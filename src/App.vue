@@ -3,7 +3,9 @@
     <div class="flex w-1/4 px-2 "> 
       <sideBarVue class=" shadow-lg rounded-2xl "></sideBarVue>
     </div>
-     <div>Element</div>
+    <div class="w-full h-full flex-col flex">
+
+    </div>
  </div>
 </template>
 
