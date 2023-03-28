@@ -5,6 +5,7 @@
     </div>
     <div class="w-full h-full flex-col flex">
       <haedBar></haedBar>
+      <router-view class=" flex w-full h-full"></router-view>
     </div>
  </div>
 </template>
