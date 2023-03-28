@@ -1,5 +1,5 @@
 <template>
-  <div>Organisme</div>
+  <div>Informations Organismes</div>
 </template>
 
 <script>
