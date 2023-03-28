@@ -4,7 +4,12 @@
         <span class=" text-xl font-extrabold">Dossier Formation</span>
     </div>
     <div class="flex flex-col ">
-        <v-btn prepend-icon="mdi-home" variant="tonal " class=" bg-black flex justify-start" >  </v-btn>
+        <v-btn prepend-icon="mdi-home" variant="tonal " class=" w-full   bg-black flex justify-start text-lg">
+            <span class=" ">Organisation</span>
+        </v-btn>
+        <v-btn prepend-icon="mdi-alert" variant="tonal " class=" w-full mt-2 flex justify-start text-lg">
+            <span class=" ">Alert</span>
+        </v-btn>
     </div>
 </div>
 </template>
@@ -15,5 +20,8 @@ export default {
 }
 </script>
 
-<style> 
+<style>
+.v-btn {
+    text-transform: none;
+}
 </style>
