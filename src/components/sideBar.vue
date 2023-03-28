@@ -13,7 +13,7 @@
 </template>
 
 <script  >
-import btn_ from '../components/button/btn_.vue'
+import btn_ from './button/btnSideBar_.vue'
 export default {
     components:{
         btn_
