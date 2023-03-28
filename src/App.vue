@@ -4,12 +4,13 @@
       <sideBarVue class=" shadow-lg rounded-2xl "></sideBarVue>
     </div>
     <div class="w-full h-full flex-col flex">
-
+      <haedBar></haedBar>
     </div>
  </div>
 </template>
 
 <script setup>
+import haedBar from "./components/haedBar.vue";
  import sideBarVue from "./components/sideBar.vue";
 </script>
 
