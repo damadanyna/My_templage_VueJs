@@ -1,8 +1,8 @@
 ear<template>
 <div class="flex flex-col h-full">
-    <h1 class=" text-lg font-bold text-stone-600 pt-2 pb-9">Organismes</h1>
-    <div class=" bg-white rounded-lg w-full h-max px-12 flex flex-col ">
-        <span class=" font-bold text-lg">Raison social</span>
+    <h1 class=" text-lg sticky -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-9">Organismes</h1>
+    <div class=" bg-white rounded-lg w-full h-max px-12 flex z-10 flex-col ">
+        <span class=" sticky top-12 w-full bg-white font-bold text-lg">Raison social</span>
 
         <!-- boite raison social -->
         <div class="flex flex-between mt-4 text-sm">
@@ -37,7 +37,7 @@ ear<template>
         </div>
 
         <!-- titre du tableau -->
-        <div class="flex flex-row items-center mt-12 justify-between w-full">
+        <div class="flex flex-row items-center sticky top-10  bg-white mt-12 justify-between w-full">
             <h5 class=" font-semibold text-2xl">Listes des sites de formation</h5>
             <btn_Vue :options="{label:'Nouveau site',style:' bg-stone-700 text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
         </div>
@@ -48,12 +48,12 @@ ear<template>
                     <th class="  w-[90%] text-start text-stone-500  pl-5 ">TitreSite</th>
                     <th class="  w-[15] text-start text-stone-500  ">Actions</th>
                 </tr>
-                <tr v-for="i in 10" :key="i">
+                <tr v-for="i in 20" :key="i">
                     <td class=" text-gray-500" v-text="i"></td>
                     <td class="pl-5" v-text="'Ligne'+i"></td>
                     <td class=" flex flex-row items-center" >
                         <svg class=" fill-current text-stone-700 w-5" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
-                        <u class=" mx-1"> Modifier</u>
+                        <u class=" mx-2 text-stone-600"> Modifier</u>
                         <button>
                             <svg class=" fill-current text-red bg-slate-300 rounded-md w-5" viewBox="0 0 24 24"><path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z" /></svg>
                         </button>

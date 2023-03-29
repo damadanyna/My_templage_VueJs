@@ -10,12 +10,17 @@ import partenairesExterneView from '../views/partenairesExternes_.vue';
 import traitementView from '../views/traitement_.vue';
 import procedureView from '../views/procedure_.vue';
 import abonnementView from '../views/abonnement_.vue';
+import alertView from '../views/alert_.vue'
 
 const routes = [
     {
         path: "/",
         name: "organisme",
         component: organismeView,
+    },{
+        path: "/alert",
+        name: "alert",
+        component: alertView,
     },{
         path: "/listeFormation",
         name: "listeFormation",
