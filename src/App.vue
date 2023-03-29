@@ -4,8 +4,8 @@
       <sideBarVue class=" shadow-lg rounded-2xl "></sideBarVue>
     </div>
     <div class="w-full h-full flex-col flex">
-      <haedBar></haedBar>
-      <router-view class=" py-3 flex w-full h-full"></router-view>
+      <haedBar class="shadow-md mb-3"></haedBar>
+      <router-view class=" pt-3 flex w-full overflow-y-auto h-full"></router-view>
     </div>
  </div>
 </template>
