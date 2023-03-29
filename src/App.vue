@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import haedBar from "./components/haedBar.vue";
+import haedBar from "./components/headBar.vue";
  import sideBarVue from "./components/sideBar.vue";
 </script>
 

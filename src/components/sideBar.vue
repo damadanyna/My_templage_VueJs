@@ -4,7 +4,7 @@
         <span class=" text-xl font-extrabold">Dossier Formation</span>
     </div>
     <div class="flex flex-col ">
-        <btn_ :options="{label:btn_.label,ico:btn_.ico,selected:btn_.selected,url:btn_.url}" v-for="btn_,i in $store.state.menu_liste" :key="i" class="  mt-2 my-1  "></btn_>
+        <btn_ :options="btn_" v-for="btn_,i in $store.state.menu_liste" :key="i" class="  mt-2 my-1  "></btn_>
     </div>
 </div>
 </template>
