@@ -1,4 +1,4 @@
-ear<template>
+<template>
 <div class="flex flex-col h-full">
     <h1 class=" text-lg sticky -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-9">Alertes</h1>
     <div class=" text-sm bg-white rounded-lg w-full h-max px-12 flex z-10 flex-col ">
