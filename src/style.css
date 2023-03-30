@@ -1,4 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+@font-face {
+    font-family: my_font;
+    src: url('./assets/policy/GolosText-VariableFont_wght.ttf');
+  }
+
+  *{
+    font-family:my_font ;
+  }
