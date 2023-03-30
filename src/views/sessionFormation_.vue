@@ -1,57 +1,60 @@
 <template>
 <div class="flex flex-col h-full">
-    <h1 class=" text-lg sticky -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-9">Session Formation</h1>
-    <div class=" d bg-white h-full py-4 rounded-lg w-full px-12 flex z-10 flex-col ">
-        <div v-if="listeFormatoin.length>0" class="flex-row">
-            <div class="flex flex-row">
-                <div class="flex ml-12 flex-row items-center">
-                    <svg class=" text-stone-500 w-5 fill-current" viewBox="0 0 24 24">
-                        <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z" /></svg>
-                    <input type="text" class=" px-3 border-b border-stone-400 outline-none focus:border-black " placeholder=" Lancer un recherche ">
-                </div>
+    <h1 class=" text-lg sticky -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-9">Séssions Formations</h1>
+    <div class=" bg-white rounded-lg w-full h-max px-12 flex z-10 flex-col ">
 
-                <div class="flex w-full justify-end relative">
-                    <btn_Vue class=" " :options="{label:'editer',style:' bg-stone-700 text-white w-full',ico:$store.state.icons.edit}"></btn_Vue>
-                </div>
-            </div>
-            <div class="flex flex-col mt-5">
-                <div v-for=" item,i in listeFormatoin" class="flex duration-300 flex-col hover:bg-black group py-3 my-2 border-[1px] px-4 rounded-md border-black ">
-                    <div class="flex flex-row justify-between w-full bg-stone-">
-                        <span class=" text-stone-700 font-semibold group-hover:text-white" v-text="item.titre"></span>
-                        <span class=" text-stone-400">#001</span>
-                    </div>
-                    <div class="flex flex-row justify-between">
-                        <div class=" flex flex-row ">
-                            <div class=" flex flex-row mx-1 ">
-                                <btn_Vue class=" " :options="{label:item.label_btn1,style:' bg-stone-600 py-1 text-stone-100 '}"></btn_Vue>
-                            </div>
-                            <div class=" flex flex-row mx-1 ">
-                                <btn_Vue class=" " :options="{label:item.label_btn2,style:' bg-fuchsia-700 py-1 text-stone-100 '}"></btn_Vue>
-                            </div>
-                            <div class=" flex flex-row mx-1  ">
-                                <btn_Vue class=" " :options="{label:item.label_btn3,style:' bg-stone-100 py-1 text-stone-800 '}"></btn_Vue>
-                            </div>
-                        </div>
-                        <div class=" flex flex-row ">
-                            <btn_Vue class=" " :options="{label:item.label_btn4,style:' bg-stone-200 py-1 text-red ',ico:$store.state.icons.edit}"></btn_Vue>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- titre du tableau -->
+        <div class="flex flex-row items-center sticky top-10  bg-white mt-12 justify-between w-full">
+            <h5 class=" font-semibold text-2xl">Séssion Formation</h5>
+            <btn_Vue :options="{label:'Nouveau',style:' bg-stone-700 text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
         </div>
-        <div v-else class=" text-stone-500 flex-col w-full h-full items-center justify-center flex">
-            <img src="../assets/vide.svg" alt="">
-            <span>Vous avez aucun formation.</span>
-            <span>Cliquer ici pour creer.</span>
-            <div class=" flex flex-row mx-1  ">
-                <btn_Vue class=" " :options="{label:'Nouvelle',ico:$store.state.icons.plus,style:' bg-stone-900 text-white py-2 text-stone-800 '}"></btn_Vue>
-            </div>
+        <div class="flex w-full text-sm mt-4">
+            <table class=" w-full items-start px-1">
+                <tr class=" w-full">
+                    <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
+                    <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-400 ">TitreSite</th>
+                    <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Etat</th>
+                    <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Date Début</th>
+                    <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Date Fin</th>
+                    <th class="  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
+                </tr>
+                <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-black  ">
+                    <td class=" text-gray-500 px-2" v-text="i"></td>
+                    <td class="pl-5" v-text="'Ligne'+i"></td>
+                    <td class="pl-5 ">
+                      <div class=" flex my-1">
+
+                      <button class=" px-5 bg-red-100 rounded-md text-red-600 text-xs  border-red-500 border py-1 ">A traité</button>
+                      </div>
+                    </td>
+                    <td class="pl-5" v-text="'18 juin 2025'"></td>
+                    <td class="pl-5" v-text="'18 juin 2025'"></td>
+                    <td class=" px-2">
+                        <div class=" flex flex-row items-center py-1">
+
+                            <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
+                                <svg class=" fill-current text-black rounded-md w-4" viewBox="0 0 24 24">
+                                    <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
+                            </button>
+                            <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
+                                <svg class=" fill-current text-black rounded-md w-4" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
+                            </button>
+                            <button class=" bg-slate-100 py-1 px-1 rounded-md">
+                                <svg class=" fill-current text-red  rounded-md w-4" viewBox="0 0 24 24">
+                                    <path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z" /></svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
         </div>
     </div>
-
 </div>
 </template>
 
+    
+    
 <script>
 import btn_Vue from '../components/button/btn_.vue'
 export default {
@@ -60,39 +63,39 @@ export default {
     },
     data() {
         return {
-            listeFormatoin: [
-                //     {
-                //     titre: 'Titre formation',
-                //     label_btn1: 'Gestion bénéficiaire',
-                //     label_btn2: 'Gestion session',
-                //     label_btn3: 'Gestion Formation',
-                //     label_btn4: 'Supprimer',
-                // }, {
-                //     titre: 'Titre formation',
-                //     label_btn1: 'Gestion bénéficiaire',
-                //     label_btn2: 'Gestion session',
-                //     label_btn3: 'Gestion Formation',
-                //     label_btn4: 'Supprimer',
-                // }, {
-                //     titre: 'Titre formation',
-                //     label_btn1: 'Gestion bénéficiaire',
-                //     label_btn2: 'Gestion session',
-                //     label_btn3: 'Gestion Formation',
-                //     label_btn4: 'Supprimer',
-                // }, {
-                //     titre: 'Titre formation',
-                //     label_btn1: 'Gestion bénéficiaire',
-                //     label_btn2: 'Gestion session',
-                //     label_btn3: 'Gestion Formation',
-                //     label_btn4: 'Supprimer',
-                // },
-            ]
+            raisonSocial: [{
+                    label: 'Raison SOCIAL:',
+                    text: 'NDA'
+                },
+                {
+                    label: 'Numéro SIREN :',
+                    text: '841939028'
+                },
+                {
+                    label: 'Numéro SIRET :',
+                    text: '84193902800012'
+                }
+            ],
+            importFichier: [{
+                titre: 'Certificat',
+                label_fichier: 'Uploader une fichier',
+                text_fichier: 'document1.pdf'
+            }, {
+                titre: 'Ajouter un logo',
+                label_fichier: 'Ajouter logo',
+                text_fichier: 'Logo.png'
+            }, {
+                titre: 'BPF',
+                label_fichier: 'Uploader une fichier',
+                text_fichier: 'document1.pdf'
+            }, ],
         }
     }
 
 }
 </script>
-
+    
+    
 <style>
-  
-  </style>
+      
+      </style>
