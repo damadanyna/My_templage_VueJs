@@ -4,7 +4,7 @@
     <div class=" bg-white rounded-lg w-full h-max px-12 flex z-10 flex-col ">
 
         <!-- titre du tableau -->
-        <div class="flex flex-row items-center sticky top-10  bg-white mt-12 justify-between w-full">
+              <div class="flex flex-row sticky top-10 py-2 w-full justify-between items-center bg-white mt-6">
             <h5 class=" font-semibold text-2xl">Séssion Formation</h5>
             <btn_Vue :options="{label:'Nouveau',style:' bg-stone-700 text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
         </div>
