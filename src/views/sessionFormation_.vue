@@ -9,7 +9,7 @@
             <btn_Vue :options="{label:'Nouveau',style:' bg-stone-700 text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
         </div>
         <div class="flex w-full text-sm mt-4">
-            <table class=" w-full items-start px-1">
+            <table class=" text-sm  w-full items-start px-1">
                 <tr class=" w-full">
                     <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
                     <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-400 ">TitreSite</th>

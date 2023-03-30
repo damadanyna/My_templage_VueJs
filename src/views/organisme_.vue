@@ -25,12 +25,12 @@
             </div>
 
             <!-- importation -->
-            <div class="h-full w-3/4 px-7 flex flex-row justify-between ">
+            <div class="h-full w-3/4 px-7  flex flex-row justify-between ">
                 <div v-for="item, i in importFichier" :key="i" class="flex flex-row">
                     <div class="flex flex-col">
                         <span v-text=" item.titre"></span>
                         <btn_Vue :options="{label:item.label_fichier,style:' bg-stone-700 text-white w-full',ico:$store.state.icons.uploadFolder}"></btn_Vue>
-                        <btn_Vue :options="{label:item.text_fichier,style:' bg-gray-200 text-red-500 w-full',stylelabel:' text-black',ico:$store.state.icons.pdf_,ico2:$store.state.icons.delete}"></btn_Vue>
+                        <btn_Vue class=" mt-3" :options="{label:item.text_fichier,style:' bg-gray-200 text-red-500 w-full',stylelabel:' text-black',ico:$store.state.icons.pdf_,ico2:$store.state.icons.delete}"></btn_Vue>
                     </div>
                 </div>
             </div>
@@ -52,10 +52,10 @@
                     <td class=" text-gray-500" v-text="i"></td>
                     <td class="pl-5" v-text="'Ligne'+i"></td>
                     <td class=" flex flex-row items-center" >
-                        <svg class=" fill-current text-stone-700 w-5" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
+                        <svg class=" fill-current text-stone-700 w-4" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
                         <u class=" mx-2 text-stone-600"> Modifier</u>
                         <button>
-                            <svg class=" fill-current text-red bg-slate-300 rounded-md w-5" viewBox="0 0 24 24"><path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z" /></svg>
+                            <svg class=" fill-current text-red bg-slate-300 rounded-md w-4" viewBox="0 0 24 24"><path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z" /></svg>
                         </button>
                     </td>
                 </tr>  

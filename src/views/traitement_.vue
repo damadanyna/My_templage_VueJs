@@ -4,12 +4,12 @@
     <div class=" bg-white rounded-lg w-full h-max px-12 flex z-10 flex-col ">
 
         <!-- titre du tableau -->
-        <div class="flex flex-row items-center sticky top-10  bg-white mt-12 justify-between w-full">
+        <div class="flex flex-row items-center sticky top-10 py-2  bg-white mt-12 justify-between w-full">
             <h5 class=" font-semibold text-2xl">Listes des Traitements aléas</h5>
             <btn_Vue :options="{label:'Nouveau site',style:' bg-stone-700 text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
         </div>
         <div class="flex w-full text-sm mt-4">
-            <table class=" w-full items-start px-1">
+            <table class=" text-sm   w-full items-start px-1">
                 <tr class=" w-full">
                     <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
                     <th class="  w-[76%] text-start text-stone-500  pl-5 ">TitreSite</th>
@@ -22,7 +22,7 @@
                     <td class="pl-5 "  >
                       <div class=" flex my-1">
 
-                      <button class=" px-5 bg-red-100 rounded-md text-red-600 text-xs  border-red-500 border py-1 ">A traité</button>
+                      <button class=" px-5 bg-red-100 rounded-md text-red-600  border-red-500 border py-1 ">A traité</button>
                       </div>
                     </td>
                     <td class=" px-2">
