@@ -59,7 +59,7 @@
         </div>
 
         <!-- Premium -->
-        <div class=" w-2/5 shadow__  flex flex-col items-center py-8 transform scale-90 px-10  border-2 rounded-lg border-black">
+        <div class=" w-2/5 shadow___  flex flex-col items-center py-8 transform scale-90 px-10  border-2 rounded-lg border-black">
             <span>Forfait</span>
             <span class=" text-2xl font-bold uppercase">premium</span>
             <div class=" flex flex-row justify-end">
@@ -120,7 +120,6 @@
 
         <!--  standard -->
         <div class="flex  w-2/5 items-center">
-
             <div class="  shadow__ h-min  flex flex-col items-center py-8 transform scale-90 px-10  border-2 rounded-lg border-black">
                 <span>Forfait</span>
                 <span class=" text-2xl font-bold uppercase"> standard</span>
@@ -200,10 +199,10 @@ export default {
   margin:0px;
   box-shadow: 0px 20px 45px rgba(183, 51, 227, 0.633);
 }
-.shadow__ {
+/* .shadow__ {
   padding: 0px;
   border-radius: 0.5rem;
   margin:0px;
   box-shadow: 0px 3px 8px rgba(51, 51, 51, 0.368);
-}
+} */ 
 </style>
