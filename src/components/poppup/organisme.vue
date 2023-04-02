@@ -20,11 +20,11 @@
                     <span @click=" set_('IF')" :class="selected!='IB'?'bg-[#63B6B9] text-white':' bg-stone-300 text-black'" class=" text-center text-xs w-full py-2 rounded-tr-md">Information pour les formateurs</span>
                 </div>
                 <div class=" group border-[1px] py-1 w-full rounded-b-lg items-center flex flex-col border-stone-300 ">
-                    <textarea v-model="data_[4].model" class=" w-full resize-none border-none outline-none px-3" name="" id="" rows="4"></textarea>
+                    <textarea v-model="data_[5].model" class=" w-full resize-none border-none outline-none px-3" name="" id="" rows="4"></textarea>
                 </div>
             </div>
         </div>
-        <div :class="data_[0].model=='' || data_[1].model=='' || this.data_[2].model=='' || this.data_[3].model==''|| this.data_[4].model==''?' opacity-50':' opacity-100'" class=" duration-300 flex mt-12 justify-center  flex-row w-full">
+        <div :class="data_[0].model=='' || data_[1].model=='' || data_[2].model=='' || data_[3].model==''|| data_[4].model || data_[5].model==''?' opacity-50':' opacity-100'" class=" duration-300 flex mt-12 justify-center  flex-row w-full">
             <btn_ @click="setIt()" :options="{label:'Valider',style:' base_bg text-white',ico:$store.state.icons.done}"></btn_>
         </div>
     </div>
