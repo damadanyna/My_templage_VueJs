@@ -47,7 +47,7 @@
                 <span>Cliquer ici pour creer.</span>
             </flex>
             <div class=" flex flex-row mx-1  ">
-                <btn_Vue class=" " :options="{label:'Nouvelle',ico:$store.state.icons.plus,style:' bg-stone-900 text-white py-2 text-stone-800 '}"></btn_Vue>
+                <btn_Vue class=" " :options="{label:'Nouvelle',ico:$store.state.icons.plus,style:' base_bg text-white py-2 text-stone-800 '}"></btn_Vue>
             </div>
         </div>
     </div>

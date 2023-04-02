@@ -1,5 +1,6 @@
 <template>
-<div id="poppupOrganisme"  >
+<div id="poppupOrganisme">
+    <!-- forumlaire de organisme -->
     <div class=" bg-white rounded-lg flex px-6 py-5 flex-col z-20">
         <div class=" mt-8 flex flex-col">
             <div class="flex flex-row w-full">
@@ -13,9 +14,18 @@
             <div class="flex mt-5 flex-row w-full">
                 <textArea_ class=" w-full" :options="data_[4]"></textArea_>
             </div>
+            <div class="flex mt-5 flex-col w-full">
+                <div class="flex flex-row w-full">
+                    <span @click=" set_('IB')" :class="selected=='IB'?'bg-[#63B6B9] text-white':' bg-stone-300 text-black'" class=" text-center text-xs w-full py-2 rounded-tl-md ">Information pour les bénéficiaires</span>
+                    <span @click=" set_('IF')" :class="selected!='IB'?'bg-[#63B6B9] text-white':' bg-stone-300 text-black'" class=" text-center text-xs w-full py-2 rounded-tr-md">Information pour les formateurs</span>
+                </div>
+                <div class=" group border-[1px] py-1 w-full rounded-b-lg items-center flex flex-col border-stone-300 ">
+                    <textarea v-model="data_[4].model" class=" w-full resize-none border-none outline-none px-3" name="" id="" rows="4"></textarea>
+                </div>
+            </div>
         </div>
-        <div :class="data_[0].model=='' || data_[1].model=='' || this.data_[2].model=='' || this.data_[3].model==''|| this.data_[4].model==''?' opacity-50':' opacity-100'" class=" duration-300 flex mt-3 justify-end flex-row w-full">
-            <btn_ @click="setIt()" :options="{label:'Valider',style:' bg-stone-900 text-white',ico:$store.state.icons.done}"></btn_>
+        <div :class="data_[0].model=='' || data_[1].model=='' || this.data_[2].model=='' || this.data_[3].model==''|| this.data_[4].model==''?' opacity-50':' opacity-100'" class=" duration-300 flex mt-12 justify-center  flex-row w-full">
+            <btn_ @click="setIt()" :options="{label:'Valider',style:' base_bg text-white',ico:$store.state.icons.done}"></btn_>
         </div>
     </div>
 </div>
@@ -53,8 +63,11 @@ export default {
                     label: 'Commentaire publique',
                     model: '',
                 },
+                { 
+                    model: '',
+                },
             ],
-
+            selected:'IB'
         }
     },
     components: {
@@ -66,17 +79,18 @@ export default {
         setIt() {
             console.log(this.data_)
         },
+        set_(val){
+                this.selected=val
+            }
     },
-    mounted() { 
-        gsap.fromTo("#poppupOrganisme", 
-    { 
-      opacity: 0, 
+    mounted() {
+        gsap.fromTo("#poppupOrganisme", {
+            opacity: 0,
 
-    },
-    {  
-        duration:.5,
-      opacity: 1,
-    });
+        }, {
+            duration: .5,
+            opacity: 1,
+        });
     }
 }
 </script>
