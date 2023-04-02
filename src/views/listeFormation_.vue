@@ -11,7 +11,7 @@
                 </div>
 
                 <div class="flex w-full justify-end relative">
-                    <btn_Vue class=" " :options="{label:'editer',style:' bg-stone-700 text-white w-full',ico:$store.state.icons.edit}"></btn_Vue>
+                    <btn_Vue class=" " :options="{label:'editer',style:' base_bg text-white w-full',ico:$store.state.icons.edit}"></btn_Vue>
                 </div>
             </div>
             <div class="flex flex-col mt-5">

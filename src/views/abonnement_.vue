@@ -53,7 +53,7 @@
                     </div>
 
                 </div>
-                <btn_Vue class="shadow_ w-full flex " :options="{label:'SOUSCRIRE',style:'bg-stone-700 justify-center  bg-stone-700 text-white w-full'}"></btn_Vue>
+                <btn_Vue class="shadow_ w-full flex " :options="{label:'SOUSCRIRE',style:'base_bg justify-center  base_bg text-white w-full'}"></btn_Vue>
 
             </div>
         </div>
@@ -114,7 +114,7 @@
                 </div>
 
             </div>
-            <btn_Vue class="w-full flex" :options="{label:'SOUSCRIRE',style:' font-bold justify-center bg-black bg-stone-700 text-white w-full'}"></btn_Vue>
+            <btn_Vue class="w-full flex" :options="{label:'SOUSCRIRE',style:' font-bold justify-center bg-black base_bg text-white w-full'}"></btn_Vue>
 
         </div>
 
@@ -168,7 +168,7 @@
                     </div>
 
                 </div>
-                <btn_Vue class="w-full flex shadow_ " :options="{label:'SOUSCRIRE',style:'bg-stone-700 justify-center  bg-stone-700 text-white w-full'}"></btn_Vue>
+                <btn_Vue class="w-full flex shadow_ " :options="{label:'SOUSCRIRE',style:'base_bg justify-center  base_bg text-white w-full'}"></btn_Vue>
 
             </div>
         </div>

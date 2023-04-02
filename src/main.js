@@ -7,7 +7,7 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import App from './App.vue'
 import store from './store'
-import router from './router'
+import router from './router' 
 
 const vuetify = createVuetify({
     components,
@@ -19,5 +19,5 @@ createApp(App)
         iconfont: 'mdi'
     })
     .use(router)
-    .use(store)
+    .use(store) 
     .mount('#app')

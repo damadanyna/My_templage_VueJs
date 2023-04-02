@@ -6,7 +6,7 @@
           <!-- titre du tableau -->
           <div class="flex flex-row items-center sticky top-10  bg-white mt-12 justify-between w-full">
               <h5 class=" font-semibold text-2xl">Listes des Procédures</h5>
-              <btn_Vue :options="{label:'Nouveau site',style:' bg-stone-700 text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
+              <btn_Vue :options="{label:'Nouveau site',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
           </div>
           <div class=" text-sm  flex w-full  mt-4">
               <table class=" w-full items-start px-1">

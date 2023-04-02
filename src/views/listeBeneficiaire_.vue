@@ -12,7 +12,7 @@
                   </div>
   
                   <div class="flex w-full justify-end relative">
-                      <btn_Vue class=" " :options="{label:'Nouvelle',style:' bg-stone-700 text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
+                      <btn_Vue class=" " :options="{label:'Nouvelle',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
                   </div>
               </div>
               <!-- tableau -->

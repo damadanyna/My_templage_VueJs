@@ -6,7 +6,7 @@
         <!-- titre du tableau -->
         <div class="flex flex-row items-center sticky top-10 py-2  bg-white mt-12 justify-between w-full">
             <h5 class=" font-semibold text-2xl">Listes des Traitements aléas</h5>
-            <btn_Vue :options="{label:'Nouveau site',style:' bg-stone-700 text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
+            <btn_Vue :options="{label:'Nouveau site',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
         </div>
         <div class="flex w-full text-sm mt-4">
             <table class=" text-sm   w-full items-start px-1">

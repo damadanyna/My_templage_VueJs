@@ -10,3 +10,11 @@
   *{
     font-family:my_font ;
   }
+
+  body{
+    overflow: hidden;
+  }
+  .base_bg{
+    background: #63B6B9;
+    ;
+  }
