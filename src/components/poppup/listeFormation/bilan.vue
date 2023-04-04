@@ -17,18 +17,24 @@
                 <textArea_ class=" w-full" :options="data_[4]"></textArea_>
                 <textArea_ class=" w-full ml-3" :options="data_[5]"></textArea_>
             </div>
-            <div class="flex mt-5 flex-row w-full">
-                <textArea_ class=" w-full " :options="data_[6]"></textArea_>
+            <div class="flex mt-5 w-full flex-row">
+                <input_ class=" w-full " :options="data_[6]"></input_>
+                <input_ class=" w-full  ml-3" :options="data_[7]"></input_>
             </div>
-            <span class=" text-teal-500 text-xs mt-2">*Délais des alertes si aucune activité est recensé sur le compte d'un bénéficiaire</span>
-            <div class="flex mt-5 flex-row w-full">
-                <div>
-                    <input_ class=" w-full" :options="data_[7]"></input_>
-                </div>
-                <textArea_ class=" w-full ml-3" :options="data_[8]"></textArea_>
+            <div class="flex flex-col">
+                <span class=" text-teal-500 text-xs mt-2">*Délais des alertes si aucune activité est recensé </span>
+                <span class=" text-teal-500 text-xs ">sur le compte d'un bénéficiaire</span>
             </div>
+            <div class="flex flex-row">
 
-            <textArea_ class=" w-full mt-5" :options="data_[9]"></textArea_>
+                <div class="flex mt-5 flex-col w-full">
+                    <span class=" font-bold">Accessibilité aux personnes handicapées</span>
+                    <span class=" flex text-xs">Si vous êtes en situation e handicape nous contacter,  afin d’évaluer l’accès à la formation</span>
+                </div>
+                <div class="flex mt-5 ml-3 flex-row w-full">
+                    <textArea_ class=" w-full " :options="data_[8]"></textArea_>
+                </div>
+            </div>
         </div>
         <div :class="data_[0].model=='' || data_[1].model=='' || data_[2].model=='' || data_[3].model==''|| data_[4].model || data_[5].model==''?' opacity-50':' opacity-100'" class=" duration-300 flex mt-12 justify-center  flex-row w-full">
             <btn_ @click="setIt()" :options="{label:'Programme',style:' base_bg text-white',ico:$store.state.icons.done}"></btn_>
@@ -38,9 +44,9 @@
 </template>
 
 <script>
-import input_ from '../input/inputTxt.vue'
-import textArea_ from '../input/textarea.vue'
-import btn_ from '../button/btn_.vue';
+import input_ from '../../input/inputTxt.vue'
+import textArea_ from '../../input/textarea.vue'
+import btn_ from '../../button/btn_.vue';
 import gsap from 'gsap'
 export default {
     data() {
@@ -79,19 +85,22 @@ export default {
                     type: 'date'
                 },
                 {
-                    label: 'Tarif',
+                    label: 'Méthodes mobilisées',
                     model: '',
                     type: 'text'
                 },
                 {
                     label: 'Modalités pédagogiques',
                     model: '',
-                    type: 'text'
                 },
                 {
-                    label: 'Modalités d’inscription et de fesabilité ',
+                    label: 'Prérequis',
                     model: '',
-                    type: 'text'
+                },
+
+                {
+                    label: 'Modalités de l’etude personalisé',
+                    model: '',
                 },
 
             ],
@@ -125,5 +134,5 @@ export default {
 </script>
 
 <style>
-        
-        </style>
+    
+    </style>

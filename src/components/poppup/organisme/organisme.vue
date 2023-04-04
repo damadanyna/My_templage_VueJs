@@ -32,9 +32,9 @@
 </template>
 
 <script>
-import input_ from '../input/inputTxt.vue'
-import textArea_ from '../input/textarea.vue'
-import btn_ from '../button/btn_.vue';
+import input_ from '../../input/inputTxt.vue'
+import textArea_ from '../../input/textarea.vue'
+import btn_ from '../../button/btn_.vue';
 import gsap from 'gsap'
 export default {
     data() {

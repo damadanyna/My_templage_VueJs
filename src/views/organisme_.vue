@@ -83,7 +83,7 @@
 
 <script>
 import btn_Vue from '../components/button/btn_.vue'
-import popup from '../components/poppup/organisme.vue'
+import popup from '../components/poppup/organisme/organisme.vue'
 export default {
     components: {
         btn_Vue,

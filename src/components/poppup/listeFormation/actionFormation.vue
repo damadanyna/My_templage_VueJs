@@ -4,6 +4,13 @@
     <div class=" bg-white rounded-lg flex px-6 py-5 flex-col z-20">
         <div class=" mt-8 flex flex-col">
 
+            <div @click="()=>{isChecked==false?isChecked=true:isChecked=false}" class=" items-center text-teal-500 flex flex-row text-xs mb-2">
+                <svg v-if="isChecked==false" class=" fill-current w-5" viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m0 2v14H5V5h14z" /></svg>
+                <svg v-else class=" fill-current w-5" viewBox="0 0 24 24">
+                    <path d="m10 17-5-5 1.41-1.42L10 14.17l7.59-7.59L19 8m0-5H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z" /></svg>
+                <span>Certifiante</span>
+            </div>
             <div class="flex flex-row w-full">
                 <input_ class=" w-full " :options="data_[0]"></input_>
                 <input_ class=" w-full ml-3" :options="data_[1]"></input_>
@@ -25,15 +32,18 @@
                 <span class=" text-teal-500 text-xs mt-2">*Délais des alertes si aucune activité est recensé </span>
                 <span class=" text-teal-500 text-xs ">sur le compte d'un bénéficiaire</span>
             </div>
-            <div class="flex flex-row">
-
-                <div class="flex mt-5 flex-col w-full">
-                    <span class=" font-bold">Accessibilité aux personnes handicapées</span>
-                    <span class=" flex text-xs">Si vous êtes en situation e handicape nous contacter,  afin d’évaluer l’accès à la formation</span>
+            <div class="flex mt-5 flex-row w-full">
+                <textArea_ class=" w-full " :options="data_[7]"></textArea_>
+            </div>
+            <div v-if="isChecked==true" class="flex flex-col w-full">
+                <div class="flex flex-col">  <div class="flex mt-5 flex-row w-full">
+                        <textArea_ class=" w-full " :options="data_[9]"></textArea_>
+                    </div> 
+                    <span class=" text-teal-500 text-xs mt-2">*Pour les diplôme de l’éducation national</span>yy
                 </div>
-                <div class="flex mt-5 ml-3 flex-row w-full">
-                    <textArea_ class=" w-full " :options="data_[8]"></textArea_>
-                </div>
+            </div>
+            <div class="flex mt-5 flex-row w-full">
+                <textArea_ class=" w-full " :options="data_[8]"></textArea_>
             </div>
         </div>
         <div :class="data_[0].model=='' || data_[1].model=='' || data_[2].model=='' || data_[3].model==''|| data_[4].model || data_[5].model==''?' opacity-50':' opacity-100'" class=" duration-300 flex mt-12 justify-center  flex-row w-full">
@@ -44,9 +54,9 @@
 </template>
 
 <script>
-import input_ from '../input/inputTxt.vue'
-import textArea_ from '../input/textarea.vue'
-import btn_ from '../button/btn_.vue';
+import input_ from '../../input/inputTxt.vue'
+import textArea_ from '../../input/textarea.vue'
+import btn_ from '../../button/btn_.vue';
 import gsap from 'gsap'
 export default {
     data() {

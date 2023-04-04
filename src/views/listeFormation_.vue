@@ -89,10 +89,10 @@
 
 <script>
 import btn_Vue from '../components/button/btn_.vue'
-import popup from '../components/poppup/organisme.vue'
-import actionFormationVue from '../components/poppup/actionFormation.vue'
-import bilan from '../components/poppup/bilan.vue'
-import vae from '../components/poppup/vae.vue'
+import popup from '../components/poppup/organisme/organisme.vue'
+import actionFormationVue from '../components/poppup/listeFormation/actionFormation.vue'
+import bilan from '../components/poppup/listeFormation/bilan.vue'
+import vae from '../components/poppup/listeFormation/vae.vue'
 export default {
     components: {
         btn_Vue,
