@@ -74,6 +74,7 @@
                     </div>
                 </div>
                 <actionFormationVue v-if="indexFormulaire==0"></actionFormationVue>
+                <bilan v-if="indexFormulaire==1"></bilan>
             </div>
         </div>
     </div>
@@ -85,11 +86,13 @@
 import btn_Vue from '../components/button/btn_.vue'
 import popup from '../components/poppup/organisme.vue'
 import actionFormationVue from '../components/poppup/actionFormation.vue'
+import bilan from '../components/poppup/bilan.vue'
 export default {
     components: {
         btn_Vue,
         popup,
-        actionFormationVue
+        actionFormationVue,
+        bilan
     },
     data() {
         return {
