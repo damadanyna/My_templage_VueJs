@@ -37,7 +37,7 @@
             </div>
         </div>
         <div :class="data_[0].model=='' || data_[1].model=='' || data_[2].model=='' || data_[3].model==''|| data_[4].model || data_[5].model==''?' opacity-50':' opacity-100'" class=" duration-300 flex mt-12 justify-center  flex-row w-full">
-            <btn_ @click="setIt()" :options="{label:'Valider',style:' base_bg text-white',ico:$store.state.icons.done}"></btn_>
+            <btn_ @click="setIt()" :options="{label:'Programme',style:' base_bg text-white',ico:$store.state.icons.done}"></btn_>
         </div>
     </div>
 </div>

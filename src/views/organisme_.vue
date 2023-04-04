@@ -118,7 +118,7 @@ export default {
                 text_fichier: 'document1.pdf'
             }, ],
 
-            howOrgPoppup: true,
+            howOrgPoppup: false,
             edit: false
         }
     },
