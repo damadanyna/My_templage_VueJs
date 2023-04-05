@@ -5,7 +5,7 @@
         <span v-if="$store.state.menuFull==true" class=" text-xl font-extrabold">Dossier Formation</span>
     </div>
     <div class="flex flex-col ">
-        <btn_ :options="btn_" v-for="btn_,i in $store.state.menu_liste" :key="i" class="  mt-2 my-1  "></btn_>
+        <btn_ :options="btn_" v-for="btn_,i in $store.state.menu_liste" :key="i" class=" text-xs mt-2 my-1  "></btn_>
     </div>
 </div>
 </template>

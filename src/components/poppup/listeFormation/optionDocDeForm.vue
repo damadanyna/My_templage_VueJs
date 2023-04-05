@@ -22,7 +22,7 @@
                 <th class="  w-[16%] text-start text-stone-500  px-5 ">Type</th>
                 <th class="  w-[19] text-start text-stone-500  ">Actions</th>
             </tr>
-            <tr v-for="i in 4" :key="i" class=" duration-200 hover:text-white  hover:bg-black  ">
+            <tr v-for="i in 4" :key="i" class=" duration-200 hover:text-white  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="'001'"></td>
                 <td class="pl-5" v-text="'Ligne'+i"></td>
                 <td class="pl-5 ">

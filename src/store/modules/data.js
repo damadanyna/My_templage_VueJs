@@ -19,7 +19,7 @@ const state = () => ({
             id:'#001',
             nom:'John',
             prenom:'Doe',
-            etat:'En  formation',
+            etat:'En formation',
             dateInscription:'18 juin 2025', 
         }, 
         {
@@ -40,7 +40,7 @@ const state = () => ({
             id:'#001',
             nom:'Ivan',
             prenom:'Ivanov',
-            etat:'En  formation',
+            etat:'En formation',
             dateInscription:'12 janvier 2024', 
         }, 
         {
@@ -54,10 +54,23 @@ const state = () => ({
             id:'#001',
             nom:'Max',
             prenom:'Mustermann',
-            etat:'En  formation',
+            etat:'En formation',
             dateInscription:'22 octobre 2023', 
         }, 
     ],
+    listeExercices:[
+        {
+            id:'001',
+            label:'Les clés pour réussir votre projet',
+            result:'Reussi'
+        },
+        {
+            id:'002',
+            label:'Leadership et communication efficace',
+            result:'Echoué'
+        },
+    ],
+    selectFormation:'null'
   })
   
    

@@ -19,7 +19,7 @@
                 <th class="  w-[76%] text-start text-stone-500  pl-5 ">Titre</th>
                 <th class="  w-[19] text-start text-stone-500 mx-5 ">Actions</th>
             </tr>
-            <tr v-for="i in 4" :key="i" class=" duration-200 hover:text-white  hover:bg-black  ">
+            <tr v-for="i in 4" :key="i" class=" duration-200 hover:text-white  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="'001'"></td>
                 <td class="pl-5" v-text="'Ligne'+i"></td>
                 <td class=" px-2 text-teal-500">

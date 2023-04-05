@@ -11,6 +11,9 @@ import traitementView from '../views/traitement_.vue';
 import procedureView from '../views/procedure_.vue';
 import abonnementView from '../views/abonnement_.vue';
 import alertView from '../views/alert_.vue'
+import gestionBeneficiaireview from '../views/listeFormation/gestionBeneficiaire_.vue'
+import proprieteView from '../views/listeFormation/propriete_.vue'
+import liverApprentissatgeView from '../views/listeFormation/livretApprentissage_.vue'
 
 const routes = [
     {
@@ -24,7 +27,11 @@ const routes = [
     },{
         path: "/listeFormation",
         name: "listeFormation",
-        component: listeFormationView,
+        component: listeFormationView, 
+    },{
+        path: "/gestionBeneficiaire",
+        name: "gestionBeneficiaire",
+        component: gestionBeneficiaireview,
     },{
         path: "/sessionFormaton",
         name: "sessionFormaton",
@@ -37,6 +44,10 @@ const routes = [
         path: "/equipe",
         name: "equipe",
         component: equipeView,
+    },{
+        path: "/propriete",
+        name: "propriete",
+        component: proprieteView,
     },{
         path: "/statistique",
         name: "statistique",
@@ -61,6 +72,10 @@ const routes = [
         path: "/abonnement",
         name: "abonnement",
         component: abonnementView,
+    },{
+        path: "/liverApprentissatge",
+        name: "liverApprentissatge",
+        component: liverApprentissatgeView,
     },
     // {
     //     path: "/",

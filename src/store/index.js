@@ -1,10 +1,12 @@
 // store/index.js
 import { createStore } from 'vuex' 
 import tools from './modules/tools'
+import myData from './modules/data'
 
 const store = createStore({
     modules:{
-        tools:tools
+        tools:tools,
+        myData:myData
     },
      state:{ 
         menu_liste: [{     
@@ -89,6 +91,7 @@ const store = createStore({
             plus:'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z',
             done:"M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7z",
             menu_down:"m7 10 5 5 5-5H7z",
+            eye:"M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z",
             list:"M7 5h14v2H7V5m0 8v-2h14v2H7M4 4.5A1.5 1.5 0 0 1 5.5 6 1.5 1.5 0 0 1 4 7.5 1.5 1.5 0 0 1 2.5 6 1.5 1.5 0 0 1 4 4.5m0 6A1.5 1.5 0 0 1 5.5 12 1.5 1.5 0 0 1 4 13.5 1.5 1.5 0 0 1 2.5 12 1.5 1.5 0 0 1 4 10.5M7 19v-2h14v2H7m-3-2.5A1.5 1.5 0 0 1 5.5 18 1.5 1.5 0 0 1 4 19.5 1.5 1.5 0 0 1 2.5 18 1.5 1.5 0 0 1 4 16.5z"
         },
         menuFull:true,
