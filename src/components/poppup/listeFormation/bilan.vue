@@ -76,7 +76,7 @@ export default {
                     model: '',
                 },
                 {
-                    label: 'Modalités et délais d’accès à la formation',
+                    label: 'Modalités et délais d’accès...',
                     model: '',
                 },
                 {

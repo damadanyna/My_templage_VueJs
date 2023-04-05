@@ -14,7 +14,7 @@
             </div>
             <span class=" text-teal-500 text-xs mt-2">*Lié à un membre d'équipe</span>
             <div class="flex mt-5 flex-row w-full">
-                <textArea_ class=" w-full" :options="data_[4]"></textArea_>
+                <textArea_ class=" w-full" title="Modalités et délais d’accès à la formation" :options="data_[4]"></textArea_>
                 <textArea_ class=" w-full ml-3" :options="data_[5]"></textArea_>
             </div>
             <div class="flex mt-5 flex-row w-full">
@@ -61,7 +61,7 @@ export default {
                     type: 'text'
                 },
                 {
-                    label: 'Tarif',
+                    label: 'Méthodes mobilisées',
                     model: '',
                     type: 'text'
                 },
@@ -70,7 +70,7 @@ export default {
                     model: '',
                 },
                 {
-                    label: 'Modalités et délais d’accès à la formation',
+                    label: 'Modalités et délais d’accès...',
                     model: '',
                 },
                 {

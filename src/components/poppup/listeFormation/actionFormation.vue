@@ -39,7 +39,7 @@
                 <div class="flex flex-col">  <div class="flex mt-5 flex-row w-full">
                         <textArea_ class=" w-full " :options="data_[9]"></textArea_>
                     </div> 
-                    <span class=" text-teal-500 text-xs mt-2">*Pour les diplôme de l’éducation national</span>yy
+                    <span class=" text-teal-500 text-xs mt-2">*Pour les diplôme de l’éducation national</span>
                 </div>
             </div>
             <div class="flex mt-5 flex-row w-full">
@@ -86,7 +86,7 @@ export default {
                     model: '',
                 },
                 {
-                    label: 'Modalités et délais d’accès à la formation',
+                    label: 'Modalités et délais d’accès...',
                     model: '',
                 },
                 {

@@ -20,16 +20,20 @@ router-link {
 
  a.router-link-exact-active  {
     color: #ffffff;
-    background: rgb(55, 55, 55);
+    background: #63B6B9;
 }
 
 a.router-link-exact-active  {
-    background: rgb(62, 62, 62); 
+  background: #42898B;
     fill: #393939;
+}
+a:hover  {
+  background: #63B6B9;
+  color:white;
+    fill: #f4f4f4;
 }
 
 a.router-link-exact-active svg {
     fill: #ffffff;
-
 }
 </style>
