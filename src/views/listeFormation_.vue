@@ -32,21 +32,23 @@
                         <div :class="howOrgPoppup==true?'flex-col mt-6 w-full':'flex-row'" class="flex  justify-between">
                             <div class=" flex flex-row w-full ">
                                 <div class=" flex flex-row mx-1 ">
-                                    <btn_ class=" " :options="{label:item.label_btn1,style:' bg-teal-700 py-0 text-stone-100 '}"></btn_>
+                                    <btn_ class=" " :options="{label:item.label_btn1,style:' bg-teal-700 text-xs  text-stone-100 '}"></btn_>
                                 </div>
                                 <div class=" flex flex-row mx-1 ">
-                                    <btn_ class=" " :options="{label:item.label_btn2,style:'bg-teal-700 py-0 text-stone-100 '}"></btn_>
+                                    <btn_ class=" " :options="{label:item.label_btn2,style:'bg-teal-700 text-xs  text-stone-100 '}"></btn_>
                                 </div>
                                 <div v-if="howOrgPoppup==true" class=" flex flex-row ">
                                     <btn_ class=" shadow-md " :options="{label:item.label_btn4,style:' bg-stone-200  text-red ',ico:$store.state.icons.delete}"></btn_>
                                 </div>
+                                <btn_ v-if="howOrgPoppup!=true" class=" " :options="{label:item.label_btn3,style:' bg-stone-100 py-1 text-stone-800 '}"></btn_>
+                                
                             </div>
-                            <div class=" bg-transparent justify-between flex flex-row mx-1 w-full mt-4 ">
-                                <div :class="howOrgPoppup==true?'w-5/6 items-center flex-col justify-center flex text-center bg-white py-1  rounded-md ':''" class="  ">
-                                    <btn_ class=" " :options="{label:item.label_btn3,style:' bg-stone-100 py-0 text-stone-800 '}"></btn_>
+                            <div v-if="howOrgPoppup==true" class=" bg-transparent justify-between flex flex-row mx-1 w-full mt-4 ">
+                                <div :class="howOrgPoppup==true?'w-5/6 bg-stone-100 items-center flex-col justify-center flex text-center py-1  rounded-md ':''" class="  ">
+                                    <btn_ class=" " :options="{label:item.label_btn3,style:' bg-stone-100 py-1 text-stone-800 '}"></btn_>
                                 </div>
                                 <button v-if="howOrgPoppup==true" class=" ml-3 bg-white p-1 mx-1 px-2 rounded-md">
-                                    <svg class=" w-4 fill-current text-red-500" viewBox="0 0 24 24">
+                                    <svg class=" w-4 fill-current text-xs text-red-500" viewBox="0 0 24 24">
                                         <path d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12z" /></svg>
                                 </button>
                             </div>

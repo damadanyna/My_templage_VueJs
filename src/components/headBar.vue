@@ -10,8 +10,7 @@
             </div>
             <button v-else class=" ">
                 <svg class=" w-8 fill-current text-stone-600" viewBox="0 0 24 24">
-                    <path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z" /></svg>
-
+                    <path d="M8.59 16.58 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z" /></svg> 
             </button>
         </div>
         <div class="flex ml-12 flex-row items-center">
