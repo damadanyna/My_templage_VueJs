@@ -47,8 +47,7 @@
                         </div>
                     </td>
                 </tr>
-            </table>
-
+            </table> 
         </div>
     </div>
 </div>

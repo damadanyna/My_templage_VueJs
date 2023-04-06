@@ -14,6 +14,7 @@ import alertView from '../views/alert_.vue'
 import gestionBeneficiaireview from '../views/listeFormation/gestionBeneficiaire_.vue'
 import proprieteView from '../views/listeFormation/propriete_.vue'
 import liverApprentissatgeView from '../views/listeFormation/livretApprentissage_.vue'
+import tableDeVeille from '../views/veille/tableDeVeille_.vue'
 
 const routes = [
     {
@@ -76,6 +77,10 @@ const routes = [
         path: "/liverApprentissatge",
         name: "liverApprentissatge",
         component: liverApprentissatgeView,
+    },{
+        path: "/tableauDeVeille",
+        name: "tableauDeVeille",
+        component: tableDeVeille,
     },
     // {
     //     path: "/",
