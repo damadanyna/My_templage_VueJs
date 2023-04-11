@@ -1,0 +1,148 @@
+<template>
+    <div id="poppupOrganisme">
+        <!-- forumlaire de organisme -->
+        <div class=" bg-white rounded-lg flex px-1 py-5 flex-col z-20">
+            <span class=" text-sm font-bold sticky top-20 py-4 bg-white z-50">Traitement des aléas, difficultés et réclamations :</span>
+            <div class=" mt-8 flex flex-col">
+                <div class="flex flex-row w-full">
+                    <input_ class=" w-full " :options="data_[0]"></input_>
+                    <input_ class=" w-full ml-3" :options="data_[1]"></input_>
+                </div>
+    
+                <div class="flex flex-row my-4 justify-end items-center">
+                    <span class=" font-bold text-sm mr-5">Gravité de l’incident:</span>
+    
+                    <div class="flex flex-row text-sm base_bg px-3 py-2 rounded-lg">
+                        <select name="" id="" class=" text-white outline-none ">
+                            <option v-for=" item,i in niveauList" :key="i" :value="item.val" v-text="item.label" class=" border-b border-stone-400 text-black "></option>
+                        </select>
+                        <div class="">
+                            <svg class="   text-white items-center  rounded-sm fill-current w-5" viewBox="0 0 24 24">
+                                <path :d="$store.state.icons.menu_down" /></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex mt-5 w-full flex-row">
+                    <textArea_ class=" w-full" :options="data_[2]"></textArea_>
+                </div>
+                <div class="flex flex-row my-4 items-center">
+                    <span class=" font-bold text-sm mr-5">Status:</span>
+                    <div v-for="item,i in listeStatus" class="flex flex-row mr-6 cursor-pointer duration-300" @click="()=>{indexStatu=i}">
+                        <svg v-if="i!=indexStatu" class=" w-5 fill-current text-[#63B6B9]" viewBox="0 0 24 24">
+                            <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z" /></svg>
+                        <svg v-else class=" w-5 fill-current text-[#63B6B9]" viewBox="0 0 24 24">
+                            <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 5a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5 5 5 0 0 0-5-5z" /></svg>
+                        <span :class="i==indexStatu?'base_bg  text-white':' text-black border-[1px] border-[#63B6B9]'" class=" px-3 py-1  rounded-md text-sm" v-text="item"></span>
+                    </div>
+                </div>
+                <div class="flex flex-row w-full">
+                    <input_ class=" w-full " :options="data_[3]"></input_>
+                    <input_ class=" w-full ml-3" :options="data_[4]"></input_>
+                </div>
+                <div class="flex mt-5 w-full flex-row">
+                    <textArea_ class=" w-full" :options="data_[5]"></textArea_>
+                </div>
+            </div>
+            <div :class="data_[0].model=='' || data_[1].model=='' || data_[2].model=='' || data_[3].model==''|| data_[4].model || data_[5].model==''?' opacity-50':' opacity-100'" class=" duration-300 flex mt-12 justify-center  flex-row w-full">
+                <btn_ @click="setIt()" :options="{label:'Valider',style:' base_bg text-white',ico:$store.state.icons.done}"></btn_>
+            </div>
+        </div>
+    </div>
+    </template>
+    
+        
+        
+    <script>
+    import input_ from '../../input/inputTxt.vue'
+    import textArea_ from '../../input/textarea.vue'
+    import btn_ from '../../button/btn_.vue';
+    import gsap from 'gsap'
+    export default {
+        data() {
+            return {
+                data_: [{
+                        label: 'Nom de l’incident',
+                        model: '',
+                        type: 'text'
+                    },
+                    {
+                        label: 'Source de l’incident',
+                        model: '',
+                        type: 'text'
+                    },
+                    {
+                        label: 'Description',
+                        model: '',
+                        type: 'text'
+                    },
+                    {
+                        label: 'Date de l’incident',
+                        model: '',
+                        type: 'text'
+                    },
+                    {
+                        label: 'Date de clôture de l’incident',
+                        model: '',
+                        type: 'text'
+                    },
+                    {
+                        label: 'Action menée',
+                        model: '',
+                        type: 'text'
+                    },
+                    {
+                        label: 'Action menée',
+                        model: '',
+                    },
+                ],
+                indexStatu: 0,
+                listeStatus: ['A traité', 'En cours', 'Resolue'],
+                niveauList: [{
+                        label: 'Niveau 1',
+                        val: ''
+                    },
+                    {
+                        label: 'Niveau 2',
+                        val: '0'
+                    },
+                    {
+                        label: 'Niveau 3',
+                        val: '1'
+                    },
+                    {
+                        label: 'Niveau 4',
+                        val: '2'
+                    },
+                ]
+            }
+        },
+        components: {
+            input_,
+            textArea_,
+            btn_
+        },
+        methods: {
+            setIt() {
+                console.log(this.data_)
+            },
+            set_(val) {
+                this.selected = val
+            }
+        },
+        mounted() {
+            gsap.fromTo("#poppupOrganisme", {
+                opacity: 0,
+    
+            }, {
+                duration: .5,
+                opacity: 1,
+            });
+        }
+    }
+    </script>
+        
+        
+    <style>
+        
+        </style>
+    

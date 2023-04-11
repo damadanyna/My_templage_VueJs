@@ -9,7 +9,7 @@
         <h1 class=" text-lg ml-2 text-teal-600 "> {{ this.$store.state.myData.selectFormation }}</h1>
 
     </div>
-    <div :class="howOrgPoppup==true?'flex-row':'flex-col'" class="flex  ">
+    <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex  ">
         <div class="flex-col duration-500  bg-white rounded-lg w-[40%] h-max  flex z-10">
             <div v-if="this.$store.state.myData.listeFormation.length>0" class=" text-xs flex-row">
 
@@ -40,13 +40,13 @@
                 </div>
             </div>
             <div v-else class="text-xs  text-stone-500 flex-col w-full h-full items-center justify-center flex">
-                <img src="../assets/vide.svg" alt="">
+                <img src="../../assets/vide.svg" alt="">
                 <flex class=" flex items-center my-3 flex-col">
                     <span>Vous avez aucun formation.</span>
                     <span>Cliquer ici pour creer.</span>
                 </flex>
                 <div class=" flex flex-row mx-1  ">
-                    <btn_ @click="()=>{howOrgPoppup=true}" class=" " :options="{label:'Nouvelle',ico:$store.state.icons.plus,style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
+                    <btn_ @click="()=>{showFormulaire=true}" class=" " :options="{label:'Nouvelle',ico:$store.state.icons.plus,style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@ export default {
     data() {
         return {
             listeMenu: ['ActionFormation', 'Bilan', 'VAE'],
-            howOrgPoppup: true,
+            showFormulaire: true,
             indexFormulaire: 0,
         }
     },

@@ -16,7 +16,7 @@
             <svg v-if=" options.ico" class=" fill-current w-4" viewBox="0 0 24 24">
             <path :d="options.ico" /></svg>
         </div>
-        <span v-if="options.label==''" class=" mx-2" :class="options.stylelabel">{{ options.label }}</span>
+        <span v-if="options.label!=''" class=" mx-2" :class="options.stylelabel">{{ options.label }}</span>
         <div v-if=" options.ico2" class="  bg-white p-1 rounded-md">
             <svg class="   text-red items-center  rounded-sm fill-current w-5" viewBox="0 0 24 24">
                 <path :d="options.ico2" /></svg>

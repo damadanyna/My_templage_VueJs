@@ -15,6 +15,7 @@ import gestionBeneficiaireview from '../views/listeFormation/gestionBeneficiaire
 import proprieteView from '../views/listeFormation/propriete_.vue'
 import liverApprentissatgeView from '../views/listeFormation/livretApprentissage_.vue'
 import tableDeVeille from '../views/veille/tableDeVeille_.vue'
+import infoPaiement from '../views/abonnement/pageAbonnement_.vue' 
 
 const routes = [
     {
@@ -81,7 +82,11 @@ const routes = [
         path: "/tableauDeVeille",
         name: "tableauDeVeille",
         component: tableDeVeille,
-    },
+    },{
+        path: "/infoPaiement",
+        name: "infoPaiement",
+        component: infoPaiement,
+    }, 
     // {
     //     path: "/",
     //     redirect: "/accueil",

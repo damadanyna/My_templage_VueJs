@@ -4,11 +4,11 @@
         <h1 class=" text-lg">Organismes </h1>
         <h1 class=" text-lg ml-2  "> > Gestion de site de formation</h1>
     </div>
-    <div :class="howOrgPoppup==true?'flex-row':'flex-col'" class="flex  ">
-        <div :class="howOrgPoppup==true?' px-5':'px-12'" class="flex-col duration-500  bg-white rounded-lg w-full h-max  flex z-10">
-            <span v-if="howOrgPoppup==false" class=" sticky top-6 py-3  bg-white font-bold text-lg">Raison social</span>
+    <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex  ">
+        <div :class="showFormulaire==true?' px-5':'px-12'" class="flex-col duration-500  bg-white rounded-lg w-full h-max  flex z-10">
+            <span v-if="showFormulaire==false" class=" sticky top-6 py-3  bg-white font-bold text-lg">Raison social</span>
             <!-- boite raison social -->
-            <div v-if="howOrgPoppup==false" class="flex flex-between mt-4 text-sm">
+            <div v-if="showFormulaire==false" class="flex flex-between mt-4 text-sm">
 
                 <!-- formulaire -->
                 <div class="flex flex-col border border-black w-2/5 rounded-lg">
@@ -43,13 +43,13 @@
             <!-- titre du tableau -->
             <div class="flex flex-row items-center sticky top-6 py-3  bg-white mt-6 justify-between w-full">
                 <div class="flex flex-row items-center">
-                    <button v-if="howOrgPoppup!=false" @click="()=>{howOrgPoppup=false}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
+                    <button v-if="showFormulaire!=false" @click="()=>{showFormulaire=false}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
                         <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                             <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
                     </button>
                     <h5 class=" font-semibold text-2xl">Listes des sites de formation</h5>
                 </div>
-                <btn_Vue v-if="howOrgPoppup==false" @click="()=> { howOrgPoppup=true}" :options="{label:'Nouveau site',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
+                <btn_Vue v-if="showFormulaire==false" @click="()=> { showFormulaire=true}" :options="{label:'Nouveau site',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
             </div>
             <div class="flex w-full text-sm mt-9">
                 <table class=" w-full items-start">
@@ -66,7 +66,7 @@
                                 <svg class=" fill-current text-[#63B6B9] w-4" viewBox="0 0 24 24">
                                     <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
                             </button>
-                            <u v-if="howOrgPoppup==false" class=" mx-2 text-stone-600"> Modifier</u>
+                            <u v-if="showFormulaire==false" class=" mx-2 text-stone-600"> Modifier</u>
                             <button class=" p-1 bg-stone-100 m-1 rounded-md">
                                 <svg class=" fill-current text-red rounded-md w-4" viewBox="0 0 24 24">
                                     <path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z" /></svg>
@@ -76,7 +76,7 @@
                 </table>
             </div>
         </div>
-        <popup v-if=" howOrgPoppup==true" class=" sticky top-6 mx-3 bg-white rounded-lg w-full h-max px-5 "></popup>
+        <popup v-if=" showFormulaire==true" class=" sticky top-6 mx-3 bg-white rounded-lg w-full h-max px-5 "></popup>
     </div>
 </div>
 </template>
@@ -118,7 +118,7 @@ export default {
                 text_fichier: 'document1.pdf'
             }, ],
 
-            howOrgPoppup: false,
+            showFormulaire: false,
             edit: false
         }
     },

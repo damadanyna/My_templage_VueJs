@@ -53,7 +53,7 @@
                     </div>
 
                 </div>
-                <btn_Vue class="shadow_ w-full flex " :options="{label:'SOUSCRIRE',style:'base_bg justify-center  base_bg text-white w-full'}"></btn_Vue>
+                <btn_Vue class="shadow_ w-full flex " :options="{url:{name:'infoPaiement'}, label:'SOUSCRIRE',style:'base_bg justify-center py-2 base_bg text-white w-full'}"></btn_Vue>
 
             </div>
         </div>
@@ -114,7 +114,7 @@
                 </div>
 
             </div>
-            <btn_Vue class="w-full flex" :options="{label:'SOUSCRIRE',style:' font-bold justify-center   base_bg text-white w-full'}"></btn_Vue>
+            <btn_Vue class="w-full flex" :options="{url:{name:'infoPaiement'},label:'SOUSCRIRE',style:' font-bold justify-center py-3 base_bg text-white w-full'}"></btn_Vue>
 
         </div>
 
@@ -168,7 +168,7 @@
                     </div>
 
                 </div>
-                <btn_Vue class="w-full flex shadow_ " :options="{label:'SOUSCRIRE',style:'base_bg justify-center  base_bg text-white w-full'}"></btn_Vue>
+                <btn_Vue class="shadow_ w-full flex " :options="{url:{name:'infoPaiement'}, label:'SOUSCRIRE',style:'base_bg justify-center py-2 base_bg text-white w-full'}"></btn_Vue>
 
             </div>
         </div>

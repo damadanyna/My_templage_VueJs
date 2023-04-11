@@ -102,7 +102,7 @@
 </script>
     
     
-<style>
+<style scoped>
          
     th{
         height: 100px;
