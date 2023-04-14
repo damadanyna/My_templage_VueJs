@@ -1,5 +1,5 @@
 <template>
-<!-- forumlaire de organisme -->
+<!-- forumlaire de detailPartenaire -->
 <div class=" bg-white rounded-lg flex px-1 py-5 flex-col z-20">
     <span class=" text-lg font-bold sticky mt-14 top-5 py-4 bg-white z-50">Listes des lieux d’exploitation :</span>
     <div class="flex w-ful justify-between">
@@ -71,7 +71,7 @@
     </div>
     <div class="flex w-full justify-between items-center my-7">
         <span class=" text-lgw font-semibold">Liste des contacts de la société</span>
-        <button class=" base_bg flex flex-row py-2 text-xs px-7 items-center rounded-md text-white">
+        <button @click="()=>{this.$store.state.isAdd=false}" class=" base_bg flex flex-row py-2 text-xs px-7 items-center rounded-md text-white">
             Ajouter un contact à la société
             <svg class=" w-5 text-white ml-3 fill-current" viewBox="0 0 24 24">
                 <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>

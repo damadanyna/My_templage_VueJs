@@ -93,7 +93,8 @@
         </div>
         <div v-if="showFormulaire==true" class="  flex flex-col  mx-3 bg-white rounded-lg w-[60%]  px-5">
             
-            <formulaire></formulaire>
+            <formulaire v-if="this.$store.state.isAdd==true"></formulaire>
+            <formulaireAjoutContacte v-else></formulaireAjoutContacte>
         </div>
     </div>
 </div>
@@ -104,19 +105,21 @@
 <script>
 import btn_ from '../components/button/btn_.vue'
 import formulaire from '../components/poppup/partenaire/detailPartenaire.vue'
+import formulaireAjoutContacte from '../components/poppup/partenaire/ajoutContacteSociete.vue'
 
 export default {
     components: {
         btn_,
-        formulaire,
+        formulaire,formulaireAjoutContacte
     },
     data() {
         return {
             listeMenu: ['ActionFormation', 'Bilan', 'VAE'],
             showFormulaire: false,
             indexFormulaire: 0,
+            
         }
-    }
+    }, 
 
 }
 </script>

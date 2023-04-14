@@ -16,5 +16,26 @@
   }
   .base_bg{
     background: #63B6B9;
-    ;
+    
   }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #63B6B9;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #42898B; 
+}
