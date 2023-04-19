@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@balkangraph/orgchart.js": "^8.10.10",
     "chart.js": "^4.2.1",
     "gsap": "^3.11.5",
     "vue": "^3.2.47",

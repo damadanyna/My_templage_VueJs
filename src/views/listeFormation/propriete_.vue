@@ -16,7 +16,7 @@
                 <!-- titre du tableau -->
                 <div class="flex flex-row sticky   py-6 w-full justify-between items-center px-5 top-5 bg-white">
                     <h5 class=" font-semibold text-sm text-teal-500 "> Nom du formation </h5>
-                    <btn_Vue :options="{label:'Nouveau',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
+                    <btn_ :options="{label:'Nouveau',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_>
                 </div>
                 <div class="flex w-full text-sm  px-5  ">
                     <table class=" text-xs  w-full items-start px-1">

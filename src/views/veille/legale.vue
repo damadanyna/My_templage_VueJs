@@ -2,9 +2,9 @@
   
   <div class=" bg-white rounded-lg w-full h-max px-12 flex z-10 flex-col ">
         <!-- titre du tableau -->
-        <div class="flex flex-row sticky top-16 py-2 w-full justify-between items-center bg-white mt-6">
+        <div class="flex flex-row sticky top-14 py-7 w-full justify-between items-center bg-white mt-6">
             <h5 class=" font-semibold text-lg">Légale et règlementairee</h5>
-            <btn_Vue :options="{label:'Veille',style:' base_bg text-white w-full',ico:$store.state.icons.listCheck}"></btn_Vue>
+            <btn_ :options="{label:'Veille',style:' base_bg text-white w-full',ico:$store.state.icons.listCheck}"></btn_>
         </div>
         <div class="flex w-full text-sm mt-4">
             <table class=" text-sm  w-full items-start px-1">
@@ -15,7 +15,7 @@
                     <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Date d'inscriptoin</th> 
                     <th class="  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
                 </tr>
-                <tr v-for="i in 3" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
+                <tr v-for="i in 3" :key="i" class=" duration-200 my-1 hover:text-[#63B6B9]  hover:bg-[#63B6B9]  ">
                     <td class=" text-gray-500 px-2" v-text="i"></td>
                     <td class="pl-5" v-text="'Ligne'+i"></td>
                     <td class="pl-5 ">
@@ -43,15 +43,15 @@
 
 <script>
 
-import btn_Vue from '../../components/button/btn_.vue'
+import btn_ from '../../components/button/btn_.vue'
 export default {
     components: {
-        btn_Vue,
+        btn_,
     },
 
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

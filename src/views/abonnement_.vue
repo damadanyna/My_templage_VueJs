@@ -53,7 +53,7 @@
                     </div>
 
                 </div>
-                <btn_Vue class="shadow_ w-full flex " :options="{url:{name:'infoPaiement'}, label:'SOUSCRIRE',style:'base_bg justify-center py-2 base_bg text-white w-full'}"></btn_Vue>
+                <btn_ class="shadow_ w-full flex " :options="{url:{name:'infoPaiement'}, label:'SOUSCRIRE',style:'base_bg justify-center py-2 base_bg text-white w-full'}"></btn_>
 
             </div>
         </div>
@@ -114,7 +114,7 @@
                 </div>
 
             </div>
-            <btn_Vue class="w-full flex" :options="{url:{name:'infoPaiement'},label:'SOUSCRIRE',style:' font-bold justify-center py-3 base_bg text-white w-full'}"></btn_Vue>
+            <btn_ class="w-full flex" :options="{url:{name:'infoPaiement'},label:'SOUSCRIRE',style:' font-bold justify-center py-3 base_bg text-white w-full'}"></btn_>
 
         </div>
 
@@ -168,7 +168,7 @@
                     </div>
 
                 </div>
-                <btn_Vue class="shadow_ w-full flex " :options="{url:{name:'infoPaiement'}, label:'SOUSCRIRE',style:'base_bg justify-center py-2 base_bg text-white w-full'}"></btn_Vue>
+                <btn_ class="shadow_ w-full flex " :options="{url:{name:'infoPaiement'}, label:'SOUSCRIRE',style:'base_bg justify-center py-2 base_bg text-white w-full'}"></btn_>
 
             </div>
         </div>
@@ -178,10 +178,10 @@
 </template>
 
 <script>
-import btn_Vue from '../components/button/btn_.vue'
+import btn_ from '../components/button/btn_.vue'
 export default {
     components: {
-        btn_Vue,
+        btn_,
     },
     data() {
         return {

@@ -3,13 +3,15 @@
 
     <div class=" flex flex-row  sticky duration-300 -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">
         <h1 class=" text-lg">Traitements aléas / logs</h1>
-        <!-- <h1 class=" text-lg ml-2  "> > Gestion de listes de formation</h1> -->
     </div>
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex ">
         <div :class="showFormulaire==true?' px-5  w-[40%] ':'px-12 w-full '" class="flex-col duration-500  bg-white rounded-lg h-max  flex z-10">
-
             <div class=" sticky top-6 mt-9 flex w-full bg-white py-4 flex-row mx-1  ">
-                <btn_ @click="()=>{showFormulaire=true}" class=" " :options="{label:'Nouvelle',ico:$store.state.icons.plus,style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
+                <btn_ v-if="showFormulaire==false" @click="()=>{showFormulaire=true}" class=" " :options="{label:'Nouvelle',ico:$store.state.icons.plus,style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
+                <button v-else @click="()=>{showFormulaire=false}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
+                    <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
+                        <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
+                </button>
             </div>
             <div class="flex w-full  first-letter:mt-4">
                 <table class=" text-xs   w-full items-start px-1 mt-10">
@@ -41,14 +43,9 @@
                         </td>
                     </tr>
                 </table>
-
             </div>
-
         </div>
         <div v-if="showFormulaire==true" class="  flex flex-col  mx-3 bg-white rounded-lg w-[60%]  px-5">
-            <div class=" sticky top-6 mt-9 z-30 flex w-full bg-white py-4 flex-row mx-1  ">
-                <btn_ @click="()=>{showFormulaire=false}" class=" " :options="{label:'Annuler',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
-            </div>
             <formulaire></formulaire>
         </div>
     </div>
@@ -62,7 +59,7 @@ import formulaire from '../components/poppup/traitement/traitement.vue'
 export default {
     components: {
         btn_,
-        formulaire, 
+        formulaire,
     },
     data() {
         return {

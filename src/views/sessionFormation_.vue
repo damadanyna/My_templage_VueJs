@@ -4,19 +4,19 @@
     <div class=" bg-white rounded-lg w-full h-max px-12 flex z-10 flex-col ">
 
         <!-- titre du tableau -->
-        <div class="flex flex-row sticky top-10 py-2 w-full justify-between items-center bg-white mt-6">
+        <div class="flex flex-row sticky top-10 py-6 w-full justify-between items-center bg-white mt-6">
             <h5 class=" font-semibold text-2xl">Séssion Formation</h5>
-            <btn_Vue :options="{label:'Nouveau',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
+            <btn_ :options="{label:'Nouveau',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_>
         </div>
         <div class="flex w-full text-sm mt-4">
-            <table class=" text-sm  w-full items-start px-1">
-                <tr class=" w-full">
+            <table class=" text-sm  w-full items-start px-1"> 
+                <tr class=" w-full sticky top-28 bg-white py-5  ">
                     <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
                     <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-400 ">TitreSite</th>
                     <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Etat</th>
                     <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Date Début</th>
                     <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Date Fin</th>
-                    <th class="  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
+                    <th class=" py-3  w-[19%] text-start text-stone-500 pl-5  ">Actions</th>
                 </tr>
                 <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
                     <td class=" text-gray-500 px-2" v-text="i"></td>
@@ -54,13 +54,14 @@
 </template>
 
 <script>
-import btn_Vue from '../components/button/btn_.vue'
+import btn_ from '../components/button/btn_.vue'
 export default {
     components: {
-        btn_Vue,
+        btn_,
     },
     data() {
-        return {
+        return { 
+            showFormulaire: false,
             raisonSocial: [{
                     label: 'Raison SOCIAL:',
                     text: 'NDA'

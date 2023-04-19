@@ -16,6 +16,7 @@ import proprieteView from '../views/listeFormation/propriete_.vue'
 import liverApprentissatgeView from '../views/listeFormation/livretApprentissage_.vue'
 import tableDeVeille from '../views/veille/tableDeVeille_.vue'
 import infoPaiement from '../views/abonnement/pageAbonnement_.vue' 
+import organigrammeView from '../views/equipe/organigrame_ Template.vue'
 
 const routes = [
     {
@@ -66,6 +67,10 @@ const routes = [
         path: "/traitement",
         name: "traitement",
         component: traitementView,
+    },{
+        path: "/organigramme",
+        name: "organigramme",
+        component: organigrammeView,
     },{
         path: "/procedure",
         name: "procedure",

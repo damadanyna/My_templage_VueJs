@@ -77,7 +77,7 @@
                 <!-- titre du tableau --> 
             <div class=" z-20 sticky top-6   bg-white rounded-lg py-5  flex justify-between w-full">
                     <h5 class=" font-semibold  ">Séssion Formation</h5>
-                    <btn_Vue :options="{label:'Nouveau',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
+                    <btn_ :options="{label:'Nouveau',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_>
                 </div>
                 <div class="flex w-full mt-14 text-sm ">
                     <table class=" text-xs  w-full items-start px-1">

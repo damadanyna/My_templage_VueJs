@@ -78,10 +78,10 @@
 </template>
 
 <script>
-import btn_Vue from '../components/button/btn_.vue'
+import btn_ from '../components/button/btn_.vue'
 export default {
     components: {
-        btn_Vue,
+        btn_,
     },
     data() {
         return {

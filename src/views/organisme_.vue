@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="flex w-full justify-end relative">
-                        <btn_Vue @click="setEditable" class=" absolute -mt-7 mr-5" :options="{label:edit==true?'Valider':'Editer',style:' base_bg text-white w-full',ico:edit==true?$store.state.icons.done:$store.state.icons.edit}"></btn_Vue>
+                        <btn_ @click="setEditable" class=" absolute -mt-7 mr-5" :options="{label:edit==true?'Valider':'Editer',style:' base_bg text-white w-full',ico:edit==true?$store.state.icons.done:$store.state.icons.edit}"></btn_>
                     </div>
                 </div>
 
@@ -33,8 +33,8 @@
                     <div v-for="item, i in importFichier" :key="i" class="flex flex-row">
                         <div class="flex flex-col">
                             <span v-text=" item.titre"></span>
-                            <btn_Vue :options="{label:item.label_fichier,style:' base_bg text-white w-full',ico:$store.state.icons.uploadFolder}"></btn_Vue>
-                            <btn_Vue class=" mt-3" :options="{label:item.text_fichier,style:' bg-gray-200 text-red-500 w-full',stylelabel:' text-black',ico:$store.state.icons.pdf_,ico2:$store.state.icons.delete}"></btn_Vue>
+                            <btn_ :options="{label:item.label_fichier,style:' base_bg text-white w-full',ico:$store.state.icons.uploadFolder}"></btn_>
+                            <btn_ class=" mt-3" :options="{label:item.text_fichier,style:' bg-gray-200 text-red-500 w-full',stylelabel:' text-black',ico:$store.state.icons.pdf_,ico2:$store.state.icons.delete}"></btn_>
                         </div>
                     </div>
                 </div>
@@ -49,11 +49,11 @@
                     </button>
                     <h5 class=" font-semibold text-2xl">Listes des sites de formation</h5>
                 </div>
-                <btn_Vue v-if="showFormulaire==false" @click="()=> { showFormulaire=true}" :options="{label:'Nouveau site',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_Vue>
+                <btn_ v-if="showFormulaire==false" @click="()=> { showFormulaire=true}" :options="{label:'Nouveau site',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_>
             </div>
             <div class="flex w-full text-sm mt-9">
                 <table class=" w-full items-start">
-                    <tr class=" w-full  ">
+                    <tr class=" w-full sticky top-20 bg-white py-2  ">
                         <th class="py-2 w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
                         <th class="py-2  w-[90%] text-start text-stone-500  pl-5 ">TitreSite</th>
                         <th class="py-2  w-[15] text-start text-stone-500  ">Actions</th>
@@ -82,11 +82,11 @@
 </template>
 
 <script>
-import btn_Vue from '../components/button/btn_.vue'
+import btn_ from '../components/button/btn_.vue'
 import popup from '../components/poppup/organisme/organisme.vue'
 export default {
     components: {
-        btn_Vue,
+        btn_,
         popup
     },
     data() {

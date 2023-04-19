@@ -2,7 +2,7 @@
     <div id="poppupOrganisme">
         <!-- forumlaire de organisme -->
         <div class=" bg-white rounded-lg flex px-1 py-5 flex-col z-20">
-            <span class=" text-sm font-bold sticky top-20 py-4 bg-white z-50">Traitement des aléas, difficultés et réclamations :</span>
+            <span class=" text-sm font-bold sticky top-6 py-5 bg-white z-50">Traitement des aléas, difficultés et réclamations :</span>
             <div class=" mt-8 flex flex-col">
                 <div class="flex flex-row w-full">
                     <input_ class=" w-full " :options="data_[0]"></input_>

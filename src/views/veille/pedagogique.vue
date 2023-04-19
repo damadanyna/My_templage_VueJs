@@ -4,7 +4,7 @@
         <!-- titre du tableau -->
         <div class="flex flex-row sticky top-16 py-2 w-full justify-between items-center bg-white mt-6">
             <h5 class=" font-semibold text-lg">Veille pédagogique</h5>
-            <btn_Vue :options="{label:'Veille',style:' base_bg text-white w-full',ico:$store.state.icons.listCheck}"></btn_Vue>
+            <btn_ :options="{label:'Veille',style:' base_bg text-white w-full',ico:$store.state.icons.listCheck}"></btn_>
         </div>
         <div class="flex w-full text-sm mt-4">
             <table class=" text-sm  w-full items-start px-1">
@@ -44,10 +44,10 @@
 
 <script>
 
-import btn_Vue from '../../components/button/btn_.vue'
+import btn_ from '../../components/button/btn_.vue'
 export default {
     components: {
-        btn_Vue,
+        btn_,
     },
     methods:{
         goTo_(){
