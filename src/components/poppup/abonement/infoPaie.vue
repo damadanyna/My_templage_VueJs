@@ -15,7 +15,7 @@
                     <input_ class=" w-[40%] " :options="data_[4]"></input_> 
                 </div>  
             <div class="flex flex-row w-full mt-5  border-[1px] border-[#63B6B9] items-center py-1 rounded-md bg-stone-200 px-2">
-                <div @click="()=>{isChecked==false?isChecked=true:isChecked=false}" class=" items-center py-1  flex flex-row text-xs ">
+                <div @click="()=>{isChecked==false?isChecked=true:isChecked=false}" class=" items-center py-1  flex flex-row text_xs ">
                     <svg v-if="isChecked==false" class=" fill-current w-5 text-[#63B6B9]" viewBox="0 0 24 24">
                         <path d="M19 3H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m0 2v14H5V5h14z" /></svg>
                     <svg v-else class=" fill-current w-5 text-[#63B6B9]" viewBox="0 0 24 24">

@@ -1,6 +1,7 @@
  
 const state = () => ({ 
-  sshowFormulaire: false
+  sshowFormulaire: false,
+  beneProp:true,
 })
 
  

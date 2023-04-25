@@ -3,10 +3,10 @@
     <h1 class=" text-lg sticky -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-9">Listes des equipes / sous-traitant</h1>
     <div class="w-full  flex flex-row">
         <div :class="showFormulaire==true?'w-[40%]':'w-full'" class=" duration-500 bg-white rounded-lg  h-max px-12 flex z-10 flex-col ">
+           
             <!-- entête -->
             <div class="flex flex-row sticky top-10 py-5 w-full justify-between items-center bg-white mt-6">
-                <h5 class=" font-semibold text-2xl">Equipes</h5>
-
+                <h5 class=" font-semibold text-2xl">Equipes</h5> 
                 <div class="flex flex-row">
                     <div class=" flex flex-row mx-1 ">
                         <btn_ class=" " :options="{url:{name:'organigramme'},label:'Organigramme',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_>
@@ -18,8 +18,9 @@
                     </button>
                 </div>
             </div>
+
             <!-- tableau -->
-            <div class="flex w-full text-xs mt-4">
+            <div class="flex w-full text_xs mt-4">
                 <table class=" w-full items-start px-1">
                     <tr class=" w-full sticky top-28 ">
                         <th class=" py-3 bg-white w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
@@ -38,7 +39,7 @@
                         <td v-if="showFormulaire==false" class="pl-5" v-text="'Gérant'"></td>
                         <td v-if="showFormulaire==false" class="pl-5 ">
                             <div class=" flex my-1">
-                                <button class=" px-2 bg-red-100 rounded-md text-red-600 text-xs  border-red-500 border py-1 ">Plus en activité</button>
+                                <button class=" px-2 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border py-1 ">Plus en activité</button>
                             </div>
                         </td>
                         <td class=" px-2">
@@ -50,8 +51,7 @@
                             </div>
                         </td>
                     </tr>
-                </table>
-
+                </table> 
             </div>
         </div>
         <div v-if="showFormulaire==true" class=" flex flex-col mx-3 bg-white rounded-lg w-[60%]  px-5">

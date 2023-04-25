@@ -12,7 +12,7 @@
                 <input_ class=" w-full " :options="data_[2]"></input_>
                 <input_ class=" w-full  ml-3" :options="data_[3]"></input_>
             </div>
-            <span class=" text-teal-500 text-xs mt-2">*Lié à un membre d'équipe</span>
+            <span class=" text-teal-500 text_xs mt-2">*Lié à un membre d'équipe</span>
             <div class="flex mt-5 flex-row w-full">
                 <textArea_ class=" w-full" :options="data_[4]"></textArea_>
                 <textArea_ class=" w-full ml-3" :options="data_[5]"></textArea_>
@@ -22,14 +22,14 @@
                 <input_ class=" w-full  ml-3" :options="data_[7]"></input_>
             </div>
             <div class="flex flex-col">
-                <span class=" text-teal-500 text-xs mt-2">*Délais des alertes si aucune activité est recensé </span>
-                <span class=" text-teal-500 text-xs ">sur le compte d'un bénéficiaire</span>
+                <span class=" text-teal-500 text_xs mt-2">*Délais des alertes si aucune activité est recensé </span>
+                <span class=" text-teal-500 text_xs ">sur le compte d'un bénéficiaire</span>
             </div>
             <div class="flex flex-row">
 
                 <div class="flex mt-5 flex-col w-full">
                     <span class=" font-bold">Accessibilité aux personnes handicapées</span>
-                    <span class=" flex text-xs">Si vous êtes en situation e handicape nous contacter,  afin d’évaluer l’accès à la formation</span>
+                    <span class=" flex text_xs">Si vous êtes en situation e handicape nous contacter,  afin d’évaluer l’accès à la formation</span>
                 </div>
                 <div class="flex mt-5 ml-3 flex-row w-full">
                     <textArea_ class=" w-full " :options="data_[8]"></textArea_>

@@ -5,18 +5,18 @@
         <h1 class=" text-lg ml-2  "> > Gestion de site de formation</h1>
     </div>
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex  ">
-        <div :class="showFormulaire==true?' px-5':'px-12'" class="flex-col duration-500  bg-white rounded-lg w-full h-max  flex z-10">
+        <div :class="showFormulaire==true?' px-5 w-[40%] ':'px-12'" class="bg-white flex-col duration-500 rounded-lg  h-max  flex z-10">
             <span v-if="showFormulaire==false" class=" sticky top-6 py-3  bg-white font-bold text-lg">Raison social</span>
             <!-- boite raison social -->
             <div v-if="showFormulaire==false" class="flex flex-between mt-4 text-sm">
 
                 <!-- formulaire -->
-                <div class="flex flex-col border border-black w-2/5 rounded-lg">
+                <div class="flex flex-col text-[12px] border border-black w-2/5 rounded-lg">
                     <div class="py-4 px-7">
                         <div v-for=" item,i in raisonSocial" :key="i" class="flex flex-row w-full items-center  my-6 ">
                             <span class=" font-semibold text-stone-800 min-w-max" v-text="item.label"></span>
                             <span v-if="edit==true" contenteditable class=" w-full ml-2 bg-stone-200 px-2 py-1 rounded-md" v-text="item.text"></span>
-                            <span v-else class=" w-full ml-2 bg-stone-200 px-2 py-1 rounded-md" v-text="item.text"></span>
+                            <span v-else class=" w-full ml-2 px-2 py-1 rounded-md" v-text="item.text"></span>
                         </div>
                         <div class="flex flex-row w-full items-center  my-6 ">
                             <span class=" font-semibold text-stone-800 min-w-max" v-text="'NDA : '"></span>
@@ -24,7 +24,13 @@
                         </div>
                     </div>
                     <div class="flex w-full justify-end relative">
-                        <btn_ @click="setEditable" class=" absolute -mt-7 mr-5" :options="{label:edit==true?'Valider':'Editer',style:' base_bg text-white w-full',ico:edit==true?$store.state.icons.done:$store.state.icons.edit}"></btn_>
+                        <!-- <btn_ @click="setEditable" class=" absolute -mt-5 mr-3" :options="{label:edit==true?'Valider':'',style:' base_bg text-white w-full px-0',ico:edit==true?$store.state.icons.done:$store.state.icons.edit}"></btn_> -->
+                        <button @click="setEditable" class=" p-1 bg-[#63B6B9] rounded-md absolute -mr-3 -mt-4">
+                            <svg v-if="edit==false" class=" w-5 fill-current text-white" viewBox="0 0 24 24">
+                                <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
+                            <svg v-else class=" w-5 fill-current text-white" viewBox="0 0 24 24">
+                                <path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7z" /></svg>
+                        </button>
                     </div>
                 </div>
 
@@ -32,7 +38,7 @@
                 <div class="h-full w-3/4 px-7  flex flex-row justify-between ">
                     <div v-for="item, i in importFichier" :key="i" class="flex flex-row">
                         <div class="flex flex-col">
-                            <span v-text=" item.titre"></span>
+                            <span v-text=" item.titre" class=" font-semibold"></span>
                             <btn_ :options="{label:item.label_fichier,style:' base_bg text-white w-full',ico:$store.state.icons.uploadFolder}"></btn_>
                             <btn_ class=" mt-3" :options="{label:item.text_fichier,style:' bg-gray-200 text-red-500 w-full',stylelabel:' text-black',ico:$store.state.icons.pdf_,ico2:$store.state.icons.delete}"></btn_>
                         </div>
@@ -41,7 +47,7 @@
             </div>
 
             <!-- titre du tableau -->
-            <div class="flex flex-row items-center sticky top-6 py-3  bg-white mt-6 justify-between w-full">
+            <div class="flex z-50 flex-row items-center sticky top-6 py-3  bg-white mt-6 justify-between w-full">
                 <div class="flex flex-row items-center">
                     <button v-if="showFormulaire!=false" @click="()=>{showFormulaire=false}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
                         <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
@@ -55,42 +61,60 @@
                 <table class=" w-full items-start">
                     <tr class=" w-full sticky top-20 bg-white py-2  ">
                         <th class="py-2 w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
-                        <th class="py-2  w-[90%] text-start text-stone-500  pl-5 ">TitreSite</th>
-                        <th class="py-2  w-[15] text-start text-stone-500  ">Actions</th>
+                        <th :class="showFormulaire==true?'w-[80%] ':'w-[80%]'" class="py-2 text-start text-stone-500  pl-5 ">TitreSite</th>
+                        <th :class="showFormulaire==true?'w-[20%]':'w-[20%]'" class="py-2 text-center text-stone-500 ">Actions</th>
                     </tr>
-                    <tr v-for="i in 20" :key="i" class=" hover:text-white rounded-lg hover:bg-[#63B6B9]">
+                    <tr v-for="i in 20" :key="i" class=" group text-[12px] hover:text-white   hover:bg-[#63B6B9]">
                         <td class=" text-gray-500 px-3" v-text="i"></td>
-                        <td class="pl-5" v-text="'Ligne'+i"></td>
-                        <td class="  px-3 flex flex-row items-center">
-                            <button class=" p-1 bg-stone-100 rounded-md m-1 py-1">
-                                <svg class=" fill-current text-[#63B6B9] w-4" viewBox="0 0 24 24">
-                                    <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
-                            </button>
-                            <u v-if="showFormulaire==false" class=" mx-2 text-stone-600"> Modifier</u>
-                            <button class=" p-1 bg-stone-100 m-1 rounded-md">
-                                <svg class=" fill-current text-red rounded-md w-4" viewBox="0 0 24 24">
-                                    <path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z" /></svg>
-                            </button>
+                        <td class="pl-5">
+                            <span v-if="editTab!=i" v-text="'Ligne'+i"></span>
+                            <div v-else class="flex w-full">
+                                <input_ class=" w-full " :options="{ label: 'Titre Site', model:'Ligne'+i,type: 'text'}"></input_>
+                            </div>
+                        </td>
+                        <td class="  px-3 ">
+                            <div class="flex flex-row items-center">
+                                <button @click="()=>{editIt(i)}" class=" p-1 bg-stone-100 rounded-md m-1 py-1">
+                                    <svg class=" fill-current text-[#63B6B9] w-4" viewBox="0 0 24 24">
+                                        <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
+                                </button>
+                                <u v-if="showFormulaire==false" @click="()=>{editIt(i)}" class=" group-hover:text-white text-[#63B6B9]">Modifier</u>
+                                <button class=" ml-3 p-1 bg-stone-100 m-1 rounded-md">
+                                    <svg class=" fill-current text-red rounded-md w-4" viewBox="0 0 24 24">
+                                        <path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z" /></svg>
+                                </button>
+                            </div>
                         </td>
                     </tr>
                 </table>
             </div>
         </div>
-        <popup v-if=" showFormulaire==true" class=" sticky top-6 mx-3 bg-white rounded-lg w-full h-max px-5 "></popup>
+        <popup v-if=" showFormulaire==true" class=" sticky top-6 mx-3 bg-white rounded-lg  w-[60%] h-max px-5 "></popup>
     </div>
 </div>
 </template>
 
 <script>
 import btn_ from '../components/button/btn_.vue'
+import input_ from '../components/input/inputTxt.vue'
 import popup from '../components/poppup/organisme/organisme.vue'
 export default {
     components: {
         btn_,
-        popup
+        popup,
+        input_
     },
     data() {
         return {
+            data_: {
+                label: 'TitreSite',
+                model: '',
+                type: 'text',
+                edit: null,
+
+            },
+
+            editTab: null,
             raisonSocial: [{
                     label: 'Raison SOCIAL:',
                     text: 'NDA'
@@ -123,8 +147,11 @@ export default {
         }
     },
     methods: {
-        setEditable() { 
+        setEditable() {
             this.edit == true ? this.edit = false : this.edit = true
+        },
+        editIt(i) {
+            this.editTab == null ? this.editTab = i : this.editTab = null
         }
     }
 

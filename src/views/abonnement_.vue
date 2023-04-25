@@ -1,7 +1,7 @@
 <template>
 <div class="flex flex-col h-full">
     <h1 class=" text-lg sticky -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-9">Page Abonnement</h1>
-    <div class=" bg-white rounded-lg w-full h-max px-12 py-3 flex z-10 text-xs flex-row justify-between">
+    <div class=" bg-white rounded-lg w-full h-max px-12 py-3 flex z-10 text_xs flex-row justify-between">
 
         <!-- Base -->
         <div class="flex w-2/5 items-center">
@@ -14,7 +14,7 @@
                         <span class=" text-xl  ">€</span>
                     </div>
                 </div>
-                <span class=" text-xs text-stone-600">Par mois</span>
+                <span class=" text_xs text-stone-600">Par mois</span>
                 <div class="flex my-5 flex-col w-full items-center ">
                     <div class="flex py-2 w-full flex-row">
                         <div>
@@ -68,7 +68,7 @@
                     <span class=" text-xl font-bold ">€</span>
                 </div>
             </div>
-            <span class=" text-xs text-stone-600">Par mois</span>
+            <span class=" text_xs text-stone-600">Par mois</span>
             <div class="flex my-5 flex-col w-full items-center ">
                 <div class="flex py-2 w-full flex-row">
                     <div>
@@ -129,7 +129,7 @@
                         <span class=" text-xl   ">€</span>
                     </div>
                 </div>
-                <span class=" text-xs text-stone-600">Par mois</span>
+                <span class=" text_xs text-stone-600">Par mois</span>
                 <div class="flex my-5 flex-col w-full items-center ">
                     <div class="flex pt-2 pb-1 w-full flex-row">
                         <div>

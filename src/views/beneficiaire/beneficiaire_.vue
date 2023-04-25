@@ -1,27 +1,26 @@
 <template>
-<div class="flex flex-col h-full">
+<div class="flex flex-col w-full h-full">
 
-    <div class=" flex flex-row  sticky justify-between duration-300 -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">
+    <div class=" flex flex-row  sticky    duration-300 -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">
         <div class="flex flex-row">
             <h1 class=" text-lg base_bg px-2 rounded-r-md"> Bénéficiaire: </h1>
             <h1 class=" text-lg ml-2  "> : {{ this.$store.state.myData.selectFormation }}</h1>
         </div>
-        <div class="flex flex-row"> 
+        <div class="flex flex-row">
             <span class=" mx-10">></span>
             <h1 class="text-lg wpx-2 rounded-r-md">Livret d’apprentissage :</h1>
             <h1 class=" text-lg ml-2 text-teal-600 "> {{ this.$store.state.myData.selectFormation }}</h1>
         </div>
-        <btn_ :options="{label:'Modification du programme de formation',style:' base_bg text-white w-full',ico:$store.state.icons.edit}"></btn_>
 
     </div>
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex  ">
         <div class="flex-col duration-500  bg-white rounded-lg w-[40%] h-max  flex z-10">
             <div v-if="this.$store.state.myData.listeFormation.length>0" class=" text-sm flex-row">
                 <!-- titre du tableau -->
-                <div class="flex flex-row sticky   py-6 w-full justify-between items-center px-5 top-5 bg-white">
-                    <h5 class=" font-semibold text-sm text-teal-500 "> Nom du formation </h5>
-                    <btn_ :options="{label:'Nouveau',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_>
-                </div>
+                <button @click="()=>{$router.go(-1)}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
+                    <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
+                        <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
+                </button>
                 <div class="flex w-full px-3 text-sm mt-5">
                     <table class=" text_xs  w-full items-start px-1">
                         <tr class=" w-full">
@@ -50,23 +49,11 @@
         <div class="  flex flex-col  mx-3 bg-white rounded-lg w-full px-10">
             <div class=" z-20 sticky top-6  mx-3 bg-white py-5  flex-row items-center flex justify-between w-full">
                 <h1 class=" font-semibold">[Name Objectif]</h1>
-                <div class="flex flex-row items-center text_xs">
-                    <span class=" font-bold">Durée estimé</span>
-                    <span class=" py-2 bg-stone-200 mx-2 px-2 border-b-[1px] border-teal-600">02 heures</span>
-                    <btn_ :options="{label:'Document',style:' base_bg text-white w-full',ico:$store.state.icons.list}"></btn_>
-
-                </div>
             </div>
             <livretApp class=" px-4"></livretApp>
             <span class="flex border-b-[2px] border-stone-300 py-3"></span>
             <div class=" z-20 sticky top-6  mx-3 bg-white py-5  flex-row items-center flex justify-between w-full">
                 <h1 class=" font-semibold">[Name Objectif]</h1>
-                <div class="flex flex-row items-center text_xs">
-                    <span class=" font-bold">Durée estimé</span>
-                    <span class=" py-2 bg-stone-200 mx-2 px-2 border-b-[1px] border-teal-600">02 heures</span>
-                    <btn_ :options="{label:'Document',style:' base_bg text-white w-full',ico:$store.state.icons.list}"></btn_>
-
-                </div>
             </div>
             <livretApp class=" px-4"></livretApp>
             <div class="mt-12 px-3">
@@ -148,6 +135,8 @@
 </div>
 </template>
 
+    
+    
 <script>
 import btn_ from '../../components/button/btn_.vue'
 import popup from '../../components/poppup/organisme/organisme.vue'
@@ -177,7 +166,8 @@ export default {
 
 }
 </script>
-
+    
+    
 <style>
-              
-              </style>
+                  
+                  </style>

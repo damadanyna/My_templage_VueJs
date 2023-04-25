@@ -39,3 +39,18 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #42898B; 
 }
+
+td:first-child{
+  border-radius: 5px 0px 0px 5px; 
+}
+td:last-child{
+  border-radius: 0px 5px 5px 0px;
+}
+select::after{
+  border-bottom: 1px solid gray;
+}
+
+/* set default text size */
+.text_xs{
+  font-size: 13px;
+}

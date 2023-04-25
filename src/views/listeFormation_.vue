@@ -1,5 +1,5 @@
 <template>
-<div class="flex flex-col h-full">
+<div class="flex flex-col h-full ">
 
     <div class=" flex flex-row  sticky duration-300 -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">
         <h1 class=" text-lg">Liste formations </h1>
@@ -7,7 +7,7 @@
     </div>
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex  ">
         <div :class="showFormulaire==true?' px-5  w-[40%] ':'px-12 w-full '" class="flex-col duration-500  bg-white rounded-lg h-max  flex z-10">
-            <div v-if=" this.$store.state.myData.listeFormation.length>0" class=" text-xs flex-row">
+            <div v-if=" this.$store.state.myData.listeFormation.length>0" class=" text_xs flex-row">
                 <div class="flex flex-row sticky z-40 top-6 py-4 bg-white mt-6">
                     <div :class="showFormulaire==true?'':' ml-12'" class="flex  flex-row items-center">
                         <button v-if="showFormulaire!=false" @click="()=>{showFormulaire=false}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
@@ -32,10 +32,10 @@
                         <div :class="showFormulaire==true?'flex-col mt-6 w-full':'flex-row'" class=" transform flex  justify-between">
                             <div class=" flex flex-row w-full ">
                                 <div class=" flex flex-row mx-1 ">
-                                    <btn_ class=" " :options="{url:{name:'gestionBeneficiaire'},label:'Gestion bénéficiaire',style:' bg-teal-700 text-xs  text-stone-100 '}"></btn_>
+                                    <btn_ class=" " :options="{url:{name:'gestionBeneficiaire'},label:'Gestion bénéficiaire',style:' bg-teal-700 text_xs  text-stone-100 '}"></btn_>
                                 </div>
                                 <div class=" flex flex-row mx-1 ">
-                                    <btn_ class=" " :options="{label:'Gestion session',style:'bg-teal-700 text-xs  text-stone-100 '}"></btn_>
+                                    <btn_ class=" " :options="{label:'Gestion session',style:'bg-teal-700 text_xs  text-stone-100 '}"></btn_>
                                 </div>
                                 <div v-if="showFormulaire==true" class=" flex flex-row ">
                                     <btn_ class=" shadow-md " :options="{label:'Supprimer',style:' bg-stone-200  text-red ',ico:$store.state.icons.delete}"></btn_>
@@ -48,7 +48,7 @@
                                     <btn_ class=" " :options="{label:'Gestion Formation',style:' bg-stone-100 py-1 text-stone-800 '}"></btn_>
                                 </div>
                                 <button v-if="showFormulaire==true" class=" ml-3 bg-white p-1 mx-1 px-2 rounded-md">
-                                    <svg class=" w-4 fill-current text-xs text-red-500" viewBox="0 0 24 24">
+                                    <svg class=" w-4 fill-current text_xs text-red-500" viewBox="0 0 24 24">
                                         <path d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12z" /></svg>
                                 </button>
                             </div>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            <div v-else class="text-xs  text-stone-500 flex-col w-full h-full items-center justify-center flex">
+            <div v-else class="text_xs  text-stone-500 flex-col w-full h-full items-center justify-center flex">
                 <img src="../assets/vide.svg" alt="">
                 <flex class=" flex items-center my-3 flex-col">
                     <span>Vous avez aucun formation.</span>
@@ -87,7 +87,7 @@
             <espaceQuestionVue class=" px-5"></espaceQuestionVue>
 
             <div class="flex flex-row my-14 w-full justify-center"> 
-                <btn_ class=" ml-2 " :options="{label:'Sauvegarder',style:' base_bg text-xs  text-white ',ico:$store.state.icons.done}"></btn_>
+                <btn_ class=" ml-2 " :options="{label:'Sauvegarder',style:' base_bg text_xs  text-white ',ico:$store.state.icons.done}"></btn_>
             </div>
         </div>
     </div>

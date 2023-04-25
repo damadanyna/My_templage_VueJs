@@ -20,7 +20,7 @@
             <div class="flex flex-row items-center sticky top-7  bg-white mt-12 justify-between w-full">
                 <h5 class=" font-semibold text-2xl py-5">Partenaire socio-économiques</h5>
             </div>
-            <div class="flex w-full text-xs mt-4">
+            <div class="flex w-full text_xs mt-4">
                 <table class=" w-full items-start px-1">
                     <tr class=" w-full">
                         <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
@@ -33,7 +33,7 @@
                         <td class="pl-5" v-text="'Ligne'+i"></td>
                         <td v-if="showFormulaire!=true" class="pl-5 ">
                             <div class=" flex my-1">
-                                <button class=" px-5 bg-red-100 rounded-md text-red-600 text-xs  border-red-500 border py-1 ">Plus en activité</button>
+                                <button class=" px-5 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border py-1 ">Plus en activité</button>
                             </div>
                         </td>
                         <td class=" px-2">
@@ -57,7 +57,7 @@
             <div class="flex flex-row items-center sticky top-7  bg-white mt-12 justify-between w-full">
                 <h5 class=" font-semibold text-2xl py-5">Partenaire handicap</h5>
             </div>
-            <div class="flex w-full text-xs mt-4">
+            <div class="flex w-full text_xs mt-4">
                 <table class=" w-full items-start px-1">
                     <tr class=" w-full">
                         <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
@@ -70,7 +70,7 @@
                         <td class="pl-5" v-text="'Ligne'+i"></td>
                         <td v-if="showFormulaire!=true" class="pl-5 ">
                             <div class=" flex my-1">
-                                <button class=" px-5 bg-red-100 rounded-md text-red-600 text-xs  border-red-500 border py-1 ">Plus en activité</button>
+                                <button class=" px-5 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border py-1 ">Plus en activité</button>
                             </div>
                         </td>
                         <td class=" px-2">

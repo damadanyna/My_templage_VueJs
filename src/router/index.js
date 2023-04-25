@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory, } from "vue-router"; 
-import organismeView from '../views/organisme_.vue' ;
+import organismeView from '../views/organisation_.vue' ;
 import listeFormationView from '../views/listeFormation_.vue' ;
 import sessionFormatonView from '../views/sessionFormation_.vue';
 import listeBeneficiaireView from '../views/listeBeneficiaire_.vue';
@@ -17,6 +17,10 @@ import liverApprentissatgeView from '../views/listeFormation/livretApprentissage
 import tableDeVeille from '../views/veille/tableDeVeille_.vue'
 import infoPaiement from '../views/abonnement/pageAbonnement_.vue' 
 import organigrammeView from '../views/equipe/organigrame_ Template.vue'
+import objectifView from '../views/beneficiaire/beneficiaire_.vue'
+import chatView from '../views/sessionFormation/chat_.vue'
+import evaluationView from '../views/sessionFormation/evaluation_.vue'
+import gestionFormation from '../views/gestionFormation_.vue'
 
 const routes = [
     {
@@ -27,6 +31,18 @@ const routes = [
         path: "/alert",
         name: "alert",
         component: alertView,
+    },{
+        path: "/evaluation",
+        name: "evaluation",
+        component: evaluationView,
+    },{
+        path: "/gestionFormation",
+        name: "gestionFormation",
+        component: gestionFormation,
+    },{
+        path: "/chat",
+        name: "chat",
+        component: chatView,
     },{
         path: "/listeFormation",
         name: "listeFormation",
@@ -42,7 +58,12 @@ const routes = [
     },{
         path: "/listeBeneficiaire",
         name: "listeBeneficiaire",
-        component: listeBeneficiaireView,
+        component: listeBeneficiaireView, 
+        children: [{
+            path: "/listeBeneficiaire/:id",
+            name: "objectif",
+            component: objectifView,
+        }]
     },{
         path: "/equipe",
         name: "equipe",
@@ -91,7 +112,7 @@ const routes = [
         path: "/infoPaiement",
         name: "infoPaiement",
         component: infoPaiement,
-    }, 
+    },  
     // {
     //     path: "/",
     //     redirect: "/accueil",

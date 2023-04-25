@@ -14,7 +14,7 @@
                 </button>
             </div>
             <div class="flex w-full  first-letter:mt-4">
-                <table class=" text-xs   w-full items-start px-1 mt-10">
+                <table class=" text_xs   w-full items-start px-1 mt-10">
                     <tr class=" w-full h-10 sticky top-20 bg-white">
                         <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
                         <th class="  w-[56%] text-start text-stone-500 pl-5 border-r border-stone-400">NomIncident</th>

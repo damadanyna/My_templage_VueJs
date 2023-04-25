@@ -6,7 +6,7 @@
         <!-- tableau des exercices -->
 
         <div class="flex w-full text-sm ">
-            <table class=" text-xs  w-full items-start px-1">
+            <table class=" text_xs  w-full items-start px-1">
                 <tr class=" w-full">
                     <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
                     <th class="  w-[56%] text-center text-stone-500 mx-2 border-r border-stone-400 ">Liste exercices</th>
@@ -17,8 +17,8 @@
                     <td class=" group-hover:text-white text-start text-gray-500 " v-text="item.id"></td>
                     <td class=" text-center" v-text="item.label"></td>
                     <td class=" text-center">
-                        <button v-if="item.result=='Echoué'" v-text="item.result" class=" py-1  px-2 my-1 bg-red-100 rounded-md text-red-600 text-xs  border-red-500 border"></button>
-                        <button v-if="item.result=='Reussi'" v-text="item.result" class=" py-1  px-2 my-1 bg-green-100 rounded-md text-green-600 text-xs  border-green-500 border"></button>
+                        <button v-if="item.result=='Echoué'" v-text="item.result" class=" py-1  px-2 my-1 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border"></button>
+                        <button v-if="item.result=='Reussi'" v-text="item.result" class=" py-1  px-2 my-1 bg-green-100 rounded-md text-green-600 text_xs  border-green-500 border"></button>
                     </td>
                     <td class=" text-[#63B6B9] group-hover:text-white items-center">
                         <div class="  flex flex-row text-center">

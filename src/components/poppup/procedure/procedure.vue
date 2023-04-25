@@ -9,15 +9,7 @@
         <div class="flex flex-row w-full items-center">
             <div class="flex w-[30%] flex-col my-3  ">
                 <span class=" font-bold text-sm ">Fonction :</span>
-                <div class="flex flex-row text-sm base_bg px-3 py-2 rounded-lg">
-                    <select name="" id="" class=" text-white outline-none ">
-                        <option v-for=" item,i in niveaufonction" :key="i" :value="item.val" v-text="item.label" class=" border-b border-stone-400 text-black "></option>
-                    </select>
-                    <div class="">
-                        <svg class="   text-white items-center  rounded-sm fill-current w-5" viewBox="0 0 24 24">
-                            <path :d="$store.state.icons.menu_down" /></svg>
-                    </div>
-                </div>
+                <selectOption :options="niveaufonction"></selectOption>  
             </div>
             <div class="flex flex-col  w-[70%] mt-5 ml-4">
                 <div class="flex flex-row"> 
@@ -37,8 +29,9 @@
 </template>
 
 <script>
-import input_ from '../../input/inputTxt.vue'
-import textArea_ from '../../input/textarea.vue'
+import input_ from '../../input/inputTxt.vue';
+import selectOption from '../../input/selectOption.vue';
+import textArea_ from '../../input/textarea.vue';
 import btn_ from '../../button/btn_.vue';
 import gsap from 'gsap'
 export default {
@@ -69,7 +62,7 @@ export default {
     components: {
         input_,
         textArea_,
-        btn_
+        btn_,selectOption
     },
     methods: {
         setIt() {

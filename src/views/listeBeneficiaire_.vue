@@ -1,12 +1,12 @@
 <template>
-<div class="flex flex-row">
-    <div :class="showFormulaire==true?'w-[40%]':' w-full'" class="flex flex-col h-full">
+<div v-if="!$route.params.id " class="flex flex-row">
+    <div :class="showFormulaire==true ?'w-[40%]':' w-full'" class="flex flex-col h-full">
         <h1 class=" text-lg sticky -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">Liste Bénéfice</h1>
-        <div class=" duration-500 bg-white rounded-lg h-max px-12 flex z-10 flex-col ">
+        <div  class=" duration-500 bg-white rounded-lg h-max px-12 flex z-10 flex-col ">
 
             <!-- recherche -->
             <div class="flex  flex-row sticky top-5 py-5 bg-white mt-4">
-                <div v-if="showFormulaire==false" class="flex ml-12 flex-row items-center">
+                <div v-if="showFormulaire==false " class="flex ml-12 flex-row items-center">
                     <svg class=" text-stone-500 w-5 fill-current" viewBox="0 0 24 24">
                         <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z" /></svg>
                     <input type="text" class=" px-3 border-b border-stone-400 outline-none focus:border-black " placeholder=" Lancer un recherche ">
@@ -37,7 +37,7 @@
                         <td class="pl-5" v-text="'Prénom'"></td>
                         <td class="pl-5 ">
                             <div class=" flex my-1">
-                                <button class=" px-2 bg-red-100 rounded-md text-red-600 text-xs  border-red-500 border py-1 ">A traité</button>
+                                <button class=" px-2 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border py-1 ">A traité</button>
                             </div>
                         </td>
                         <td v-if="showFormulaire==false" class="pl-5" v-text="'18 juin 2025'"></td>
@@ -54,33 +54,44 @@
 
             </div>
         </div>
+ 
+    </div> 
 
-    </div>
-
-    <div v-if="showFormulaire==true" class=" flex flex-col   rounded-lg w-[60%]  px-3">
-        <div class="flex sticky -top-6  flex-row items-center">
+    <div v-if="showFormulaire==true  " class=" flex flex-col   rounded-lg w-[60%]  px-3">
+        <div class="flex sticky z-50 -top-6  bg-stone-100 flex-row items-center">
             <span class=" text-xl text-stone-400 mr-2">></span>
-            <h1 class=" text-lg w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">Bénéficiaire :</h1>
+            <h1 class=" text-lg w-full   z-50 font-bold text-stone-600 pt-2 pb-3">Bénéficiaire :</h1>
         </div>
-        <div class="sticky top-5 py-5 bg-white flex-col flex w-full bg-white rounded-md px-5">
-        <documentBenefVue></documentBenefVue>
-        <ficheEtrepriseVue></ficheEtrepriseVue>
-        <infoBenefVue></infoBenefVue>
+        <div class=" z-20 flex-col flex w-full ">
+            <ficheEtrepriseVue class="   px-5 bg-white rounded-md"></ficheEtrepriseVue>
+            <div class="flex flex-col    px-5 bg-white mt-4 rounded-md">
+                <infoBenefVue></infoBenefVue>
+                <documentBenefVue></documentBenefVue>
+                <LivretApprentissage></LivretApprentissage>
+            </div>
         </div>
     </div>
+</div>
+<div v-else class=" flex flex-row w-full">
+    <livret></livret>
 </div>
 </template>
 
 <script>
-import btn_ from '../components/button/btn_.vue' 
+import btn_ from '../components/button/btn_.vue'
 import documentBenefVue from '../components/poppup/listeBenef/documentBenef.vue'
 import ficheEtrepriseVue from '../components/poppup/listeBenef/ficheEtreprise.vue'
 import infoBenefVue from '../components/poppup/listeBenef/infoBenef.vue'
+import LivretApprentissage from '../components/poppup/listeBenef/livretApprentissage.vue' 
+import livret from './beneficiaire/beneficiaire_.vue'
 
 export default {
     components: {
         btn_,
-        documentBenefVue,ficheEtrepriseVue,infoBenefVue
+        documentBenefVue,
+        ficheEtrepriseVue,
+        infoBenefVue,
+        LivretApprentissage,livret
     },
     data() {
         return {
@@ -112,6 +123,9 @@ export default {
                 text_fichier: 'document1.pdf'
             }, ],
         }
+    },
+    mounted() {
+        console.log(this.$route.query.name);
     }
 
 }

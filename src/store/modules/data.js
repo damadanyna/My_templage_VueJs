@@ -70,6 +70,22 @@ const state = () => ({
             result:'Echoué'
         },
     ],
+    livetApprentissage:[{
+       id:1,
+        nomFomation:'Les clés pour réussir votre projet',
+        dateInsc:'18 juin 2025',
+        etat:'En formation',
+    },{
+        id:2,
+        nomFomation:'Titre formation',
+        dateInsc:'18 juin 2025',
+        etat:'En formation',
+    },{
+        id:3,
+        nomFomation:'Les clés pour réussir votre projet',
+        dateInsc:'18 juin 2025',
+        etat:'Abandonné',
+    },],
     selectFormation:'null'
   })
   

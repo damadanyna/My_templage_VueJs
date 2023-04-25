@@ -32,7 +32,7 @@
                     <svg class=" fill-current text-red-500 w-4" viewBox="0 0 24 24">
                         <path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m4.1 9.4c-.02.04-.29 1.76-2.1 4.69 0 0-3.5 1.82-2.67 3.18.67 1.08 2.32-.04 3.74-2.68 0 0 1.82-.64 4.24-.82 0 0 3.86 1.73 4.39-.11.52-1.86-3.06-1.44-3.7-1.25 0 0-2-1.35-2.5-3.21 0 0 1.14-3.95-.61-3.9-1.75.05-1.09 3.13-.79 4.1m.81 1.04c.03.01.47 1.21 1.89 2.46 0 0-2.33.46-3.39.9 0 0 1-1.73 1.5-3.36m3.93 2.72c.58-.16 2.33.15 2.26.48-.06.33-2.26-.48-2.26-.48M7.77 17c-.53 1.24-1.44 2-1.67 2-.23 0 .7-1.6 1.67-2m3.14-6.93c0-.07-.36-2.2 0-2.15.54.08 0 2.08 0 2.15z" /></svg>
                 </button>
-                <span class=" text-xs mx-2">document1.pdf</span>
+                <span class=" text_xs mx-2">document1.pdf</span>
                 <button class=" flex flex-row base_bg p-1  items-center rounded-md">
                     <svg class=" fill-current text-white w-4" viewBox="0 0 24 24">
                         <path d="m17 13-5 5-5-5h3V9h4v4m5.35-2.97A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.03A6.004 6.004 0 0 0 0 14a6 6 0 0 0 6 6h13a5 5 0 0 0 5-5c0-2.64-2.05-4.78-4.65-4.97z" /></svg>
@@ -48,7 +48,7 @@
                     <svg class=" fill-current text-red-500 w-4" viewBox="0 0 24 24">
                         <path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m4.1 9.4c-.02.04-.29 1.76-2.1 4.69 0 0-3.5 1.82-2.67 3.18.67 1.08 2.32-.04 3.74-2.68 0 0 1.82-.64 4.24-.82 0 0 3.86 1.73 4.39-.11.52-1.86-3.06-1.44-3.7-1.25 0 0-2-1.35-2.5-3.21 0 0 1.14-3.95-.61-3.9-1.75.05-1.09 3.13-.79 4.1m.81 1.04c.03.01.47 1.21 1.89 2.46 0 0-2.33.46-3.39.9 0 0 1-1.73 1.5-3.36m3.93 2.72c.58-.16 2.33.15 2.26.48-.06.33-2.26-.48-2.26-.48M7.77 17c-.53 1.24-1.44 2-1.67 2-.23 0 .7-1.6 1.67-2m3.14-6.93c0-.07-.36-2.2 0-2.15.54.08 0 2.08 0 2.15z" /></svg>
                 </button>
-                <span class=" text-xs mx-2">Certificat_document.pdf</span>
+                <span class=" text_xs mx-2">Certificat_document.pdf</span>
                 <button class=" flex flex-row base_bg p-1  items-center rounded-md">
                     <svg class=" fill-current text-white w-4" viewBox="0 0 24 24">
                         <path d="m17 13-5 5-5-5h3V9h4v4m5.35-2.97A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.03A6.004 6.004 0 0 0 0 14a6 6 0 0 0 6 6h13a5 5 0 0 0 5-5c0-2.64-2.05-4.78-4.65-4.97z" /></svg>
@@ -68,7 +68,7 @@
 
         <!-- tableau d'apprentissage -->
         <div class="flex w-full text-sm mt-5">
-            <table class=" text-xs  w-full items-start px-1">
+            <table class=" text_xs  w-full items-start px-1">
                 <tr class=" w-full">
                     <th class=" w-[8%] text-center text-stone-500 border-r border-stone-400">idx</th>
                     <th class="  w-[34%] text-center text-stone-500 mx-2 border-r border-stone-400 ">Nom du formation</th>
@@ -81,9 +81,9 @@
                     <td class=" text-center" v-text="'Les clés pour réussir votre projet'"></td>
                     <td class=" text-center" v-text="'18 juin 2025'"></td>
                     <td class=" text-center ">
-                        <button v-if="item.etat=='Abandonné'" class=" py-1  px-2 my-1 bg-red-100 rounded-md text-red-600 text-xs  border-red-500 border" v-text="item.etat"></button>
-                        <button v-if="item.etat=='En formation'" class=" py-1  px-2 my-1 bg-green-100 rounded-md text-green-600 text-xs  border-green-500 border" v-text="item.etat"></button>
-                        <button v-if="item.etat=='Achevé'" class=" py-1  px-2 my-1 bg-yellow-100 rounded-md text-yellow-600 text-xs  border-yellow-500 border" v-text="item.etat"></button>
+                        <button v-if="item.etat=='Abandonné'" class=" py-1  px-2 my-1 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border" v-text="item.etat"></button>
+                        <button v-if="item.etat=='En formation'" class=" py-1  px-2 my-1 bg-green-100 rounded-md text-green-600 text_xs  border-green-500 border" v-text="item.etat"></button>
+                        <button v-if="item.etat=='Achevé'" class=" py-1  px-2 my-1 bg-yellow-100 rounded-md text-yellow-600 text_xs  border-yellow-500 border" v-text="item.etat"></button>
                     </td>
                     <td class=" text-[#63B6B9] group-hover:text-white items-center">
                         <div class="  flex flex-row text-center">

@@ -4,8 +4,8 @@
         <img class=" w-10 h-10" src="../assets/Logo_DF_2.svg" alt="">
         <span v-if="$store.state.menuFull==true" class=" text-xl font-extrabold">Dossier Formation</span>
     </div>
-    <div class="flex flex-col ">
-        <btn_ :options="btn_" v-for="btn_,i in $store.state.menu_liste" :key="i" class=" text-xs mt-2 my-1  "></btn_>
+    <div class="flex flex-col "> 
+        <btn_ :class="$store.state.menu_liste.length-1==i?' bg-[#0F9EC2]':''" :options="{opt:btn_,index:i}" v-for="btn_,i in $store.state.menu_liste" :key="i" class=" text_xs mt-2 my-1"></btn_>
     </div>
 </div>
 </template>

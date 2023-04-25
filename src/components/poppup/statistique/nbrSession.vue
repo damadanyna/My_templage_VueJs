@@ -2,7 +2,7 @@
     <flex class="flex flex-col w-full">
     <div class="flex flex-row w-full">
         <div v-for=" item, i in boites" :key="i" class=" py-7 flex items-center w-full justify-between bg-stone-800 ml-[1px] text-white text-center flex-col">
-            <span class=" text-xs font-bold">{{ item.label }}</span>
+            <span class=" text_xs font-bold">{{ item.label }}</span>
             <span class=" text-2xl font-semibold">{{ item.nbr }}</span>
         </div>
     </div>

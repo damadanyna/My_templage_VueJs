@@ -4,17 +4,10 @@
     <div class=" text-sm bg-white rounded-lg w-full h-max px-12 flex z-10 flex-col ">
         <div class="flex  sticky top-6 py-3 mt-7 bg-white  justify-between items-center flex-row w-full">
             <span class="  w-full font-semibold text-2xl">Listes des alertes</span>
+            <!-- select Option -->
             <div class="flex items-center flex-row">
                 <span class=" mr-3 font-semibold">Filtrer</span>
-                <div class="flex flex-row base_bg px-3 py-2 rounded-lg">
-                    <select name="" id="" class=" text-white outline-none ">
-                        <option v-for=" item,i in triList" :key="i" :value="item.val" v-text="item.label" class=" border-b border-stone-400 text-black "></option>
-                    </select>
-                    <div class="">
-                        <svg class="   text-white items-center  rounded-sm fill-current w-5" viewBox="0 0 24 24">
-                            <path :d="$store.state.icons.menu_down" /></svg>
-                    </div>
-                </div>
+                <selectOption :options="triList"></selectOption> 
             </div>
         </div>
         <!-- succees -->
@@ -79,9 +72,10 @@
 
 <script>
 import btn_ from '../components/button/btn_.vue'
+import selectOption from '../components/input/selectOption.vue';
 export default {
     components: {
-        btn_,
+        btn_,selectOption
     },
     data() {
         return {

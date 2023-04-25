@@ -7,7 +7,7 @@
     </div>
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex  ">
         <div :class="showFormulaire==true?' px-5':'px-12'" class="flex-col duration-500  bg-white rounded-lg w-[40%] h-max  flex z-10">
-            <div v-if="this.$store.state.myData.listeFormation.length>0" class=" text-xs flex-row">
+            <div v-if="this.$store.state.myData.listeFormation.length>0" class=" text_xs flex-row">
                 <div class="flex flex-row sticky top-6 py-4 z-30 bg-white mt-6">
                     <div :class="showFormulaire==true?'':' ml-12'" class="flex  flex-row items-center">
                         <button v-if="showFormulaire!=false" @click="back_()" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
@@ -30,12 +30,9 @@
                             <span class=" text-stone-400 group-hover:text-white" v-text="item.id"></span>
                         </div>
                         <div :class="showFormulaire==true?'flex-col mt-6 w-full':'flex-row'" class=" transform flex  justify-between">
-                            <div class=" flex flex-row w-full ">
+                            <div class=" flex flex-row w-full "> 
                                 <div class=" flex flex-row mx-1 ">
-                                    <btn_ class=" " :options="{url:{name:'gestionBeneficiaire'},label:'Gestion bénéficiaire',style:' bg-teal-700 text-xs  text-stone-100 '}"></btn_>
-                                </div>
-                                <div class=" flex flex-row mx-1 ">
-                                    <btn_ class=" " :options="{label:'Gestion session',style:'bg-teal-700 text-xs  text-stone-100 '}"></btn_>
+                                    <btn_ class=" " :options="{label:'Gestion session',style:'bg-teal-700 text_xs  text-stone-100 '}"></btn_>
                                 </div>
                                 <div v-if="showFormulaire==true" class=" flex flex-row ">
                                     <btn_ class=" shadow-md " :options="{label:'Supprimer',style:' bg-stone-200  text-red ',ico:$store.state.icons.delete}"></btn_>
@@ -48,7 +45,7 @@
                                     <btn_ class=" " :options="{label:'Gestion Formation',style:' bg-stone-100 py-1 text-stone-800 '}"></btn_>
                                 </div>
                                 <button v-if="showFormulaire==true" class=" ml-3 bg-white p-1 mx-1 px-2 rounded-md">
-                                    <svg class=" w-4 fill-current text-xs text-red-500" viewBox="0 0 24 24">
+                                    <svg class=" w-4 fill-current text_xs text-red-500" viewBox="0 0 24 24">
                                         <path d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12z" /></svg>
                                 </button>
                             </div>
@@ -60,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div v-else class="text-xs  text-stone-500 flex-col w-full h-full items-center justify-center flex">
+            <div v-else class="text_xs  text-stone-500 flex-col w-full h-full items-center justify-center flex">
                 <img src="../../assets/vide.svg" alt="">
                 <flex class=" flex items-center my-3 flex-col">
                     <span>Vous avez aucun formation.</span>
@@ -80,7 +77,7 @@
                     <btn_ :options="{label:'Nouveau',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_>
                 </div>
                 <div class="flex w-full mt-14 text-sm ">
-                    <table class=" text-xs  w-full items-start px-1">
+                    <table class=" text_xs  w-full items-start px-1">
                         <tr class=" w-full">
                             <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
                             <th class="  w-[26%] text-center text-stone-500 mx-2 border-r border-stone-400 ">Nom</th>
@@ -94,9 +91,9 @@
                             <td class=" text-center" v-text="item.nom"></td>
                             <td class=" text-center" v-text="item.prenom"></td>
                             <td class=" text-center "> 
-                                    <button v-if="item.etat=='Abandonné'" class=" py-1  px-2 my-1 bg-red-100 rounded-md text-red-600 text-xs  border-red-500 border" v-text="item.etat"></button>
-                                    <button v-if="item.etat=='En formation'" class=" py-1  px-2 my-1 bg-green-100 rounded-md text-green-600 text-xs  border-green-500 border" v-text="item.etat"></button>
-                                    <button v-if="item.etat=='Achevé'" class=" py-1  px-2 my-1 bg-yellow-100 rounded-md text-yellow-600 text-xs  border-yellow-500 border" v-text="item.etat"></button>
+                                    <button v-if="item.etat=='Abandonné'" class=" py-1  px-2 my-1 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border" v-text="item.etat"></button>
+                                    <button v-if="item.etat=='En formation'" class=" py-1  px-2 my-1 bg-green-100 rounded-md text-green-600 text_xs  border-green-500 border" v-text="item.etat"></button>
+                                    <button v-if="item.etat=='Achevé'" class=" py-1  px-2 my-1 bg-yellow-100 rounded-md text-yellow-600 text_xs  border-yellow-500 border" v-text="item.etat"></button>
                             </td>
                             <td class=" text-center" v-text="'18 juin 2025'"></td>
                             <td class=" px-2 group-hover:text-white">

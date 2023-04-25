@@ -21,7 +21,7 @@
         </div>
         <div v-else class=" group border-[1px] items-center  w-3/4 rounded-lg px-3 flex flex-row  border-[#63B6B9] ">
             <div class=" flex relative z-0  ">
-                <span class=" -mt-6  text-xs w-24 z-0 ml-2 bg-white px-1 duration-300 absolute" v-text="email.label"></span>
+                <span class=" -mt-6  text_xs w-24 z-0 ml-2 bg-white px-1 duration-300 absolute" v-text="email.label"></span>
             </div>
             <span class=" text-sm w-full text-stone-600 " v-text="email.model"></span>
             <button @click="()=>{email.editable=true}">

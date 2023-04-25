@@ -12,7 +12,7 @@
                 <input_ class=" w-full " :options="data_[2]"></input_>
                 <input_ class=" w-full  ml-3" :options="data_[3]"></input_>
             </div>
-            <span class=" text-teal-500 text-xs mt-2">*Lié à un membre d'équipe</span>
+            <span class=" text-teal-500 text_xs mt-2">*Lié à un membre d'équipe</span>
             <div class="flex mt-5 flex-row w-full">
                 <textArea_ class=" w-full" title="Modalités et délais d’accès à la formation" :options="data_[4]"></textArea_>
                 <textArea_ class=" w-full ml-3" :options="data_[5]"></textArea_>
@@ -20,7 +20,7 @@
             <div class="flex mt-5 flex-row w-full">
                 <textArea_ class=" w-full " :options="data_[6]"></textArea_>
             </div>
-            <span class=" text-teal-500 text-xs mt-2">*Délais des alertes si aucune activité est recensé sur le compte d'un bénéficiaire</span>
+            <span class=" text-teal-500 text_xs mt-2">*Délais des alertes si aucune activité est recensé sur le compte d'un bénéficiaire</span>
             <div class="flex mt-5 flex-row w-full">
                 <div>
                     <input_ class=" w-full" :options="data_[7]"></input_>

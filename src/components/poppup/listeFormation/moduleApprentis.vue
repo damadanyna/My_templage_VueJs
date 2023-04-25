@@ -9,11 +9,11 @@
     </div>
 
     <div class="flex flex-row">
-        <btn_ class="  " :options="{label:'Nouveau Document',style:' px-0 base_bg text-xs  text-white ',ico:$store.state.icons.plus}"></btn_>
-        <btn_ class="  ml-2 " :options="{label:'Bibliothéque de document',style:' base_bg text-xs  text-white ',ico:$store.state.icons.list}"></btn_>
+        <btn_ class="  " :options="{label:'Nouveau Document',style:' px-0 base_bg text_xs  text-white ',ico:$store.state.icons.plus}"></btn_>
+        <btn_ class="  ml-2 " :options="{label:'Bibliothéque de document',style:' base_bg text_xs  text-white ',ico:$store.state.icons.list}"></btn_>
     </div>
 
-    <div class="flex w-full text-xs mt-4">
+    <div class="flex w-full text_xs mt-4">
         <table class=" w-full items-start px-1">
             <tr class=" w-full">
                 <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>

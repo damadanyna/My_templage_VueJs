@@ -30,8 +30,7 @@
         
     
 <script>
-import input_ from '../../input/inputTxt.vue'
-import textArea_ from '../../input/textarea.vue'
+import input_ from '../../input/inputTxt.vue' 
 import btn_ from '../../button/btn_.vue';
 import gsap from 'gsap'
 export default {
@@ -71,8 +70,7 @@ export default {
         }
     },
     components: {
-        input_,
-        textArea_,
+        input_, 
         btn_
     },
     methods: {

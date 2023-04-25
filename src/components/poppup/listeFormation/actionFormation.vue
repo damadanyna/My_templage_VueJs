@@ -4,7 +4,7 @@
     <div class=" bg-white rounded-lg flex px-6 py-5 flex-col z-20">
         <div class=" mt-8 flex flex-col">
 
-            <div @click="()=>{isChecked==false?isChecked=true:isChecked=false}" class=" items-center text-teal-500 flex flex-row text-xs mb-2">
+            <div @click="()=>{isChecked==false?isChecked=true:isChecked=false}" class=" items-center text-teal-500 flex flex-row text_xs mb-2">
                 <svg v-if="isChecked==false" class=" fill-current w-5" viewBox="0 0 24 24">
                     <path d="M19 3H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m0 2v14H5V5h14z" /></svg>
                 <svg v-else class=" fill-current w-5" viewBox="0 0 24 24">
@@ -19,7 +19,7 @@
                 <input_ class=" w-full " :options="data_[2]"></input_>
                 <input_ class=" w-full  ml-3" :options="data_[3]"></input_>
             </div>
-            <span class=" text-teal-500 text-xs mt-2">*Lié à un membre d'équipe</span>
+            <span class=" text-teal-500 text_xs mt-2">*Lié à un membre d'équipe</span>
             <div class="flex mt-5 flex-row w-full">
                 <textArea_ class=" w-full" :options="data_[4]"></textArea_>
                 <textArea_ class=" w-full ml-3" :options="data_[5]"></textArea_>
@@ -29,8 +29,8 @@
                 <input_ class=" w-full  ml-3" :options="data_[7]"></input_>
             </div>
             <div class="flex flex-col">
-                <span class=" text-teal-500 text-xs mt-2">*Délais des alertes si aucune activité est recensé </span>
-                <span class=" text-teal-500 text-xs ">sur le compte d'un bénéficiaire</span>
+                <span class=" text-teal-500 text_xs mt-2">*Délais des alertes si aucune activité est recensé </span>
+                <span class=" text-teal-500 text_xs ">sur le compte d'un bénéficiaire</span>
             </div>
             <div class="flex mt-5 flex-row w-full">
                 <textArea_ class=" w-full " :options="data_[7]"></textArea_>
@@ -39,7 +39,7 @@
                 <div class="flex flex-col">  <div class="flex mt-5 flex-row w-full">
                         <textArea_ class=" w-full " :options="data_[9]"></textArea_>
                     </div> 
-                    <span class=" text-teal-500 text-xs mt-2">*Pour les diplôme de l’éducation national</span>
+                    <span class=" text-teal-500 text_xs mt-2">*Pour les diplôme de l’éducation national</span>
                 </div>
             </div>
             <div class="flex mt-5 flex-row w-full">

@@ -1,5 +1,5 @@
 <template>
-<div class="flex flex-row text-sm"> 
+<div class="flex flex-row text_xs"> 
     <button v-if="!options.url" :class="options.style" class="  duration-200 rounded-md flex-row items-center hover:opacity-80 bg-stone-50 flex justify-start px-4  ">
         <div class=" flex items-center flex-row">
             <svg v-if=" options.ico" class=" fill-current w-4" viewBox="0 0 24 24">
@@ -7,10 +7,10 @@
         </div>
         <span v-if="options.label" class=" mx-2" :class="options.stylelabel">{{ options.label }}</span>
         <div v-if=" options.ico2" class="  bg-white p-1 rounded-md">
-            <svg :class="options.ico2Style?options.ico2Style:'text-red'" class="  items-center  rounded-sm fill-current w-5" viewBox="0 0 24 24">
+            <svg :class="options.ico2Style?options.ico2Style:'text-red'" class="  items-center  rounded-sm fill-current w-4" viewBox="0 0 24 24">
                 <path :d="options.ico2" /></svg>
         </div>
-        <div v-if=" options.ico3" class="  bg-white p-1 rounded-md">
+        <div v-if=" options.ico3" class="  bg-white p-1 ml-1 rounded-md">
             <svg :class="options.ico3Style?options.ico3Style:'text-red'" class="  items-center  rounded-sm fill-current w-4" viewBox="0 0 24 24">
                 <path :d="options.ico3" /></svg>
         </div>
