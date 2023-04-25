@@ -23,11 +23,11 @@
             <div class="flex w-full text-sm mt-4 h-[54vh] overflow-auto px-5">
                 <table class=" text-sm  w-full items-start px-1">
                     <tr class=" w-full sticky top-0 bg-white py-5  ">
-                        <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
-                        <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-400 ">TitreSite</th>
-                        <th v-if="showFormulaire==false" class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Etat</th>
-                        <th v-if="showFormulaire==false" class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Date Début</th>
-                        <th v-if="showFormulaire==false" class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Date Fin</th>
+                        <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
+                        <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-200 ">TitreSite</th>
+                        <th v-if="showFormulaire==false" class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Etat</th>
+                        <th v-if="showFormulaire==false" class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date Début</th>
+                        <th v-if="showFormulaire==false" class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date Fin</th>
                         <th class=" py-3  w-[19%] text-start text-stone-500 pl-5  ">Actions</th>
                     </tr>
                     <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">

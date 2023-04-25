@@ -16,10 +16,10 @@
             <div class="flex w-full  first-letter:mt-4">
                 <table class=" text_xs   w-full items-start px-1 mt-10">
                     <tr class=" w-full h-10 sticky top-20 bg-white">
-                        <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
-                        <th class="  w-[56%] text-start text-stone-500 pl-5 border-r border-stone-400">NomIncident</th>
-                        <th class="  w-[36%] text-start text-stone-500 pl-5 border-r border-stone-400">Etat</th>
-                        <th class="  w-[19] text-start text-stone-500 border-r border-stone-400">Actions</th>
+                        <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
+                        <th class="  w-[56%] text-start text-stone-500 pl-5 border-r border-stone-200">NomIncident</th>
+                        <th class="  w-[36%] text-start text-stone-500 pl-5 border-r border-stone-200">Etat</th>
+                        <th class="  w-[19] text-start text-stone-500 border-r border-stone-200">Actions</th>
                     </tr>
                     <tr v-for="i in 20" :key="i" class=" duration-200 hover:text-white  hover:bg-[#63B6B9]  ">
                         <td class=" text-gray-500 px-2" v-text="i"></td>

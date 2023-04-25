@@ -16,7 +16,7 @@
                             </button>
                             <svg class=" text-teal-700 w-5 fill-current" viewBox="0 0 24 24">
                                 <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z" /></svg>
-                            <input type="text" class=" px-3 border-b border-stone-400 outline-none focus:border-black " placeholder=" Lancer un recherche ">
+                            <input type="text" class=" px-3 border-b border-stone-200 outline-none focus:border-black " placeholder=" Lancer un recherche ">
                         </div>
 
                         <div v-if="showFormulaire==false" class="flex w-full justify-end relative">
@@ -82,11 +82,11 @@
                     <div class="flex w-full mt-14 text_xs ">
                         <table class=" text_xs  w-full items-start px-1">
                             <tr class=" w-full">
-                                <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
-                                <th class="  w-[26%] text-center text-stone-500 mx-2 border-r border-stone-400 ">Nom</th>
-                                <th class="  w-[26%] text-center text-stone-500 mx-2 border-r border-stone-400 ">Prénom</th>
-                                <th class="  w-[16%] text-center text-stone-500 mx-2 border-r border-stone-400 ">Etat</th>
-                                <th class="  w-[36%] text-center text-stone-500 mx-2 border-r border-stone-400 ">Date D'inscription</th>
+                                <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
+                                <th class="  w-[26%] text-center text-stone-500 mx-2 border-r border-stone-200 ">Nom</th>
+                                <th class="  w-[26%] text-center text-stone-500 mx-2 border-r border-stone-200 ">Prénom</th>
+                                <th class="  w-[16%] text-center text-stone-500 mx-2 border-r border-stone-200 ">Etat</th>
+                                <th class="  w-[36%] text-center text-stone-500 mx-2 border-r border-stone-200 ">Date D'inscription</th>
                                 <th class="  w-[19] text-center text-stone-500 mx-2 ">Actions</th>
                             </tr>
                             <tr @click="getIt_()" v-for="item,i in this.$store.state.myData.TitreFormation" :key="i" class=" group duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">

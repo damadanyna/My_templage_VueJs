@@ -9,7 +9,7 @@
                 <div v-if="showFormulaire==false " class="flex ml-12 flex-row items-center">
                     <svg class=" text-stone-500 w-5 fill-current" viewBox="0 0 24 24">
                         <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z" /></svg>
-                    <input type="text" class=" px-3 border-b border-stone-400 outline-none focus:border-black " placeholder=" Lancer un recherche ">
+                    <input type="text" class=" px-3 border-b border-stone-200 outline-none focus:border-black " placeholder=" Lancer un recherche ">
                 </div>
 
                 <div class="flex w-full justify-end relative">
@@ -24,11 +24,11 @@
             <div class="flex w-full text-sm mt-4">
                 <table class=" w-full items-start px-1">
                     <tr class=" w-full sticky top-24 bg-white py-5  ">
-                        <th class=" py-2 w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
-                        <th class=" py-2  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Nom </th>
-                        <th class=" py-2  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Prénom</th>
-                        <th class=" py-2  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Etat</th>
-                        <th v-if="showFormulaire==false" class=" py-2  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Date d'inscription</th>
+                        <th class=" py-2 w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
+                        <th class=" py-2  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Nom </th>
+                        <th class=" py-2  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Prénom</th>
+                        <th class=" py-2  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Etat</th>
+                        <th v-if="showFormulaire==false" class=" py-2  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date d'inscription</th>
                         <th v-if="showFormulaire==false" class=" py-2  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
                     </tr>
                     <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">

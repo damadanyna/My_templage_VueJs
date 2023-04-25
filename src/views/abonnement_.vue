@@ -5,7 +5,7 @@
 
         <!-- Base -->
         <div class="flex w-2/5 items-center">
-            <div class="  shadow__ h-min  flex flex-col items-center py-8 transform scale-90 px-10  border-2 rounded-lg border-stone-300">
+            <div class="  shadow__ h-min  flex flex-col items-center py-8 transform scale-90 px-10  border-2 rounded-lg border-stone-200">
                 <span>Forfait</span>
                 <span class=" text-2xl text-[#63B6B9] font-bold uppercase">base</span>
                 <div class=" flex flex-row justify-end">
@@ -120,7 +120,7 @@
 
         <!--  standard -->
         <div class="flex  w-2/5 items-center">
-            <div class="  shadow__ h-min  flex flex-col items-center py-8 transform scale-90 px-10  border-2 rounded-lg border-stone-300">
+            <div class="  shadow__ h-min  flex flex-col items-center py-8 transform scale-90 px-10  border-2 rounded-lg border-stone-200">
                 <span>Forfait</span>
                 <span class=" text-2xl  text-[#63B6B9]  font-bold uppercase"> standard</span>
                 <div class=" flex flex-row justify-end">

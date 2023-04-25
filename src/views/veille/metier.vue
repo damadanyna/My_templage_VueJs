@@ -9,10 +9,10 @@
           <div class="flex w-full text-sm mt-4">
             <table class=" text-sm  w-full items-start px-1">
                 <tr class=" w-full">
-                    <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
-                    <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-400 ">TitreSite</th>
-                    <th class="  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Status</th>
-                    <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Date d'inscriptoin</th> 
+                    <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
+                    <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-200 ">TitreSite</th>
+                    <th class="  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Status</th>
+                    <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date d'inscriptoin</th> 
                     <th class="  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
                 </tr>
                 <tr v-for="i in 3" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">

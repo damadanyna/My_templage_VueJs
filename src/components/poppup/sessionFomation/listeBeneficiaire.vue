@@ -6,7 +6,7 @@
             <span class=" mr-3 font-semibold text-[#63B6B9]">Formation :</span>
             <div class="flex flex-row bg-stone-300 px-3 py-2 rounded-lg">
                 <select name="" id="" class=" text-black outline-none ">
-                    <option v-for=" item,i in nomFormation" :key="i" :value="item.val" v-text="item.label" class=" border-b border-stone-400 text-black "></option>
+                    <option v-for=" item,i in nomFormation" :key="i" :value="item.val" v-text="item.label" class=" border-b border-stone-200 text-black "></option>
                 </select>
                 <div class="">
                     <svg class="   text-black items-center  rounded-sm fill-current w-5" viewBox="0 0 24 24">
@@ -19,7 +19,7 @@
             <span class=" mr-3 font-semibold text-[#63B6B9]">Liste formateurs :</span>
             <div class="flex flex-row bg-stone-300 px-3 py-2 rounded-lg">
                 <select name="" id="" class=" text-black outline-none ">
-                    <option v-for=" item,i in formateur" :key="i" :value="item.val" v-text="item.label" class=" border-b border-stone-400 text-black "></option>
+                    <option v-for=" item,i in formateur" :key="i" :value="item.val" v-text="item.label" class=" border-b border-stone-200 text-black "></option>
                 </select>
                 <div class="">
                     <svg class="   text-black items-center  rounded-sm fill-current w-5" viewBox="0 0 24 24">
@@ -37,11 +37,11 @@
     <div class="flex w-full text-sm mt-4  h-96 overflow-auto">
         <table class=" w-full items-start px-1 ">
             <tr class=" w-full sticky top-0 bg-white py-5  ">
-                <th class=" py-2 w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
-                <th class=" py-2  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Nom </th>
-                <th class=" py-2  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Prénom</th>
-                <th class=" py-2  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Etat</th>
-                <th v-if="showFormulaire==false" class=" py-2  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Date d'inscription</th>
+                <th class=" py-2 w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
+                <th class=" py-2  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Nom </th>
+                <th class=" py-2  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Prénom</th>
+                <th class=" py-2  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Etat</th>
+                <th v-if="showFormulaire==false" class=" py-2  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date d'inscription</th>
                 <th v-if="showFormulaire==false" class=" py-2  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
             </tr>
             <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">

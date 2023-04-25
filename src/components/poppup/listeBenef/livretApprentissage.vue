@@ -9,10 +9,10 @@
     <div class="flex w-full text-sm mt-4">
         <table class=" w-full items-start px-1">
             <tr class=" w-full sticky top-8 bg-white py-5  ">
-                <th class=" py-3 w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
-                <th class=" py-3  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Nom Formation </th>
-                <th v-if="!minimise" class=" py-3  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Date d’inscription</th>
-                <th v-if="!minimise" class=" py-3  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Etat</th>
+                <th class=" py-3 w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
+                <th class=" py-3  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Nom Formation </th>
+                <th v-if="!minimise" class=" py-3  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date d’inscription</th>
+                <th v-if="!minimise" class=" py-3  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Etat</th>
                  <th v-if="!minimise"  class=" py-3  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
             </tr>
             <tr @click="()=>{goto(item)}"  v-for="item,i in $store.state.myData.livetApprentissage" :key="i" :class="$route.params.id==item.id?' bg-[#42898B] text-white ':''" class=" duration-200 my-2 hover:text-white  hover:bg-[#63B6B9]  ">

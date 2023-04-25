@@ -70,9 +70,9 @@
         <div class="flex w-full text-sm mt-5">
             <table class=" text_xs  w-full items-start px-1">
                 <tr class=" w-full">
-                    <th class=" w-[8%] text-center text-stone-500 border-r border-stone-400">idx</th>
-                    <th class="  w-[34%] text-center text-stone-500 mx-2 border-r border-stone-400 ">Nom du formation</th>
-                    <th class="  w-[26%] text-center text-stone-500 mx-2 border-r border-stone-400 ">Date d'inscription</th>
+                    <th class=" w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>
+                    <th class="  w-[34%] text-center text-stone-500 mx-2 border-r border-stone-200 ">Nom du formation</th>
+                    <th class="  w-[26%] text-center text-stone-500 mx-2 border-r border-stone-200 ">Date d'inscription</th>
                     <th class="  w-[16%] text-center text-stone-500 mx-2">Etat</th>
                     <th class="  w-[7%] text-center text-stone-500 mx-2">Action</th>
                 </tr>

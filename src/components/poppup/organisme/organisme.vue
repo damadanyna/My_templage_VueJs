@@ -19,7 +19,7 @@
                     <span @click=" set_('IB')" :class="selected=='IB'?'bg-[#63B6B9] text-white':' bg-stone-300 text-black'" class=" text-center text_xs w-full py-2 rounded-tl-md ">Information pour les bénéficiaires</span>
                     <span @click=" set_('IF')" :class="selected!='IB'?'bg-[#63B6B9] text-white':' bg-stone-300 text-black'" class=" text-center text_xs w-full py-2 rounded-tr-md">Information pour les formateurs</span>
                 </div>
-                <div class=" group border-[1px] py-1 w-full rounded-b-lg items-center flex flex-col border-stone-300 ">
+                <div class=" group border-[1px] py-1 w-full rounded-b-lg items-center flex flex-col border-stone-200 ">
                     <textarea v-model="data_[5].model" class=" w-full resize-none border-none outline-none px-3" name="" id="" rows="4"></textarea>
                 </div>
             </div>

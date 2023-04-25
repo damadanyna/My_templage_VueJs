@@ -23,12 +23,12 @@
             <div class="flex w-full text_xs mt-4">
                 <table class=" w-full items-start px-1">
                     <tr class=" w-full sticky top-28 ">
-                        <th class=" py-3 bg-white w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
-                        <th class=" py-3 bg-white w-[26%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Nom </th>
-                        <th class=" py-3 bg-white w-[26%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Prénom</th>
-                        <th v-if="showFormulaire==false" class=" py-3 bg-white w-[13%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Fonction</th>
-                        <th v-if="showFormulaire==false" class=" py-3 bg-white w-[12%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Status</th>
-                        <th v-if="showFormulaire==false" class=" py-3 bg-white w-[26%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Etat</th>
+                        <th class=" py-3 bg-white w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
+                        <th class=" py-3 bg-white w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Nom </th>
+                        <th class=" py-3 bg-white w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Prénom</th>
+                        <th v-if="showFormulaire==false" class=" py-3 bg-white w-[13%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Fonction</th>
+                        <th v-if="showFormulaire==false" class=" py-3 bg-white w-[12%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Status</th>
+                        <th v-if="showFormulaire==false" class=" py-3 bg-white w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Etat</th>
                         <th class=" py-3 bg-white w-[19%] text-start text-stone-500 pl-5  ">Actions</th>
                     </tr>
                     <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">

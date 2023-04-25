@@ -23,7 +23,7 @@
             <div class="flex w-full text_xs mt-4">
                 <table class=" w-full items-start px-1">
                     <tr class=" w-full">
-                        <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
+                        <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                         <th class="  w-[76%] text-start text-stone-500  pl-5 ">TitreSite</th>
                         <th v-if="showFormulaire!=true" class="  w-[16%] text-start text-stone-500  pl-5 ">Etat</th>
                         <th class="  w-[19] text-start text-stone-500  ">Actions</th>
@@ -60,7 +60,7 @@
             <div class="flex w-full text_xs mt-4">
                 <table class=" w-full items-start px-1">
                     <tr class=" w-full">
-                        <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
+                        <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                         <th class="  w-[76%] text-start text-stone-500  pl-5 ">TitreSite</th>
                         <th v-if="showFormulaire!=true" class="  w-[16%] text-start text-stone-500  pl-5 ">Etat</th>
                         <th class="  w-[19] text-start text-stone-500  ">Actions</th>

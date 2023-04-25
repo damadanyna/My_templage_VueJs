@@ -60,7 +60,7 @@
             <div class="flex w-full text-sm mt-9">
                 <table class=" w-full items-start">
                     <tr class=" w-full sticky top-20 bg-white py-2  ">
-                        <th class="py-2 w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
+                        <th class="py-2 w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                         <th :class="showFormulaire==true?'w-[80%] ':'w-[80%]'" class="py-2 text-start text-stone-500  pl-5 ">TitreSite</th>
                         <th :class="showFormulaire==true?'w-[20%]':'w-[20%]'" class="py-2 text-center text-stone-500 ">Actions</th>
                     </tr>

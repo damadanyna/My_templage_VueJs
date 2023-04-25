@@ -16,7 +16,7 @@
     <div class="flex w-full text_xs mt-4">
         <table class=" w-full items-start px-1">
             <tr class=" w-full">
-                <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
+                <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                 <th class="  w-[76%] text-start text-stone-500  pl-5 ">Titre</th>
                 <th class="  w-[16%] text-start text-stone-500  pl-5 ">Public</th>
                 <th class="  w-[16%] text-start text-stone-500  px-5 ">Type</th>

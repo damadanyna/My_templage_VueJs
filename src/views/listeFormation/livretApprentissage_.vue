@@ -25,7 +25,7 @@
                 <div class="flex w-full px-3 text-sm mt-5">
                     <table class=" text_xs  w-full items-start px-1">
                         <tr class=" w-full">
-                            <th class=" w-[8%] text-center text-stone-500 border-r border-stone-400">idx</th>
+                            <th class=" w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>
                             <th class=" w-[92%] text-center text-stone-500 ">Nom de formation</th>
                         </tr>
                         <tr @click="getIt_()" v-for="item,i in this.$store.state.myData.TitreFormation" :key="i" class=" h-8 group duration-200  hover:text-white  hover:bg-[#63B6B9]  ">
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <livretApp class=" px-4"></livretApp>
-            <span class="flex border-b-[2px] border-stone-300 py-3"></span>
+            <span class="flex border-b-[2px] border-stone-200 py-3"></span>
             <div class=" z-20 sticky top-6  mx-3 bg-white py-5  flex-row items-center flex justify-between w-full">
                 <h1 class=" font-semibold">[Name Objectif]</h1>
                 <div class="flex flex-row items-center text_xs">
@@ -72,7 +72,7 @@
             <div class="mt-12 px-3">
                 <h1 class="  text-stone-500"> Résultat Global</h1>
             </div>
-            <span class="flex border-b-[2px] border-stone-300 py-3"></span>
+            <span class="flex border-b-[2px] border-stone-200 py-3"></span>
             <div class=" flex flex-row py-5">
                 <div class="flex flex-col">
                     <div class="flex flex-row py-5 items-center">

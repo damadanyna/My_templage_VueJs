@@ -14,7 +14,7 @@
     
                     <div class="flex flex-row text-sm base_bg px-3 py-2 rounded-lg">
                         <select name="" id="" class=" text-white outline-none ">
-                            <option v-for=" item,i in niveauList" :key="i" :value="item.val" v-text="item.label" class=" border-b border-stone-400 text-black "></option>
+                            <option v-for=" item,i in niveauList" :key="i" :value="item.val" v-text="item.label" class=" border-b border-stone-200 text-black "></option>
                         </select>
                         <div class="">
                             <svg class="   text-white items-center  rounded-sm fill-current w-5" viewBox="0 0 24 24">

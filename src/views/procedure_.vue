@@ -19,10 +19,10 @@
             <div class=" text_xs  flex w-full  mt-4">
                 <table class=" w-full items-start px-1">
                     <tr class=" sticky top-20 h-9 bg-white w-full">
-                        <th  class="  w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
-                        <th :class="showFormulaire==true?'w-[70%]':'w-[46%]'" class="text-start text-stone-500 border-r border-stone-400 pl-5 ">TitreSite</th>
-                        <th v-if="showFormulaire!=true" class=" w-[16%] text-center text-stone-500 border-r border-stone-400">Fonction associé</th>
-                        <th v-if="showFormulaire!=true" class=" w-[16%] text-center text-stone-500 border-r border-stone-400">PDF</th>
+                        <th  class="  w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
+                        <th :class="showFormulaire==true?'w-[70%]':'w-[46%]'" class="text-start text-stone-500 border-r border-stone-200 pl-5 ">TitreSite</th>
+                        <th v-if="showFormulaire!=true" class=" w-[16%] text-center text-stone-500 border-r border-stone-200">Fonction associé</th>
+                        <th v-if="showFormulaire!=true" class=" w-[16%] text-center text-stone-500 border-r border-stone-200">PDF</th>
                         <th :class="showFormulaire==true?'w-[30%]':'w-[29]'" class=" text-center text-stone-500 ">Actions</th>
                     </tr>
                     <tr v-for="i in 20" :key="i" class=" duration-200 hover:text-white  hover:bg-[#63B6B9]  ">

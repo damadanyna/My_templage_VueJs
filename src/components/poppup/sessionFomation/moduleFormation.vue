@@ -5,9 +5,9 @@
     <div class="flex w-full  mt-4 h-[84%] px-4 overflow-y-auto">
         <table class=" text-[12px]  w-full items-start px-1">
             <tr class=" w-full sticky top-0  bg-white    ">
-                <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
-                <th class="  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-400 ">TitreSite</th>
-                <th class=" w-[14%] text-start  text-stone-500 break-all pl-5 border-r border-stone-400 ">Activation/desactivation</th>
+                <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
+                <th class="  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-200 ">TitreSite</th>
+                <th class=" w-[14%] text-start  text-stone-500 break-all pl-5 border-r border-stone-200 ">Activation/desactivation</th>
                 <th class=" w-[8%] text-start text-stone-500 pl-5">Actions</th>
             </tr>
             <tr v-for="item,i in module" :key="i" class=" duration-200 hover:text-white  hover:bg-[#63B6B9]  ">

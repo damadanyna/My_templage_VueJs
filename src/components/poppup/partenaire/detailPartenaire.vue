@@ -82,10 +82,10 @@
     <div class="flex w-full text-sm mt-4">
         <table class=" w-full items-start px-1">
             <tr class=" w-full">
-                <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
-                <th class="  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Nom </th>
-                <th class="  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Prénom</th>
-                <th class="  w-[13%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Fonction</th>
+                <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
+                <th class="  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Nom </th>
+                <th class="  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Prénom</th>
+                <th class="  w-[13%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Fonction</th>
                 <th class="  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
             </tr>
             <tr v-for="i in 2" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
@@ -144,10 +144,10 @@
     <div class="flex w-full text-sm mt-4">
         <table class=" w-full items-start px-1">
             <tr class=" w-full">
-                <th class=" w-[8%] text-start text-stone-500 border-r border-stone-400">idx</th>
-                <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Titre </th>
-                <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Pubilc</th>
-                <th class="  w-[13%] text-start text-stone-500  pl-5 border-r border-stone-400 ">Type</th>
+                <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
+                <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Titre </th>
+                <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Pubilc</th>
+                <th class="  w-[13%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Type</th>
                 <th class="  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
             </tr>
             <tr v-for="i in 2" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
