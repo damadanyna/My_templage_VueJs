@@ -119,11 +119,11 @@
             </div>
         </div>
     </div>
-    <span class=" text-lg font-semibold mt-9">Espace documentaire de la formation</span>
+    <span class=" text-lg font-semibold mt-9 mb-5">Espace documentaire de la formation</span>
     <!-- tableau de titre du site -->
-    <div class=" z-20 sticky top-6 mx-3 bg-white rounded-lg py-5 flex justify-between w-full">
+    <!-- <div class=" z-20 sticky top-6 mx-3 bg-white rounded-lg py-5 flex justify-between w-full">
         <span class=" font-semibold ">Espace documentaire de la formation</span>
-    </div>
+    </div> -->
 
     <div class="flex flex-row">
         <btn_ class=" " :options="{label:'Nouveau Objectif',style:' px-0 base_bg text_xs  text-white ',ico:$store.state.icons.plus}"></btn_>
