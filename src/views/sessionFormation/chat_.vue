@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import sessionChat from '../../components/poppup/sessionFomation/sessionChat.vue';
-import espaceDocumentaireVue from '../../components/poppup/sessionFomation/espaceDocumentaire.vue';
-import DetailFormation from '../../components/poppup/sessionFomation/detailFormation.vue';
-import moduleFormationVue from '../../components/poppup/sessionFomation/moduleFormation.vue';
+import sessionChat from '../../components/poppup/sessionFomation/components/sessionChat.vue';
+import espaceDocumentaireVue from '../../components/poppup/sessionFomation/components/espaceDocumentaire.vue';
+import DetailFormation from '../../components/poppup/sessionFomation/components/detailFormation.vue';
+import moduleFormationVue from '../../components/poppup/sessionFomation/components/moduleFormation.vue';
 
 export default {
     components: {

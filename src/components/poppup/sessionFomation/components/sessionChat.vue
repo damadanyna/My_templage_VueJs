@@ -37,8 +37,8 @@
 </template>
 
 <script>
-import btn_ from '../../button/btn_.vue';
-import input_ from '../../input/inputTxt.vue';
+import btn_ from '../../../button/btn_.vue';
+import input_ from '../../../input/inputTxt.vue';
 export default {
     components: {
         btn_,

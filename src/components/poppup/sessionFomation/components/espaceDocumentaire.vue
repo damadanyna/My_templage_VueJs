@@ -35,8 +35,8 @@
 </template>
 
 <script>
-import btn_ from '../../button/btn_.vue'
-import slidebtn_Vue from '../../button/slidebtn_.vue'
+import btn_ from '../../../button/btn_.vue'
+import slidebtn_Vue from '../../../button/slidebtn_.vue'
 export default {
     components: {
         slidebtn_Vue,btn_

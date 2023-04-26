@@ -166,10 +166,10 @@
 </template>
 
 <script>
-import btn_ from '../../button/btn_.vue';
-import input_ from '../../input/inputTxt.vue';
-import textArea_ from '../../input/textarea.vue';
-import optionDocDeFormVue from '../listeFormation/optionDocDeForm.vue';
+import btn_ from '../../../button/btn_.vue';
+import input_ from '../../../input/inputTxt.vue';
+import textArea_ from '../../../input/textarea.vue';
+import optionDocDeFormVue from '../../listeFormation/optionDocDeForm.vue';
 
 export default {
     components: {

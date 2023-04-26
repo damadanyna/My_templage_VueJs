@@ -1,12 +1,12 @@
 <template>
 <div class="flex flex-col h-full">
- 
+
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex  ">
-        <div class="flex-col duration-500   w-[40%] h-max  flex z-10">
-            <div class=" flex flex-row  sticky duration-300 -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">
+        <div class="flex-col duration-500 flex z-10">
+            <div class=" flex flex-row  w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">
                 <h1 class=" text-lg   px-2 rounded-r-md">Listes formations</h1>
             </div>
-            <div :class="showFormulaire==true?' px-5':'px-12'" class="flex-col duration-500  bg-white rounded-lg h-max px-3 flex z-10">
+            <div :class="showFormulaire==true?' px-5':'px-12'" class="  overflow-auto    max-h-[87vh] flex-col duration-500  bg-white rounded-lg h-max px-3 flex z-10">
                 <div v-if="this.$store.state.myData.listeFormation.length>0" class=" text_xs flex-row">
                     <div class="flex flex-row sticky top-6 py-4 z-30 bg-white mt-6">
                         <div :class="showFormulaire==true?'':' ml-12'" class="flex  flex-row items-center">
@@ -30,29 +30,15 @@
                                 <span class=" text-stone-400 group-hover:text-white" v-text="item.id"></span>
                             </div>
                             <div :class="showFormulaire==true?'flex-col mt-6 w-full':'flex-row'" class=" transform flex  justify-between">
-                                <div class=" flex flex-row w-full ">
-                                    <div class=" flex flex-row mx-1 ">
-                                        <btn_ class=" " :options="{label:'Gestion session',style:'bg-teal-700 text_xs  text-stone-100 '}"></btn_>
-                                    </div>
-                                    <div v-if="showFormulaire==true" class=" flex flex-row ">
-                                        <btn_ class=" shadow-md " :options="{label:'Supprimer',style:' bg-stone-200  text-red ',ico:$store.state.icons.delete}"></btn_>
-                                    </div>
-                                    <btn_ v-if="showFormulaire!=true" class=" " :options="{label:'Gestion Formation',style:' bg-stone-100 py-1 text-stone-800 '}"></btn_>
-
+                                <div class=" flex flex-row w-full  justify-center  "> 
+                                    <btn_ class=" " :options="{label:'Gestion session',style:' w-full bg-teal-700 text_xs  text-stone-50 '}"></btn_>
+                                    <btn_ class=" ml-3 shadow-md " :options="{label:'Supprimer',style:' bg-stone-200  text-red ',ico:$store.state.icons.delete}"></btn_>
                                 </div>
-                                <div v-if="showFormulaire==true" class=" bg-transparent justify-between flex flex-row mx-1 w-full mt-4 ">
-                                    <div :class="showFormulaire==true?'w-5/6 bg-stone-100 items-center flex-col justify-center flex text-center py-1  rounded-md ':''" class="  ">
-                                        <btn_ class=" " :options="{label:'Gestion Formation',style:' bg-stone-100 py-1 text-stone-800 '}"></btn_>
-                                    </div>
-                                    <button v-if="showFormulaire==true" class=" ml-3 bg-white p-1 mx-1 px-2 rounded-md">
-                                        <svg class=" w-4 fill-current text_xs text-red-500" viewBox="0 0 24 24">
-                                            <path d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12z" /></svg>
-                                    </button>
+                                <div v-if="showFormulaire==true" class=" bg-transparent justify-center flex flex-row  w-full bg-slate-300  mt-4 ">
+                                       <btn_  :options="{url:{name:'gestionFormation'},label:'Gestion Formation ',style:' w-[21vw]  bg-white  py-1 text-stone-800 '}"></btn_>
+                                     
                                 </div>
 
-                                <div v-if="showFormulaire!=true" class=" flex flex-row ">
-                                    <btn_ class=" shadow-md " :options="{label:'Supprimer',style:' bg-stone-200 py-1 text-red ',ico:$store.state.icons.delete}"></btn_>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -69,16 +55,14 @@
                 </div>
             </div>
         </div>
-        <div v-if="showFormulaire==true" class="flex flex-col  mx-3   rounded-lg w-[60%]">
+        <div v-if="showFormulaire==true" class="flex flex-col  mx-3  sticky top-6 py-2   rounded-lg w-[60%]">
 
-            <div class=" flex flex-row  sticky duration-300 -top-6 w-full bg-stone-100 z-50 text-stone-600 pt-2 pb-3">
+            <div class=" flex flex-row   duration-300 w-full bg-stone-100 z-50 text-stone-600  pb-3">
                 <h1 class=" text-lg ml-2  "> > Gestion bénéficiaire :</h1>
                 <h1 class=" text-lg ml-2 font-semibold text-[#63B6B9]  ">TitreFormation</h1>
             </div>
-            <div  class="  flex flex-col   bg-white rounded-lg   ">
+            <div class="  flex flex-col   bg-white rounded-lg   ">
                 <div class=" bg-white rounded-lg w-full h-max px-12 flex z-10 flex-col ">
-
-                    
                     <div class="flex w-full mt-14 text_xs ">
                         <table class=" text_xs  w-full items-start px-1">
                             <tr class=" w-full">

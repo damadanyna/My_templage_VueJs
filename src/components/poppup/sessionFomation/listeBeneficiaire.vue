@@ -75,7 +75,7 @@
 import btn_ from '../../button/btn_.vue';
 import input_ from '../../input/inputTxt.vue';
 import textArea_ from '../../input/textarea.vue';
-import detailFormationVue from './detailFormation.vue';
+import detailFormationVue from './components/detailFormation.vue';
 
 export default {
     components: {
