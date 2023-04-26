@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="options.opt.url" :class="$store.state.menu_liste.length-1==options.index?'bg-[#0F9EC2] text-white':'bg-stone-50 text-stone-600'"  class=" py-2  duration-300 rounded-md mt-2 items-center  flex justify-start px-2    text-sm">
+  <router-link :to="options.opt.url" :class="$store.state.menu_liste.length-1==options.index?'bg-[#0F9EC2] text-white':'bg-stone-50 text-stone-600'"  class=" py-2  duration-300 rounded-md mt-2 items-center  flex justify-start px-2    text_xs">
     <svg v-if=" options.opt.ico" class=" fill-current w-5" viewBox="0 0 24 24" v-html="options.opt.ico"></svg>
     <span v-if="$store.state.menuFull==true" class=" ml-2 w-full">{{ options.opt.label }}</span>
     <div v-if="$store.state.menu_liste.length-1==options.index || $store.state.menu_liste.length-3==options.index || $store.state.menu_liste.length-4==options.index" class="flex relative">

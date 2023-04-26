@@ -1,12 +1,12 @@
 <template>
-<div class=" h-full w-full text-sm flex flex-col">
+<div class=" h-full w-full text_xs flex flex-col">
     <div class="flex text-lg items-center justify-start sticky z-10 -top-6 pt-3 bg-white  flex-row">
         <div class="flex flex-row justify-between w-full  items-center">
             <h1 class="  font-bold text-[#000000] pt-4  ">Livret d’apprentissage</h1>
         </div>
     </div>
     <!-- tableau -->
-    <div class="flex w-full text-sm mt-4">
+    <div class="flex w-full text_xs mt-4">
         <table class=" w-full items-start px-1">
             <tr class=" w-full sticky top-8 bg-white py-5  ">
                 <th class=" py-3 w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>

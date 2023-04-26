@@ -5,7 +5,7 @@
 
         <!-- tableau des exercices -->
 
-        <div class="flex w-full text-sm ">
+        <div class="flex w-full text_xs ">
             <table class=" text_xs  w-full items-start px-1">
                 <tr class=" w-full">
                     <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>

@@ -1,7 +1,7 @@
 <template>
 <div class="flex flex-col h-full">
     <h1 class=" text-lg sticky -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">Alertes</h1>
-    <div class=" text-sm bg-white rounded-lg w-full h-max px-12 flex z-10 flex-col ">
+    <div class=" text_xs bg-white rounded-lg w-full h-max px-12 flex z-10 flex-col ">
         <div class="flex  sticky top-6 py-3 mt-7 bg-white  justify-between items-center flex-row w-full">
             <span class="  w-full font-semibold text-2xl">Listes des alertes</span>
             <!-- select Option -->

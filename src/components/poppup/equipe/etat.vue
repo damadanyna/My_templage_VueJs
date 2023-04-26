@@ -3,7 +3,7 @@
     <div class="flex text-lg items-center justify-start sticky z-10 top-12 bg-white  flex-row">
         <div class="flex flex-row  items-center">
             <h1 class="  w-full  font-bold text-stone-800 pt-4 pb-4">Etat :</h1>
-            <span class=" ml-2 text-[#63B6B9] text-sm rounded-md bg-teal-100  py-1 px-7"> Actif </span>
+            <span class=" ml-2 text-[#63B6B9] text_xs rounded-md bg-teal-100  py-1 px-7"> Actif </span>
         </div>
     </div>
     <div class="grid  grid-cols-2 w-full  mt-10">
@@ -11,7 +11,7 @@
             <input_ class=" z-10 w-full " :options="item"></input_>
         </div>
     </div>
-    <div class=" text-[#63B6B9] mt-7 text-sm flex flex-col">
+    <div class=" text-[#63B6B9] mt-7 text_xs flex flex-col">
         <span class=" font-semibold">Contrat de travail</span>
         <div class="flex">
             <btn_ class=" bg-white mt-3" :options="{label:'Contrat de travail.pdf',ico2Style:'text-[#63B6B9]',style:'   text-red-500 w-full',stylelabel:' text-black',ico:$store.state.icons.pdf_,ico2:$store.state.icons.cloudDown}"></btn_>

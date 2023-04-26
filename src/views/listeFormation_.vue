@@ -74,7 +74,7 @@
         <div v-if="showFormulaire==true" class="  flex flex-col  mx-3 bg-white rounded-lg w-[60%]  px-5">
             <div class=" z-20 sticky top-6  mx-3 bg-white rounded-lg py-5 px-5 flex justify-between w-full">
                 <span class=" font-semibold">Formulaire de base</span>
-                <div class="flex items-center flex-row text-sm ">
+                <div class="flex items-center flex-row text_xs ">
                     <span v-for="item,i in listeMenu" @click="()=>{indexFormulaire=i}" :key="i" :class="indexFormulaire==i?' base_bg text-white rounded-md':''" class=" mx-2 py-1 px-2" v-text="item"></span>
 
                 </div>

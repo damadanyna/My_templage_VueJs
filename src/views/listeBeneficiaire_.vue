@@ -21,7 +21,7 @@
                 </div>
             </div>
             <!-- tableau -->
-            <div class="flex w-full text-sm mt-4">
+            <div class="flex w-full text_xs mt-4">
                 <table class=" w-full items-start px-1">
                     <tr class=" w-full sticky top-24 bg-white py-5  ">
                         <th class=" py-2 w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>

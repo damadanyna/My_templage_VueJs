@@ -15,13 +15,13 @@
     </div>
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex  ">
         <div class="flex-col duration-500  bg-white rounded-lg w-[40%] h-max  flex z-10">
-            <div v-if="this.$store.state.myData.listeFormation.length>0" class=" text-sm flex-row">
+            <div v-if="this.$store.state.myData.listeFormation.length>0" class=" text_xs flex-row">
                 <!-- titre du tableau -->
                 <button @click="()=>{$router.go(-1)}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
                     <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
                 </button>
-                <div class="flex w-full px-3 text-sm mt-5">
+                <div class="flex w-full px-3 text_xs mt-5">
                     <table class=" text_xs  w-full items-start px-1">
                         <tr class=" w-full">
                             <th class=" w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>

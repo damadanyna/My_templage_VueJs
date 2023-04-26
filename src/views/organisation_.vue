@@ -8,7 +8,7 @@
         <div :class="showFormulaire==true?' px-5 w-[40%] ':'px-12'" class="bg-white flex-col duration-500 rounded-lg  h-max  flex z-10">
             <span v-if="showFormulaire==false" class=" sticky top-6 py-3  bg-white font-bold text-lg">Raison social</span>
             <!-- boite raison social -->
-            <div v-if="showFormulaire==false" class="flex flex-between mt-4 text-sm">
+            <div v-if="showFormulaire==false" class="flex flex-between mt-4 text_xs">
 
                 <!-- formulaire -->
                 <div class="flex flex-col text-[12px] border border-black w-2/5 rounded-lg">
@@ -57,7 +57,7 @@
                 </div>
                 <btn_ v-if="showFormulaire==false" @click="()=> { showFormulaire=true}" :options="{label:'Nouveau site',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_>
             </div>
-            <div class="flex w-full text-sm mt-9">
+            <div class="flex w-full text_xs mt-9">
                 <table class=" w-full items-start">
                     <tr class=" w-full sticky top-20 bg-white py-2  ">
                         <th class="py-2 w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>

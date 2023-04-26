@@ -50,8 +50,8 @@
             </div>
         </div>
         <!-- tableau de titre du site -->
-        <div class="flex w-full text-sm mt-4 h-96 overflow-auto">
-            <table class=" text-sm  w-full items-start px-1">
+        <div class="flex w-full text_xs mt-4 h-96 overflow-auto">
+            <table class=" text_xs  w-full items-start px-1">
                 <tr class=" w-full sticky top-0 bg-stone-300 py-5  ">
                     <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                     <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-200 ">TitreSite</th>
@@ -94,14 +94,14 @@
     <div class="flex  py-3 justify-between mt-4 px-7 w-full flex-col bg-stone-300 border-[1px] border-[#63B6B9] rounded-md">
         <div class="flex flex-col justify-between">
             <span class=" text-[#0F9EC2] font-semibold text-lg">Si présentiel</span>
-            <span class="text-sm mt-3">Condition d’accès au cours</span>
+            <span class="text_xs mt-3">Condition d’accès au cours</span>
             <div class="flex mt-3">
                 <btn_ class=" bg-stone-300 rounded-md" :options="{label:'Condition d’accès au cours.pdf',ico2Style:'text-[#63B6B9]',style:' py-1 text-red-500 w-full',stylelabel:' text-black',ico:$store.state.icons.pdf_,ico2:$store.state.icons.cloudDown}"></btn_>
             </div>
         </div>
     </div>
-    <div class="flex flex-col  mt-7 text-sm">
-        <span class="text-sm font-semibold  text-[#63B6B9]">Quelques modèles</span>
+    <div class="flex flex-col  mt-7 text_xs">
+        <span class="text_xs font-semibold  text-[#63B6B9]">Quelques modèles</span>
         <div class="flex flex-row mt-6">
             <div class="flex flex-col mr-2">
                 <span>Modèle de convocation</span>

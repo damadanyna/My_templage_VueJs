@@ -6,8 +6,8 @@
             <h5 class=" font-semibold text-lg">Veille pédagogique</h5>
             <btn_ :options="{label:'Veille',style:' base_bg text-white w-full',ico:$store.state.icons.listCheck}"></btn_>
         </div>
-        <div class="flex w-full text-sm mt-4">
-            <table class=" text-sm  w-full items-start px-1">
+        <div class="flex w-full text_xs mt-4">
+            <table class=" text_xs  w-full items-start px-1">
                 <tr class=" w-full">
                     <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                     <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-200 ">TitreSite</th>

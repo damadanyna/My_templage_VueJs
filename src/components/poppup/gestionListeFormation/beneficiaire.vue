@@ -67,7 +67,7 @@
         </div>
 
         <!-- tableau d'apprentissage -->
-        <div class="flex w-full text-sm mt-5">
+        <div class="flex w-full text_xs mt-5">
             <table class=" text_xs  w-full items-start px-1">
                 <tr class=" w-full">
                     <th class=" w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>

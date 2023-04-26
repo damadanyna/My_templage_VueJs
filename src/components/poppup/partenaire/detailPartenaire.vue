@@ -3,7 +3,7 @@
 <div class=" bg-white rounded-lg flex px-1 py-5 flex-col z-20">
     <span class=" text-lg font-bold sticky mt-14 top-5 py-4 bg-white z-50">Listes des lieux d’exploitation :</span>
     <div class="flex w-ful justify-between">
-        <span class=" text-sm font-semibold">Site d’expoitation 1</span>
+        <span class=" text_xs font-semibold">Site d’expoitation 1</span>
         <div class=" flex flex-row">
             <div class="flex flex-row items-center">
                 <button class=" p-1 bg-slate-100 rounded-md ">
@@ -38,7 +38,7 @@
         <div class="flex h-[2px] w-full bg-stone-300"></div>
     </div>
     <div class="flex w-ful justify-between">
-        <span class=" text-sm font-semibold">Site d’expoitation 2</span>
+        <span class=" text_xs font-semibold">Site d’expoitation 2</span>
         <div class=" flex flex-row">
             <div class="flex flex-row items-center">
                 <button class=" p-1 bg-slate-100 rounded-md ">
@@ -79,7 +79,7 @@
     </div>
 
     <!-- tableau -->
-    <div class="flex w-full text-sm mt-4">
+    <div class="flex w-full text_xs mt-4">
         <table class=" w-full items-start px-1">
             <tr class=" w-full">
                 <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
@@ -141,7 +141,7 @@
     </div>
 
     <!-- tableau -->
-    <div class="flex w-full text-sm mt-4">
+    <div class="flex w-full text_xs mt-4">
         <table class=" w-full items-start px-1">
             <tr class=" w-full">
                 <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>

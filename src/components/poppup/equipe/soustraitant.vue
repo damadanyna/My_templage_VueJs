@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <div class="flex flex-col justify-center px-2 text-sm mt-2">
+        <div class="flex flex-col justify-center px-2 text_xs mt-2">
             <span class=" font-semibold">TEST QUALIOPI</span>
             <div class="flex flex-row items-center mt-5">
                 <btn_ class=" bg-white   rounded-md" :options="{label:'document1.pdf',ico2Style:'text-[#63B6B9]',style:' py-1 text-red-500 w-full',stylelabel:' text-black',ico:$store.state.icons.pdf_,ico2:$store.state.icons.cloudDown,ico3:$store.state.icons.delete}"></btn_>

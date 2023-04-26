@@ -7,7 +7,7 @@
           </div>
       </div>
       <div class=" w-full h-full flex flex-col rounded-md "> 
-          <div class="flex flex-col justify-center   text-sm  "> 
+          <div class="flex flex-col justify-center   text_xs  "> 
               <div class="flex flex-row items-center mt-1">
                   <btn_ class=" bg-white   rounded-md" :options="{label:'document1.pdf',ico2Style:'text-[#63B6B9]',style:' bg-stone-200 py-1 text-red-500 w-full',stylelabel:' text-black',ico:$store.state.icons.pdf_,ico2:$store.state.icons.cloudDown,ico3:$store.state.icons.delete}"></btn_>
                   <btn_ class=" bg-white ml-2  rounded-md" :options="{label:'Certificat_document.pdf',ico2Style:'text-[#63B6B9]',style:' bg-stone-200 py-1 text-red-500 w-full',stylelabel:' text-black',ico:$store.state.icons.pdf_,ico2:$store.state.icons.cloudDown,ico3:$store.state.icons.delete}"></btn_>

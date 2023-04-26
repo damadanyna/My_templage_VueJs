@@ -1,5 +1,5 @@
 <template>
-<div class=" flex flex-col py-5 text-sm">
+<div id="template" class=" flex flex-col py-5 text_xs">
     <div class="flex flex-row w-full justify-between px-4">
         <!-- select Option -->
         <div class="flex items-center flex-row">
@@ -34,28 +34,22 @@
 
     </div>
     <!-- tableau -->
-    <div class="flex w-full text-sm mt-4  h-96 overflow-auto">
+    <div class="flex w-full text_xs mt-4  h-96 overflow-auto">
         <table class=" w-full items-start px-1 ">
             <tr class=" w-full sticky top-0 bg-white py-5  ">
-                <th class=" py-2 w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
-                <th class=" py-2  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Nom </th>
-                <th class=" py-2  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Prénom</th>
-                <th class=" py-2  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Etat</th>
-                <th v-if="showFormulaire==false" class=" py-2  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date d'inscription</th>
-                <th v-if="showFormulaire==false" class=" py-2  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
+                <th class=" py-2 w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>
+                <th class=" py-2  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Nom </th>
+                <th class=" py-2  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Prénom</th>
+                <th class=" py-2  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Date d'inscription</th>
+                <th class=" py-2  w-[19] text-center text-stone-500   ">Actions</th>
             </tr>
             <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
-                <td class=" text-gray-500 px-2" v-text="i"></td>
-                <td class="pl-5" v-text="'Nom'+i"></td>
-                <td class="pl-5" v-text="'Prénom'"></td>
-                <td class="pl-5 ">
-                    <div class=" flex my-1">
-                        <button class=" px-2 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border py-1 ">A traité</button>
-                    </div>
-                </td>
-                <td v-if="showFormulaire==false" class="pl-5" v-text="'18 juin 2025'"></td>
-                <td v-if="showFormulaire==false" class=" px-2">
-                    <div class=" flex flex-row items-center py-1">
+                <td class=" text-gray-500 text-center" v-text="i"></td>
+                <td class="text-center font-semibold" v-text="'Nom'+i"></td>
+                <td class="text-center font-semibold" v-text="'Prénom'"></td> 
+                <td class="text-center" v-text="'18 juin 2025'"></td>
+                <td class=" px-2">
+                    <div class=" flex flex-row items-center justify-center py-1">
                         <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
                             <svg class=" fill-current text-black rounded-md w-4" viewBox="0 0 24 24">
                                 <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
@@ -76,7 +70,7 @@ import btn_ from '../../button/btn_.vue';
 import input_ from '../../input/inputTxt.vue';
 import textArea_ from '../../input/textarea.vue';
 import detailFormationVue from './components/detailFormation.vue';
-
+import gsap from 'gsap';
 export default {
     components: {
         btn_,
@@ -121,8 +115,19 @@ export default {
                     label: 'Formateur name 3',
                     val: '2'
                 },
-            ], 
+            ],
         }
+    },
+    mounted() {
+        gsap.fromTo("#template", {
+            width: 0,
+            opacity:0,
+
+        }, {
+            duration: .5,
+            opacity: 1,
+            width:'100%'
+        });
     }
 }
 </script>

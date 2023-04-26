@@ -16,13 +16,13 @@
     </div>
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex  ">
         <div class="flex-col duration-500  bg-white rounded-lg w-[40%] h-max  flex z-10">
-            <div v-if="this.$store.state.myData.listeFormation.length>0" class=" text-sm flex-row">
+            <div v-if="this.$store.state.myData.listeFormation.length>0" class=" text_xs flex-row">
                 <!-- titre du tableau -->
                 <div class="flex flex-row sticky   py-6 w-full justify-between items-center px-5 top-5 bg-white">
-                    <h5 class=" font-semibold text-sm text-teal-500 "> Nom du formation </h5>
+                    <h5 class=" font-semibold text_xs text-teal-500 "> Nom du formation </h5>
                     <btn_ :options="{label:'Nouveau',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_>
                 </div>
-                <div class="flex w-full px-3 text-sm mt-5">
+                <div class="flex w-full px-3 text_xs mt-5">
                     <table class=" text_xs  w-full items-start px-1">
                         <tr class=" w-full">
                             <th class=" w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>

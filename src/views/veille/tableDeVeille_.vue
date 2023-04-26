@@ -7,8 +7,8 @@
     </div>
     <div class="flex flex-col rounded-lg bg-white pb-10 px-10">
         <span class=" py-4 font-bold">Veille</span>
-        <div class="flex w-full text-sm mt-4">
-            <table class=" text-[#4B4B4B] text-sm  w-full items-start px-1">
+        <div class="flex w-full text_xs mt-4">
+            <table class=" text-[#4B4B4B] text_xs  w-full items-start px-1">
                 <tr>
                     <th class="bg-[#63B6B9] text-white   rounded-tl-[15px] ">Date acquisition</th>
                     <th class="bg-[#D9D9D9] border-x-[3px] border-white rounded-t-[15px]">9 août 2023</th>
@@ -30,8 +30,8 @@
 
         </div>
         <span class=" py-4 font-bold mt-6">Exploitation de la veille</span>
-        <div class="flex w-full text-sm mt-4 flex-col ">
-            <table class=" text-[#4B4B4B] text-sm w-full items-start px-1">
+        <div class="flex w-full text_xs mt-4 flex-col ">
+            <table class=" text-[#4B4B4B] text_xs w-full items-start px-1">
                 <tr>
                     <th class="bg-[#63B6B9] text-white   rounded-tl-[15px] ">Statut</th>
                     <th class="bg-[#D9D9D9] border-x-[3px] border-white rounded-t-[15px]">{statut}</th>

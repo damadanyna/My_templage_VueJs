@@ -1,5 +1,5 @@
 <template>
-<div class="flex justify-between bg-white items-center flex-row px-4 rounded-lg  w-full text-sm  py-3">
+<div class="flex justify-between bg-white items-center flex-row px-4 rounded-lg  w-full text_xs  py-3">
 
     <div class=" relative flex items-center flex-row">
         <div class=" absolute w-7 h-7 flex items-center " @click="()=>{ $store.state.menuFull==true? $store.state.menuFull=false: $store.state.menuFull=true}">

@@ -10,11 +10,11 @@
         </div>
         <div class="flex flex-row w-full">
             <div class="flex flex-col w-[50%]">
-                <span class=" text-[#63B6B9] font-semibold text-sm">Informations de facturation :</span>
+                <span class=" text-[#63B6B9] font-semibold text_xs">Informations de facturation :</span>
                 <infoFacturation class="flex  "></infoFacturation>
             </div> 
             <div class="flex flex-col w-[50%]">
-                <span class=" text-[#63B6B9] font-semibold text-sm">Informations de paiement :</span>
+                <span class=" text-[#63B6B9] font-semibold text_xs">Informations de paiement :</span>
                 <infoPaie class="flex  "></infoPaie>
             </div> 
         </div>

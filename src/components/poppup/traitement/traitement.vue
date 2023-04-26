@@ -2,7 +2,7 @@
     <div id="poppupOrganisme">
         <!-- forumlaire de organisme -->
         <div class=" bg-white rounded-lg flex px-1 py-5 flex-col z-20">
-            <span class=" text-sm font-bold sticky top-6 py-5 bg-white z-50">Traitement des aléas, difficultés et réclamations :</span>
+            <span class=" text_xs font-bold sticky top-6 py-5 bg-white z-50">Traitement des aléas, difficultés et réclamations :</span>
             <div class=" mt-8 flex flex-col">
                 <div class="flex flex-row w-full">
                     <input_ class=" w-full " :options="data_[0]"></input_>
@@ -10,9 +10,9 @@
                 </div>
     
                 <div class="flex flex-row my-4 justify-end items-center">
-                    <span class=" font-bold text-sm mr-5">Gravité de l’incident:</span>
+                    <span class=" font-bold text_xs mr-5">Gravité de l’incident:</span>
     
-                    <div class="flex flex-row text-sm base_bg px-3 py-2 rounded-lg">
+                    <div class="flex flex-row text_xs base_bg px-3 py-2 rounded-lg">
                         <select name="" id="" class=" text-white outline-none ">
                             <option v-for=" item,i in niveauList" :key="i" :value="item.val" v-text="item.label" class=" border-b border-stone-200 text-black "></option>
                         </select>
@@ -26,13 +26,13 @@
                     <textArea_ class=" w-full" :options="data_[2]"></textArea_>
                 </div>
                 <div class="flex flex-row my-4 items-center">
-                    <span class=" font-bold text-sm mr-5">Status:</span>
+                    <span class=" font-bold text_xs mr-5">Status:</span>
                     <div v-for="item,i in listeStatus" class="flex flex-row mr-6 cursor-pointer duration-300" @click="()=>{indexStatu=i}">
                         <svg v-if="i!=indexStatu" class=" w-5 fill-current text-[#63B6B9]" viewBox="0 0 24 24">
                             <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z" /></svg>
                         <svg v-else class=" w-5 fill-current text-[#63B6B9]" viewBox="0 0 24 24">
                             <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 5a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5 5 5 0 0 0-5-5z" /></svg>
-                        <span :class="i==indexStatu?'base_bg  text-white':' text-black border-[1px] border-[#63B6B9]'" class=" px-3 py-1  rounded-md text-sm" v-text="item"></span>
+                        <span :class="i==indexStatu?'base_bg  text-white':' text-black border-[1px] border-[#63B6B9]'" class=" px-3 py-1  rounded-md text_xs" v-text="item"></span>
                     </div>
                 </div>
                 <div class="flex flex-row w-full">
