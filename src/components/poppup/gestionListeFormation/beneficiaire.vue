@@ -3,6 +3,7 @@
 
     <div class=" bg-white rounded-lg flex px-6 py-5 flex-col z-20">
 
+        <span class=" hidden ">{{ item }}</span>
         <!-- forumlaire de base -->
         <div class=" mt-4 flex flex-col">
             <div class="flex flex-row w-full">
@@ -77,15 +78,15 @@
                     <th class="  w-[7%] text-center text-stone-500 mx-2">Action</th>
                 </tr>
                 <tr @click="getIt_()" v-for="item,i in this.$store.state.myData.TitreFormation" :key="i" class=" group duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
-                    <td class=" text-center text-gray-500 px-2" v-text="item.id"></td>
-                    <td class=" text-center" v-text="'Les clés pour réussir votre projet'"></td>
-                    <td class=" text-center" v-text="'18 juin 2025'"></td>
-                    <td class=" text-center ">
+                    <td class=" group-hover:text-white text-center text-gray-500 px-2" v-text="item.id"></td>
+                    <td class=" group-hover:text-white text-center text-[#42898B] font-semibold" v-text="'Les clés pour réussir votre projet'"></td>
+                    <td class=" group-hover:text-white text-center" v-text="'18 juin 2025'"></td>
+                    <td class=" group-hover:text-white text-center ">
                         <button v-if="item.etat=='Abandonné'" class=" py-1  px-2 my-1 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border" v-text="item.etat"></button>
                         <button v-if="item.etat=='En formation'" class=" py-1  px-2 my-1 bg-green-100 rounded-md text-green-600 text_xs  border-green-500 border" v-text="item.etat"></button>
                         <button v-if="item.etat=='Achevé'" class=" py-1  px-2 my-1 bg-yellow-100 rounded-md text-yellow-600 text_xs  border-yellow-500 border" v-text="item.etat"></button>
                     </td>
-                    <td class=" text-[#63B6B9] group-hover:text-white items-center">
+                    <td class=" color_base group-hover:text-white items-center">
                         <div class="  flex flex-row text-center">
                             <svg class=" fill-current w-4" viewBox="0 0 24 24">
                                 <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
@@ -105,6 +106,9 @@ import input_ from '../../input/inputTxt.vue'
 import btn_ from '../../button/btn_.vue';
 import gsap from 'gsap'
 export default {
+    props: {
+        item: {}
+    },
     data() {
         return {
             data_: [{
@@ -154,8 +158,17 @@ export default {
         set_(val) {
             this.selected = val
         },
-        getIt_(){
-            this.$router.push({name:'liverApprentissatge'})
+        getIt_() {
+            this.$router.push({
+                name: 'liverApprentissatge'
+            })
+        },
+        setVal(item) { 
+            console.log(item);
+            if (item.titre) {
+                this.data_[0].model = item.titre.nom
+                this.data_[1].model = item.titre.prenom
+            }
         }
     },
     mounted() {
@@ -166,6 +179,16 @@ export default {
             duration: .5,
             opacity: 1,
         });
+
+        if (this.item != {}) {
+            this.setVal(this.item)
+        }
+    },
+    updated() {
+
+        if (this.item != {}) {
+            this.setVal(this.item)
+        }
     }
 }
 </script>

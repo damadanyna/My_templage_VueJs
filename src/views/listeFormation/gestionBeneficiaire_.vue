@@ -2,7 +2,7 @@
 <div class="flex flex-col h-full">
 
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex  ">
-        <div class="flex-col duration-500 flex z-10">
+        <div class="flex-col duration-500 flex z-10 w-[40%]">
             <div class=" flex flex-row  w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">
                 <h1 class=" text-lg   px-2 rounded-r-md">Listes formations</h1>
             </div>
@@ -59,7 +59,7 @@
 
             <div class=" flex flex-row   duration-300 w-full bg-stone-100 z-50 text-stone-600  pb-3">
                 <h1 class=" text-lg ml-2  "> > Gestion bénéficiaire :</h1>
-                <h1 class=" text-lg ml-2 font-semibold text-[#63B6B9]  ">TitreFormation</h1>
+                <h1 class=" text-lg ml-2 font-semibold color_base  ">TitreFormation</h1>
             </div>
             <div class="  flex flex-col   bg-white rounded-lg   ">
                 <div class=" bg-white rounded-lg w-full h-max px-12 flex z-10 flex-col ">
@@ -87,10 +87,10 @@
                                     <div class=" flex flex-row items-center py-1">
 
                                         <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
-                                            <svg class=" fill-current text-[#63B6B9] rounded-md w-4" viewBox="0 0 24 24">
+                                            <svg class=" fill-current color_base rounded-md w-4" viewBox="0 0 24 24">
                                                 <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
                                         </button>
-                                        <span class=" text-[#63B6B9] group-hover:text-white">Voir</span>
+                                        <span class=" color_base group-hover:text-white">Voir</span>
                                     </div>
                                 </td>
                             </tr>

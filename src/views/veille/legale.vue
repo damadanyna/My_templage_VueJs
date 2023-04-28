@@ -15,7 +15,7 @@
                     <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date d'inscriptoin</th> 
                     <th class="  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
                 </tr>
-                <tr v-for="i in 3" :key="i" class=" duration-200 my-1 hover:text-[#63B6B9]  hover:bg-[#63B6B9]  ">
+                <tr v-for="i in 3" :key="i" class=" duration-200 my-1 hover:color_base  hover:bg-[#63B6B9]  ">
                     <td class=" text-gray-500 px-2" v-text="i"></td>
                     <td class="pl-5" v-text="'Ligne'+i"></td>
                     <td class="pl-5 ">

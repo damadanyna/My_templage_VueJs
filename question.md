@@ -12,8 +12,4 @@ gestion bénéficiaire
   gtag('config', 'G-CRYFZ3RNVT');
 </script> -->
 
-
-line vers - chat
-
-- fiche de presence
-- fiche de presence
+ 

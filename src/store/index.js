@@ -1,13 +1,13 @@
 // store/index.js
 import { createStore } from 'vuex' 
 import tools from './modules/tools'
-import myData from './modules/data'
+import myData from './modules/data' 
 
 const store = createStore({
     modules:{
         tools:tools,
         myData:myData,
-        isAdd:true,
+        isAdd:true, 
     },
      state:{ 
         menu_liste: [{     

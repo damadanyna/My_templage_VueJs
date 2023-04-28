@@ -20,7 +20,7 @@
                         <button v-if="item.result=='Echoué'" v-text="item.result" class=" py-1  px-2 my-1 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border"></button>
                         <button v-if="item.result=='Reussi'" v-text="item.result" class=" py-1  px-2 my-1 bg-green-100 rounded-md text-green-600 text_xs  border-green-500 border"></button>
                     </td>
-                    <td class=" text-[#63B6B9] group-hover:text-white items-center">
+                    <td class=" color_base group-hover:text-white items-center">
                         <div class="  flex flex-row text-center">
                             <svg class=" fill-current w-4" viewBox="0 0 24 24">
                                 <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>

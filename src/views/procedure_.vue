@@ -28,8 +28,8 @@
                     <tr v-for="i in 20" :key="i" class=" duration-200 hover:text-white  hover:bg-[#63B6B9]  ">
                         <td class=" text-gray-500 px-2" v-text="i"></td>
                         <td class="pl-5" v-text="'Ligne'+i"></td>
-                        <td v-if="showFormulaire!=true" class="text-center text-[#63B6B9]" v-text="'[Fonction]'"></td>
-                        <td v-if="showFormulaire!=true" class="text-center text-[#63B6B9]" v-text="'[Lien PDF]'"></td>
+                        <td v-if="showFormulaire!=true" class="text-center color_base" v-text="'[Fonction]'"></td>
+                        <td v-if="showFormulaire!=true" class="text-center color_base" v-text="'[Lien PDF]'"></td>
                         <td class=" px-2">
                             <div class=" flex flex-row w-full justify-center items-center py-1">
                                 <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">

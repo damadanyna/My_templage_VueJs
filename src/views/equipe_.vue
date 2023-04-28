@@ -1,12 +1,12 @@
 <template>
-<div class="flex flex-col h-full">
-    <h1 class=" text-lg sticky -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-9">Listes des equipes / sous-traitant</h1>
+<div class="flex flex-col h-full sticky -top-6">
+    <h1 class=" text-lg   w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-9">Listes des equipes / sous-traitant</h1>
     <div class="w-full  flex flex-row">
-        <div :class="showFormulaire==true?'w-[40%]':'w-full'" class=" duration-500 bg-white rounded-lg  h-max px-12 flex z-10 flex-col ">
-           
+        <div :class="showFormulaire==true?'w-[40%] px-2':'w-full px-7'" class="  duration-500 bg-white rounded-lg  h-max  flex z-10 flex-col ">
+
             <!-- entête -->
-            <div class="flex flex-row sticky top-10 py-5 w-full justify-between items-center bg-white mt-6">
-                <h5 class=" font-semibold text-2xl">Equipes</h5> 
+            <div class="flex flex-row sticky top-3 py-5 w-full justify-between items-center bg-white mt-6">
+                <h5 class=" font-semibold text-2xl">Equipes</h5>
                 <div class="flex flex-row">
                     <div class=" flex flex-row mx-1 ">
                         <btn_ class=" " :options="{url:{name:'organigramme'},label:'Organigramme',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_>
@@ -20,41 +20,44 @@
             </div>
 
             <!-- tableau -->
-            <div class="flex w-full text_xs mt-4">
+            <div class="flex w-full text_xs mt-4 h-[65vh] px-2 overflow-auto">
                 <table class=" w-full items-start px-1">
-                    <tr class=" w-full sticky top-28 ">
-                        <th class=" py-3 bg-white w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
-                        <th class=" py-3 bg-white w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Nom </th>
-                        <th class=" py-3 bg-white w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Prénom</th>
-                        <th v-if="showFormulaire==false" class=" py-3 bg-white w-[13%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Fonction</th>
-                        <th v-if="showFormulaire==false" class=" py-3 bg-white w-[12%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Status</th>
-                        <th v-if="showFormulaire==false" class=" py-3 bg-white w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Etat</th>
-                        <th class=" py-3 bg-white w-[19%] text-start text-stone-500 pl-5  ">Actions</th>
+                    <tr class=" w-full sticky top-0 ">
+                        <th class=" py-3 bg-white w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>
+                        <th :class="showFormulaire==false?'w-[16%]':' w-[20%]'" class=" py-3 bg-white text-center text-stone-500  border-r border-stone-200 ">Nom </th>
+                        <th :class="showFormulaire==false?'w-[16%]':' w-[20%]'" class=" py-3 bg-white text-center text-stone-500  border-r border-stone-200 ">Prénom</th>
+                        <th v-if="showFormulaire==false" class=" py-3 bg-white w-[13%] text-center text-stone-500  border-r border-stone-200 ">Fonction</th>
+                        <th v-if="showFormulaire==false" class=" py-3 bg-white w-[12%] text-center text-stone-500  border-r border-stone-200 ">Status</th>
+                        <th v-if="showFormulaire==false" class=" py-3 bg-white w-[16%] text-center text-stone-500  border-r border-stone-200 ">Etat</th>
+                        <th :class="showFormulaire==false?' w-[32%]':' w-[10%]'" class=" py-3 bg-white text-center text-stone-500  ">Actions</th>
                     </tr>
-                    <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
-                        <td class=" text-gray-500 px-2" v-text="i"></td>
-                        <td class="pl-5" v-text="'Nom'+i"></td>
-                        <td class="pl-5" v-text="'Prénom'"></td>
-                        <td v-if="showFormulaire==false" class="pl-5" v-text="'{Fonction}'"></td>
-                        <td v-if="showFormulaire==false" class="pl-5" v-text="'Gérant'"></td>
-                        <td v-if="showFormulaire==false" class="pl-5 ">
-                            <div class=" flex my-1">
+                    <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white group  hover:bg-[#63B6B9]  ">
+                        <td class=" text-center text-gray-500 px-2" v-text="i"></td>
+                        <td class=" text-center font-semibold" v-text="'Nom'+i"></td>
+                        <td class=" text-center font-semibold" v-text="'Prénom'"></td>
+                        <td v-if="showFormulaire==false" class=" color_base text-center" v-text="'{Fonction}'"></td>
+                        <td v-if="showFormulaire==false" class=" text-center" v-text="'Gérant'"></td>
+                        <td v-if="showFormulaire==false" class=" text-center ">
+                            <div class=" flex w-full justify-center flex-row my-1">
                                 <button class=" px-2 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border py-1 ">Plus en activité</button>
                             </div>
                         </td>
                         <td class=" px-2">
-                            <div class=" flex flex-row items-center py-1">
-                                <button  @click="()=>{showFormulaire=true}"  class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
-                                    <svg class=" fill-current text-black rounded-md w-4" viewBox="0 0 24 24">
-                                        <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
+                            <div :class="showFormulaire==false?'  px-6':' px-2'" class=" flex flex-row items-center justify-between w-full py-1">
+                                <button @click="()=>{showFormulaire=true}" class="  flex flex-row items-center  px-1 rounded-md py-1 ">
+                                    <svg class=" group-hover:text-white fill-current w-4 color_base" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
+                                    <u class=" group-hover:text-white color_base ml-1">Modifier</u>
+                                </button>
+                                <button @click="()=>{showFormulaire=true}" class=" ml-4 bg-slate-100 px-1 rounded-md py-1 ">
+                                    <svg class=" fill-current w-4 text-red-500" viewBox="0 0 24 24"><path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z" /></svg>
                                 </button>
                             </div>
                         </td>
                     </tr>
-                </table> 
+                </table>
             </div>
         </div>
-        <div v-if="showFormulaire==true" class=" flex flex-col mx-3 bg-white rounded-lg w-[60%]  px-5">
+        <div v-if="showFormulaire==true" class=" flex flex-col mx-3 bg-white rounded-lg w-[60%]  h-[85vh]  overflow-auto  px-5">
             <formulaireVue></formulaireVue>
             <etat></etat>
             <soustraitantVue></soustraitantVue>

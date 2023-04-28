@@ -1,6 +1,6 @@
 <template>
   <div class=" h-full w-full flex flex-col">
-      <div class="flex text-lg items-center justify-start sticky z-10 top-5 py-5 bg-white  flex-row">
+      <div class="flex text-lg items-center justify-start sticky z-10 -top-2 py-5 bg-white  flex-row">
           <div class="flex flex-row  items-center">
               <h1 class="w-full font-bold text-[#000000] pt-4  ">Info bénéficiaire</h1>
           </div>

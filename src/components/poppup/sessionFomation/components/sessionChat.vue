@@ -6,8 +6,8 @@
     </div>
     <div class="flex py-2 flex-row justify-between w-full font-semibold mt-5">
         <btn_ class=" " :options="{label:'Séssion',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
-        <btn_ class=" " :options="{label:'Formateur 1',style:' bg-stone-300 text-[#63B6B9] py-2 '}"></btn_>
-        <btn_ class=" " :options="{label:'Responsable pédagogique',style:' bg-stone-300 text-[#63B6B9] py-2 '}"></btn_>
+        <btn_ class=" " :options="{label:'Formateur 1',style:' bg-stone-300 color_base py-2 '}"></btn_>
+        <btn_ class=" " :options="{label:'Responsable pédagogique',style:' bg-stone-300 color_base py-2 '}"></btn_>
     </div>
     <div class="flex flex-col">
         <div id="message_contener" class="flex flex-col h-[40vh] overflow-y-auto">
@@ -24,7 +24,7 @@
         <div class="flex py-3 flex-row">
             <input_ class=" w-full mr-2 bg-white py-1" :options="Mydata"></input_>
             <button class=" px-4  rounded-md mr-2">
-                <svg class=" w-6 text-[#63B6B9] transform -rotate-45 fill-current " viewBox="0 0 24 24">
+                <svg class=" w-6 color_base transform -rotate-45 fill-current " viewBox="0 0 24 24">
                     <path d="M7.5 18A5.5 5.5 0 0 1 2 12.5 5.5 5.5 0 0 1 7.5 7H18a4 4 0 0 1 4 4 4 4 0 0 1-4 4H9.5A2.5 2.5 0 0 1 7 12.5 2.5 2.5 0 0 1 9.5 10H17v1.5H9.5a1 1 0 0 0-1 1 1 1 0 0 0 1 1H18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 18 8.5H7.5a4 4 0 0 0-4 4 4 4 0 0 0 4 4H17V18H7.5z" /></svg>
             </button>
             <button @click="sendMessage" class="bg-[#63B6B9] px-4 ml-2 rounded-md">

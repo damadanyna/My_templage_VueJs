@@ -2,7 +2,7 @@
 <div class="flex flex-col px-6 bg-white rounded-md">
     <div class="flex flex-row font-semibold">
         <span>Grille d'évaluation/Sondage :</span>
-        <span class=" text-[#63B6B9]">Titre formation - Module</span>
+        <span class=" color_base">Titre formation - Module</span>
     </div>
     <div class="flex flex-row text_xs mt-3 font-semibold">
         <span>Remplir par :</span>
@@ -29,7 +29,7 @@
         <div class=" text-[14px] items-center bg-stone-100 mx-3 px-5 flex flex-row rounded-md" v-for="item, i in media " :key="i">
             <span v-text="item"></span>
             <button class="  ml-2">
-                <svg class="  fill-current w-4 text-[#63B6B9]" viewBox="0 0 24 24">
+                <svg class="  fill-current w-4 color_base" viewBox="0 0 24 24">
                     <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
             </button>
         </div>
@@ -78,7 +78,7 @@
         <div class=" text-[14px] items-center bg-stone-100 mx-3 px-5 flex flex-row rounded-md" v-for="item, i in media " :key="i">
             <span v-text="item"></span>
             <button class="  ml-2">
-                <svg class="  fill-current w-4 text-[#63B6B9]" viewBox="0 0 24 24">
+                <svg class="  fill-current w-4 color_base" viewBox="0 0 24 24">
                     <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
             </button>
         </div>

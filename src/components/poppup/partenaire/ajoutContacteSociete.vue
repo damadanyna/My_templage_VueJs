@@ -18,20 +18,21 @@
         </div> 
         <div class="flex mt-5 flex-col w-full">
             <div class="flex flex-row w-full  rounded-t-lg border-[#63B6B9] border-t-[1px] border-x-[1px] font-bold">
-                <div @click="set_('IB')" :class="selected=='IB'?'bg-[#63B6B9] text-white':' bg-stone-100 text-[#63B6B9]'" class=" rounded-tl-lg w-full py-2   flex flex-col justify-center ">
+                <div @click="set_('IB')" :class="selected=='IB'?'bg-[#63B6B9] text-white':' bg-stone-100 color_base'" class=" rounded-tl-lg w-full py-2   flex flex-col justify-center ">
                     <span class=" text-center text_xs w-full   ">Commentaire interne </span> 
                 </div>
-                <div @click="set_('IF')" :class="selected!='IB'?'bg-[#63B6B9] text-white':' bg-stone-100 text-[#63B6B9]'" class=" w-full py-2 rounded-tr-lg  flex flex-col justify-center ">
+                <div @click="set_('IF')" :class="selected!='IB'?'bg-[#63B6B9] text-white':' bg-stone-100 color_base'" class=" w-full py-2 rounded-tr-lg  flex flex-col justify-center ">
                     <span class=" text-center text_xs w-full  ">Commentaire public</span> 
                 </div>
             </div>
             <div class="   border-[#63B6B9] group border-[1px] py-1 w-full rounded-b-lg items-center flex flex-col  ">
-                <textarea v-model="data_[5].model" class=" w-full resize-none border-none outline-none px-3" name="" id="" rows="4"></textarea>
+                <textarea v-if="selected=='IB'" v-model="data_[6].model" class=" w-full resize-none border-none outline-none px-3" name="" id="" rows="4"></textarea>
+                <textarea v-else v-model="data_[7].model" class=" w-full resize-none border-none outline-none px-3" name="" id="" rows="4"></textarea>
             </div>
         </div>
         
         <div  class="  flex w-full justify-center mt-14 bg-white py-4 flex-row mx-1  ">
-                <btn_ @click="()=>{this.$store.state.isAdd=true}" class=" mr-6 " :options="{label:'Retour',ico:$store.state.icons.back,style:' bg-tranparent text-[#63B6B9] py-2 text-stone-800 '}"></btn_>
+                <btn_ @click="()=>{this.$store.state.isAdd=true}" class=" mr-6 " :options="{label:'Retour',ico:$store.state.icons.back,style:' bg-tranparent color_base py-2 text-stone-800 '}"></btn_>
 
                 <btn_ @click="()=>{this.$store.state.isAdd=true}" class=" " :options="{label:'Enregistrer',ico:$store.state.icons.plus,style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
             </div> 
@@ -47,7 +48,9 @@
     export default {
         data() {
             return {
-                data_: [{
+ 
+                data_: [    
+                {
                         label: 'Adresse',
                         model: '',
                         type: 'text'
@@ -81,6 +84,10 @@
                         label: 'Action menée',
                         model: '',
                     },
+                    {
+                        label: 'Action menée',
+                        model: '',
+                    },
                 ],
                 indexStatu: 0,
                 listeStatus: ['A traité', 'En cours', 'Resolue'],
@@ -101,7 +108,7 @@
                         val: '2'
                     },
                 ],
-                selected: true,
+                selected: 'IB',
             }
         },
         components: {

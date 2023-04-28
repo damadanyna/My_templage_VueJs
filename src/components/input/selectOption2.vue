@@ -1,6 +1,6 @@
 <template>
 <div class="flex"> 
-    <div class="custom-select text-[12px]" style="width:200px;">
+    <div class="custom-select2 text-[12px]" style="width:200px;">
         <select>
             <option v-for=" item, i in options" :value="item.val" v-text="item.label"> </option>
         </select>
@@ -16,15 +16,15 @@ export default {
     mounted() {
 
         var x, i, j, l, ll, selElmnt, a, b, c;
-        /*look for any elements with the class "custom-select":*/
-        x = document.getElementsByClassName("custom-select");
+        /*look for any elements with the class "custom-select2":*/
+        x = document.getElementsByClassName("custom-select2");
         l = x.length;
         for (i = 0; i < l; i++) {
             selElmnt = x[i].getElementsByTagName("select")[0];
             ll = selElmnt.length;
             /*for each element, create a new DIV that will act as the selected item:*/
             a = document.createElement("DIV");
-            a.setAttribute("class", "select-selected");
+            a.setAttribute("class", "select-selected2");
             a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
             x[i].appendChild(a);
             /*for each element, create a new DIV that will contain the option list:*/
@@ -75,7 +75,7 @@ export default {
             except the current select box:*/
             var x, y, i, xl, yl, arrNo = [];
             x = document.getElementsByClassName("select-items");
-            y = document.getElementsByClassName("select-selected");
+            y = document.getElementsByClassName("select-selected2");
             xl = x.length;
             yl = y.length;
             for (i = 0; i < yl; i++) {
@@ -100,25 +100,26 @@ export default {
 
 <style>
 /*the container must be positioned relative:*/
-.custom-select {
+.custom-select2 {
     position: relative;
 }
 
-.custom-select select {
+.custom-select2 select {
     display: none;
     color: white;
     /*hide original SELECT element:*/
 }
 
-.select-selected {
-    background-color: #63B6B9;
+.select-selected2 {
+    background-color: #EEEEEE;
     border-radius: 5px;
     display: flex;
     color: white;
 }
 
 /*style the arrow inside the select element:*/
-.select-selected:after {
+.select-selected2:after {
+    margin-top: 2px;
     position: absolute;
     content: "";
     top: 14px;
@@ -126,21 +127,20 @@ export default {
     width: 0;
     height: 0;
     border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent;
+    border-color: #63B6B9 transparent transparent transparent;
 }
 
 /*point the arrow upwards when the select box is open (active):*/
-.select-selected.select-arrow-active:after {
-    border-color: transparent transparent #fff transparent;
+.select-selected2.select-arrow-active:after {
+    border-color: transparent transparent #63B6B9 transparent;
     top: 7px;
 }
-
 /*style the items (options), including the selected item:*/
 .select-items div,
-.select-selected {
+.select-selected2 {
     color: black;
     padding: 8px 16px;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     border-color: transparent transparent rgba(47, 47, 47, 0.1) transparent;
     cursor: pointer;
     user-select: none;

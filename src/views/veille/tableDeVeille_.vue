@@ -18,7 +18,7 @@
                     <th class="bg-[#D9D9D9] border-x-[3px] border-white rounded-t-[15px]">9 août 2023</th>
                 </tr>
 
-                <tr v-for="item,i in data_table.contenu" :key="i" class=" duration-200 my-1 hover:text-[#63B6B9]     ">
+                <tr v-for="item,i in data_table.contenu" :key="i" class=" duration-200 my-1 hover:color_base     ">
                     <td :class="i%2==0?i==data_table.contenu.length-1?'bg-[#42898B] ':'bg-[#42898B]':i==data_table.contenu.length-1?'bg-[#63B6B9] rounded-b-lg' :'bg-[#63B6B9] rounded-md'"   class=" text-white text-center w-40  " :style=" data_table.title[i]=='Commentaires'?'height: 140px;':'height: 60px;'"><div :class="data_table.title[i]=='Commentaires'?' mt-7':' justify-center '" class=" flex flex-col h-full">{{data_table.title[i]}}</div></td>
                     <td :class="i%2!=0?i==data_table.contenu.length-1?'bg-[#D9D9D9] rounded-b-[15px]':'bg-[#D9D9D9]':'bg-[#EDEDED]'" class=" w-48  border-x-[3px] text-center border-white " :style=" data_table.title[i]=='Commentaires'?'height: 140px;':'height: 60px;'"><div :class="data_table.title[i]=='Commentaires'?' mt-7':' justify-center '" class=" flex flex-col h-full">{{item}}</div></td>
                     <td :class="i%2!=0?i==data_table.contenu.length-1?'bg-[#D9D9D9] rounded-b-[15px]':'bg-[#D9D9D9]':'bg-[#EDEDED]'" class=" w-48  border-x-[3px] text-center border-white " :style=" data_table.title[i]=='Commentaires'?'height: 140px;':'height: 60px;'"><div :class="data_table.title[i]=='Commentaires'?' mt-7':' justify-center '" class=" flex flex-col h-full">{{item}}</div></td>
@@ -40,7 +40,7 @@
                     <th class="bg-[#D9D9D9] border-x-[3px] border-white rounded-t-[15px]">{statut}</th>
                     <th class="bg-[#D9D9D9] border-x-[3px] border-white rounded-t-[15px]">{statut}</th>
                 </tr> 
-                <tr v-for="item,i in data_table2.contenu" :key="i" class=" duration-200 my-1 hover:text-[#63B6B9]     ">
+                <tr v-for="item,i in data_table2.contenu" :key="i" class=" duration-200 my-1 hover:color_base     ">
                     <td :class="i%2==0?i==data_table2.contenu.length-1?'bg-[#42898B] ':'bg-[#42898B]':i==data_table2.contenu.length-1?'bg-[#63B6B9] rounded-b-lg' :'bg-[#63B6B9] rounded-md'"   class=" text-white text-center w-40  " :style=" data_table2.title[i]=='Commentaires'?'height: 140px;':'height: 60px;'"><div :class="data_table2.title[i]=='Commentaires'?' mt-7':' justify-center '" class=" flex flex-col h-full">{{data_table2.title[i]}}</div></td>
                     <td :class="i%2!=0?i==data_table2.contenu.length-1?'bg-[#D9D9D9] rounded-b-[15px]':'bg-[#D9D9D9]':'bg-[#EDEDED]'" class=" w-48  border-x-[3px] text-center border-white " :style=" data_table2.title[i]=='Commentaires'?'height: 140px;':'height: 60px;'"><div :class="data_table2.title[i]=='Commentaires'?' mt-7':' justify-center '" class=" flex flex-col h-full">{{item}}</div></td>
                     <td :class="i%2!=0?i==data_table2.contenu.length-1?'bg-[#D9D9D9] rounded-b-[15px]':'bg-[#D9D9D9]':'bg-[#EDEDED]'" class=" w-48  border-x-[3px] text-center border-white " :style=" data_table2.title[i]=='Commentaires'?'height: 140px;':'height: 60px;'"><div :class="data_table2.title[i]=='Commentaires'?' mt-7':' justify-center '" class=" flex flex-col h-full">{{item}}</div></td>

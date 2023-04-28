@@ -5,20 +5,20 @@
         <div class="flex flex-row">
             <div class="flex flex-row items-center">
                 <span>Durée</span>
-                <button class=" p-1 mx-3 text-[#63B6B9] text-lg">-</button>
+                <button class=" p-1 mx-3 color_base text-lg">-</button>
                 <div class="flex flex-row  px-4 items-center bg-stone-300 border-b-2 border-[#63B6B9]">
                     <span class=" px-1">02</span>
                     <span>hrs</span>
                 </div>
-                <button class=" p-1 mx-3 text-[#63B6B9] text-lg">+</button>
+                <button class=" p-1 mx-3 color_base text-lg">+</button>
             </div>
             <div class="flex flex-row items-center ml-14"> 
-                <button class=" p-1 mx-3 text-[#63B6B9] text-lg">-</button>
+                <button class=" p-1 mx-3 color_base text-lg">-</button>
                 <div class="flex flex-row  px-4 items-center bg-stone-300 border-b-2 border-[#63B6B9]">
                     <span class=" px-1">30</span>
                     <span>min</span>
                 </div>
-                <button class=" p-1 mx-3 text-[#63B6B9] text-lg">+</button>
+                <button class=" p-1 mx-3 color_base text-lg">+</button>
             </div>
         </div>
     </div>

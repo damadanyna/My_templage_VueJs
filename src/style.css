@@ -54,3 +54,13 @@ select::after{
 .text_xs{
   font-size: 13px;
 }
+
+.color_base{
+  color: #63B6B9;
+}
+tr:nth-child(even){
+  background-color: rgb(246, 246, 246);
+} 
+ body{
+  overflow-x: hidden;
+ }

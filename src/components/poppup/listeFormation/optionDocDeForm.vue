@@ -13,7 +13,7 @@
         <btn_ class=" ml-2 " :options="{label:'Bibliothéque d\'objectif',style:' base_bg text_xs  text-white ',ico:$store.state.icons.list}"></btn_>
     </div>
 
-    <div class="flex w-full text_xs mt-4">
+    <div class="flex w-full text_xs mt-4  ">
         <table class=" w-full items-start px-1">
             <tr class=" w-full">
                 <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
@@ -22,7 +22,7 @@
                 <th class="  w-[16%] text-start text-stone-500  px-5 ">Type</th>
                 <th class="  w-[19] text-start text-stone-500  ">Actions</th>
             </tr>
-            <tr v-for="i in 4" :key="i" class=" duration-200 hover:text-white  hover:bg-[#63B6B9]  ">
+            <tr v-for="i in 4" :key="i" class=" group duration-200 hover:text-white  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="'001'"></td>
                 <td class="pl-5" v-text="'Ligne'+i"></td>
                 <td class="pl-5 ">
@@ -30,7 +30,7 @@
                 </td>
                 <td class="pl-5" v-text="'PDF'"></td>
                 <td class=" px-2 text-teal-500">
-                    <div class=" flex flex-row items-center py-1">
+                    <div class=" flex flex-row group-hover:text-white items-center py-1">
                         <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
                             <svg class=" fill-current text-teal-500 rounded-md w-4" viewBox="0 0 24 24">
                                 <path d="m17 13-5 5-5-5h3V9h4v4m5.35-2.97A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.03A6.004 6.004 0 0 0 0 14a6 6 0 0 0 6 6h13a5 5 0 0 0 5-5c0-2.64-2.05-4.78-4.65-4.97z" /></svg>

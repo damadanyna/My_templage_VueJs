@@ -1,46 +1,47 @@
 <template>
 <div class="flex flex-col h-full">
 
-    <div class=" flex flex-row  sticky duration-300 -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">
+    <div class=" flex flex-row  sticky duration-300 -top-6 w-full  bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">
         <h1 class=" text-lg">Traitements aléas / logs</h1>
         <!-- <h1 class=" text-lg ml-2  "> > Gestion de listes de formation</h1> -->
     </div>
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex ">
-        <div :class="showFormulaire==true?' px-5  w-[40%] ':'px-12 w-full '" class="flex-col duration-500  bg-white rounded-lg h-max  flex z-10">
-            <div v-if="showFormulaire!=false" class=" sticky top-5 mt-9 flex w-full bg-white py-4 flex-row mx-1  ">
+        <div :class="showFormulaire==true?' px-5  w-[40%] ':'px-12 w-full '" class=" py-8 flex-col duration-500  bg-white rounded-lg  flex z-10">
+            <div v-if="showFormulaire!=false" class=" sticky top-5 mt-3 flex w-full bg-white py-4 flex-row mx-1  ">
                 <button @click="()=>{showFormulaire=false}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
                     <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
                 </button>
             </div>
-            <div v-else class=" sticky top-5 mt-9 flex w-full bg-white py-4 flex-row mx-1  ">
-                <btn_ @click="()=>{showFormulaire=true}" class=" " :options="{label:'Nouvelle',ico:$store.state.icons.plus,style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
+            <div v-else class=" sticky top-5 mt-2 flex w-full bg-white py-4 flex-row mx-1  ">
+                <btn_ @click="()=>{back_()}" class=" " :options="{label:'Nouvelle',ico:$store.state.icons.plus,style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
             </div>
             <!-- Partenaire socio-économiques -->
-            <div class="flex flex-row items-center sticky top-7  bg-white mt-12 justify-between w-full">
-                <h5 class=" font-semibold text-2xl py-5">Partenaire socio-économiques</h5>
+            <div class="flex flex-row items-center sticky top-7  bg-white  justify-between w-full">
+                <h5 class=" font-semibold text-2xl py-3">Partenaire socio-économiques</h5>
             </div>
-            <div class="flex w-full text_xs mt-4">
+            <div class="flex w-full text_xs px-2 mt-4 h-[30vh] overflow-auto ">
                 <table class=" w-full items-start px-1">
                     <tr class=" w-full">
-                        <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
-                        <th class="  w-[76%] text-start text-stone-500  pl-5 ">TitreSite</th>
-                        <th v-if="showFormulaire!=true" class="  w-[16%] text-start text-stone-500  pl-5 ">Etat</th>
-                        <th class="  w-[19] text-start text-stone-500  ">Actions</th>
+                        <th class=" w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>
+                        <th class="  w-[66%] pl-5 text-start text-stone-500  ">TitreSite</th>
+                        <th v-if="showFormulaire!=true" class="  w-[26%] text-center text-stone-500  ">Etat</th>
+                        <th class="  w-[19%] text-center text-stone-500  ">Actions</th>
                     </tr>
-                    <tr v-for="i in 4" :key="i" class=" duration-200 hover:text-white  hover:bg-[#63B6B9]  ">
-                        <td class=" text-gray-500 px-2" v-text="'001'"></td>
-                        <td class="pl-5" v-text="'Ligne'+i"></td>
-                        <td v-if="showFormulaire!=true" class="pl-5 ">
+                    <tr v-for="i in 15" :key="i" class=" duration-200 hover:text-white group  hover:bg-[#63B6B9]  ">
+                        <td class="     text-center text-gray-500 px-2" v-text="'001'"></td>
+                        <td class=" font-semibold  pl-5" v-text="'Ligne'+i"></td>
+                        <td v-if="showFormulaire!=true" class=" flex justify-center ">
                             <div class=" flex my-1">
-                                <button class=" px-5 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border py-1 ">Plus en activité</button>
+                                <button class="  bg-red-100 rounded-md text-red-600 px-2 text_xs  border-red-500 border py-1 ">Plus en activité</button>
                             </div>
                         </td>
                         <td class=" px-2">
                             <div class=" flex flex-row items-center py-1">
-                                <button @click="goto_()" class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
-                                    <svg class=" fill-current text-black rounded-md w-4" viewBox="0 0 24 24">
+                                <button @click="()=>{goto_()}" class="  flex flex-row items-center  px-1 rounded-md py-1 ">
+                                    <svg class=" group-hover:text-white   fill-current w-4 color_base" viewBox="0 0 24 24">
                                         <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
+                                    <u class=" group-hover:text-white color_base ml-1">Modifier</u>
                                 </button>
                                 <button class=" bg-slate-100 py-1 px-1 rounded-md">
                                     <svg class=" fill-current text-red  rounded-md w-4" viewBox="0 0 24 24">
@@ -54,30 +55,31 @@
             </div>
 
             <!-- Partenaire handicap -->
-            <div class="flex flex-row items-center sticky top-7  bg-white mt-12 justify-between w-full">
+            <div class="flex flex-row items-center sticky top-3  bg-white mt-4 justify-between w-full">
                 <h5 class=" font-semibold text-2xl py-5">Partenaire handicap</h5>
             </div>
-            <div class="flex w-full text_xs mt-4">
+            <div class="flex w-full text_xs mt-4  px-2  h-[30vh] overflow-auto">
                 <table class=" w-full items-start px-1">
                     <tr class=" w-full">
-                        <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
-                        <th class="  w-[76%] text-start text-stone-500  pl-5 ">TitreSite</th>
-                        <th v-if="showFormulaire!=true" class="  w-[16%] text-start text-stone-500  pl-5 ">Etat</th>
-                        <th class="  w-[19] text-start text-stone-500  ">Actions</th>
+                        <th class=" w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>
+                        <th class="  w-[66%] pl-5 text-start text-stone-500  ">TitreSite</th>
+                        <th v-if="showFormulaire!=true" class="  w-[26%] text-center text-stone-500  ">Etat</th>
+                        <th class="  w-[19%] text-center text-stone-500  ">Actions</th>
                     </tr>
-                    <tr v-for="i in 4" :key="i" class=" duration-200 hover:text-white  hover:bg-[#63B6B9]  ">
-                        <td class=" text-gray-500 px-2" v-text="i"></td>
-                        <td class="pl-5" v-text="'Ligne'+i"></td>
-                        <td v-if="showFormulaire!=true" class="pl-5 ">
+                    <tr v-for="i in 15" :key="i" class=" duration-200 hover:text-white group  hover:bg-[#63B6B9]  ">
+                        <td class=" text-center text-gray-500 px-2" v-text="'001'"></td>
+                        <td class="pl-5 font-semibold " v-text="'Ligne'+i"></td>
+                        <td v-if="showFormulaire!=true" class=" flex justify-center ">
                             <div class=" flex my-1">
-                                <button class=" px-5 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border py-1 ">Plus en activité</button>
+                                <button class="  bg-red-100 rounded-md text-red-600 px-2 text_xs  border-red-500 border py-1 ">Plus en activité</button>
                             </div>
                         </td>
                         <td class=" px-2">
                             <div class=" flex flex-row items-center py-1">
-                                <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
-                                    <svg class=" fill-current text-black rounded-md w-4" viewBox="0 0 24 24">
+                                <button @click="()=>{goto_()}" class="  flex flex-row items-center  px-1 rounded-md py-1 ">
+                                    <svg class=" group-hover:text-white  fill-current w-4 color_base" viewBox="0 0 24 24">
                                         <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
+                                    <u class=" group-hover:text-white color_base ml-1">Modifier</u>
                                 </button>
                                 <button class=" bg-slate-100 py-1 px-1 rounded-md">
                                     <svg class=" fill-current text-red  rounded-md w-4" viewBox="0 0 24 24">
@@ -92,16 +94,14 @@
 
         </div>
         <div v-if="showFormulaire==true" class="  flex flex-col  mx-3 bg-white rounded-lg w-[60%]  px-5">
-            
-            <formulaire v-if="this.$store.state.isAdd==true"></formulaire>
+
+            <formulaire v-if="this.$store.state.tools.isAdd==true"></formulaire>
             <formulaireAjoutContacte v-else></formulaireAjoutContacte>
         </div>
     </div>
 </div>
 </template>
 
-    
-    
 <script>
 import btn_ from '../components/button/btn_.vue'
 import formulaire from '../components/poppup/partenaire/detailPartenaire.vue'
@@ -110,21 +110,35 @@ import formulaireAjoutContacte from '../components/poppup/partenaire/ajoutContac
 export default {
     components: {
         btn_,
-        formulaire,formulaireAjoutContacte
+        formulaire,
+        formulaireAjoutContacte
     },
     data() {
         return {
             listeMenu: ['ActionFormation', 'Bilan', 'VAE'],
             showFormulaire: false,
             indexFormulaire: 0,
-            
+
         }
-    }, 
+    },
+    methods: {
+        goto_() {
+            this.showFormulaire = true
+            this.$store.state.tools.isAdd = false
+        },
+        back_() {
+            this.showFormulaire = true
+            this.$store.state.tools.isAdd = true
+
+        }
+    },
+    mounted() {
+        console.log();
+    }
 
 }
 </script>
-    
-    
+
 <style>
     
     </style>

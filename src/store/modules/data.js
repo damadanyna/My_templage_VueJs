@@ -14,6 +14,7 @@ const state = () => ({
             title:'Les clés pour réussir votre projet',
         },
     ],
+
     TitreFormation:[
         {
             id:'#001',
@@ -85,6 +86,31 @@ const state = () => ({
         nomFomation:'Les clés pour réussir votre projet',
         dateInsc:'18 juin 2025',
         etat:'Abandonné',
+    },],
+    listeBeneficiaire:[{
+        id:'001',
+        alert:'1',
+        nom:'John',
+        prenom:'Doe',
+        dateInscr:'18 juin 2025', 
+    },{
+        id:'001',
+        alert:'2',
+        nom:'Jane',
+        prenom:'Doe',
+        dateInscr:'9 août 2023', 
+    },{
+        id:'001',
+        alert:'1',
+        nom:'Joe',
+        prenom:'Bloggs',
+        dateInscr:'29 novembre 2026', 
+    },{
+        id:'001',
+        alert:'5',
+        nom:'Ivan',
+        prenom:'Ivanov',
+        dateInscr:'12 janvier 2024', 
     },],
     selectFormation:'null'
   })

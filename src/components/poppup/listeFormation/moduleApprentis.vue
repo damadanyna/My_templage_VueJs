@@ -20,10 +20,10 @@
                 <th class="  w-[76%] text-start text-stone-500  pl-5 ">Titre</th>
                 <th class="  w-[19] text-start text-stone-500 mx-5 ">Actions</th>
             </tr>
-            <tr v-for="i in 4" :key="i" class=" duration-200 hover:text-white  hover:bg-[#63B6B9]  ">
+            <tr v-for="i in 4" :key="i" class=" duration-200 group hover:text-white  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="'001'"></td>
                 <td class="pl-5" v-text="'Ligne'+i"></td>
-                <td class=" px-2 text-teal-500">
+                <td class=" group-hover:text-white px-2 text-teal-500">
                     <div class=" flex flex-row items-center py-1">
                         <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
                             <svg class=" fill-current text-teal-500 rounded-md w-4" viewBox="0 0 24 24">

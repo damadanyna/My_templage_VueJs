@@ -10,7 +10,7 @@
                     <svg class=" w-4 fill-current " viewBox="0 0 24 24">
                         <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
                 </button>
-                <u class=" text-[#63B6B9] text_xs ml-1">Modifier</u>
+                <u class=" color_base text_xs ml-1">Modifier</u>
             </div>
             <div class="flex ml-5 flex-row items-center">
                 <button class=" p-1 bg-slate-100 rounded-md ">
@@ -45,7 +45,7 @@
                     <svg class=" w-4 fill-current " viewBox="0 0 24 24">
                         <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
                 </button>
-                <u class=" text-[#63B6B9] text_xs ml-1">Modifier</u>
+                <u class=" color_base text_xs ml-1">Modifier</u>
             </div>
             <div class="flex ml-5 flex-row items-center">
                 <button class=" p-1 bg-slate-100 rounded-md ">
@@ -111,11 +111,11 @@
 
     <div class="flex mt-5 flex-col w-full">
         <div class="flex flex-row w-full  rounded-t-lg border-[#63B6B9] border-t-[1px] border-x-[1px] font-bold">
-            <div @click="set_('IB')" :class="selected=='IB'?'bg-[#63B6B9] text-white':' bg-stone-100 text-[#63B6B9]'" class=" rounded-tl-lg w-full py-2   flex flex-col justify-center ">
+            <div @click="set_('IB')" :class="selected=='IB'?'bg-[#63B6B9] text-white':' bg-stone-100 color_base'" class=" rounded-tl-lg w-full py-2   flex flex-col justify-center ">
                 <span class=" text-center text_xs w-full   ">Information complémentaire </span>
                 <span class=" text-center text_xs w-full   "> pour les bénéficiaires</span>
             </div>
-            <div @click="set_('IF')" :class="selected!='IB'?'bg-[#63B6B9] text-white':' bg-stone-100 text-[#63B6B9]'" class=" w-full py-2 rounded-tr-lg  flex flex-col justify-center ">
+            <div @click="set_('IF')" :class="selected!='IB'?'bg-[#63B6B9] text-white':' bg-stone-100 color_base'" class=" w-full py-2 rounded-tr-lg  flex flex-col justify-center ">
                 <span class=" text-center text_xs w-full  ">Information complémentaire </span>
                 <span class=" text-center text_xs w-full  ">pour les formateurs</span>
             </div>
@@ -158,7 +158,7 @@
                 <td class=" px-2">
                     <div class=" flex flex-row items-center py-1">
                         <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
-                            <svg class=" fill-current text-[#63B6B9] rounded-md w-4" viewBox="0 0 24 24">
+                            <svg class=" fill-current color_base rounded-md w-4" viewBox="0 0 24 24">
                                 <path d="m17 13-5 5-5-5h3V9h4v4m5.35-2.97A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.03A6.004 6.004 0 0 0 0 14a6 6 0 0 0 6 6h13a5 5 0 0 0 5-5c0-2.64-2.05-4.78-4.65-4.97z" /></svg>
                         </button>
                         <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">

@@ -1,31 +1,16 @@
 <template>
 <div id="template" class=" flex flex-col py-5 text_xs">
     <div class="flex flex-row w-full justify-between px-4">
-        <!-- select Option -->
+        <!-- select Option --> 
         <div class="flex items-center flex-row">
-            <span class=" mr-3 font-semibold text-[#63B6B9]">Formation :</span>
-            <div class="flex flex-row bg-stone-300 px-3 py-2 rounded-lg">
-                <select name="" id="" class=" text-black outline-none ">
-                    <option v-for=" item,i in nomFormation" :key="i" :value="item.val" v-text="item.label" class=" border-b border-stone-200 text-black "></option>
-                </select>
-                <div class="">
-                    <svg class="   text-black items-center  rounded-sm fill-current w-5" viewBox="0 0 24 24">
-                        <path :d="$store.state.icons.menu_down" /></svg>
-                </div>
-            </div>
+            <span class=" mr-3 font-semibold color_base">Formation :</span> 
+            <selectOptionVue :options="nomFormation" />   
         </div>
         <!-- select Option -->
         <div class="flex items-center flex-row">
-            <span class=" mr-3 font-semibold text-[#63B6B9]">Liste formateurs :</span>
-            <div class="flex flex-row bg-stone-300 px-3 py-2 rounded-lg">
-                <select name="" id="" class=" text-black outline-none ">
-                    <option v-for=" item,i in formateur" :key="i" :value="item.val" v-text="item.label" class=" border-b border-stone-200 text-black "></option>
-                </select>
-                <div class="">
-                    <svg class="   text-black items-center  rounded-sm fill-current w-5" viewBox="0 0 24 24">
-                        <path :d="$store.state.icons.menu_down" /></svg>
-                </div>
-            </div>
+            <span class=" mr-3 font-semibold color_base">Liste formateurs :</span> 
+            <selectOptionVue2 :options="formateur" /> 
+            
         </div>
     </div>
     <div class="flex flex-row w-full justify-between py-5 mt-2">
@@ -43,17 +28,21 @@
                 <th class=" py-2  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Date d'inscription</th>
                 <th class=" py-2  w-[19] text-center text-stone-500   ">Actions</th>
             </tr>
-            <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
+            <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white group hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 text-center" v-text="i"></td>
                 <td class="text-center font-semibold" v-text="'Nom'+i"></td>
                 <td class="text-center font-semibold" v-text="'Prénom'"></td> 
                 <td class="text-center" v-text="'18 juin 2025'"></td>
-                <td class=" px-2">
+                <td class=" px-2 ">
                     <div class=" flex flex-row items-center justify-center py-1">
-                        <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
-                            <svg class=" fill-current text-black rounded-md w-4" viewBox="0 0 24 24">
+                        <button class=" mr-2 flex flex-row   text_xs  px-1 rounded-md items-center py-1 ">
+                            <svg class=" fill-current color_base group-hover:text-white  rounded-md w-4" viewBox="0 0 24 24">
                                 <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
-                        </button>
+                                <u class=" color_base group-hover:text-white ml-1">Voir</u>
+                            </button>
+                        <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
+                                <svg class=" fill-current text-red-500 rounded-md w-4"  viewBox="0 0 24 24"><path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z" /></svg>
+                            </button>
                     </div>
                 </td>
             </tr>
@@ -61,7 +50,7 @@
 
     </div>
     <span class=" h-[2px] bg-stone-200 my-7 w-full"></span>
-    <detailFormationVue></detailFormationVue>
+    <detailFormationVue  ></detailFormationVue>
 </div>
 </template>
 
@@ -70,13 +59,16 @@ import btn_ from '../../button/btn_.vue';
 import input_ from '../../input/inputTxt.vue';
 import textArea_ from '../../input/textarea.vue';
 import detailFormationVue from './components/detailFormation.vue';
+import selectOptionVue from '../../input/selectOption3.vue';
+import selectOptionVue2 from '../../input/selectOption2.vue';
 import gsap from 'gsap';
 export default {
     components: {
         btn_,
         input_,
         textArea_,
-        detailFormationVue
+        detailFormationVue,
+        selectOptionVue,selectOptionVue2
     },
 
     data() {
