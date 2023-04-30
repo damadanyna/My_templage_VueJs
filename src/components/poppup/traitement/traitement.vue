@@ -2,7 +2,7 @@
 <div id="poppupOrganisme">
     <!-- forumlaire de organisme -->
     <div class=" bg-white rounded-lg flex px-1 py-5 flex-col z-20">
-        <span class=" text_xs font-bold sticky top-6 py-5 bg-white z-50">Traitement des aléas, difficultés et réclamations :</span>
+        <span class=" text_xs font-bold  py-5 bg-white z-50">Traitement des aléas, difficultés et réclamations :</span>
         <div class=" mt-8 flex flex-col">
             <div class="flex flex-row w-full">
                 <input_ class=" w-full " :options="data_[0]"></input_>
@@ -52,6 +52,9 @@ import btn_ from '../../button/btn_.vue';
 import selectOption from '../../input/selectOption.vue';
 import gsap from 'gsap'
 export default {
+    props: {
+        item: {}
+    },
     data() {
         return {
             data_: [{
@@ -122,6 +125,11 @@ export default {
         },
         set_(val) {
             this.selected = val
+        },
+        setVal(item) {
+            if (item.nomFomation) {
+                this.data_[0].model = item.nomFomation 
+            }
         }
     },
     mounted() {
@@ -132,6 +140,15 @@ export default {
             duration: .5,
             opacity: 1,
         });
+        if (this.item != {}) {
+            this.setVal(this.item)
+        }
+    },
+    updated() {
+
+        if (this.item != {}) {
+            this.setVal(this.item)
+        }
     }
 }
 </script>

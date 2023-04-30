@@ -25,21 +25,21 @@
                 </div>
 
                 <!-- tableau -->
-                <div class="flex w-full text_xs mt-4 h-[65vh] px-2 overflow-auto">
+                <div class="flex w-full text_xs mt-4 h-[65vh] px-2 overflow-y-auto  overflow-x-hidden">
                     <table class=" w-full items-start px-1">
                         <tr class=" w-full sticky top-0 ">
-                            <th class=" py-3 bg-white w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>
-                            <th :class="showFormulaire==false?'w-[26%]':' w-[30%]'" class=" py-3 bg-white text-center text-stone-500  border-r border-stone-200 ">Nom </th>
-                            <th :class="showFormulaire==false?'w-[26%]':' w-[30%]'" class=" py-3 bg-white text-center text-stone-500  border-r border-stone-200 ">Prénom</th>
-                            <th v-if="showFormulaire==false" class=" py-3 bg-white w-[13%] text-center text-stone-500  border-r border-stone-200 ">Fonction</th>
-                            <th v-if="showFormulaire==false" class=" py-3 bg-white w-[12%] text-center text-stone-500  border-r border-stone-200 ">Status</th>
-                            <th v-if="showFormulaire==false" class=" py-3 bg-white w-[16%] text-center text-stone-500  border-r border-stone-200 ">Etat</th>
-                            <th :class="showFormulaire==false?' w-[12%]':' w-[10%]'" class=" py-3 bg-white text-center text-stone-500  ">Actions</th>
+                            <th class=" py-1 bg-white w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>
+                            <th :class="showFormulaire==false?'w-[26%]':' w-[30%]'" class=" py-1 bg-white text-center text-stone-500  border-r border-stone-200 ">Nom </th>
+                            <th :class="showFormulaire==false?'w-[26%]':' w-[30%]'" class=" py-1 bg-white text-center text-stone-500  border-r border-stone-200 ">Prénom</th>
+                            <th v-if="showFormulaire==false" class=" py-1 bg-white w-[13%] text-center text-stone-500  border-r border-stone-200 ">Fonction</th>
+                            <th v-if="showFormulaire==false" class=" py-1 bg-white w-[12%] text-center text-stone-500  border-r border-stone-200 ">Status</th>
+                            <th v-if="showFormulaire==false" class=" py-1 bg-white w-[16%] text-center text-stone-500  border-r border-stone-200 ">Etat</th>
+                            <th :class="showFormulaire==false?' w-[12%]':' w-[10%]'" class=" py-1 bg-white text-center text-stone-500  ">Actions</th>
                         </tr>
-                        <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white group  hover:bg-[#63B6B9]  ">
-                            <td class=" text-center text-gray-500 px-2" v-text="i"></td>
-                            <td class=" text-center font-semibold" v-text="'Nom'+i"></td>
-                            <td class=" text-center font-semibold" v-text="'Prénom'"></td>
+                        <tr v-for="item,i in this.$store.state.myData.TitreFormation" :key="i" class=" duration-200 my-1 hover:text-white group  hover:bg-[#63B6B9]  ">
+                            <td class=" text-center text-gray-500 px-2" v-text="item.id"></td>
+                            <td class=" text-center font-semibold" v-text="item.nom"></td>
+                            <td class=" text-center font-semibold" v-text="item.prenom"></td>
                             <td v-if="showFormulaire==false" class=" color_base text-center" v-text="'{Fonction}'"></td>
                             <td v-if="showFormulaire==false" class=" text-center" v-text="'Gérant'"></td>
                             <td v-if="showFormulaire==false" class=" text-center ">
@@ -49,7 +49,7 @@
                             </td>
                             <td class=" px-2">
                                 <div :class="showFormulaire==false?'  px-6':' px-2'" class=" flex flex-row items-center justify-between w-full py-1">
-                                    <button @click="()=>{showFormulaire=true}" class="  flex flex-row items-center rounded-md py-1 ">
+                                    <button @click="()=> {getIt(item)}" class="  flex flex-row items-center rounded-md py-1 ">
                                         <svg class=" group-hover:text-white fill-current w-4 color_base" viewBox="0 0 24 24">
                                             <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
                                         <u class=" group-hover:text-white color_base ml-1">Modifier</u>
@@ -73,8 +73,8 @@
                     <h1 class=" text-lg color_base font-bold ">John Doe</h1>
                 </div>
                 <div v-if="showFormulaire==true" class=" flex flex-col  bg-white rounded-lg  h-[85vh]  overflow-auto  px-5">
-                    <formulaireVue></formulaireVue>
-                    <etat></etat>
+                    <formulaireVue ></formulaireVue>
+                    <etat :item="item"></etat>
                     <soustraitantVue v-if=" this.$store.state.statut_=='Sous traitant'"></soustraitantVue>
                 </div>
             </div>
@@ -110,20 +110,19 @@ export default {
                     label: 'Numéro SIRET :',
                     text: '84193902800012'
                 }
-            ],
-            // importFichier: [{
-            //     titre: 'Certificat',
-            //     label_fichier: 'Uploader une fichier',
-            //     text_fichier: 'document1.pdf'
-            // }, {
-            //     titre: 'Ajouter un logo',
-            //     label_fichier: 'Ajouter logo',
-            //     text_fichier: 'Logo.png'
-            // }, {
-            //     titre: 'BPF',
-            //     label_fichier: 'Uploader une fichier',
-            //     text_fichier: 'document1.pdf'
-            // }, ],
+            ], 
+            item:{}
+        }
+    },
+    mounted(){
+        console.log();
+    },
+    methods: {
+        getIt(val){
+
+            this.item=val
+            this.showFormulaire = true 
+
         }
     }
 

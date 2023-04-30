@@ -2,17 +2,18 @@
 <div id="poppupOrganisme">
     <!-- forumlaire de organisme -->
     <div class=" bg-white rounded-lg flex px-1 py-5 flex-col z-20">
-        <div class=" sticky top-6 mt-9 z-30 flex w-full bg-white py-4 flex-row mx-1  ">
-            <span class=" text-lg font-semibold mr-7">Titre du procedure</span>
+        <!-- <span>{{ item }}</span> -->
+        <div class=" sticky top-6 mt-9 z-30 flex w-full bg-white py-4 flex-row  ">
+            <span class=" text-lg font-semibold">Titre du procedure</span>
             <input_ class=" " :options="data_[0]"></input_>
         </div>
         <div class="flex flex-row w-full items-center">
             <div class="flex w-[30%] flex-col my-3  ">
                 <span class=" font-bold text_xs ">Fonction :</span>
-                <selectOption :options="niveaufonction"></selectOption>  
+                <selectOption :options="niveaufonction"></selectOption>
             </div>
             <div class="flex flex-col  w-[70%] mt-5 ml-4">
-                <div class="flex flex-row"> 
+                <div class="flex flex-row">
                     <input_ class=" w-full  ml-3" :options="data_[1]"></input_>
                     <button class=" p-1 bg-stone-200 ml-2 rounded-lg px-2">
                         <svg class=" w-4 fill-current" viewBox="0 0 24 24">
@@ -20,10 +21,10 @@
                     </button>
                 </div>
             </div>
-        </div> 
-            <div class="flex rounded-md mt-3 w-full border-[1px] border-teal-800 h-28">
-                <textarea class="  w-full resize-none border-none outline-none px-3"  name="" id=""  rows="3"></textarea>
-            </div>
+        </div>
+        <div class="flex rounded-md mt-3 w-full border-[1px] border-teal-800 h-28">
+            <textarea class="  w-full resize-none border-none outline-none px-3" name="" id="" rows="3"></textarea>
+        </div>
     </div>
 </div>
 </template>
@@ -35,6 +36,9 @@ import textArea_ from '../../input/textarea.vue';
 import btn_ from '../../button/btn_.vue';
 import gsap from 'gsap'
 export default {
+    props: {
+        item: {}
+    },
     data() {
         return {
             data_: [{
@@ -62,7 +66,8 @@ export default {
     components: {
         input_,
         textArea_,
-        btn_,selectOption
+        btn_,
+        selectOption
     },
     methods: {
         setIt() {
@@ -70,6 +75,11 @@ export default {
         },
         set_(val) {
             this.selected = val
+        },
+        setVal(item) {
+            if (item.title) {
+                this.data_[0].model = item.title 
+            }
         }
     },
     mounted() {
@@ -80,6 +90,15 @@ export default {
             duration: .5,
             opacity: 1,
         });
+        if (this.item != {}) {
+            this.setVal(this.item)
+        }
+    },
+    updated() {
+
+        if (this.item != {}) {
+            this.setVal(this.item)
+        }
     }
 }
 </script>

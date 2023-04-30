@@ -173,8 +173,7 @@ export default {
                 name: 'liverApprentissatge'
             })
         },
-        setVal(item) {
-            console.log(item);
+        setVal(item) { 
             if (item.titre) {
                 this.data_[0].model = item.titre.nom
                 this.data_[1].model = item.titre.prenom

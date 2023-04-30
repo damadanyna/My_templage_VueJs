@@ -1,7 +1,7 @@
 <template>
 <!-- forumlaire de detailPartenaire -->
-<div class=" bg-white rounded-lg flex px-1 py-5 flex-col z-20">
-    <span class=" text-lg font-bold sticky mt-14 top-5 py-4 bg-white z-50">Listes des lieux d’exploitation :</span>
+<div class=" bg-white rounded-lg flex px-1  flex-col z-20">
+    <span class=" text-lg font-bold sticky mt-3  bg-white z-50">Listes des lieux d’exploitation :</span>
     <div class="flex w-ful justify-between">
         <span class=" text_xs font-semibold">Site d’expoitation 1</span>
         <div class=" flex flex-row">
@@ -258,7 +258,7 @@ export default {
             duration: .5,
             opacity: 1,
         });
-    }
+    } 
 }
 </script>
 

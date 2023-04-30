@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="grid  grid-cols-2 w-full  mt-10">
-        <div class=" my-2 px-1 w-full" v-for="item,i in data " :key="i">
+        <div class=" my-2 px-1 w-full" v-for="item,i in data_ " :key="i">
             <input_ class=" z-10 w-full " :options="item"></input_>
         </div>
     </div>
@@ -20,18 +20,20 @@
 </div>
 </template>
 
-<script>
+<script> 
 import btn_ from '../../button/btn_.vue';
-import input_ from '../../input/inputTxt.vue';
-
+import input_ from '../../input/inputTxt.vue'; 
 export default {
+    props: {
+        item: {}
+    },
     components: {
         btn_,
         input_
     },
     data() {
         return {
-            data: [{
+            data_: [{
                 label: 'Nom',
                 model: '',
                 type: 'text',
@@ -58,7 +60,27 @@ export default {
             }, ],
             liste: ['Reférent handicap', 'Reféret pédago', 'Formateur', 'Référent administratif', 'Référent commercial', 'Responsable qualité', 'Responsable logistique']
         }
+    },
+    methods: {
+        setVal(item) {
+            if (item.nom) { 
+                this.data_[0].model = item.nom
+                this.data_[1].model = item.prenom
+            }
+        }
+    },
+    mounted() { 
+        if (this.item != {}) {
+            this.setVal(this.item)
+        }
+    },
+    updated() {
+
+        if (this.item != {}) {
+            this.setVal(this.item)
+        }
     }
+
 }
 </script>
 

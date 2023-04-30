@@ -48,8 +48,7 @@ td:last-child{
 }
 select::after{
   border-bottom: 1px solid gray;
-}
-
+} 
 /* set default text size */
 .text_xs{
   font-size: 13px;
@@ -64,3 +63,4 @@ tr:nth-child(even){
  body{
   overflow-x: hidden;
  }
+ 

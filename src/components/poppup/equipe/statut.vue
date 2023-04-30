@@ -1,5 +1,6 @@
 <template>
 <div class=" h-full w-full flex flex-col">
+    <span>{{ item }}</span>
     <div class="flex text-lg sticky z-10 top-0 bg-white mb-5 items-center py-6  flex-row">
         <h1 class="   font-bold text-stone-800  ">Statut :</h1> 
         <selectOption2Vue class=" ml-5" :options="statut" /> 
@@ -83,7 +84,7 @@ export default {
                 ['Responsable logistique', false]
             ]
         }
-    }
+    },
 }
 </script>
 
