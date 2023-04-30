@@ -1,10 +1,14 @@
 <template>
 <div class="flex flex-col h-full">
-    <div class="flex flex-row z-50 px-10  bg-stone-100 text-stone-600 justify-between sticky -top-4 w-full pt-2 pb-9">
-        <h1 class=" text-lg font-bold">Tableau de veille :</h1>
-        <btn_ :options="{label:'Flux RSS',style:' base_bg text-white w-full',ico:$store.state.icons.listCheck}"></btn_>
-
-    </div>
+  
+    <div class="flex flex-row z-50   bg-stone-100 text-stone-600 items-center sticky -top-4 w-full pt-1 pb-2">
+        <button v-if="showFormulaire!=false" @click="()=>{back()}" class=" sticky top-4  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
+                <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
+                    <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
+            </button> 
+        <h1 class=" text-lg text-black font-bold">Tableau de veille :</h1>
+       
+    </div> 
     <div class="flex flex-col rounded-lg bg-white pb-10 px-10">
         <span class=" py-4 font-bold">Veille</span>
         <div class="flex w-full text_xs mt-4">
@@ -68,6 +72,11 @@ export default {
                 title: ['Responsable', 'Activités à prevoir', 'Indicateur de suivi', 'Etat d’avancement','Resultat obtenu','Suite envisagée','Commentaires'],
                 contenu: ['{responsable}', '{activité}', '{indicateur}', '{etat}','{result}','{Suite}','{Commentaires}']
             }
+        }
+    },
+    methods: {
+        back(){
+            this.$router.go(-1)
         }
     }
 

@@ -8,7 +8,7 @@
                     <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
                 </button>
-                <h1 class=" text-lg">Traitements aléas / logs</h1>
+                <h1 class=" text-lg text-black" >Traitements aléas / logs</h1>
                 <!-- <h1 class=" text-lg ml-2  "> > Gestion de listes de formation</h1> -->
             </div>
             <div :class="showFormulaire==true?' px-5   ':'px-12  '" class="overflow-x-hidden h-[87vh]  overflow-auto sticky -top-2 pb-8 pt-0 flex-col duration-500  bg-white rounded-lg  flex z-10">

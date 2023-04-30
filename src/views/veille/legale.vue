@@ -2,7 +2,7 @@
   
   <div class=" bg-white rounded-lg w-full h-max px-12 flex z-10 flex-col ">
         <!-- titre du tableau -->
-        <div class="flex flex-row sticky top-14 py-7 w-full justify-between items-center bg-white mt-6">
+        <div class="flex flex-row sticky top-4 py-7 w-full justify-between items-center bg-white mt-6">
             <h5 class=" font-semibold text-lg">Légale et règlementairee</h5>
             <btn_ :options="{label:'Veille',style:' base_bg text-white w-full',ico:$store.state.icons.listCheck}"></btn_>
         </div>

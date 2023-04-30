@@ -1,12 +1,12 @@
 <template>
 <div class="flex flex-col h-full">
 
-    <div class=" flex flex-row duration-300 items-center pb-5   w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2">
+    <div class=" flex flex-row duration-300 items-center pb-3   w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2">
         <button v-if="showFormulaire!=false" @click="()=>{showFormulaire=false}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
             <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                 <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
         </button>
-        <h1 class=" text-lg">Procédure</h1>
+        <h1 class=" text-lg text-black">Procédure</h1>
     </div>
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex w-full ">
         <div :class="showFormulaire==true?' px-2  w-[36%] ':'px-12 w-full '" class=" py-4 flex-col duration-500  bg-white rounded-lg h-max  flex z-10">

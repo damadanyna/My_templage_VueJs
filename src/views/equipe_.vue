@@ -9,7 +9,7 @@
                     <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
                 </button>
-                <h1 class=" text-black ">Listes des equipes / sous-traitant</h1>
+                <h1 class=" font-bold text-black text-lg ">Listes des equipes / sous-traitant</h1>
             </div>
 
             <div :class="showFormulaire==true?'  px-2':' px-7'" class="   bg-white rounded-lg  h-max  flex z-10 flex-col ">
@@ -25,7 +25,7 @@
                 </div>
 
                 <!-- tableau -->
-                <div class="flex w-full text_xs mt-4 h-[65vh] px-2 overflow-y-auto  overflow-x-hidden">
+                <div class="  w-full text_xs mt-4 h-[65vh] px-2 overflow-y-auto  overflow-x-hidden">
                     <table class=" w-full items-start px-1">
                         <tr class=" w-full sticky top-0 ">
                             <th class=" py-1 bg-white w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>

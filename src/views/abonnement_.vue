@@ -1,6 +1,6 @@
 <template>
 <div class="flex flex-col h-full">
-    <h1 class=" text-lg sticky -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-9">Page Abonnement</h1>
+    <h1 class=" text-lg sticky -top-6 w-full bg-stone-100 z-50 font-bold  pt-2 pb-3 text-black">Page Abonnement</h1>
     <div class=" bg-white rounded-lg w-full h-max px-12 py-3 flex z-10 text_xs flex-row justify-between">
 
         <!-- Base -->
