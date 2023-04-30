@@ -8,6 +8,7 @@ const store = createStore({
         tools:tools,
         myData:myData,
         isAdd:true, 
+        statut_:''
     },
      state:{ 
         menu_liste: [{     

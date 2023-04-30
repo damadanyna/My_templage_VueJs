@@ -10,7 +10,7 @@
         </div>
         <div class="flex w-1/2 ml-2 flex-col border-">
             <span class=" text_xs font-semibold">Modalités et délais d’accès ?</span>
-            <div class="flex justify-between px-7 w-full flex-row py-2 bg-stone-300 border-[1px] border-[#63B6B9] rounded-md">
+            <div class="flex justify-between px-7 w-full flex-row py-2   border-[1px] border-[#63B6B9] rounded-md">
                 <div class="flex flex-row cursor-pointer" @click="()=>{isPresenciel=true}">
                     <svg v-if="isPresenciel==false" class=" fill-current color_base w-4" viewBox="0 0 24 24">
                         <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z" /></svg>
@@ -30,7 +30,7 @@
     </div>
 
     <!-- si présentiel -->
-    <div v-if="isPresenciel!=false" class="flex  py-6 justify-between mt-4 px-7 w-full flex-col bg-stone-300 border-[1px] border-[#63B6B9] rounded-md">
+    <div v-if="isPresenciel!=false" class="flex  py-6 justify-between mt-4 px-7 w-full flex-col   border-[1px] border-[#63B6B9] rounded-md">
         <div class="flex flex-row justify-between">
             <!-- <span class=" text-[#0F9EC2] font-semibold text-lg">Si présentiel</span> -->
             <div class="flex flex-row ">
@@ -52,7 +52,7 @@
         <!-- tableau de titre du site -->
         <div class="flex w-full text_xs mt-4 h-96 overflow-auto">
             <table class=" text_xs  w-full items-start px-1">
-                <tr class=" w-full sticky top-0 bg-stone-300 py-5  ">
+                <tr class=" w-full sticky top-0 bg-white py-5  ">
                     <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                     <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-200 ">TitreSite</th>
                     <th class=" py-3  w-[19%] text-start text-stone-500 pl-5  ">Actions</th>
@@ -91,7 +91,7 @@
         <textArea_ class=" w-full mt-5 bg-white " :options="data[6]"></textArea_>
     </div>
     <!-- Si distanciel -->
-    <div v-else class="flex  py-3 justify-between mt-4 px-7 w-full flex-col bg-stone-300 border-[1px] border-[#63B6B9] rounded-md">
+    <div v-else class="flex  py-3 justify-between mt-4 px-7 w-full flex-col   border-[1px] border-[#63B6B9] rounded-md">
         <div class="flex flex-col justify-between">
             <!-- <span class=" text-[#0F9EC2] font-semibold text-lg">Si présentiel</span> -->
             <span class="text_xs mt-3">Condition d’accès au cours</span>

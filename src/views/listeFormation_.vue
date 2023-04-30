@@ -2,7 +2,7 @@
 <div class="flex flex-col h-full "> 
     <div   class="flex flex-row w-full ">
         <div  :class="showFormulaire==true?' w-[40%] ':' w-full '" class=" flex flex-col duration-500 ">
-            <h1 class=" text-lg">Liste formations </h1>
+            <h1 class=" text-lg font-bold">Liste formations </h1>
             <div   class="flex-col duration-500 px-2 py-6 sticky -top-6 bg-white rounded-lg h-max  flex z-10">
                 <div v-if=" this.$store.state.myData.listeFormation.length>0" class=" h-[80vh] px-2 overflow-auto text_xs flex-row">
                     <div class="flex flex-row sticky z-40 -top-4 py-4 bg-white mt-6">

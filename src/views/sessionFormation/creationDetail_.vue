@@ -1,8 +1,9 @@
 <template>
-<div class="flex flex-col h-full"> 
+<div class="flex flex-col h-full">
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex  ">
         <div class="flex flex-col  w-[35%] duration-500 ">
             <div class=" flex flex-row    duration-300  w-full bg-stone-100 z-50 font-bold text-black pt-2 pb-3">
+
                 <h1 class=" text-lg font-normal  px-2 rounded-r-md">Gestion Bénéficiaire :</h1>
                 <h1 class=" text-lg ml-2 color_base  ">Titre Formation</h1>
             </div>
@@ -11,8 +12,10 @@
 
                     <!-- titre du tableau -->
                     <div class="flex flex-row v  py-6 w-full justify-between items-center px-5  bg-white">
-                        <h5 class=" font-semibold text_xs text-teal-500 "> Nom du formation </h5>
-                        <btn_ :options="{label:'Nouveau',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_>
+                        <button v-if="showFormulaire!=false" @click="()=>{$router.go(-1)}" class=" sticky top-4  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
+                            <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
+                                <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
+                        </button>
                     </div>
                     <div class="flex w-full text_xs  px-5  ">
                         <table class=" text_xs  w-full items-start px-1">
@@ -49,17 +52,17 @@
         </div>
 
         <div class="flex flex-col  w-[65%] duration-500 ">
-            <div class=" flex flex-row  duration-300 font-normal   w-full bg-stone-100 z-50 text-black pt-2 pb-3">
+            <div class=" flex flex-row  duration-300 font-normal items-centerw-full bg-stone-100 z-50 text-black pt-2 pb-3">
                 <span class=" mx-3 text-lg text-stone-500">></span>
                 <h1 class="text-lg px-2 rounded-r-md">Bénéficiaire :</h1>
                 <h1 class=" text-lg ml-2 color_base font-semibold "> John Doe</h1>
 
             </div>
             <div class=" sticky -top-6 flex flex-col  mx-3 bg-white rounded-lg px-5">
-                <div class=" z-20   mx-3 bg-white rounded-lg py-5 px-5 flex justify-between w-full">
+                <div class=" z-20   mx-3 bg-white rounded-lg  pt-5 px-5 flex justify-between w-full">
                     <span class=" font-semibold">Formulaire de base</span>
                 </div>
-                <beneficiaireForm  :item="selectedItem" ></beneficiaireForm>
+                <beneficiaireForm :item="selectedItem"></beneficiaireForm>
             </div>
         </div>
     </div>
@@ -69,7 +72,7 @@
 <script>
 import btn_ from '../../components/button/btn_.vue'
 import popup from '../../components/poppup/organisme/organisme.vue'
-import beneficiaireForm from '../../components/poppup/gestionListeFormation/beneficiaire.vue'
+import beneficiaireForm from '../../components/poppup/sessionFomation/gestionBeneficiaire.vue'
 
 export default {
     components: {
@@ -82,7 +85,7 @@ export default {
             listeMenu: ['ActionFormation', 'Bilan', 'VAE'],
             showFormulaire: true,
             indexFormulaire: 0,
-            selectedItem:{}
+            selectedItem: {}
         }
     },
     methods: {
@@ -90,7 +93,7 @@ export default {
             this.$router.go(-1)
         },
         getIt_(item) {
-            
+
             this.selectedItem.titre = item
         }
     }
@@ -99,5 +102,5 @@ export default {
 </script>
 
 <style>
-          
-          </style>
+            
+            </style>

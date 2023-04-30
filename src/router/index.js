@@ -21,6 +21,8 @@ import objectifView from '../views/beneficiaire/beneficiaire_.vue'
 import chatView from '../views/sessionFormation/chat_.vue'
 import evaluationView from '../views/sessionFormation/evaluation_.vue'
 import gestionFormation from '../views/gestionFormation_.vue'
+import positionnementView from '../views/gestionFormation/positionnement_.vue'
+import creatDetailView from '../views/sessionFormation/creationDetail_.vue'
 
 const routes = [
     {
@@ -31,6 +33,10 @@ const routes = [
         path: "/alert",
         name: "alert",
         component: alertView,
+    },{
+        path: "/creatDetail",
+        name: "creatDetail",
+        component: creatDetailView,
     },{
         path: "/evaluation",
         name: "evaluation",
@@ -55,6 +61,10 @@ const routes = [
         path: "/sessionFormaton",
         name: "sessionFormaton",
         component: sessionFormatonView,
+    },{
+        path: "/positionnement",
+        name: "positionnement",
+        component: positionnementView,
     },{
         path: "/listeBeneficiaire",
         name: "listeBeneficiaire",

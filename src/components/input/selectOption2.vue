@@ -1,8 +1,8 @@
 <template>
 <div class="flex"> 
-    <div class="custom-select2 text-[12px]" style="width:200px;">
-        <select>
-            <option v-for=" item, i in options" :value="item.val" v-text="item.label"> </option>
+    <div @click="()=>{change_val()}" class="custom-select2 text-[12px]" style="width:200px;">
+        <select >
+            <option  v-for=" item, i in options" :value="item.val" v-text="item.label"> </option>
         </select>
     </div>
 </div>
@@ -12,6 +12,11 @@
 export default {
     props: {
         options: {}
+    },
+    methods:{
+        change_val(){
+            this.$store.state.statut_= document.querySelector('.custom-select2').children[1].innerHTML;
+        }
     },
     mounted() {
 
