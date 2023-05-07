@@ -4,7 +4,7 @@
         <span class=" h-[2px] w-full my-6 rounded-sm bg-stone-300"></span>
     </div>
 
-    <div class=" z-20 sticky top-6 mx-3 bg-white rounded-lg py-5 flex justify-between w-full">
+    <div class=" z-20 sticky top-6 z-0 bg-white px-3 py-5 flex justify-between w-full">
         <span class=" font-semibold ">Espace documentaire de la formation</span>
     </div>
 

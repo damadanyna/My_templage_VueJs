@@ -42,7 +42,7 @@ export default {
     data() {
         return {
             data_: [{
-                    label: '{Titre de procedure}',
+                    label: 'Titre de procedure',
                     model: '',
                     type: 'text'
                 },

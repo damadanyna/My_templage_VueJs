@@ -19,7 +19,7 @@
                 <input_ class=" w-full " :options="data_[2]"></input_>
                 <input_ class=" w-full  ml-3" :options="data_[3]"></input_>
             </div>
-            <span class=" text-teal-500 text_xs mt-2">*Lié à un membre d'équipe</span>
+            <!-- <span class=" text-teal-500 text_xs mt-2">*Lié à un membre d'équipe</span> -->
             <div class="flex mt-5 flex-row w-full">
                 <textArea_ class=" w-full" :options="data_[4]"></textArea_>
                 <textArea_ class=" w-full ml-3" :options="data_[5]"></textArea_>
@@ -29,21 +29,21 @@
                 <input_ class=" w-full  ml-3" :options="data_[7]"></input_>
             </div>
             <div class="flex flex-col">
-                <span class=" text-teal-500 text_xs mt-2">*Délais des alertes si aucune activité est recensé </span>
-                <span class=" text-teal-500 text_xs ">sur le compte d'un bénéficiaire</span>
+                <!-- <span class=" text-teal-500 text_xs mt-2">*Délais des alertes si aucune activité est recensé </span>
+                <span class=" text-teal-500 text_xs ">sur le compte d'un bénéficiaire</span> -->
             </div>
             <div class="flex mt-5 flex-row w-full">
-                <textArea_ class=" w-full " :options="data_[7]"></textArea_>
+                <textArea_ class=" w-full " :options="data_[8]"></textArea_>
             </div>
             <div v-if="isChecked==true" class="flex flex-col w-full">
                 <div class="flex flex-col">  <div class="flex mt-5 flex-row w-full">
                         <textArea_ class=" w-full " :options="data_[9]"></textArea_>
                     </div> 
-                    <span class=" text-teal-500 text_xs mt-2">*Pour les diplôme de l’éducation national</span>
+                    <!-- <span class=" text-teal-500 text_xs mt-2">*Pour les diplôme de l’éducation national</span> -->
                 </div>
             </div>
             <div class="flex mt-5 flex-row w-full">
-                <textArea_ class=" w-full " :options="data_[8]"></textArea_>
+                <textArea_ class=" w-full " :options="data_[10]"></textArea_>
             </div>
         </div>
         <div :class="data_[0].model=='' || data_[1].model=='' || data_[2].model=='' || data_[3].model==''|| data_[4].model || data_[5].model==''?' opacity-50':' opacity-100'" class=" duration-300 flex mt-12 justify-center  flex-row w-full">

@@ -29,7 +29,7 @@
         <!-- text area -->
         <div class="w-full mt-7 flex flex-col ">
             <textareaVue class=" w-full " :options="{model:'',label:''}"></textareaVue>
-            <span class=" color_base text-xs">** Commentaire libre non accessible au bénéficiaire</span>
+            <!-- <span class=" color_base text-xs">** Commentaire libre non accessible au bénéficiaire</span> -->
         </div>
 
         <!-- telechargement -->
@@ -98,9 +98,11 @@
                         <button v-if="item.etat=='Achevé'" class=" py-1  px-2 my-1 bg-yellow-100 rounded-md text-yellow-600 text_xs  border-yellow-500 border" v-text="item.etat"></button>
                     </td>
                     <td class=" color_base group-hover:text-white items-center">
-                        <div class="  flex flex-row text-center">
-                            <svg class=" fill-current w-4" viewBox="0 0 24 24">
-                                <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
+                        <div class="  flex px-3 flex-row text-center">
+                            <button class="   bg-slate-100 px-1 rounded-md py-1 ">
+                                <svg class=" fill-current color_base rounded-md w-4" viewBox="0 0 24 24">
+                                    <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
+                            </button>
                             <u class=" ml-2">Voir</u>
                         </div>
                     </td>
@@ -112,8 +114,6 @@
 </div>
 </template>
 
-    
-    
 <script>
 import input_ from '../../input/inputTxt.vue'
 import btn_ from '../../button/btn_.vue';
@@ -173,7 +173,7 @@ export default {
                 name: 'liverApprentissatge'
             })
         },
-        setVal(item) { 
+        setVal(item) {
             if (item.titre) {
                 this.data_[0].model = item.titre.nom
                 this.data_[1].model = item.titre.prenom
@@ -201,8 +201,7 @@ export default {
     }
 }
 </script>
-    
-    
+
 <style>
             
             </style>

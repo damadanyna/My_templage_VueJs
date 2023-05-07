@@ -1,7 +1,7 @@
 <template>
 <div class=" h-full w-full flex flex-col">
     <span>{{ item }}</span>
-    <div class="flex text-lg sticky z-10 top-0 bg-white mb-5 items-center py-6  flex-row">
+    <div class="flex text-lg bg-white mb-5 items-center py-6  flex-row">
         <h1 class="   font-bold text-stone-800  ">Statut :</h1> 
         <selectOption2Vue class=" ml-5" :options="statut" /> 
 
@@ -36,7 +36,7 @@
                     <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
             </button>
         </div>
-        <span class=" mx-3 mt-5 color_base text_xs">*Verification si un compte formateur est dejà créer</span>
+        <!-- <span class=" mx-3 mt-5 color_base text_xs">*Verification si un compte formateur est dejà créer</span> -->
     </div>
 </div>
 </template>

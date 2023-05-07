@@ -5,20 +5,20 @@
         <div class="flex  flex-row">
             <div class="flex flex-row items-center">
                 <span class=" font-semibold">Durée</span>
-                <button class="  mx-3 color_base text-lg">-</button>
+                <button class="  mx-3 color_base text-lg" @click="()=>{decrement()}">-</button>
                 <div class="flex flex-row  px-4 items-center bg-stone-300 border-b-2 border-[#63B6B9]">
-                    <span class=" px-1">02</span>
+                    <span class=" px-1 w-5 mr-1" v-text="heure<10?'0'+heure:heure"></span>
                     <span>hrs</span>
                 </div>
-                <button class=" p-1 mx-3 color_base text-lg">+</button>
+                <button class=" p-1 mx-3 color_base text-lg" @click="()=>{increment()}" >+</button>
             </div>
             <div class="flex flex-row items-center ml-14">
-                <button class=" p-1 mx-3 color_base text-lg">-</button>
+                <button class=" p-1 mx-3 color_base text-lg"  @click="()=>{decrementMin()}">-</button>
                 <div class="flex flex-row  px-4 items-center bg-stone-300 border-b-2 border-[#63B6B9]">
-                    <span class=" px-1">30</span>
+                    <span class=" px-1 w-5 mr-1" v-text="min<10?'0'+min:min"></span>
                     <span>min</span>
                 </div>
-                <button class=" p-1 mx-3 color_base text-lg">+</button>
+                <button class=" p-1 mx-3 color_base text-lg"  @click="()=>{incrementMin()}">+</button>
             </div>
         </div>
     </div>
@@ -98,6 +98,8 @@ export default {
     },
     data() {
         return {
+            heure:2,
+            min:30,
             importFichier: [{
                 text_fichier: 'document1.pdf'
             }, {
@@ -109,6 +111,20 @@ export default {
                 text_fichier: 'Certificat_document.pdf'
             }, ],
         }
+    },
+    methods:{
+        decrement(){ 
+            return this.heure>1? this.heure-=1:1
+        },
+        increment(){ 
+            return this.heure<10? this.heure+=1:10
+        },
+        decrementMin(){ 
+            return this.min>0? this.min-=15:0
+        },
+        incrementMin(){ 
+            return this.min<45? this.min+=15:0
+        },
     }
 
 }

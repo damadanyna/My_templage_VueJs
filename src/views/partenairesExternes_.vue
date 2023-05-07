@@ -1,9 +1,9 @@
 <template>
 <div class="flex flex-col h-full">
 
-    <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex ">
+    <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex overflow-hidden  ">
         <div class="flex flex-col duration-500" :class="showFormulaire==true?'  w-[40%] ':'  w-full '">
-            <div class=" flex flex-row    w-full items-center  bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">
+            <div class=" flex flex-row    w-full items-center  bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-1">
                 <button v-if="showFormulaire==true" @click="()=>{showFormulaire=false}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
                     <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>

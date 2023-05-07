@@ -32,7 +32,7 @@
                                         <btn_ class=" " :options="{url:{name:'gestionBeneficiaire'},label:'Gestion bénéficiaire',style:' bg-teal-700 text_xs  text-stone-100 '}"></btn_>
                                     </div>
                                     <div class=" flex flex-row mx-1 ">
-                                        <btn_ class=" " :options="{label:'Gestion session',style:'bg-teal-700 text_xs  text-stone-100 '}"></btn_>
+                                        <btn_ @click="()=>{showFormulaire=true}" class=" " :options="{label:'Gestion session',style:'bg-teal-700 text_xs  text-stone-100 '}"></btn_>
                                     </div> 
                                     <btn_   v-if="showFormulaire!=true" class=" " :options="{url:{name:'gestionFormation'},label:'Gestion Formation',style:' bg-stone-100 py-1 text-stone-800 '}"></btn_>
 
@@ -74,7 +74,7 @@
             <h1 class=" color_base ml-2 font-bold ">TitreFormation </h1>
             </div>
             <div class="  flex flex-col  mx-3 bg-white rounded-lg px-5">
-                <div class=" z-20 sticky -top-6  mx-3 bg-white rounded-lg py-5 px-5 flex justify-between w-full">
+                <div class=" z-30 z-20 sticky -top-6  mx-3 bg-white rounded-lg py-5 px-5 flex justify-between w-full">
                     <span class=" font-semibold">Formulaire de base</span>
                     <div class="flex items-center flex-row text_xs ">
                         <span v-for="item,i in listeMenu" @click="()=>{indexFormulaire=i}" :key="i" :class="indexFormulaire==i?' base_bg text-white rounded-md':''" class=" mx-2 py-1 px-2" v-text="item"></span>

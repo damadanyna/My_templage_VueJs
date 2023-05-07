@@ -1,5 +1,5 @@
 <template>
-<div id="template" class=" flex flex-col py-5 text_xs"> 
+<div id="template" class=" flex flex-col py-5 text_xs">
     <div class="flex flex-row w-full justify-between px-4">
         <!-- select Option -->
         <div class="flex items-center flex-row">
@@ -24,7 +24,7 @@
         <btn_ @click="()=>{getIt_()}" class=" " :options="{label:'Formation' ,style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
 
     </div>
-    
+
     <!-- tableau -->
     <div class="flex w-full text_xs mt-4  h-96 overflow-auto">
         <table class=" w-full items-start px-1 ">
@@ -38,24 +38,27 @@
             </tr>
             <tr v-for="i in 20" :key="i" class=" duration-200   hover:text-white group hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 text-center" v-text="i"></td>
-                <td class="text-center font-semibold  " >
+                <td class="text-center font-semibold  ">
                     <div class=" group-hover:text-black text-slate-600 ">
                         <span class="bg-orange-100 border-[1px]   border-orange-400 rounded-md px-2 py-1">1 </span>
                     </div>
                 </td>
                 <td class="text-center font-semibold" v-text="'Nom'+i"></td>
-                <td class="text-center font-semibold" v-text="'Prénom'"></td> 
+                <td class="text-center font-semibold" v-text="'Prénom'"></td>
                 <td class="text-center" v-text="'18 juin 2025'"></td>
                 <td class=" px-2 ">
                     <div class=" flex flex-row items-center justify-center py-1">
                         <button class=" mr-2 flex flex-row   text_xs  px-1 rounded-md items-center py-1 ">
-                            <svg class=" fill-current color_base group-hover:text-white  rounded-md w-4" viewBox="0 0 24 24">
-                                <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
-                                <u class=" color_base group-hover:text-white ml-1">Voir</u>
+                            <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
+                                <svg class=" fill-current color_base rounded-md w-4" viewBox="0 0 24 24">
+                                    <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
                             </button>
+                            <u class=" color_base group-hover:text-white ml-1">Voir</u>
+                        </button>
                         <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
-                                <svg class=" fill-current text-red-500 rounded-md w-4"  viewBox="0 0 24 24"><path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z" /></svg>
-                            </button>
+                            <svg class=" fill-current text-red-500 rounded-md w-4" viewBox="0 0 24 24">
+                                <path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z" /></svg>
+                        </button>
                     </div>
                 </td>
             </tr>
@@ -120,7 +123,7 @@ export default {
             ],
         }
     },
-    methods:{
+    methods: {
         getIt_() {
             this.$router.push({
                 name: "chat"

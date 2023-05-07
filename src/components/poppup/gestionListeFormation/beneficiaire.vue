@@ -88,15 +88,15 @@
                     </td>
                     <td class=" color_base group-hover:text-white items-center">
                         <div class="  flex flex-row text-center">
-                            <svg class=" fill-current w-4" viewBox="0 0 24 24">
-                                <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
-                            <u class=" ml-2">Voir</u>
+                            <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
+                                <svg class=" fill-current color_base rounded-md w-4" viewBox="0 0 24 24">
+                                    <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
+                            </button> <u class=" ml-2">Voir</u>
                         </div>
                     </td>
                 </tr>
             </table>
-        </div>
-
+        </div> 
     </div>
 </div>
 </template>
@@ -163,7 +163,7 @@ export default {
                 name: 'liverApprentissatge'
             })
         },
-        setVal(item) { 
+        setVal(item) {
             console.log(item);
             if (item.titre) {
                 this.data_[0].model = item.titre.nom

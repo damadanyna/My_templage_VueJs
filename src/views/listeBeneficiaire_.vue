@@ -41,7 +41,7 @@
                         <td class=" font-semibold pl-5" v-text="'Prénom'"></td>
                         <td class="  ">
                             <div class=" flex my-1 justify-center">
-                                <button class=" px-2 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border py-0 ">A traité</button>
+                                <button class=" px-1 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border py-0 ">A traité</button>
                             </div>
                         </td>
                         <td v-if="showFormulaire==false" class="pl-5" v-text="'18 juin 2025'"></td>
@@ -63,10 +63,10 @@
     </div>
 
     <div v-if="showFormulaire==true  " class=" flex flex-col   rounded-lg w-[70%]  px-3">
-        <div class="flex z-50  bg-stone-100 flex-row items-center">
+        <div class="flex z-50 bg-stone-100 flex-row items-center pt-2  pb-4">
             <span class=" text-lg  text-stone-400 mr-2">></span>
-            <h1 class=" text-lg z-50 font-bold text-stone-600 pt-2 pb-4">Bénéficiaire :</h1>
-            <h1 class=" text-lg z-50 font-bold color_base pt-2 pb-4">John Doe</h1>
+            <h1 class=" text-lg z-50 font-bold text-black  ">Bénéficiaire :</h1>
+            <h1 class=" text-lg z-50 font-bold color_base">John Doe</h1>
         </div>
         <div class=" z-20 flex-col flex w-full ">
             <ficheEtrepriseVue class="   px-5 bg-white rounded-md"></ficheEtrepriseVue>

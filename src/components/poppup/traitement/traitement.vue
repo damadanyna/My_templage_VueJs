@@ -19,11 +19,7 @@
             <div class="flex flex-row my-4 items-center">
                 <span class=" font-bold text_xs mr-5">Status:</span>
                 <div v-for="item,i in listeStatus" class="flex flex-row mr-6 cursor-pointer duration-300" @click="()=>{indexStatu=i}">
-                    <svg v-if="i!=indexStatu" class=" w-5 fill-current color_base" viewBox="0 0 24 24">
-                        <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z" /></svg>
-                    <svg v-else class=" w-5 fill-current color_base" viewBox="0 0 24 24">
-                        <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 5a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5 5 5 0 0 0-5-5z" /></svg>
-                    <span :class="i==indexStatu?'base_bg  text-white':' text-black border-[1px] border-[#63B6B9]'" class=" px-3 py-1  rounded-md text_xs" v-text="item"></span>
+                   <span :class="i==indexStatu?'base_bg  text-white':' text-black border-[1px] border-[#63B6B9]'" class=" px-3 py-1  rounded-md text_xs" v-text="item"></span>
                 </div>
             </div>
             <div class="flex flex-row w-full">

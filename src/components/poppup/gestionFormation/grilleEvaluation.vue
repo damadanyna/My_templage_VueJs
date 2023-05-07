@@ -15,12 +15,12 @@
             <span class=" ml-3 text_xs">Radio, Text, Select,1 à 5, documents </span>
         </div>
         <!-- type de reponse 1 -->
-        <div class="flex flex-row justify-between mt-7">
+        <div class="flex flex-row justify-between  mt-7">
             <!-- Radion btn -->
-            <div class="flex bg-white hover:base_bg shadow-lg rounded-md p-2">
-                <div class="flex flex-col items-center justify-center  border-[1px]   border-[#63B6B9] px-7   rounded-md">
+            <div @click="()=>{selectedElement[0]=!selectedElement[0]}" :class="selectedElement[0]==true?'bg-stone-300':'bg-white'" class="flex cursor-pointer shadow-lg rounded-md p-2">
+                <div class="flex flex-col items-center justify-center group-hover:boder-[#444]  border-[1px] border-[#63B6B9] px-7   rounded-md">
                     <div class="relative ">
-                        <span class=" absolute -mt-8  -ml-14 bg-white px-2 font-semibold">Radio</span>
+                        <span :class="selectedElement[0]==true?'bg-stone-300':'bg-white'" class=" absolute -mt-10   -ml-14 px-2 font-semibold">Radio</span>
                     </div>
                     <radio_ :item="{style:'flex-col',label:'Lorem ipsum',check:true}"></radio_>
                     <radio_ :item="{style:'flex-col',label:'Lorem ipsum',check:false}"></radio_>
@@ -28,10 +28,10 @@
                 </div>
             </div>
             <!-- text -->
-            <div class="flex bg-white shadow-lg rounded-md p-2">
+            <div @click="()=>{selectedElement[1]=!selectedElement[1]}" :class="selectedElement[1]==true?'bg-stone-300':'bg-white'" class="flex  cursor-pointer  shadow-lg rounded-md p-2">
                 <div class="flex flex-col border-[1px] w-[200px]  border-[#63B6B9]   px-2 py-3 rounded-md">
                     <div class="relative ">
-                        <span class=" absolute -mt-6  ml-2 bg-white px-2 font-semibold">Texte</span>
+                        <span :class="selectedElement[1]==true?'bg-stone-300':'bg-white'"  class=" absolute -mt-5  ml-2   px-2 font-semibold">Texte</span>
                     </div>
                     <span class="text_xs break-all">
                         Les feuilles tombent lentement des arbres en automne. Le sourire de l'enfant illumine la pièce.Le café chaud réchauffe mes mains frigorifiées.
@@ -39,10 +39,10 @@
                 </div>
             </div>
             <!-- select -->
-            <div class="flex bg-white shadow-lg rounded-md p-2">
+            <div  @click="()=>{selectedElement[2]=!selectedElement[2]}" :class="selectedElement[2]==true?'bg-stone-300':'bg-white'"  class="flex  cursor-pointer  shadow-lg rounded-md p-2">
                 <div class="flex flex-col border-[1px]    border-[#63B6B9]  px-3   py-3 rounded-md">
                     <div class="relative ">
-                        <span class=" absolute -mt-6  ml-2 bg-white px-2 font-semibold">Select</span>
+                        <span :class="selectedElement[2]==true?'bg-stone-300':'bg-white'"  class=" absolute -mt-5  ml-2   px-2 font-semibold">Select</span>
                     </div>
 
                     <selectOption :options="niveaufonction"></selectOption>
@@ -54,10 +54,10 @@
         <!-- type de reponse 2 -->
         <div class="flex flex-row justify-between mt-7">
             <!-- Nombre -->
-            <div class="flex bg-white shadow-lg rounded-md p-2">
+            <div @click="()=>{selectedElement[3]=!selectedElement[3]}" :class="selectedElement[3]==true?'bg-stone-300':'bg-white'"  class="flex  cursor-pointer  shadow-lg rounded-md p-2">
                 <div class="flex flex-col items-center justify-center  border-[1px]   border-[#63B6B9] px-7   rounded-md">
                     <div class="relative ">
-                        <span class=" absolute -mt-4 -ml-20 bg-white px-2 font-semibold">Nombre</span>
+                        <span :class="selectedElement[3]==true?'bg-stone-300':'bg-white'"  class=" absolute -mt-16 -ml-20 px-2 font-semibold">Nombre</span>
                     </div>
 
                     <div class="flex flex-row items-center">
@@ -70,12 +70,12 @@
                 </div>
             </div>
             <!-- Document -->
-            <div class="flex bg-white shadow-lg rounded-md p-2">
+            <div  @click="()=>{selectedElement[4]=!selectedElement[4]}" :class="selectedElement[4]==true?'bg-stone-300':'bg-white'"  class="flex  cursor-pointer  shadow-lg rounded-md p-2">
                 <div class="flex flex-col items-center border-[1px] w-[20vw]  border-[#63B6B9]   px-2 py-3 rounded-md">
                     <div class="relative ">
-                        <span class=" absolute -mt-6 -ml-32 bg-white px-2 font-semibold">Document</span>
+                        <span :class="selectedElement[4]==true?'bg-stone-300':'bg-white'"  class=" absolute -mt-5 -ml-32 px-2 font-semibold">Document</span>
                     </div>
-                    <btn_ class=" " :options="{label:'Uploader une document', style:' base_bg py-2 text-white',stylelabel:' text-white', ico:$store.state.icons.uploadFolder}"></btn_>
+                    <btn_ class=" mt-1 " :options="{label:'Uploader une document', style:' base_bg py-2 text-white',stylelabel:' text-white', ico:$store.state.icons.uploadFolder}"></btn_>
                     <btn_ class=" mt-4 " :options="{label:'document1.pdf',ico2Style:'color_base',style:' bg-[#ccc] py-1 text-red-500',stylelabel:' text-black',ico2Style:'base_bg text-white',ico:$store.state.icons.pdf_,ico2:$store.state.icons.cloudDown,ico3:$store.state.icons.delete}"></btn_>
                     <btn_ class=" mt-4 " :options="{label:'Certificat_doc...',ico2Style:'color_base',style:' bg-[#ccc] py-1 text-red-500',stylelabel:' text-black',ico2Style:'base_bg text-white',ico:$store.state.icons.pdf_,ico2:$store.state.icons.cloudDown,ico3:$store.state.icons.delete}"></btn_>
 
@@ -139,6 +139,7 @@ export default {
     },
     data() {
         return {
+            selectedElement:[false,false,false,false,false],
             index: null,
             importFichier: [{
                 text_fichier: 'document1.pdf'
@@ -195,6 +196,8 @@ export default {
                 },
             ]
         }
+    },
+    methods:{ 
     }
 
 }

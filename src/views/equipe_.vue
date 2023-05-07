@@ -3,19 +3,19 @@
 
     <!-- <h1 class=" text-lg   w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-9"></h1> -->
     <div class="w-full  flex flex-row">
-        <div class="flex flex-col duration-500" :class="showFormulaire==true?'w-[30%] ' :'w-full '">
+        <div class="flex flex-col duration-500 sticky top-0" :class="showFormulaire==true?'w-[30%] ' :'w-full '">
             <div class="flex flex-row pb-3 items-center">
                 <button v-if="showFormulaire!=false" @click="()=>{showFormulaire=false}" class=" sticky top-4  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
                     <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
                 </button>
-                <h1 class=" font-bold text-black text-lg ">Listes des equipes / sous-traitant</h1>
+                <h1  :class="showFormulaire==true?' text-md' :'text-lg  '" class=" font-bold text-black ">Listes des equipes / sous-traitant</h1>
             </div>
 
-            <div :class="showFormulaire==true?'  px-2':' px-7'" class="   bg-white rounded-lg  h-max  flex z-10 flex-col ">
+            <div :class="showFormulaire==true?'  px-2':' px-7'" class="   bg-white rounded-lg sticky -top-5 flex z-10 flex-col ">
 
                 <!-- entête -->
-                <div class="flex flex-row sticky top-3 py-5 w-full justify-between items-center bg-white mt-6">
+                <div class="flex z-40 flex-row sticky -top-4 py-5 w-full justify-between items-center bg-white mt-6">
                     <h5 class=" font-semibold text-2xl">Equipes</h5>
                     <div class="flex flex-row">
                         <btn_ class=" " :options="{url:{name:'organigramme'},label:'Organigramme',style:' base_bg text-white py-2 w-full',ico:$store.state.icons.plus}"></btn_>
@@ -25,7 +25,7 @@
                 </div>
 
                 <!-- tableau -->
-                <div class="  w-full text_xs mt-4 h-[65vh] px-2 overflow-y-auto  overflow-x-hidden">
+                <div class=" z-10 w-full text_xs mt-4 h-[65vh] px-2 overflow-y-auto  overflow-x-hidden">
                     <table class=" w-full items-start px-1">
                         <tr class=" w-full sticky top-0 ">
                             <th class=" py-1 bg-white w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>
@@ -72,7 +72,7 @@
                     <h1 class=" text-lg  font-bold  text-black ">Formateur :</h1>
                     <h1 class=" text-lg color_base font-bold ">John Doe</h1>
                 </div>
-                <div v-if="showFormulaire==true" class=" flex flex-col  bg-white rounded-lg  h-[85vh]  overflow-auto  px-5">
+                <div v-if="showFormulaire==true" class=" flex flex-col  bg-white rounded-lg px-5">
                     <formulaireVue ></formulaireVue>
                     <etat :item="item"></etat>
                     <soustraitantVue v-if=" this.$store.state.statut_=='Sous traitant'"></soustraitantVue>

@@ -1,8 +1,8 @@
 <template>
   <div class=" h-full w-full flex flex-col">
-      <div class="flex text-lg items-center justify-start sticky z-10 top-5 py-5 bg-white  flex-row">
+      <div class="flex text-lg items-center justify-start z-10 sticky -top-3 py-4 bg-white  flex-row">
           <div class="flex flex-row  items-center">
-              <h1 class="w-full font-bold text-[#000000] pt-4  ">Fiche entreprise</h1>
+              <h1 class="w-full font-bold text-[#000000] pt-3 ">Fiche entreprise</h1>
           </div>
       </div>
       <div class=" w-full h-full flex flex-col rounded-md py-6">

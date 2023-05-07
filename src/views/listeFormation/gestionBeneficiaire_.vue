@@ -84,8 +84,7 @@
                                 </td>
                                 <td class=" text-center" v-text="'18 juin 2025'"></td>
                                 <td class=" px-2 group-hover:text-white">
-                                    <div class=" flex flex-row items-center py-1">
-
+                                    <div class=" flex flex-row items-center py-1"> 
                                         <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
                                             <svg class=" fill-current color_base rounded-md w-4" viewBox="0 0 24 24">
                                                 <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>

@@ -1,9 +1,9 @@
 <template>
 <div class="flex flex-col h-full">
 
-    <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex ">
-        <div class="flex flex-col duration-500 " :class="showFormulaire==true?'  w-[40%] ':'  w-full '">
-            <div class=" flex flex-row    w-full items-center  bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">
+    <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex overflow-hidden ">
+        <div class="flex flex-col duration-500  " :class="showFormulaire==true?'  w-[40%] ':'  w-full '">
+            <div class=" flex flex-row    w-full items-center  bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-1">
                 <button v-if="showFormulaire==true" @click="()=>{showFormulaire=false}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
                     <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
@@ -11,14 +11,14 @@
                 <h1 class=" text-lg text-black" >Traitements aléas / logs</h1>
                 <!-- <h1 class=" text-lg ml-2  "> > Gestion de listes de formation</h1> -->
             </div>
-            <div :class="showFormulaire==true?' px-5   ':'px-12  '" class="overflow-x-hidden h-[87vh]  overflow-auto sticky -top-2 pb-8 pt-0 flex-col duration-500  bg-white rounded-lg  flex z-10">
+            <div :class="showFormulaire==true?' px-5   ':'px-12  '" class="  sticky -top-2 pb-8 pt-0 flex-col duration-500  bg-white rounded-lg  flex z-10">
 
-                <div class=" sticky top-6 mt-9 flex w-full bg-white py-4 flex-row mx-1  ">
+                <div class=" sticky top-6 mt-2 flex w-full bg-white py-4 flex-row mx-1  ">
                     <btn_ v-if="showFormulaire==false" @click="()=>{ nouvelle()}" class=" " :options="{label:'Nouvelle',ico:$store.state.icons.plus,style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
 
                 </div>
                 <div class="  w-fullh-[80vh] px-2 overflow-auto  first-letter:mt-4">
-                    <table class=" text_xs   w-full items-start px-1 mt-10">
+                    <table class=" text_xs   w-full items-start px-1 mt-2">
                         <tr class=" w-full h-10 sticky top-0 bg-white">
                             <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                             <th class="  w-[46%] text-start text-stone-500 pl-5 border-r border-stone-200">NomIncident</th>
@@ -51,7 +51,7 @@
             </div>
         </div>
         <div v-if="showFormulaire==true" class="flex flex-col  w-[60%]">
-            <div class=" flex flex-row    w-full items-center  bg-stone-100 z-50  text-stone-600 pt-2 pb-6">
+            <div class=" flex flex-row    w-full items-center  bg-stone-100 z-50  text-stone-600 pt-2 pb-4">
 
                 <h1 class=" text-lg mr-3 text-stone-400">></h1>
                 <h1 class=" font-semibold text-lg">Détail partenaire : </h1>
