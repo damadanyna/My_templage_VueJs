@@ -2,7 +2,11 @@
 <div class=" flex flex-col pt-7 h-[70vh]">
     <div class="text-[14px] font-semibold items-center flex flex-row w-full justify-between">
         <span>Espace documentaire de la formation</span>
-        <btn_   @click="()=>{ }" class=" " :options="{label:'Bibliothéque de document',ico:$store.state.icons.list,style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
+        <div class="flex flex-col">
+            <btn_ @click="()=>{showBibliotheque=!showBibliotheque}" class=" " :options="{label:'Bibliothéque de document',ico:$store.state.icons.list,style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
+            <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:''}"> </bibliothequeVue>
+    
+        </div>
     </div>
     <!-- tableau de titre du site -->
     <div class="flex w-full  mt-4 h-[84%] px-4 overflow-y-auto">
@@ -37,13 +41,17 @@
 <script>
 import btn_ from '../../../button/btn_.vue'
 import slidebtn_Vue from '../../../button/slidebtn_.vue'
+import bibliothequeVue from '../../../input/bibliotheque.vue' 
+
 export default {
     components: {
-        slidebtn_Vue,btn_
+        slidebtn_Vue,
+        btn_,bibliothequeVue
     },
 
     data() {
         return {
+            showBibliotheque: false,
             module: [{
                 id: 1,
                 titre: 'Leadership et communication efficace .pdf',

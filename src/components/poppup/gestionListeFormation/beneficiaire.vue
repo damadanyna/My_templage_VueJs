@@ -75,7 +75,7 @@
                     <th class="  w-[34%] text-center text-stone-500 mx-2 border-r border-stone-200 ">Nom du formation</th>
                     <th class="  w-[26%] text-center text-stone-500 mx-2 border-r border-stone-200 ">Date d'inscription</th>
                     <th class="  w-[16%] text-center text-stone-500 mx-2">Etat</th>
-                    <th class="  w-[7%] text-center text-stone-500 mx-2">Action</th>
+                    <th class="  w-[13%] text-center text-stone-500 mx-2">Action</th>
                 </tr>
                 <tr @click="getIt_()" v-for="item,i in this.$store.state.myData.TitreFormation" :key="i" class=" group duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
                     <td class=" group-hover:text-white text-center text-gray-500 px-2" v-text="item.id"></td>
@@ -88,10 +88,10 @@
                     </td>
                     <td class=" color_base group-hover:text-white items-center">
                         <div class="  flex flex-row text-center">
-                            <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
+                            <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1   ">
                                 <svg class=" fill-current color_base rounded-md w-4" viewBox="0 0 24 24">
                                     <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
-                            </button> <u class=" ml-2">Voir</u>
+                            </button> <u class=" ml-1">Voir</u>
                         </div>
                     </td>
                 </tr>

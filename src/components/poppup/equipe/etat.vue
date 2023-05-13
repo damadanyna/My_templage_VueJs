@@ -1,12 +1,12 @@
 <template>
 <div class=" h-full w-full flex flex-col">
-    <div class="flex text-lg w-full items-center justify-start sticky z-10 top-0 bg-white  flex-row">
+    <div class="flex text-lg w-full items-center justify-start   z-10   bg-white  flex-row">
         <div class="flex flex-row  items-center">
             <div>
                 <h1 class="  w-full  font-bold text-stone-800 pt-4 pb-4">Etat :</h1>
             </div>
             <div class="flex flex-row">
-                <button @click="()=>{statut=!statut}" :class="statut==true?'color_base bg-teal-100 ':' bg-red-100 text-red-500'" class="  text_xs ml-2  rounded-md  py-1 px-7" v-text="statut==true?'Actif':'Non Actif'"> </button>
+                <button @click="()=>{statut=!statut}" :class="statut==true?'color_base bg-teal-100 ':' bg-red-100 text-red-500'" class="  text_xs ml-2  rounded-md  py-1 px-7" v-text="statut==true?'Activé':'Desactivé'"> </button>
             </div>
         </div>
     </div>

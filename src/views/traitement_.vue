@@ -1,7 +1,7 @@
 <template>
 <div class="flex flex-col h-full">
 
-    <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex overflow-hidden ">
+    <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex overflow-hidden h-full bg-white  ">
         <div class="flex flex-col duration-500  " :class="showFormulaire==true?'  w-[40%] ':'  w-full '">
             <div class=" flex flex-row    w-full items-center  bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-1">
                 <button v-if="showFormulaire==true" @click="()=>{showFormulaire=false}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
@@ -50,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <div v-if="showFormulaire==true" class="flex flex-col  w-[60%]">
+        <div v-if="showFormulaire==true" class="flex flex-col h-full  w-[60%]">
             <div class=" flex flex-row    w-full items-center  bg-stone-100 z-50  text-stone-600 pt-2 pb-4">
 
                 <h1 class=" text-lg mr-3 text-stone-400">></h1>
@@ -58,7 +58,7 @@
                 <h1 class=" font-semibold text-lg color_base ">SmartTech Solutions</h1>
                 <!-- <h1 class=" text-lg ml-2  "> > Gestion de listes de formation</h1> -->
             </div>
-            <div class="  flex flex-col  mx-3 bg-white rounded-lg   px-5">
+            <div class="  flex flex-col  mx-3 bg-white h-full  rounded-lg   px-5">
                 <formulaire :item="item"></formulaire>
             </div>
         </div>

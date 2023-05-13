@@ -1,5 +1,5 @@
 <template>
-<div class="flex flex-col w-full h-full"> 
+<div class="flex flex-col w-full h-full">
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex sticky top-3 ">
         <div class="flex flex-col  w-[35%]  ">
             <div class="flex flex-col  ">
@@ -23,8 +23,8 @@
                                 <th class=" w-[92%] h-[5vh]  text-center text-stone-500 ">Nom de formation</th>
                             </tr>
                             <tr @click="getIt_()" v-for="item,i in this.$store.state.myData.TitreFormation" :key="i" class="  h-8 group duration-200  hover:text-white  hover:bg-[#63B6B9]  ">
-                                <td class=" group-hover:text-white text-center text-gray-500 px-2 " v-text="item.id" >   </td>
-                                <td class=" text-center my-2"  >
+                                <td class=" group-hover:text-white text-center text-gray-500 px-2 " v-text="item.id"> </td>
+                                <td class=" text-center my-2">
                                     <div class=" flex flex-row justify-center my-3">Les clés pour réussir votre projet</div>
                                 </td>
                             </tr>
@@ -47,19 +47,25 @@
         </div>
         <div class="flex flex-col  w-[65%]   ">
             <div class="flex flex-row items-center">
-                <span class=" mx-3 text-stone-400">></span>
-                <h1 class="text-lg   rounded-r-md">Livret d’apprentissage :</h1>
+                <h1 class=" text-lg mx-3 text-stone-400">></h1>
+                <h1 class="text-lg  ">Livret d’apprentissage :</h1>
                 <h1 class=" text-lg ml-2 color_base font-semibold "> NameFormation</h1>
             </div>
 
             <div class="  flex flex-col  mx-3 bg-white py-2 rounded-lg">
+
+                <div class="flex flex-row py-5 px-3 items-center">
+                    <h3>Etape de la formation :</h3>
+                    <span class=" px-3 py-1 mx-2 text-green-500 bg-teal-100">En cours</span>
+                </div>
+
                 <div class=" z-20 sticky -top-6  px-3 bg-white py-5  flex-row items-center flex justify-between w-full">
-                    <h1 class=" font-semibold">[Name Objectif]</h1>
+                    <h1 class=" font-semibold">[Nom Objectif]</h1>
                 </div>
                 <livretApp class=" px-4"></livretApp>
                 <span class="flex border-b-[2px] border-stone-200 py-3"></span>
                 <div class=" z-20 sticky -top-6  px-3 bg-white py-5  flex-row items-center flex justify-between w-full">
-                    <h1 class=" font-semibold">[Name Objectif]</h1>
+                    <h1 class=" font-semibold">[Nom Objectif]</h1>
                 </div>
                 <livretApp class=" px-4"></livretApp>
                 <div class="mt-12 px-3">
@@ -68,10 +74,6 @@
                 <span class="flex border-b-[2px] border-stone-200 py-3"></span>
                 <div class=" flex flex-row py-5">
                     <div class="flex flex-col">
-                        <div class="flex flex-row py-5 items-center">
-                            <h3>Etape de la formation :</h3>
-                            <span class=" px-3 py-1 mx-2 text-green-500 bg-teal-100">En cours</span>
-                        </div>
                         <div class="flex mt-5 flex-row relative color_base">
                             <div class=" border-[1px] border-[#63B6B9] flex px-3 py-2 rounded-md flex-row">
                                 <span class=" absolute text_xs color_base -mt-4 -ml-0 bg-white">Date de début de la formation</span>
@@ -90,12 +92,12 @@
                         </div>
                     </div>
                     <div class="flex flex-col ml-4 mt-2">
-                        <div class="flex flex-row py-5 items-center">
+                        <div class="flex flex-row   items-center">
                             <h3 class=" font-semibold">Certificat</h3>
                         </div>
 
                         <!-- liste des document -->
-                        <div class="w-full mt-7 flex flex-col ">
+                        <div class="w-full flex flex-col ">
                             <div class="flex flex-row items-center justify-between w-full bg-stone-300 px-2 py-1 rounded-md">
                                 <button class=" flex flex-row bg-slate-100 p-1  items-center rounded-md">
                                     <svg class=" fill-current text-red-500 w-4" viewBox="0 0 24 24">

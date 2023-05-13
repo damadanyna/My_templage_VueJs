@@ -4,13 +4,16 @@
         <span class=" h-[2px] w-full my-6 rounded-sm bg-stone-300"></span>
     </div>
 
-    <div class=" z-20 sticky top-6 z-0 bg-white px-3 py-5 flex justify-between w-full">
+    <div class=" z-20 sticky top-6   bg-white px-3 py-5 flex justify-between w-full">
         <span class=" font-semibold ">Espace documentaire de la formation</span>
     </div>
 
     <div class="flex flex-row">
         <btn_ class=" " :options="{label:'Nouveau Objectif',style:' px-0 base_bg text_xs  text-white ',ico:$store.state.icons.plus}"></btn_>
-        <btn_ class=" ml-2 " :options="{label:'Bibliothéque d\'objectif',style:' base_bg text_xs  text-white ',ico:$store.state.icons.list}"></btn_>
+        <div class="flex flex-col">
+            <btn_ @click="()=>{showBibliotheque=!showBibliotheque}" class=" ml-2 " :options="{label:'Bibliothéque d\'objectif',style:' base_bg text_xs  text-white ',ico:$store.state.icons.list}"></btn_>
+            <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:''}"> </bibliothequeVue>
+        </div>
     </div>
 
     <div class="flex w-full text_xs mt-4  ">
@@ -51,9 +54,17 @@
 
 <script>
 import btn_ from '../../button/btn_.vue';
+import bibliothequeVue from '../../input/bibliotheque.vue';
+
 export default {
-    components:{
-        btn_
+    components: {
+        btn_,
+        bibliothequeVue
+    },
+    data() {
+        return {
+            showBibliotheque: false
+        }
     }
 
 }

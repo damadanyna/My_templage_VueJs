@@ -2,16 +2,20 @@
 <div class="flex flex-row h-full">
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class=" flex w-full  ">
 
-        <div :class="showFormulaire==true?'w-[40%]':'w-[100%] '" class=" flex-col duration-500   h-max  flex z-10">
+        <div :class="showFormulaire==true?'w-[35%]':'w-[100%] '" class=" flex-col duration-500   h-max  flex z-10">
 
-            <div class=" flex flex-row  sticky duration-300 -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">
+            <div class=" flex flex-row  sticky duration-300 -top-6 w-full bg-stone-100 items-center z-50 font-bold text-stone-600 pt-2 pb-3">
+                <button v-if="showFormulaire!=false" @click="()=>{goOn()}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
+                    <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
+                        <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
+                </button>
                 <h1 class=" text-lg">Organismes </h1>
             </div>
-            <div  :class="showFormulaire==true?' px-5  ':'px-12'" class="flex rounded-lg flex-col bg-white ">
+            <div :class="showFormulaire==true?' px-5  ':'px-12'" class="flex rounded-lg flex-col bg-white ">
 
                 <span v-if="showFormulaire==false" class=" sticky top-6 py-3  bg-white font-bold text-lg">Raison social</span>
                 <!-- boite raison social -->
-                <div v-if="showFormulaire==false" class="flex flex-between mt-4 text_xs"> 
+                <div v-if="showFormulaire==false" class="flex flex-between mt-4 text_xs">
                     <!-- formulaire -->
                     <div class="flex flex-col text-[12px] border border-black w-2/5 rounded-lg">
                         <div class="py-4 px-7">
@@ -19,10 +23,6 @@
                                 <span class=" font-semibold text-stone-800 min-w-max" v-text="item.label"></span>
                                 <span v-if="edit==true" contenteditable class=" w-full ml-2 bg-stone-200 px-2 py-1 rounded-md" v-text="item.text"></span>
                                 <span v-else class=" w-full ml-2 px-2 py-1 rounded-md" v-text="item.text"></span>
-                            </div>
-                            <div class="flex flex-row w-full items-center  my-6 ">
-                                <span class=" font-semibold text-stone-800 min-w-max" v-text="'NDA : '"></span>
-                                <input placeholder="Input NDA" type="text" class=" w-full ml-2 border border-stone-900 px-2 py-1 rounded-md">
                             </div>
                         </div>
                         <div class="flex w-full justify-end relative">
@@ -49,16 +49,13 @@
                 </div>
 
                 <!-- titre du tableau -->
-                <div class="flex z-50 flex-row items-center sticky top-6 py-5 bg-white mt-6 justify-between w-full">
-                    <div class="flex flex-row items-center">
-                        <button v-if="showFormulaire!=false" @click="()=>{showFormulaire=false}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
-                            <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
-                                <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
-                        </button>
+                <div class="flex z-50 flex-row items-center py-1 bg-white mt-6 justify-between w-full">
+                    <div class="flex flex-row items-center"> 
                         <h5 :class="showFormulaire==true?'text-sm ':'xl'" class=" font-semibold  ">Listes des sites de formation</h5>
                     </div>
-                    <btn_ v-if="showFormulaire==false" @click="()=> { nouveauSite()}" :options="{label:'Nouveau site',style:' base_bg text-white w-full',ico:$store.state.icons.plus}"></btn_>
-                </div>
+                                  <btn_  v-if="showFormulaire==false" @click="()=>{showFormulaire=true}" class=" ml-1 " :options="{url:{name:'organisme',query: {is:true}},label:'Nouveau sites',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
+
+                 </div>
                 <div class="  w-full text_xs  h-[70vh] overflow-auto px-2 mt-9">
                     <table class="  w-full items-start">
                         <tr class=" w-full sticky -top-7  bg-white py-4  ">
@@ -90,11 +87,11 @@
             </div>
         </div>
 
-        <div v-if=" showFormulaire==true" class="flex flex-col w-[60%] ">
+        <div v-if=" showFormulaire==true" class="flex flex-col w-[65%] ">
             <div class=" flex flex-row  sticky duration-300 -top-6 w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-3">
                 <h1 class=" text-lg ml-2  "> > Gestion de site de formation</h1>
             </div>
-            <popup  :item="selectedItem" class=" sticky top-6 mx-3 bg-white rounded-lg  h-max px-5 "></popup>
+            <popup :item="selectedItem" class=" sticky top-6 mx-3 mt-3 bg-white rounded-lg  h-max px-5 "></popup>
 
         </div>
     </div>
@@ -135,7 +132,11 @@ export default {
                 {
                     label: 'Numéro SIRET :',
                     text: '84193902800012'
-                }
+                },
+                {
+                    label: 'NDA :',
+                    text: 'input NDA'
+                },
             ],
             importFichier: [{
                 titre: 'Certificat',
@@ -185,8 +186,25 @@ export default {
             this.showFormulaire = true
             this.selectedItem.titre = ""
         }
-    }
+        ,
+        goOn(){ 
+            this.$router.push({name: 'organisme'})
+        }
+    },
+    mounted() {
+        if (this.$route.query.is) {
+            this.showFormulaire = true
+        }
+        
+    },
+    updated() {
+        if (this.$route.query.is) {
+            this.showFormulaire = true
+        }else{
 
+            this.showFormulaire = false
+        }
+    }
 }
 </script>
 

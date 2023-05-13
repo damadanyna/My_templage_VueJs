@@ -34,25 +34,12 @@
             </button>
         </div>
     </div>
-    <div class="flex flex-col w-full mt-8">
-        <div v-for="item,i in reponses" :key="i" class="flex flex-row items-center mt-4">
-            <div class="flex flex-row text_xs mt-5 w-full justify-center  ">
-                <div class=" group w-[50%]  border-[1px] py-2 rounded-lg items-start px-5 flex flex-col border-[#63B6B9] ">
-                    <div class=" flex relative z-0 w-full ">
-                        <span class="-mt-4  text_xs font-semibold z-0  ml-2 bg-white inline px-1 duration-300 absolute" v-text="item.label"> </span>
-                    </div>
-                    <span v-text=" item.type"> </span>
-                </div>
-                <div @click="()=>{index=i}" :class="index==i?'bg-[#63B6B9]':' '" class=" ml-4 p-2   rounded-md border-[1px] border-[#63B6B9]">
-                    <svg v-if="index!=i" class=" w-4 text-white fill-current " viewBox="0 0 24 24">
-                        <path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z" /></svg>
-                    <svg v-else class="  fill-current w-4 text-white" viewBox="0 0 24 24">
-                        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" /></svg>
-                </div>
-            </div>
-        </div> 
+    <div class="flex flex-col w-full mt-8 items-center">
+        <div class="flex flex-row w-[70%]"> 
+            <radioVue :options="{liste:reponses,editable:false}"></radioVue>
+        </div>
         <div class="flex w-full justify-center my-12">
-            <span class=" w-[60%] h-[2px] bg-stone-300 "></span> 
+            <span class=" w-[60%] h-[2px] bg-stone-300 "></span>
         </div>
     </div>
     <!-- Question 2 -->
@@ -83,25 +70,13 @@
             </button>
         </div>
     </div>
-    <div class="flex flex-col w-full mt-8">
-        <div v-for="item,i in reponses" :key="i" class="flex flex-row items-center mt-4">
-            <div class="flex flex-row text_xs mt-5 w-full justify-center  ">
-                <div class=" group w-[50%]  border-[1px] py-2 rounded-lg items-start px-5 flex flex-col border-[#63B6B9] ">
-                    <div class=" flex relative z-0 w-full ">
-                        <span class="-mt-4  text_xs font-semibold z-0  ml-2 bg-white inline px-1 duration-300 absolute" v-text="item.label"> </span>
-                    </div>
-                    <span v-text=" item.type"> </span>
-                </div>
-                <div @click="()=>{index=i}" :class="index==i?'bg-[#63B6B9]':' '" class=" ml-4 p-2   rounded-md border-[1px] border-[#63B6B9]">
-                    <svg v-if="index!=i" class=" w-4 text-white fill-current " viewBox="0 0 24 24">
-                        <path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z" /></svg>
-                    <svg v-else class="  fill-current w-4 text-white" viewBox="0 0 24 24">
-                        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" /></svg>
-                </div>
-            </div>
-        </div> 
+    <div class="flex flex-col w-full mt-8 items-center">
+        <div class="flex flex-row w-[70%]"> 
+            <radioVue :options="{liste:reponses,editable:true}"></radioVue>
+        </div>
+
         <div class="flex w-full justify-center my-12">
-            <span class=" w-[60%] h-[2px] bg-stone-300 "></span> 
+            <span class=" w-[60%] h-[2px] bg-stone-300 "></span>
         </div>
     </div>
 </div>
@@ -110,10 +85,13 @@
 <script>
 import btn_ from '../../components/button/btn_.vue';
 import input_ from '../../components/input/inputTxt.vue';
+import radioVue from '../../components/input/radio.vue';
+
 export default {
     components: {
         btn_,
-        input_
+        input_,
+        radioVue
     },
     data() {
         return {
@@ -121,19 +99,19 @@ export default {
             media: ['media_document.pdf', 'media_image.jpg', 'media_video.mp4', 'media_Audio.mp3'],
             reponses: [{
                     label: 'Proposition A',
-                    type: 'Brésil'
+                    reponse: 'Brésil',
                 },
                 {
                     label: 'Proposition B',
-                    type: 'Argentine'
+                    reponse: 'Argentine',
                 },
                 {
                     label: 'Proposition C',
-                    type: 'Pérou'
+                    reponse: 'Pérou',
                 },
                 {
                     label: 'Proposition D',
-                    type: 'Colombie'
+                    reponse: 'Colombie',
                 },
             ]
         }

@@ -3,11 +3,18 @@
     <div :class="showFormulaire==true?'flex-row':'flex-col'" class=" flex">
         <div class="flex flex-col w-[35%] ">
             <div class="flex flex-row pt-2 pb-7">
+
                 <h1 class=" text-lg px-2 font-normal rounded-r-md"> Bénéficiaire: </h1>
                 <h1 class=" text-lg ml-2 color_base font-semibold  "> John Doe</h1>
             </div>
 
             <div class="flex-col duration-500  bg-white rounded-lg h-max flex sticky py-5 -top-6    z-10">
+                <div class="flex flex-row items-center px-4">
+                    <button @click="()=>{$router.go(-1)}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
+                        <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
+                            <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
+                    </button>
+                </div>
                 <div v-if="this.$store.state.myData.listeFormation.length>0" class=" text_xs flex-row">
                     <!-- titre du tableau -->
                     <div class=" w-full px-3 text_xs h-[78vh] overflow-auto mt-5">
@@ -18,7 +25,7 @@
                             </tr>
                             <tr @click="getIt_()" v-for="item,i in this.$store.state.myData.TitreFormation" :key="i" class=" h-8 group duration-200  hover:text-white  hover:bg-[#63B6B9]  ">
                                 <td class=" text-center text-gray-500 px-2 " v-text="item.id"></td>
-                                <td class=" text-center" >
+                                <td class=" text-center">
                                     <div class=" justify-center my-2 flex w-full">Les clés pour réussir votre projet</div>
                                 </td>
                             </tr>
@@ -43,17 +50,23 @@
                     <h1 class=" text-lg ml-2 color_base font-semibold "> NameFormation</h1>
                 </div>
 
-                <div class="flex w-60 ">
-                    <btn_ :options="{label:'Modification du programme de formation',style:' py-1  break-all base_bg text-left text-white w-full',ico:$store.state.icons.edit}"></btn_>
+                <div class="flex flex-col">
+                    <div class="flex w-60 ">
+                        <btn_ @click="()=>{showBibliotheque=!showBibliotheque}" :options="{label:'Modification du programme de formation',style:' py-1  break-all base_bg text-left text-white w-full',ico:$store.state.icons.edit}"></btn_>
+                    </div>
+                    <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:'-ml-9'}"> </bibliothequeVue>
                 </div>
-                <!-- <div class=" flex flex-row mx-1  ">
-                    <btn_ @click="()=>{showFormulaire=true}" class=" " :options="{label:'Nouvelle',ico:$store.state.icons.plus,style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
-                </div> -->
+
             </div>
 
             <div class="  flex flex-col  mx-3 bg-white rounded-lg  px-10">
+
+                <div class="flex flex-row py-5 items-center">
+                    <h3>Etape de la formation :</h3>
+                    <span class=" px-3 py-1 mx-2 text-green-500 bg-teal-100">En cours</span>
+                </div>
                 <div class=" z-20 sticky -top-4  mx-3 bg-white py-5  flex-row items-center flex justify-between w-full">
-                    <h1 class=" font-semibold">[Name Objectif]</h1>
+                    <h1 class=" font-semibold">[Nom Objectif]</h1>
                     <div class="flex flex-row items-center text_xs">
                         <span class=" font-bold">Durée estimé</span>
                         <span class=" py-2 bg-stone-200 mx-2 px-2 border-b-[1px] color_base">02 heures</span>
@@ -66,7 +79,7 @@
                 <livretApp class=" px-4"></livretApp>
                 <span class="flex border-b-[2px] border-stone-200 py-3"></span>
                 <div class=" z-20 sticky -top-4  mx-3 bg-white py-5  flex-row items-center flex justify-between w-full">
-                    <h1 class=" font-semibold">[Name Objectif]</h1>
+                    <h1 class=" font-semibold">[Nom Objectif]</h1>
                     <div class="flex flex-row items-center text_xs">
                         <span class=" font-bold">Durée estimé</span>
                         <span class=" py-2 bg-stone-200 mx-2 px-2 border-b-[1px] color_base">02 heures</span>
@@ -81,10 +94,6 @@
                 <span class="flex border-b-[2px] border-stone-200 py-3"></span>
                 <div class=" flex flex-row py-5">
                     <div class="flex flex-col">
-                        <div class="flex flex-row py-5 items-center">
-                            <h3>Etape de la formation :</h3>
-                            <span class=" px-3 py-1 mx-2 text-green-500 bg-teal-100">En cours</span>
-                        </div>
                         <div class="flex mt-5 flex-row relative color_base">
                             <div class=" border-[1px] border-[#63B6B9] flex px-3 py-2 rounded-md flex-row">
                                 <span class=" absolute text_xs color_base -mt-4 -ml-0 bg-white">Date de début de la formation</span>
@@ -103,12 +112,12 @@
                         </div>
                     </div>
                     <div class="flex flex-col ml-4 mt-2">
-                        <div class="flex flex-row py-5 items-center">
+                        <div class="flex flex-row   items-center">
                             <h3 class=" font-semibold">Certificat</h3>
                         </div>
 
                         <!-- liste des document -->
-                        <div class="w-full mt-7 flex flex-col ">
+                        <div class="w-full flex flex-col ">
                             <div class="flex flex-row items-center justify-between w-full bg-stone-300 px-2 py-1 rounded-md">
                                 <button class=" flex flex-row bg-slate-100 p-1  items-center rounded-md">
                                     <svg class=" fill-current text-red-500 w-4" viewBox="0 0 24 24">
@@ -159,18 +168,21 @@
 import btn_ from '../../components/button/btn_.vue'
 import popup from '../../components/poppup/organisme/organisme.vue'
 import livretApp from '../../components/poppup/gestionListeFormation/livret.vue'
+import bibliothequeVue from '../../components/input/bibliotheque.vue'
 
 export default {
     components: {
         btn_,
         popup,
         livretApp,
+        bibliothequeVue
     },
     data() {
         return {
             listeMenu: ['ActionFormation', 'Bilan', 'VAE'],
             showFormulaire: true,
             indexFormulaire: 0,
+            showBibliotheque: false
         }
     },
     methods: {

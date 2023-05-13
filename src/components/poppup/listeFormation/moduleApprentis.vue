@@ -10,7 +10,11 @@
 
     <div class="flex flex-row">
         <btn_ class="  " :options="{label:'Nouveau Document',style:' px-0 base_bg text_xs  text-white ',ico:$store.state.icons.plus}"></btn_>
-        <btn_ class="  ml-2 " :options="{label:'Bibliothéque de document',style:' base_bg text_xs  text-white ',ico:$store.state.icons.list}"></btn_>
+        <div class="flex flex-col">
+            <btn_ @click="()=>{showBibliotheque=!showBibliotheque}" class="  ml-2 " :options="{label:'Bibliothéque de document',style:' base_bg text_xs  text-white ',ico:$store.state.icons.list}"></btn_>
+      
+            <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:''}"> </bibliothequeVue>
+        </div>
     </div>
 
     <div class="flex w-full text_xs mt-4">
@@ -45,9 +49,15 @@
 
 <script>
 import btn_ from '../../button/btn_.vue';
+import bibliothequeVue from '../../input/bibliotheque.vue'; 
 export default {
     components: {
-        btn_
+        btn_,bibliothequeVue
+    },
+    data() {
+        return {
+            showBibliotheque: false
+        }
     }
 }
 </script>

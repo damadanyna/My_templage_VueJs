@@ -1,6 +1,5 @@
 <template>
 <div class="flex flex-col h-full sticky -top-6">
-
     <!-- <h1 class=" text-lg   w-full bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-9"></h1> -->
     <div class="w-full  flex flex-row">
         <div class="flex flex-col duration-500 sticky top-0" :class="showFormulaire==true?'w-[30%] ' :'w-full '">
@@ -9,7 +8,7 @@
                     <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
                 </button>
-                <h1  :class="showFormulaire==true?' text-md' :'text-lg  '" class=" font-bold text-black ">Listes des equipes / sous-traitant</h1>
+                <h1 :class="showFormulaire==true?' text-md' :'text-lg  '" class=" font-bold text-black ">Listes des equipes / sous-traitant</h1>
             </div>
 
             <div :class="showFormulaire==true?'  px-2':' px-7'" class="   bg-white rounded-lg sticky -top-5 flex z-10 flex-col ">
@@ -67,15 +66,33 @@
         </div>
         <div v-if="showFormulaire==true" class=" flex flex-col mx-3  w-[70%] ">
             <div class="flex flex-col duration-500">
-                <div class="flex flex-row pb-4 mt-2"> 
+                <div class="flex flex-row pb-4 mt-2">
                     <h1 class=" text-lg   mr-2 text-stone-500 ">> </h1>
                     <h1 class=" text-lg  font-bold  text-black ">Formateur :</h1>
                     <h1 class=" text-lg color_base font-bold ">John Doe</h1>
                 </div>
                 <div v-if="showFormulaire==true" class=" flex flex-col  bg-white rounded-lg px-5">
-                    <formulaireVue ></formulaireVue>
+                    <div class="flex text-lg bg-white mb-5 items-center py-6  flex-row">
+                        <h1 class="   font-bold text-stone-800  ">Statut :</h1>
+                        <selectOption2Vue class=" ml-5" :options="statut" />
+
+                    </div>
+                    <formulaireVue></formulaireVue>
                     <etat :item="item"></etat>
-                    <soustraitantVue v-if=" this.$store.state.statut_=='Sous traitant'"></soustraitantVue>
+                    <soustraitantVue></soustraitantVue>
+                    <listeExperienceVue></listeExperienceVue>
+                    <div class="flex w-full px-3 my-12">
+                        <span class=" h-[2px] bg-stone-300 w-full"></span>
+                    </div>
+                    <listeQuestionaireVue></listeQuestionaireVue>
+                    <div class="flex w-full px-3 my-12">
+                        <span class=" h-[2px] bg-stone-300 w-full"></span>
+                    </div>
+                    <listeObjectiifValiderVue></listeObjectiifValiderVue>
+                    <div class="flex w-full px-3 my-12">
+                        <span class=" h-[2px] bg-stone-300 w-full"></span>
+                    </div>
+                    <historiqueSessionVue></historiqueSessionVue>
                 </div>
             </div>
         </div>
@@ -85,19 +102,39 @@
 
 <script>
 import btn_ from '../components/button/btn_.vue'
+import selectOption2Vue from '../components/input/selectOption2.vue'
 import etat from '../components/poppup/equipe/etat.vue'
+import historiqueSessionVue from '../components/poppup/equipe/historiqueSession.vue'
+import listeExperienceVue from '../components/poppup/equipe/listeExperience.vue'
+import listeObjectiifValiderVue from '../components/poppup/equipe/listeObjectiifValider.vue'
+import listeQuestionaireVue from '../components/poppup/equipe/listeQuestionaire.vue'
 import soustraitantVue from '../components/poppup/equipe/soustraitant.vue'
-import formulaireVue from '../components/poppup/equipe/statut.vue'
+import formulaireVue from '../components/poppup/equipe/statut.vue' 
 export default {
     components: {
         btn_,
         formulaireVue,
         etat,
-        soustraitantVue
+        historiqueSessionVue,
+        soustraitantVue,
+        selectOption2Vue,
+        listeExperienceVue,
+        listeObjectiifValiderVue,
+        listeQuestionaireVue
     },
     data() {
         return {
             showFormulaire: false,
+            statut: [{
+                label: 'Salarié',
+                val: ''
+            }, {
+                label: 'Salarié',
+                val: '0'
+            }, {
+                label: 'Sous traitant',
+                val: '1'
+            }, ],
             raisonSocial: [{
                     label: 'Raison SOCIAL:',
                     text: 'NDA'
@@ -110,18 +147,18 @@ export default {
                     label: 'Numéro SIRET :',
                     text: '84193902800012'
                 }
-            ], 
-            item:{}
+            ],
+            item: {}
         }
     },
-    mounted(){
+    mounted() {
         console.log();
     },
     methods: {
-        getIt(val){
+        getIt(val) {
 
-            this.item=val
-            this.showFormulaire = true 
+            this.item = val
+            this.showFormulaire = true
 
         }
     }

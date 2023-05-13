@@ -1,11 +1,9 @@
 <template>
 <div class=" h-full w-full flex flex-col">
     <div class="flex text-lg items-center justify-start sticky z-10 top-0 bg-white  flex-row">
-        <div class="flex flex-row  items-center">
-            <h1 class="w-full font-bold color_base pt-4  ">Si sous traitant</h1>
-        </div>
+         
     </div>
-    <div class=" w-full h-full flex flex-col  border-[1px] border-[#63B6B9] rounded-md py-6 ">
+    <div class=" w-full h-full flex flex-col   rounded-md py-6 ">
         <div class="grid  grid-cols-2 w-full ">
             <div class=" my-2 px-1 w-full" v-for="item,i in data " :key="i">
                 <input_ class=" z-10 w-full bg-white " :options="item"></input_>

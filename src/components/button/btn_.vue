@@ -15,7 +15,7 @@
                 <path :d="options.ico3" /></svg>
         </div>
     </button>
-    <router-link v-else :to="{name:options.url.name}" :class="options.style" class="  duration-200 rounded-md flex-row items-center hover:bg-[#42898B] hover:opacity-80 bg-stone-50 flex justify-center px-4  ">
+    <router-link v-else :to="options.url" :class="options.style" class="  duration-200 rounded-md flex-row items-center hover:bg-[#42898B] hover:opacity-80 bg-stone-50 flex justify-center px-4  ">
         <div class=" flex items-center flex-row">
             <svg v-if=" options.ico" class=" fill-current w-4" viewBox="0 0 24 24">
                 <path :d="options.ico" /></svg>

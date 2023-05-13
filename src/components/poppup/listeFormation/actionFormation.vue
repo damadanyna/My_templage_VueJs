@@ -19,6 +19,10 @@
                 <input_ class=" w-full " :options="data_[2]"></input_>
                 <input_ class=" w-full  ml-3" :options="data_[3]"></input_>
             </div>
+            <div v-if="isChecked==true" class="flex mt-5 w-full flex-row">
+                <input_ class=" w-full " :options="data_[12]"></input_>
+                <input_ class=" w-full  ml-3" :options="data_[13]"></input_>
+            </div>
             <!-- <span class=" text-teal-500 text_xs mt-2">*Lié à un membre d'équipe</span> -->
             <div class="flex mt-5 flex-row w-full">
                 <textArea_ class=" w-full" :options="data_[4]"></textArea_>
@@ -44,6 +48,9 @@
             </div>
             <div class="flex mt-5 flex-row w-full">
                 <textArea_ class=" w-full " :options="data_[10]"></textArea_>
+            </div>
+            <div class="flex mt-7 flex-row w-full">
+                <textArea_ class=" w-full " :options="data_[11]"></textArea_>
             </div>
         </div>
         <div :class="data_[0].model=='' || data_[1].model=='' || data_[2].model=='' || data_[3].model==''|| data_[4].model || data_[5].model==''?' opacity-50':' opacity-100'" class=" duration-300 flex mt-12 justify-center  flex-row w-full">
@@ -111,6 +118,22 @@ export default {
                 {
                     label: 'Modalités de l’etude personalisé',
                     model: '',
+                }, 
+                // block
+                {
+                    label: ' ',
+                    model: '',
+                },
+                {
+                    label: 'Niveau du diplôme',
+                    model: '',
+                    type: 'text'
+                },
+
+                {
+                    label: 'Intitulé du diplôme',
+                    model: '',
+                    type: 'text'
                 },
 
             ],

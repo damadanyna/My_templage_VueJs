@@ -9,7 +9,7 @@
             </div>
         </div>
         <!-- select Option -->
-        <div class="flex items-center flex-row">
+        <!-- <div class="flex items-center flex-row">
             <span class=" mr-3 font-semibold color_base">Liste formateurs :</span>
             <div class="flex flex-row bg-stone-300 px-3 py-2 rounded-lg">
                 <span>John Doe</span>
@@ -17,7 +17,7 @@
             <div class="flex ml-3 flex-row bg-stone-300 px-3 py-2 rounded-lg">
                 <span>John Doe</span>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="flex flex-row w-full justify-between py-5 mt-2">
         <span class=" text-lg font-semibold ">Liste des bénéficiaires</span>

@@ -1,18 +1,29 @@
 <template>
-<div class="flex flex-col h-full text-[14px] ">
-    <div class="w-full flex flex-row">
-        <div class=" w-[30%]   duration-500   flex z-10 flex-col ">
+<div class="flex flex-col h-full text-[14px] " >
+    <router-view v-if=" $route.query.symb=='consulter' "></router-view>
 
-            <div class="flex flex-row"> 
-                <h1 class=" text-lg ">Gestion Formation :</h1>
-                <h1 class=" text-lg color_base font-semibold"> TitreFormation</h1>
-            </div> 
+    <div v-else class="w-full flex flex-row">
+        <div class=" w-[30%]   duration-500   flex z-10 flex-col ">
+            <div class="flex flex-row w-full items-center">
+                <button @click="()=>{$router.go(-1)}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
+                    <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
+                        <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
+                </button>
+                <div class="  flex text-lg ">
+                    <h1 class="">Gestion Formation :</h1>
+                    <h1 class=" text-lg color_base font-semibold"> TitreFormation</h1>
+                </div>
+            </div>
             <div class="  py-6 sticky pb-4 -top-5  mt-4  duration-500 bg-white rounded-lg    px-4 flex z-10 flex-col ">
 
                 <span class=" font-semibold">Module d’apprentissage</span>
                 <div class=" mt-2 flex w-full justify-between">
                     <btn_ @click="()=>{showFormulaire=true}" class=" " :options="{label:'Nouveau document',ico:$store.state.icons.plus,style:' base_bg text-[12px] text-white py-1 text-stone-800 '}"></btn_>
-                    <btn_ @click="()=>{showFormulaire=true}" class=" ml-3 " :options="{label: `Bibliothéque module d’apprentissage`,ico:$store.state.icons.list,style:' base_bg text-[12px] text-white py-1 text-stone-800 '}"></btn_>
+                    <div class="flex flex-col">
+                        <btn_ @click="()=>{showBibliotheque=!showBibliotheque}" class=" ml-3 " :options="{label: `Bibliothéque module d’apprentissage`,ico:$store.state.icons.list,style:' base_bg text-[12px] text-white py-1 text-stone-800 '}"></btn_>
+                        <bibliothequeVue v-if= "showBibliotheque==true" :options="{class:''}" class="flex"> </bibliothequeVue>
+
+                    </div>
                 </div>
                 <div class="flex w-full h-[66vh] overflow-y-auto  text_xs mt-4">
                     <table class=" w-full -start px-1">
@@ -63,8 +74,8 @@
                 <h1 class=" text-lg color_base font-semibold"> NameModule</h1>
             </div>
 
-            <div class=" mt-4 flex flex-row  w-full justify-between text-lg items-center font-bold border-[#63B6B9] py-2 px-4  border-[1px] bg-white rounded-lg  ">
-                <span class="color_base ">Activer le module d'apprentissage par défaut</span>
+            <div :class="this.activer != true?'border-[#63B6B9] color_base ':'border-stone-400 text-stone-400'" class=" mt-4 flex flex-row  w-full justify-between text-lg items-center font-bold  py-2 px-4  border-[1px] bg-white rounded-lg  ">
+                <span :class="this.activer != true?'  color_base ':' text-stone-400'">Activer le module d'apprentissage par défaut</span>
                 <slidebtn_ @click="activeIt()" :options="{active:activer,border:'border-[#63B6B9] ',bg:' bg-[#63B6B9]'}"></slidebtn_>
             </div>
             <div class=" flex flex-col   bg-white rounded-lg shadow-lg mt-6">
@@ -75,7 +86,7 @@
                 <div class="flex px-3 flex-row items-center justify-between">
                     <span class=" text-lg font-semibold">Grille d'évaluation :</span>
                     <div class="flex  flex-row">
-                        <btn_ @click="()=>{showFormulaire=true}" class=" mt-3" :options="{label:'Nouvelle question',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
+                        <btn_ @click="()=>{question.push('')}" class=" mt-3" :options="{label:'Nouvelle question',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
                     </div>
                 </div>
                 <div class="flex flex-col px-8">
@@ -85,7 +96,6 @@
                     <div class="flex  flex-row mt-4">
                         <btn_ @click="()=>{showFormulaire=true}" class=" mt-3" :options="{label:'Formateur',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
                         <btn_ @click="()=>{showFormulaire=true}" class=" mt-3 ml-9" :options="{label:'Bénéficiaire',style:' bg-[#EEEEEE] text-black py-2 text-stone-800 '}"></btn_>
-
                     </div>
                     <div class="flex  flex-row w-full mt-6">
                         <div class="flex  flex-row">
@@ -102,7 +112,18 @@
                         </div>
                     </div>
                 </div>
-                <grilleEvaluation></grilleEvaluation>
+                <div class="flex flex-col" v-for="i in question" :key="i">
+                    <grilleEvaluation></grilleEvaluation>
+
+                    <div class="flex w-full px-1">
+                        <div class="  mt-9 w-full  base_bg justify-center rounded-md flex">
+                            <btn_ :options="{label:'Sauvegarder', style:' base_bg py-2 text-white',stylelabel:' text-white'}"></btn_>
+                        </div>
+                    </div>
+                    <div class="flex w-full flex-col px-3">
+                        <span class=" h-[2px] bg-stone-400 my-4 w-full"></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -114,17 +135,22 @@ import btn_ from '../components/button/btn_.vue'
 import paramètre from '../components/poppup/gestionFormation/paramètre.vue'
 import grilleEvaluation from '../components/poppup/gestionFormation/grilleEvaluation.vue'
 import slidebtn_ from '../components/button/slidebtn_.vue'
+import bibliothequeVue from '../components/input/bibliotheque.vue'
+
 export default {
     components: {
         btn_,
         paramètre,
         slidebtn_,
         grilleEvaluation,
+        bibliothequeVue
     },
     data() {
         return {
             index: null,
             activer: false,
+            question: [''],
+            showBibliotheque:false
         }
     },
     methods: {

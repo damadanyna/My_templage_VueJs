@@ -49,29 +49,31 @@
                     <div class="flex flex-col pl-7 pr-3">
                         <div class="flex flex-row w-full justify-between items-center">
                             <span class=" font-semibold text_base">Positionnement</span>
-                            <btn_ class=" " :options="{label:'Visualiser le fomulaire', style:' base_bg py-2 text-white',stylelabel:' text-white', ico:$store.state.icons.eye}"></btn_>
+                            <btn_ @click="()=>{$router.push({ name: 'evaluation'})}" class=" " :options="{label:'Visualiser le fomulaire', style:' base_bg py-2 text-white',stylelabel:' text-white', ico:$store.state.icons.eye}"></btn_>
 
                         </div>
-                        <div class="flex flex-row">
-                            <checkBtnVue @click="()=>{setPos(positionnement)}" class=" mt-2" :options="{text:'Analyse des besoins',checked:positionnement,style:myStyle(positionnement)}"></checkBtnVue>
+                        <div class="flex flex-row"> 
+                            <checkBtnVue  @click="()=>{index=0}" v-if="index!=0" class=" mt-2" :options="{text:liste[0],checked:false,style:'text_xs color_base bg-stone-200 py-2 rounded-md py-0 px-3'}"></checkBtnVue>
+                            <checkBtnVue v-else class=" mt-2" :options="{text:liste[0],checked:true,style:'text_xs text-white base_bg py-2 rounded-md py-0 px-3'}"></checkBtnVue>
                         </div>
                         <div class="flex flex-row w-full   mt-5 items-center">
                             <span class=" font-semibold text_base">Fin de formation</span>
                            
                         </div>
                         <div class="flex flex-row mt-2">
-                            <div v-for="item,i in finfomationBtn" :key="i" @click="()=>{indexFin=i}" class="flex mr-7 ">
-                                <checkBtnVue v-if="indexFin!=i" class=" mt-1" :options="{text:item,checked:false,style:'text_xs color_base bg-stone-200 py-2 rounded-md py-0 px-3'}"></checkBtnVue>
+                            <div v-for="item,i in liste" :key="i" @click="()=>{index=i}" :class="i>0 & i<3?'flex':'hidden'" class=" mr-7 ">
+                                <checkBtnVue v-if="index!=i" class=" mt-1" :options="{text:item,checked:false,style:'text_xs color_base bg-stone-200 py-2 rounded-md py-0 px-3'}"></checkBtnVue>
                                 <checkBtnVue v-else class=" mt-1" :options="{text:item,checked:true,style:'text_xs text-white base_bg py-2 rounded-md py-0 px-3'}"></checkBtnVue>
                             </div>
                         </div>
                         <div class="flex flex-row w-full   mt-5 items-center">
                             <span class=" font-semibold text_base">Satisfaction</span>
-                           
+                          
                         </div>
                         <div class="flex flex-row mt-2">
-                            <div v-for="item,i in satisfaction" :key="i" @click="()=>{indexSat=i}" class="flex mr-7 ">
-                                <checkBtnVue v-if="indexSat!=i" class=" mt-1" :options="{text:item,checked:false,style:'text_xs color_base bg-stone-200 py-2 rounded-md py-0 px-3'}"></checkBtnVue>
+                          
+                            <div v-for="item,i in liste" :key="i" @click="()=>{index=i}" :class="i>2 ?'flex':'hidden'" class=" mr-7 ">
+                                <checkBtnVue v-if="index!=i" class=" mt-1" :options="{text:item,checked:false,style:'text_xs color_base bg-stone-200 py-2 rounded-md py-0 px-3'}"></checkBtnVue>
                                 <checkBtnVue v-else class=" mt-1" :options="{text:item,checked:true,style:'text_xs text-white base_bg py-2 rounded-md py-0 px-3'}"></checkBtnVue>
                             </div>
                         </div>
@@ -99,10 +101,8 @@ export default {
         return {
             showFormulaire: true,
             positionnement: false,
-            indexFin: 0, 
-            indexSat: 0, 
-            finfomationBtn:['Bénéficiaire','Formateur'],
-            satisfaction:['Bénéficiaire','Formateur','Financeur','Employeur']
+            index: 0,   
+            liste:['Analyse des besoins','Bénéficiaire','Formateur','Bénéficiaire','Formateur','Financeur','Employeur']
 
         }
     },

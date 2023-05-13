@@ -2,15 +2,15 @@
 const state = () => ({  
     listeFormation:[
         {
-            id:'#001',
+            id:'001',
             title:'Titre Formation',
         },
         {
-            id:'#002',
+            id:'002',
             title:'Leadership et communication efficace',
         },
         {
-            id:'#003',
+            id:'003',
             title:'Les clés pour réussir votre projet',
         },
     ],

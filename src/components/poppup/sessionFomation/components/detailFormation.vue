@@ -1,7 +1,7 @@
 <template>
 <div class="flex flex-col">
     <div class="flex flex-row w-full justify-between py-5 mt-2">
-        <span class=" text-lg font-semibold ">Detail de la formation</span>
+        <span class=" text-lg font-semibold ">Detail de la formations</span>
     </div>
     <div class="flex flex-row">
         <div class="flex w-1/2 mr-2 flex-col border-">
@@ -16,14 +16,14 @@
                         <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z" /></svg>
                     <svg v-else class=" fill-current color_base w-4" viewBox="0 0 24 24">
                         <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 5a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5 5 5 0 0 0-5-5z" /></svg>
-                    <span>Distanciel</span>
+                    <span>Présenciel</span>
                 </div>
                 <div class="flex flex-row cursor-pointer" @click="()=>{isPresenciel=false}">
                     <svg v-if="isPresenciel!=false" class=" fill-current color_base w-4" viewBox="0 0 24 24">
                         <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z" /></svg>
                     <svg v-else class=" fill-current color_base w-4" viewBox="0 0 24 24">
                         <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 5a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5 5 5 0 0 0-5-5z" /></svg>
-                    <span>Présenciel</span>
+                    <span> Distanciel</span>
                 </div>
             </div>
         </div>
@@ -34,8 +34,12 @@
         <div class="flex flex-row justify-between">
             <!-- <span class=" text-[#0F9EC2] font-semibold text-lg">Si présentiel</span> -->
             <div class="flex flex-row ">
-                <btn_ @click="()=>{showFormulaire=true}" class=" mr-1 " :options="{label:'Bibliothéque sites',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
-                <btn_ @click="()=>{showFormulaire=true}" class=" ml-1 " :options="{label:'Nouveau sites',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
+                <div class="flex flex-col">
+                     <btn_ @click="()=>{showBibliotheque=!showBibliotheque}" class=" mr-1 " :options="{label:'Bibliothéque sites',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
+             
+                    <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:''}"> </bibliothequeVue>
+                </div>
+                <btn_ @click="()=>{showFormulaire=true}" class=" ml-1 " :options="{url:{name:'organisme',query: {is:true}},label:'Nouveau sites',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
 
             </div>
         </div>
@@ -44,9 +48,8 @@
                 <input_ class=" w-full bg-white " :options="{ label: 'Site de formation', model:'',type: 'text'}"></input_>
             </div>
             <div class="flex w-[60%] items-center  justify-end flex-row">
-                <span class=" mr-3 text_xs font-semibold color_base">Titre de site :</span>
-               
-                <selectOption :options="nomFormation"></selectOption>  
+                <span class=" mr-3 text_xs font-semibold color_base">Titre de site :</span> 
+                <selectOptionVue :options="nomFormation"></selectOptionVue>
             </div>
         </div>
         <!-- tableau de titre du site -->
@@ -120,10 +123,13 @@
         </div>
     </div>
     <span class=" text-lg font-semibold mt-9 mb-5">Espace documentaire de la formation</span>
-    
+
     <div class="flex flex-row">
         <btn_ class=" " :options="{label:'Nouveau Objectif',style:' px-0 base_bg text_xs  text-white ',ico:$store.state.icons.plus}"></btn_>
-        <btn_ class=" ml-2 " :options="{label:'Bibliothéque d\'objectif',style:' base_bg text_xs  text-white ',ico:$store.state.icons.list}"></btn_>
+        <div class="flex flex-col">
+            <btn_ @click="()=>{showBibliotheque=!showBibliotheque}" class=" ml-2 " :options="{label:'Bibliothéque d\'objectif',style:' base_bg text_xs  text-white ',ico:$store.state.icons.list}"></btn_>
+            <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:''}"> </bibliothequeVue>
+        </div>
     </div>
 
     <div class="flex w-full text_xs mt-4">
@@ -135,9 +141,9 @@
                 <th class="  w-[16%] text-start text-stone-500  px-5 ">Type</th>
                 <th class="  w-[19] text-start text-stone-500  ">Actions</th>
             </tr>
-            <tr v-for="i in 4" :key="i" class=" duration-200 group hover:text-white  hover:bg-[#63B6B9]  ">
-                <td class=" text-gray-500 px-2" v-text="'001'"></td>
-                <td class="pl-5" v-text="'Ligne'+i"></td>
+            <tr v-for="item,i in this.$store.state.myData.TitreFormation" :key="i" class=" duration-200 group hover:text-white  hover:bg-[#63B6B9]  ">
+                <td class=" text-gray-500 px-2" v-text="item.id"></td>
+                <td class="pl-5" v-text="`Les clés pour réussir votre projet`"></td>
                 <td class="pl-5 ">
                     <div class=" flex my-1 color_base  group-hover:text-white" v-text="'{public}'"></div>
                 </td>
@@ -145,7 +151,8 @@
                 <td class=" px-2 text-teal-500 group-hover:text-white">
                     <div class=" flex flex-row items-center py-1">
                         <button class="  mr-2 bg-transparent flex flex-row items-center px-1 rounded-md py-1 ">
-                            <svg class=" group-hover:text-white fill-current color_base rounded-md w-4" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
+                            <svg class=" group-hover:text-white fill-current color_base rounded-md w-4" viewBox="0 0 24 24">
+                                <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" /></svg>
                             <u class="group-hover:text-white ml-1 text_xs color_base">Modifier</u>
                         </button>
                         <button class=" bg-stone-100 py-1 px-1 rounded-md">
@@ -163,18 +170,36 @@
 
 <script>
 import btn_ from '../../../button/btn_.vue';
+import bibliothequeVue from '../../../input/bibliotheque.vue';
 import input_ from '../../../input/inputTxt.vue';
+import selectOptionVue from '../../../input/selectOption.vue';
 import textArea_ from '../../../input/textarea.vue';
 import optionDocDeFormVue from '../../listeFormation/optionDocDeForm.vue';
+ 
 
 export default {
     components: {
         btn_,
         input_,
-        textArea_,optionDocDeFormVue
+        textArea_,
+        optionDocDeFormVue,
+        bibliothequeVue,
+        selectOptionVue
     },
     data() {
-        return { 
+        return {
+            showBibliotheque: false,
+
+            nomFormation: [{
+                label: 'Salarié',
+                val: ''
+            }, {
+                label: 'Salarié',
+                val: '0'
+            },  {
+                label: 'Sous traitant',
+                val: '1'
+            },  ],
             data: [{
                     label: 'Adresse',
                     model: '',
@@ -211,7 +236,7 @@ export default {
                     type: 'text'
                 },
             ],
-            isPresenciel:false,
+            isPresenciel: true,
         }
     }
 }

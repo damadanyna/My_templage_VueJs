@@ -1,24 +1,21 @@
 <template>
-<div class=" bg-white rounded-lg w-full h-max px-12 flex z-10 flex-col ">
+<div class=" pb-14 w-full h-max px-5 flex z-10 flex-col overflow-y-auto ">
     <!-- titre du tableau -->
-    <div class="flex flex-row sticky top-4 py-7 w-full justify-between items-center bg-white mt-6">
-        <h5 class=" font-semibold text-lg">Légale et règlementairee</h5>
-        <btn_ :options="{label:'Veille',style:' base_bg text-white w-full',ico:$store.state.icons.listCheck}"></btn_>
-    </div>
+   
     <div class="flex w-full text_xs mt-4">
         <table class=" text_xs  w-full items-start px-1">
-            <tr class=" w-full">
+            <tr class=" sticky top-0 bg-white mb-2 w-full">
                 <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                 <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-200 ">TitreSite</th>
                 <th class="  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Status</th>
                 <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date d'inscriptoin</th>
                 <th class="  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
             </tr>
-            <tr v-for="i in 3" :key="i" class=" duration-200 my-1 hover:color_base  hover:bg-[#63B6B9]  ">
+            <tr v-for="i in 35" :class="i<options.limite?' ':'hidden'" :key="i" class=" duration-200 my-1 group hover:color_base  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="i"></td>
                 <td class="pl-5" v-text="'Ligne'+i"></td>
                 <td class="pl-5 ">
-                    <a href="#" class=" text-teal-500">{url.source}</a>
+                    <a href="#" class=" group-hover:text-white text-teal-500">{url.source}</a>
                 </td>
                 <td class="pl-5" v-text="'18 juin 2025'"></td>
                 <td class=" px-2">
@@ -45,6 +42,9 @@
 <script>
 import btn_ from '../../components/button/btn_.vue'
 export default {
+    props:{
+        options:{}
+    },
     components: {
         btn_,
     },
