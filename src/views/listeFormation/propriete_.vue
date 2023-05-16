@@ -1,12 +1,12 @@
 <template>
 <div class="flex flex-col h-full">
-    <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex  ">
-        <div class="flex flex-col  w-[35%] duration-500 ">
+    <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex h-full ">
+        <div class="flex flex-col  w-[35%] duration-500 h-full ">
             <div class=" flex flex-row    duration-300  w-full bg-stone-100 z-50 font-bold text-black pt-2 pb-3">
                 <h1 class=" text-lg font-normal  px-2 rounded-r-md">Gestion Bénéficiaire :</h1>
                 <h1 class=" text-lg ml-2 color_base  ">Titre Formation</h1>
             </div>
-            <div class="flex-col  bg-white rounded-lg sticky -top-6 overflow-auto  flex z-10">
+            <div class="flex-col h-full bg-white rounded-lg sticky -top-6 overflow-auto  flex z-10">
                 <div v-if="this.$store.state.myData.listeFormation.length>0" class=" text_xs flex-row">
 
                     <!-- titre du tableau -->
@@ -54,14 +54,14 @@
             </div>
         </div>
 
-        <div class="flex flex-col  w-[65%] duration-500 ">
+        <div class="flex flex-col  w-[65%] h-full duration-500 ">
             <div class=" flex flex-row  duration-300 font-normal   w-full bg-stone-100 z-50 text-black pt-2 pb-3">
                 <span class=" mx-3 text-lg text-stone-500">></span>
                 <h1 class="text-lg px-2 rounded-r-md">Bénéficiaire :</h1>
                 <h1 class=" text-lg ml-2 color_base font-semibold "> John Doe</h1>
 
             </div>
-            <div class=" sticky -top-6 flex flex-col  mx-3 bg-white rounded-lg px-5">
+            <div class=" sticky -top-6 flex flex-col h-full  mx-3 bg-white rounded-lg px-5">
                 <div class=" z-20   mx-3 bg-white rounded-lg py-5 px-5 flex justify-between w-full">
                     <span class=" font-semibold">Formulaire de base</span>
                 </div>

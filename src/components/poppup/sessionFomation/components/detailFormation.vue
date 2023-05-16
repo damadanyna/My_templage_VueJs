@@ -57,14 +57,14 @@
             <table class=" text_xs  w-full items-start px-1">
                 <tr class=" w-full sticky top-0 bg-white py-5  ">
                     <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
-                    <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-200 ">TitreSite</th>
-                    <th class=" py-3  w-[19%] text-start text-stone-500 pl-5  ">Actions</th>
+                    <th class="  w-[76%] text-start text-stone-500  pl-5 border-r border-stone-200 ">TitreSite</th>
+                    <th class=" py-3  w-[10%] text-center text-stone-500   ">Actions</th>
                 </tr>
                 <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
                     <td class=" text-gray-500 px-2" v-text="i"></td>
                     <td class="pl-5" v-text="'Ligne'+i"></td>
-                    <td class=" px-2">
-                        <div class=" flex flex-row items-center py-1">
+                    <td class=" px-2 ">
+                        <div class=" flex justify-center flex-row items-center py-1">
 
                             <button class=" mr-2 bg-slate-100 px-1 rounded-md py-1 ">
                                 <svg class=" fill-current color_base rounded-md w-4" viewBox="0 0 24 24">
@@ -139,7 +139,7 @@
                 <th class="  w-[76%] text-start text-stone-500  pl-5 ">Titre</th>
                 <th class="  w-[16%] text-start text-stone-500  pl-5 ">Public</th>
                 <th class="  w-[16%] text-start text-stone-500  px-5 ">Type</th>
-                <th class="  w-[19] text-start text-stone-500  ">Actions</th>
+                <th class="  w-[19%] text-start text-stone-500  ">Actions</th>
             </tr>
             <tr v-for="item,i in this.$store.state.myData.TitreFormation" :key="i" class=" duration-200 group hover:text-white  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="item.id"></td>

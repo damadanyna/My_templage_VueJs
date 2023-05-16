@@ -1,7 +1,7 @@
 <template>
 <div class="flex flex-col h-full ">
-    <div class="w-full   flex flex-row">
-        <div :class="showFormulaire==true?'w-[30%]':'w-full'" class="flex duration-500 flex-col">
+    <div class="w-full  flex flex-row">
+        <div :class="showFormulaire==true?'w-[30%]':'w-full'" class="flex h-full bg-white rounded-md duration-500 flex-col">
 
             <div class=" flex flex-row text-lg items-center w-full bg-stone-100 z-50 font-bold text-stone-600 pt-0   pb-3 ">
                 <button v-if="showFormulaire==true" @click="()=>{showFormulaire=false}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">

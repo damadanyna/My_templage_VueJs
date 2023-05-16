@@ -17,11 +17,13 @@
 
                 <div v-if="item.showText==true" class="mt-3 py-3 items-center  w-full rounded-lg flex flex-row" :class="item.classe ">
                     <div class=" px-4 flex w-[25%] items-center flex-row">
-                        <svg class=" mx-4 fill-current w-5" viewBox="0 0 24 24" v-html=" item.ico"></svg>
-                        <div class="flex flex-col"> 
-                            <span v-text="item.label"></span>
+                        <div class="flex flex-col">
+                            <div class="flex flex-row items-center"> 
+                                <svg class=" mx-4 fill-current w-5" viewBox="0 0 24 24" v-html=" item.ico"></svg>
+                                <span v-text="item.label"></span>
+                            </div>
                             <div class="relative flex">
-                                <span class="absolute mt-8 -ml-7 " v-text="item.date"></span>
+                                <span class=" absolute  mt-2 ml-5 " v-text="item.date"></span>
                             </div>
                         </div>
                     </div>

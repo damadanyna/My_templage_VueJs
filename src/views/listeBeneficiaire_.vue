@@ -10,7 +10,7 @@
             <h1 class=" text-black ">Liste Bénéfice</h1>
             
         </div>
-        <div :class="showFormulaire==false?'px-7':'px-2'" class="  py-5 bg-white rounded-lg  flex z-10 flex-col ">
+        <div :class="showFormulaire==false?'px-7':'px-2'" class=" h-full  py-5 bg-white rounded-lg  flex z-10 flex-col ">
             <!-- recherche -->
             <div class="flex  flex-row     bg-white mt-4">
                 <div v-if="showFormulaire==false " class="flex ml-12  flex-row items-center">

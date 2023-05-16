@@ -59,7 +59,7 @@
 
             </div>
 
-            <div class="  flex flex-col  mx-3 bg-white rounded-lg  px-10">
+            <div class="  flex flex-col h-full  mx-3 bg-white rounded-lg  px-10">
 
                 <div class="flex flex-row py-5 items-center">
                     <h3>Etape de la formation :</h3>

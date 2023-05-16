@@ -1,11 +1,11 @@
 <template>
- <div v-if="showFormulaire==true" class="flex flex-col w-full">
+ <div v-if="showFormulaire==true" class="flex h-full flex-col w-full">
      <div class="flex flex-row items-center">
          <h1 class=" text-lg ml-2 text-stone-500 "> > </h1>
          <h1 class=" text-lg ml-2  "> Gestion bénéficiaire : </h1>
          <h1 class=" color_base ml-2 font-bold ">TitreFormation </h1>
      </div>
-     <div class=" mt-8  flex flex-col  mx-3 bg-white rounded-lg px-5">
+     <div class=" mt-8  flex flex-col h-full mx-3 bg-white rounded-lg px-5">
          <div class=" bg-white rounded-lg w-full h-max px-4 flex z-10 flex-col ">
              <div class="flex w-full py-5 mt-7 text_xs ">
                  <table class=" text_xs w-full items-start px-1">

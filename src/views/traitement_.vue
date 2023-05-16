@@ -1,8 +1,8 @@
 <template>
 <div class="flex flex-col h-full">
 
-    <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex overflow-hidden h-full bg-white  ">
-        <div class="flex flex-col duration-500  " :class="showFormulaire==true?'  w-[40%] ':'  w-full '">
+    <div :class="showFormulaire==true?'flex-row':'flex-col'" class="flex overflow-hidden h-full   ">
+        <div class="flex flex-col duration-500 h-full " :class="showFormulaire==true?'  w-[30%] ':'  w-full '">
             <div class=" flex flex-row    w-full items-center  bg-stone-100 z-50 font-bold text-stone-600 pt-2 pb-1">
                 <button v-if="showFormulaire==true" @click="()=>{showFormulaire=false}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
                     <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
@@ -11,7 +11,7 @@
                 <h1 class=" text-lg text-black" >Traitements aléas / logs</h1>
                 <!-- <h1 class=" text-lg ml-2  "> > Gestion de listes de formation</h1> -->
             </div>
-            <div :class="showFormulaire==true?' px-5   ':'px-12  '" class="  sticky -top-2 pb-8 pt-0 flex-col duration-500  bg-white rounded-lg  flex z-10">
+            <div :class="showFormulaire==true?' px-5   ':'px-12  '" class=" h-full sticky -top-2 pb-8 pt-0 flex-col duration-500  bg-white rounded-lg  flex z-10">
 
                 <div class=" sticky top-6 mt-2 flex w-full bg-white py-4 flex-row mx-1  ">
                     <btn_ v-if="showFormulaire==false" @click="()=>{ nouvelle()}" class=" " :options="{label:'Nouvelle',ico:$store.state.icons.plus,style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
@@ -50,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <div v-if="showFormulaire==true" class="flex flex-col h-full  w-[60%]">
+        <div v-if="showFormulaire==true" class="flex flex-col h-full  w-[70%]">
             <div class=" flex flex-row    w-full items-center  bg-stone-100 z-50  text-stone-600 pt-2 pb-4">
 
                 <h1 class=" text-lg mr-3 text-stone-400">></h1>
@@ -58,7 +58,7 @@
                 <h1 class=" font-semibold text-lg color_base ">SmartTech Solutions</h1>
                 <!-- <h1 class=" text-lg ml-2  "> > Gestion de listes de formation</h1> -->
             </div>
-            <div class="  flex flex-col  mx-3 bg-white h-full  rounded-lg   px-5">
+            <div class="  flex flex-col mx-4   bg-white h-full  rounded-lg   px-5">
                 <formulaire :item="item"></formulaire>
             </div>
         </div>

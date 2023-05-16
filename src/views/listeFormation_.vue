@@ -31,14 +31,14 @@
                                 </div>
                                 <div :class="showFormulaire==true?'flex-col mt-6 w-full':'flex-row'" class=" transform flex  justify-between">
                                     <div class=" flex flex-row w-full ">
-                                        <div  v-if="$route.query.my!='beneficiaire'" class=" flex flex-row mx-1 ">
-                                            <btn_  @click="()=> {$router.push({ name: 'listeFormation',query:{is:true,my:'beneficiaire'}})}" class=" " :options="{label:'Gestion bénéficiaire',style:' bg-teal-700 text_xs  text-stone-100 '}"></btn_>
+                                        <div :class="$route.query.my?' w-full':''"  v-if="$route.query.my!='beneficiaire'" class=" flex flex-row mx-1 ">
+                                            <btn_  @click="()=> {$router.push({ name: 'listeFormation',query:{is:true,my:'beneficiaire'}})}" class=" " :options="{label:'Gestion bénéficiaire',style:' bg-teal-700 text_xs w-full  text-stone-100 '}"></btn_>
                                         </div>
-                                        <div v-if="$route.query.my!='session'" class=" flex flex-row mx-1 ">
-                                            <btn_ @click="()=>{$router.push({ name: 'listeFormation',query:{is:true,my:'session'}})}" class=" " :options="{label:'Gestion session',style:'bg-teal-700 text_xs  text-stone-100 '}"></btn_>
+                                        <div :class="$route.query.my?' w-full':''"  v-if="$route.query.my!='session'" class="  flex flex-row mx-1 ">
+                                            <btn_ @click="()=>{$router.push({ name: 'listeFormation',query:{is:true,my:'session'}})}" class=" " :options="{label:'Gestion session',style:'bg-teal-700 text_xs w-full  text-stone-100 '}"></btn_>
                                         </div>
     
-                                        <button  v-if="showFormulaire==true" class="  bg-white py-2 flex flex-row items-center  px-5 rounded-md">
+                                        <button :class="$route.query.my?' w-full':''"   v-if="showFormulaire==true" class="  bg-white py-2 flex flex-row items-center  px-5 rounded-md">
                                             <svg class="  w-4 fill-current text_xs text-red-500" viewBox="0 0 24 24">
                                                 <path d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12z" /></svg>
                                             <span class=" text_xs ml-2 text-red-500">Supprimer</span>
