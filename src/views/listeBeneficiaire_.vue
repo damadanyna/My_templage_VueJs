@@ -70,7 +70,7 @@
         </div>
         <div class=" z-20 flex-col flex w-full ">
             <ficheEtrepriseVue class="   px-5 bg-white rounded-md"></ficheEtrepriseVue>
-            <div class="flex flex-col    px-5 bg-white mt-4 rounded-md">
+            <div class="flex flex-col py-12 px-5 bg-white mt-4 rounded-md">
                 <infoBenefVue></infoBenefVue>
                 <documentBenefVue></documentBenefVue>
                 <LivretApprentissage></LivretApprentissage>

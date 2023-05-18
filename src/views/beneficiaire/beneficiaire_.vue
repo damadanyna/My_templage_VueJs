@@ -60,12 +60,12 @@
                 </div>
 
                 <div class=" z-20 sticky -top-6  px-3 bg-white py-5  flex-row items-center flex justify-between w-full">
-                    <h1 class=" font-semibold">[Nom Objectif]</h1>
+                    <h1 class=" font-semibold">[Liste des objectifs]</h1>
                 </div>
                 <livretApp class=" px-4"></livretApp>
                 <span class="flex border-b-[2px] border-stone-200 py-3"></span>
                 <div class=" z-20 sticky -top-6  px-3 bg-white py-5  flex-row items-center flex justify-between w-full">
-                    <h1 class=" font-semibold">[Nom Objectif]</h1>
+                    <h1 class=" font-semibold">[Liste des objectifs]</h1>
                 </div>
                 <livretApp class=" px-4"></livretApp>
                 <div class="mt-12 px-3">

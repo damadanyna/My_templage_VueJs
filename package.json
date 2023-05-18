@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@balkangraph/orgchart.js": "^8.10.10",
+    "@ckeditor/ckeditor5-build-classic": "^37.1.0",
+    "@ckeditor/ckeditor5-vue": "^5.1.0",
     "chart.js": "^4.2.1",
     "gsap": "^3.11.5",
     "vue": "^3.2.47",

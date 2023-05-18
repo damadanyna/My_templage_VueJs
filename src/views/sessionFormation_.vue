@@ -4,7 +4,7 @@
         <div :class="showFormulaire==true?'w-[30%]':'w-full'" class="flex h-full bg-white rounded-md duration-500 flex-col">
 
             <div class=" flex flex-row text-lg items-center w-full bg-stone-100 z-50 font-bold text-stone-600 pt-0   pb-3 ">
-                <button v-if="showFormulaire==true" @click="()=>{showFormulaire=false}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
+                <button v-if="eshowFormulaire==tru" @click="()=>{$router.go(-1)}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
                     <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
                 </button>
@@ -50,7 +50,7 @@
                                         <button class="   bg-slate-100 px-1 rounded-md py-1 ">
                                             <svg class=" fill-current color_base rounded-md w-4" viewBox="0 0 24 24">
                                                 <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" /></svg>
-                                        </button> 
+                                        </button>
                                     </router-link>
                                     <button class=" bg-slate-100 py-1 px-1 rounded-md">
                                         <svg class=" fill-current text-red  rounded-md w-4" viewBox="0 0 24 24">
@@ -132,6 +132,22 @@ export default {
         showFormulaire_(typeOf) {
             this.showFormulaire = true;
             this.typeFormulaire = typeOf
+            this.$router.push({name: 'sessionFormaton',query:{is:true}});
+        }
+    },
+    mounted() {
+        if (this.$route.query.is == 'true') {
+            this.showFormulaire = true
+        } else {
+            this.showFormulaire = false
+        }
+    },
+    updated() {
+        if (this.$route.query.is == 'true') {
+            this.showFormulaire = true
+        } else {
+            this.showFormulaire = false
+
         }
     }
 

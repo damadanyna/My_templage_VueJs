@@ -21,15 +21,14 @@
                     </button>
                 </div>
             </div>
-        </div>
-        <div class="flex rounded-md mt-3 w-full border-[1px] border-teal-800 h-28">
-            <textarea class="  w-full resize-none border-none outline-none px-3" name="" id="" rows="3"></textarea>
-        </div>
+        </div> 
+        <ckeditor class=" h-full" :editor="editor"  ></ckeditor> 
     </div>
 </div>
 </template>
 
 <script>
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import input_ from '../../input/inputTxt.vue';
 import selectOption from '../../input/selectOption.vue';
 import textArea_ from '../../input/textarea.vue';
@@ -41,6 +40,7 @@ export default {
     },
     data() {
         return {
+            editor: ClassicEditor,
             data_: [{
                     label: 'Titre de procedure',
                     model: '',

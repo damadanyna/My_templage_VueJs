@@ -37,7 +37,9 @@
             </div>
 
             <textArea_ class=" w-full mt-5" :options="data_[9]"></textArea_>
-            <textArea_ class=" w-full mt-5" :options="data_[12]"></textArea_>
+            <div class=" mt-5"> 
+                <ckeditor class=" mt-5" :editor="editor" v-model="data_[12].model"  @input="onEditorInput"></ckeditor>
+            </div>
         </div>
         <div :class="data_[0].model=='' || data_[1].model=='' || data_[2].model=='' || data_[3].model==''|| data_[4].model || data_[5].model==''?' opacity-50':' opacity-100'" class=" duration-300 flex mt-12 justify-center  flex-row w-full">
             <btn_ @click="setIt()" :options="{label:'Programme',style:' base_bg text-white',ico:$store.state.icons.done}"></btn_>
@@ -47,6 +49,7 @@
 </template>
 
 <script>
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import input_ from '../../input/inputTxt.vue'
 import textArea_ from '../../input/textarea.vue'
 import btn_ from '../../button/btn_.vue';
@@ -54,6 +57,7 @@ import gsap from 'gsap'
 export default {
     data() {
         return {
+            editor: ClassicEditor, 
             data_: [{
                     label: 'Titre',
                     model: '',

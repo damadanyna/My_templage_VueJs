@@ -66,7 +66,7 @@
                     <span class=" px-3 py-1 mx-2 text-green-500 bg-teal-100">En cours</span>
                 </div>
                 <div class=" z-20 sticky -top-4  mx-3 bg-white py-5  flex-row items-center flex justify-between w-full">
-                    <h1 class=" font-semibold">[Nom Objectif]</h1>
+                    <h1 class=" font-semibold">[Liste des objectifs]</h1>
                     <div class="flex flex-row items-center text_xs">
                         <span class=" font-bold">Durée estimé</span>
                         <span class=" py-2 bg-stone-200 mx-2 px-2 border-b-[1px] color_base">02 heures</span>
@@ -79,7 +79,7 @@
                 <livretApp class=" px-4"></livretApp>
                 <span class="flex border-b-[2px] border-stone-200 py-3"></span>
                 <div class=" z-20 sticky -top-4  mx-3 bg-white py-5  flex-row items-center flex justify-between w-full">
-                    <h1 class=" font-semibold">[Nom Objectif]</h1>
+                    <h1 class=" font-semibold">[Liste des objectifs]</h1>
                     <div class="flex flex-row items-center text_xs">
                         <span class=" font-bold">Durée estimé</span>
                         <span class=" py-2 bg-stone-200 mx-2 px-2 border-b-[1px] color_base">02 heures</span>

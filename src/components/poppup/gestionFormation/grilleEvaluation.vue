@@ -103,7 +103,7 @@
             <textareaVue v-if="index==1" :options="{model:'',label:'Réponse'}"></textareaVue>
             <selectOption2Vue v-if="index==2" :options="niveaufonction"></selectOption2Vue>
             <numberIncrementVue v-if="index==3" :options="{model:1}"></numberIncrementVue>
-            <div v-else class="flex flex-col">
+            <div  v-if="index==4" class="flex flex-col">
                 <span class=" text-stone-600">Importez les réponses</span>
               <div class="flex flex-row mt-3">
                 <btn_ class="  " :options="{label:'document1.pdf',ico2Style:'color_base',style:' bg-[#ccc] py-1 text-red-500',stylelabel:' text-black',ico2Style:'base_bg text-white',ico:$store.state.icons.pdf_,ico2:$store.state.icons.cloudDown,ico3:$store.state.icons.delete}"></btn_>

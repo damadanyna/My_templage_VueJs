@@ -95,14 +95,14 @@
             </div>
         </div>
         <div v-if="showFormulaire==true" class="flex flex-col  w-[60%]">
-            <div class=" flex flex-row    w-full items-center  bg-stone-100 z-50  text-stone-600 pt-2 pb-6">
+            <div class=" flex flex-row    w-full items-center  bg-stone-100 z-50  text-stone-600 pt-2 pb-4">
 
                 <h1 class=" text-lg mr-3 text-stone-400">></h1>
                 <h1 class=" font-semibold text-lg">Détail partenaire : </h1>
                 <h1 class=" font-semibold text-lg color_base ">SmartTech Solutions</h1>
                 <!-- <h1 class=" text-lg ml-2  "> > Gestion de listes de formation</h1> -->
             </div>
-            <div  class="  flex flex-col  mx-3 bg-white rounded-lg   px-5">
+            <div  class="  flex flex-col  mx-3 bg-white rounded-lg h-[77vh] overflow-y-auto  px-5">
                 <formulaire v-if="this.$store.state.tools.isAdd==true"></formulaire>
                 <formulaireAjoutContacte :item="item" v-else></formulaireAjoutContacte>
             </div>

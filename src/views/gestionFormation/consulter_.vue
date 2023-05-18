@@ -13,7 +13,25 @@
             </div>
         </div>
         <div class="flex flex-col  w-[70%] bg-white mx-3  mt-14 rounded-md  ">
-            <GrilleEvaluation class=""></GrilleEvaluation>
+
+            <div class="flex px-3 flex-row items-center justify-between">
+                    <span class=" text-lg font-semibold">Grille d'évaluation :</span>
+                    <div class="flex  flex-row">
+                        <btn_ @click="()=>{question.push('')}" class=" mt-3" :options="{label:'Nouvelle question',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
+                    </div>
+                </div>
+                <div class="flex flex-col" v-for="i in question" :key="i">
+                    <GrilleEvaluation></GrilleEvaluation>
+
+                    <div class="flex w-full px-1">
+                        <div class="  mt-9 w-full  base_bg justify-center rounded-md flex">
+                            <btn_ :options="{label:'Sauvegarder', style:' base_bg py-2 text-white',stylelabel:' text-white'}"></btn_>
+                        </div>
+                    </div>
+                    <div class="flex w-full flex-col px-3">
+                        <span class=" h-[2px] bg-stone-400 my-4 w-full"></span>
+                    </div>
+                </div>
         </div>
     </div>
 </div>
@@ -32,7 +50,8 @@ export default {
     GrilleEvaluation
 },
     data() {
-        return {}
+        return {
+            question: [''],}
     },
     methods: {}
 

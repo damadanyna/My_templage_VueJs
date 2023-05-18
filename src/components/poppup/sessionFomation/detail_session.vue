@@ -10,7 +10,7 @@
         </div>
         <!-- select Option -->
         <!-- <div class="flex items-center flex-row">
-            <span class=" mr-3 font-semibold color_base">Liste formateurs :</span>
+            <span class=" mr-3 font-semibold color_base">Equipe pédagogique :</span>
             <div class="flex flex-row bg-stone-300 px-3 py-2 rounded-lg">
                 <span>John Doe</span>
             </div>

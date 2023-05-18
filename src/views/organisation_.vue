@@ -188,7 +188,8 @@ export default {
         }
         ,
         goOn(){ 
-            this.$router.push({name: 'organisme'})
+            // this.$router.push({name: 'organisme'})
+            this.$router.go(-1)
         }
     },
     mounted() {

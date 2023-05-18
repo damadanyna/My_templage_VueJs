@@ -1,6 +1,6 @@
 <template>
 <!-- forumlaire de detailPartenaire -->
-<div class=" bg-white rounded-lg flex px-1  flex-col z-20">
+<div class=" bg-white rounded-lg flex px-1 pb-12 flex-col z-20">
     <span class=" text-lg font-bold sticky mt-3  bg-white z-50">Listes des lieux d’exploitation :</span>
     <div class="flex w-ful justify-between">
         <span class=" text_xs font-semibold">Site d’expoitation 1</span>
@@ -37,7 +37,7 @@
     <div class="flex w-full  my-7">
         <div class="flex h-[2px] w-full bg-stone-300"></div>
     </div>
-    <div class="flex w-ful justify-between">
+    <!-- <div class="flex w-ful justify-between">
         <span class=" text_xs font-semibold">Site d’expoitation 2</span>
         <div class=" flex flex-row">
             <div class="flex flex-row items-center">
@@ -68,7 +68,7 @@
         <div class="flex mt-5 w-full flex-row">
             <input_ class=" w-full" :options="data_[5]"></input_>
         </div>
-    </div>
+    </div> -->
     <div class="flex w-full justify-between items-center my-7">
         <span class=" text-lgw font-semibold">Liste des contacts de la société</span>
         <button @click="()=>{this.$store.state.isAdd=false}" class=" base_bg flex flex-row py-2 text_xs px-7 items-center rounded-md text-white">
@@ -85,13 +85,17 @@
                 <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                 <th class="  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Nom </th>
                 <th class="  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Prénom</th>
-                <th class="  w-[13%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Fonction</th>
-                <th class="  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
+                <th class="  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Tél</th>
+                <th class="  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Email</th>
+                <th class="  w-[13%] text-center text-stone-500  border-r border-stone-200 ">Fonction</th>
+                <th class="  w-[12%] text-center text-stone-500  ">Actions</th>
             </tr>
             <tr v-for="i in 2" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="i"></td>
                 <td class="pl-5" v-text="'Nom'+i"></td>
                 <td class="pl-5" v-text="'Prénom'"></td>
+                <td class="pl-5" v-text="'+261...'"></td>
+                <td class="pl-5" v-text="'dossierfor...'"></td>
                 <td class="pl-5" v-text="'{Fonction}'"></td>
                 <td class=" px-2">
                     <div class=" flex flex-row items-center py-1">
@@ -133,11 +137,10 @@
                 <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
             Nouveau document
         </button>
-        <button class=" ml-3 base_bg flex flex-row py-2 text_xs px-4 items-center rounded-md text-white">
-            <svg class=" w-4 mr-2 text-white ml-1 fill-current" viewBox="0 0 24 24">
-                <path d="M3 4h4v4H3V4m6 1v2h12V5H9m-6 5h4v4H3v-4m6 1v2h12v-2H9m-6 5h4v4H3v-4m6 1v2h12v-2H9" /></svg>
-            Bibliothéque de document
-        </button>
+           <div class="flex flex-col">
+            <btn_ @click="()=>{showBibliotheque=!showBibliotheque}" class=" ml-2 " :options="{label:'Bibliothéque de document',style:' base_bg text_xs  text-white ',ico:$store.state.icons.list}"></btn_>
+            <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:''}"> </bibliothequeVue>
+        </div> 
     </div>
 
     <!-- tableau -->
@@ -178,9 +181,13 @@
 import input_ from '../../input/inputTxt.vue'
 import textArea_ from '../../input/textarea.vue'
 import gsap from 'gsap'
+import btn_ from '../../button/btn_.vue'
+import bibliothequeVue from '../../input/bibliotheque.vue'
 export default {
     data() {
         return {
+        
+            showBibliotheque: false,
             data_: [{
                     label: 'Adresse',
                     model: '',
@@ -240,7 +247,7 @@ export default {
     },
     components: {
         input_,
-        textArea_,
+        textArea_,btn_,bibliothequeVue
     },
     methods: {
         setIt() {

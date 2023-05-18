@@ -8,8 +8,9 @@
         </div>
         <!-- select Option -->
         <div class="flex items-center flex-row">
-            <span class=" mr-3 font-semibold color_base">Liste formateurs :</span>
-            <selectOptionVue2 :options="formateur" />
+            <button @click="()=>{showList=!showList}" class=" mr-3 font-semibold color_base" id="titre_">Equipe pédagogique :</button>
+            <selectCheckBoxVue v-if="showList==true" class=" mt-9" :options="{posX:xposition}" />
+            <!-- <selectOptionVue2 :options="formateur" /> -->
 
         </div>
     </div>
@@ -65,6 +66,7 @@ import detailFormationVue from './components/detailFormation.vue';
 import selectOptionVue from '../../input/selectOption3.vue';
 import selectOptionVue2 from '../../input/selectOption2.vue';
 import gsap from 'gsap';
+import selectCheckBoxVue from '../../input/selectCheckBox.vue';
 export default {
     components: {
         btn_,
@@ -72,12 +74,15 @@ export default {
         textArea_,
         detailFormationVue,
         selectOptionVue,
-        selectOptionVue2
+        selectOptionVue2,
+        selectCheckBoxVue
     },
 
     data() {
         return {
             isPresenciel: true,
+            showList:false,
+            // xposition: 0,
             nomFormation: [{
                     label: 'Formation name',
                     val: ''
@@ -123,8 +128,15 @@ export default {
             duration: .5,
             opacity: 1,
             width: '100%'
-        });
-    }
+        }); 
+        // console.log("W= " + document.getElementById('app').offsetWidth, "P= " + Math.round(document.getElementById('titre_').getBoundingClientRect().left));
+        // window.addEventListener('resize', () => {
+        //     console.log("W= " + document.getElementById('app').offsetWidth, "P= " + Math.round(document.getElementById('titre_').getBoundingClientRect().left));
+
+        //     this.xposition = document.getElementById('app').offsetWidth - document.getElementById('titre_').getBoundingClientRect().left;
+        // });
+    },
+    updated() {}
 }
 </script>
 
