@@ -12,6 +12,10 @@
                 <input_ class=" w-full " :options="data_[2]"></input_>
                 <input_ class=" w-full  ml-3" :options="data_[3]"></input_>
             </div>
+
+            <div class="flex mt-5 flex-row w-full">  
+                <input_ class=" w-full " :options="data_[13]"></input_>
+            </div>
             <div class="flex mt-5 w-full flex-row">
                 <input_ class=" w-full " :options="data_[10]"></input_>
                 <input_ class=" w-full  ml-3" :options="data_[11]"></input_>
@@ -26,6 +30,7 @@
             <div class="flex mt-5 flex-row w-full">
                 <textArea_ class=" w-full " :options="data_[6]"></textArea_>
             </div>
+
             <!-- <span class=" text-teal-500 text_xs mt-2">*Délais des alertes si aucune activité est recensé sur le compte d'un bénéficiaire</span> -->
             <div class="flex mt-5 flex-row w-full">
                 <div class=" flex flex-col w-full">
@@ -37,8 +42,8 @@
             </div>
 
             <textArea_ class=" w-full mt-5" :options="data_[9]"></textArea_>
-            <div class=" mt-5"> 
-                <ckeditor class=" mt-5" :editor="editor" v-model="data_[12].model"  @input="onEditorInput"></ckeditor>
+            <div class=" mt-5">
+                <ckeditor class=" mt-5" :editor="editor" v-model="data_[12].model" @input="onEditorInput"></ckeditor>
             </div>
         </div>
         <div :class="data_[0].model=='' || data_[1].model=='' || data_[2].model=='' || data_[3].model==''|| data_[4].model || data_[5].model==''?' opacity-50':' opacity-100'" class=" duration-300 flex mt-12 justify-center  flex-row w-full">
@@ -57,7 +62,7 @@ import gsap from 'gsap'
 export default {
     data() {
         return {
-            editor: ClassicEditor, 
+            editor: ClassicEditor,
             data_: [{
                     label: 'Titre',
                     model: '',
@@ -121,6 +126,17 @@ export default {
                     label: ' ',
                     model: '',
                 },
+                {
+                    label: 'RNCP',
+                    model: '',
+                    type: 'text'
+                },
+
+{
+    label: 'RNCP',
+    model: '',
+    type: 'text'
+},
 
             ],
             selected: 'IB',

@@ -21,15 +21,15 @@
             <tr class=" w-full">
                 <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                 <th class="  w-[76%] text-start text-stone-500  pl-5 ">Titre</th>
-                <th class="  w-[16%] text-start text-stone-500  pl-5 ">Public</th>
+                <th class="  w-[16%] text-start text-stone-500  pl-5 ">Publique</th>
                 <th class="  w-[16%] text-start text-stone-500  px-5 ">Type</th>
-                <th class="  w-[19] text-start text-stone-500  ">Actions</th>
+                <th class="  w-[19] text-start text-stone-500  ">action</th>
             </tr>
             <tr v-for="i in 4" :key="i" class=" group duration-200 hover:text-white  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="'001'"></td>
                 <td class="pl-5" v-text="'Ligne'+i"></td>
                 <td class="pl-5 ">
-                    <div class=" flex my-1" v-text="'{public}'"></div>
+                    <div class=" flex my-1" v-text="'{Publique}'"></div>
                 </td>
                 <td class="pl-5" v-text="'PDF'"></td>
                 <td class=" px-2 text-teal-500">

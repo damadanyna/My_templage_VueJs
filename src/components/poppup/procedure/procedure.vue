@@ -5,7 +5,7 @@
         <!-- <span>{{ item }}</span> -->
         <div class=" sticky top-6 mt-9 z-30 flex w-full bg-white py-4 flex-row  ">
             <span class=" text-lg font-semibold">Titre du procedure</span>
-            <input_ class=" " :options="data_[0]"></input_>
+            <input_ class=" ml-3" :options="data_[0]"></input_>
         </div>
         <div class="flex flex-row w-full items-center">
             <div class="flex w-[30%] flex-col my-3  ">
@@ -56,7 +56,7 @@ export default {
                 }
             ],
             indexStatu: 0,
-            listeStatus: ['A traité', 'En cours', 'Resolue'],
+            listeStatut: ['A traité', 'En cours', 'Resolue'],
             niveaufonction: [{
                 label: 'Fonction Associé',
                 val: ''

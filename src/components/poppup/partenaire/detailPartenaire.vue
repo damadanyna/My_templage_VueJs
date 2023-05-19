@@ -30,6 +30,10 @@
             <input_ class=" w-full " :options="data_[3]"></input_>
             <input_ class=" w-full ml-3" :options="data_[4]"></input_>
         </div>
+        <div class="flex flex-row mt-5 w-full">
+            <input_ class=" w-full " :options="data_[7]"></input_>
+            <input_ class=" w-full ml-3" :options="data_[8]"></input_>
+        </div>
         <div class="flex mt-5 w-full flex-row">
             <input_ class=" w-full" :options="data_[5]"></input_>
         </div>
@@ -88,7 +92,7 @@
                 <th class="  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Tél</th>
                 <th class="  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Email</th>
                 <th class="  w-[13%] text-center text-stone-500  border-r border-stone-200 ">Fonction</th>
-                <th class="  w-[12%] text-center text-stone-500  ">Actions</th>
+                <th class="  w-[12%] text-center text-stone-500  ">action</th>
             </tr>
             <tr v-for="i in 2" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="i"></td>
@@ -151,12 +155,12 @@
                 <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Titre </th>
                 <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Pubilc</th>
                 <th class="  w-[13%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Type</th>
-                <th class="  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
+                <th class="  w-[19] text-start text-stone-500 pl-5  ">action</th>
             </tr>
             <tr v-for="i in 2" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="i"></td>
                 <td class="pl-5" v-text="'Titre'+i"></td>
-                <td class="pl-5" v-text="'{public}'"></td>
+                <td class="pl-5" v-text="'{Publique}'"></td>
                 <td class="pl-5" v-text="'PDF'"></td>
                 <td class=" px-2">
                     <div class=" flex flex-row items-center py-1">
@@ -222,9 +226,19 @@ export default {
                     label: 'Action menée',
                     model: '',
                 },
+                {
+                    label: 'Portable/Téléphone',
+                    model: '',
+                    type: 'text'
+                },
+                {
+                    label: 'Email',
+                    model: '',
+                    type: 'text'
+                },
             ],
             indexStatu: 0,
-            listeStatus: ['A traité', 'En cours', 'Resolue'],
+            listeStatut: ['A traité', 'En cours', 'Resolue'],
             niveauList: [{
                     label: 'Niveau 1',
                     val: ''

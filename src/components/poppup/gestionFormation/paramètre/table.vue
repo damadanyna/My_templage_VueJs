@@ -13,7 +13,7 @@
             <tr class=" sticky top-0 bg-white w-full">
                 <th class=" w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>
                 <th class="  w-[66%] pl-5 text-start text-stone-500  ">TitreSite</th>
-                <th class="  w-[19%] text-center text-stone-500  ">Actions</th>
+                <th class="  w-[19%] text-center text-stone-500  ">action</th>
             </tr>
             <tr v-for="i in 15" :key="i" class=" duration-200 hover:text-white group  hover:bg-[#63B6B9]  ">
                 <td :class="i==$route.params.id && $route.query.symb=='consulter'?'bg-[#42898B] text-white font-semibold':'  bg-transprent group-hover:text-white'" class=" group-hover:text-white text-center text-gray-500 px-2" v-text="i<100?i<10?'00'+i:'0'+i:i"></td>

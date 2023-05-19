@@ -19,6 +19,10 @@
                 <input_ class=" w-full " :options="data_[2]"></input_>
                 <input_ class=" w-full  ml-3" :options="data_[3]"></input_>
             </div>
+            <div v-if="isChecked==true" class="flex mt-5 flex-row w-full">  
+                <input_ class=" w-full " :options="data_[14]"></input_>
+            </div>
+
             <div v-if="isChecked==true" class="flex mt-5 w-full flex-row">
                 <input_ class=" w-full " :options="data_[12]"></input_>
                 <input_ class=" w-full  ml-3" :options="data_[13]"></input_>
@@ -27,7 +31,7 @@
             <div class="flex mt-5 flex-row w-full">
                 <textArea_ class=" w-full" :options="data_[4]"></textArea_>
                 <textArea_ class=" w-full ml-3" :options="data_[5]"></textArea_>
-            </div>
+            </div> 
             <div class="flex mt-5 w-full flex-row">
                 <input_ class=" w-full " :options="data_[6]"></input_>
                 <input_ class=" w-full  ml-3" :options="data_[7]"></input_>
@@ -74,7 +78,8 @@ export default {
         return {
             editor: ClassicEditor, 
             editorData: '',
-            data_: [{
+            data_: [
+                {
                     label: 'Titre',
                     model: '',
                     type: 'text'
@@ -138,6 +143,12 @@ export default {
 
                 {
                     label: 'Intitulé du diplôme',
+                    model: '',
+                    type: 'text'
+                },
+
+                {
+                    label: 'RNCP',
                     model: '',
                     type: 'text'
                 },

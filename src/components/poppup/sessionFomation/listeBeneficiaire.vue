@@ -25,7 +25,7 @@
                 <th class=" py-2  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Nom </th>
                 <th class=" py-2  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Prénom</th>
                 <th class=" py-2  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Date d'inscription</th>
-                <th class=" py-2  w-[19] text-center text-stone-500   ">Actions</th>
+                <th class=" py-2  w-[19] text-center text-stone-500   ">action</th>
             </tr>
             <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white group hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 text-center" v-text="i"></td>

@@ -14,7 +14,7 @@
             <tr class=" w-full sticky top-0  bg-white    ">
                 <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                 <th class="  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-200 ">TitreSite</th>
-                <th class=" w-[8%] text-start text-stone-500 pl-5">Actions</th>
+                <th class=" w-[8%] text-start text-stone-500 pl-5">action</th>
             </tr>
             <tr v-for="item,i in module" :key="i" class=" duration-200 hover:text-white  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="item.id"></td>

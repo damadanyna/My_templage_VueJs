@@ -9,7 +9,7 @@
                     <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
                 </button>
-                <h1 class=" text-lg">Organismes </h1>
+                <h1 class=" text-lg">Informations organismes </h1>
             </div>
             <div :class="showFormulaire==true?' px-5  ':'px-12'" class="flex rounded-lg flex-col bg-white ">
 
@@ -53,7 +53,7 @@
                     <div class="flex flex-row items-center"> 
                         <h5 :class="showFormulaire==true?'text-sm ':'xl'" class=" font-semibold  ">Listes des sites de formation</h5>
                     </div>
-                                  <btn_  v-if="showFormulaire==false" @click="()=>{showFormulaire=true}" class=" ml-1 " :options="{url:{name:'organisme',query: {is:true}},label:'Nouveau sites',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
+                                  <btn_  v-if="showFormulaire==false" @click="()=>{showFormulaire=true}" class=" ml-1 " :options="{url:{name:'organisme',query: {is:true}},label:'Nouveau site',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
 
                  </div>
                 <div class="  w-full text_xs  h-[70vh] overflow-auto px-2 mt-9">
@@ -61,7 +61,7 @@
                         <tr class=" w-full sticky -top-7  bg-white py-4  ">
                             <th class="py-2 w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                             <th :class="showFormulaire==true?'w-[80%] ':'w-[80%]'" class="py-2 text-start text-stone-500  pl-5 ">TitreSite</th>
-                            <th :class="showFormulaire==true?'w-[20%]':'w-[20%]'" class="py-2 text-center text-stone-500 ">Actions</th>
+                            <th :class="showFormulaire==true?'w-[20%]':'w-[20%]'" class="py-2 text-center text-stone-500 ">action</th>
                         </tr>
                         <tr v-for="item,i in listeSite" :key="i" class=" group text-[12px] hover:text-white   hover:bg-[#63B6B9]">
                             <td class=" text-gray-500 px-3" v-text="i"></td>

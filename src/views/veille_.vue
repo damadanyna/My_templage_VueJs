@@ -8,7 +8,7 @@
         <!-- legale et règlement -->
         <div class="flex text-lg items-center rounded-lg justify-start sticky z-10  bg-white top-0  flex-col px-6">
             <div class="flex flex-row sticky top-4 px-5 py-7 w-full justify-between items-center mt-6">
-                <h5 class=" font-semibold text-lg">Légale et règlementairee</h5>
+                <h5 class=" font-semibold text-lg">Légale et règlementaire</h5>
                 <btn_ @click="()=>{$router.push({ name: 'legal'})}" :options="{label:'Veille',style:' py-1 base_bg text-white w-full',ico:$store.state.icons.listCheck}"></btn_>
             </div>
             <legale :options="{limite:5}"></legale>

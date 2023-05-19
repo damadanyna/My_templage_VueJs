@@ -7,7 +7,7 @@
                     <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
                 </button>
-                <h1 class=" text-lg text-black font-bold">Légale et règlementairee</h1>
+                <h1 class=" text-lg text-black font-bold">Légale et règlementaire</h1>
             </div>
             <div class="  flex flex-col h-full py-11  bg-white rounded-lg">
                 <legaleVue :options="{limite:100}"></legaleVue>

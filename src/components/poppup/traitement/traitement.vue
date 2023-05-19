@@ -17,8 +17,8 @@
                 <textArea_ class=" w-full" :options="data_[2]"></textArea_>
             </div>
             <div class="flex flex-row my-4 items-center">
-                <span class=" font-bold text_xs mr-5">Status:</span>
-                <div v-for="item,i in listeStatus" class="flex flex-row mr-6 cursor-pointer duration-300" @click="()=>{indexStatu=i}">
+                <span class=" font-bold text_xs mr-5">Statut:</span>
+                <div v-for="item,i in listeStatut" class="flex flex-row mr-6 cursor-pointer duration-300" @click="()=>{indexStatu=i}">
                    <span :class="i==indexStatu?'base_bg  text-white':' text-black border-[1px] border-[#63B6B9]'" class=" px-3 py-1  rounded-md text_xs" v-text="item"></span>
                 </div>
             </div>
@@ -89,7 +89,7 @@ export default {
                 },
             ],
             indexStatu: 0,
-            listeStatus: ['A traité', 'En cours', 'Resolue'],
+            listeStatut: ['A traité', 'En cours', 'Resolue'],
             niveauList: [{
                     label: 'Niveau 1',
                     val: ''

@@ -21,7 +21,7 @@
             <tr class=" w-full">
                 <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                 <th class="  w-[76%] text-start text-stone-500  pl-5 ">Titre</th>
-                <th class="  w-[19] text-start text-stone-500 mx-5 ">Actions</th>
+                <th class="  w-[19] text-start text-stone-500 mx-5 ">action</th>
             </tr>
             <tr v-for="i in 4" :key="i" class=" group duration-200 hover:text-white  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="'001'"></td>

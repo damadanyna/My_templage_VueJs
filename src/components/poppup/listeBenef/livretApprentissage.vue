@@ -13,7 +13,7 @@
                 <th class=" py-3  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Nom Formation </th>
                 <th v-if="!minimise" class=" py-3  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Date d’inscription</th>
                 <th v-if="!minimise" class=" py-3  w-[23%] text-center text-stone-500  border-r border-stone-200 ">Etat</th>
-                 <th v-if="!minimise"  class=" py-3  w-[23%] text-center text-stone-500  ">Actions</th>
+                 <th v-if="!minimise"  class=" py-3  w-[23%] text-center text-stone-500  ">action</th>
             </tr>
             <tr @click="()=>{goto(item)}"  v-for="item,i in $store.state.myData.livetApprentissage" :key="i" :class="$route.params.id==item.id?' bg-[#42898B] text-white ':''" class=" duration-200 my-2 hover:text-white  hover:bg-[#63B6B9]  ">
                 <td :class="$route.params.id==item.id?'   text-white ':' text-gray-500'"  class=" px-2" v-text="item.id "></td>

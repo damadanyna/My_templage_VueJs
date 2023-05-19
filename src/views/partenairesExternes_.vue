@@ -24,8 +24,8 @@
                     <table class=" w-full items-start px-1">
                         <tr class=" w-full">
                             <th class=" w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>
-                            <th class="  w-[66%] pl-5 text-start text-stone-500  ">TitreSite</th>
-                            <th v-if="showFormulaire!=true" class="  w-[26%] text-center text-stone-500  ">Etat</th>
+                            <th class="  w-[66%] pl-5 text-start text-stone-500  ">NomEntreprise</th>
+                            <th v-if="showFormulaire!=true" class="  w-[26%] text-center text-stone-500  ">Statut</th>
                             <th class="  w-[19%] text-center text-stone-500  ">Actions</th>
                         </tr>
                         <tr  v-for="item,i in this.$store.state.myData.TitreFormation"   :key="i" class=" duration-200 hover:text-white group  hover:bg-[#63B6B9]  ">
@@ -62,8 +62,8 @@
                     <table class=" w-full items-start px-1">
                         <tr class=" w-full">
                             <th class=" w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>
-                            <th class="  w-[66%] pl-5 text-start text-stone-500  ">TitreSite</th>
-                            <th v-if="showFormulaire!=true" class="  w-[26%] text-center text-stone-500  ">Etat</th>
+                            <th class="  w-[66%] pl-5 text-start text-stone-500  ">NomEntreprise</th>
+                            <th v-if="showFormulaire!=true" class="  w-[26%] text-center text-stone-500  ">Statut</th>
                             <th class="  w-[19%] text-center text-stone-500  ">Actions</th>
                         </tr>
                         <tr  v-for="item,i in this.$store.state.myData.TitreFormation"   :key="i" class=" duration-200 hover:text-white group  hover:bg-[#63B6B9]  ">

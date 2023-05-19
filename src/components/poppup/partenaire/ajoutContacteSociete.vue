@@ -12,6 +12,10 @@
             <input_ class=" w-full " :options="data_[3]"></input_>
             <input_ class=" w-full ml-3" :options="data_[4]"></input_>
         </div>
+        <div class="flex flex-row mt-5 w-full">
+            <input_ class=" w-full " :options="data_[8]"></input_>
+            <input_ class=" w-full ml-3" :options="data_[9]"></input_>
+        </div>
         <div class="flex mt-5 w-full flex-row">
             <input_ class=" w-full" :options="data_[5]"></input_>
         </div>
@@ -22,7 +26,7 @@
                 <span class=" text-center text_xs w-full   ">Commentaire interne </span>
             </div>
             <div @click="set_('IF')" :class="selected!='IB'?'bg-[#63B6B9] text-white':' bg-stone-100 color_base'" class=" w-full py-2 rounded-tr-lg  flex flex-col justify-center ">
-                <span class=" text-center text_xs w-full  ">Commentaire public</span>
+                <span class=" text-center text_xs w-full  ">Commentaire Publique</span>
             </div>
         </div>
         <div class="   border-[#63B6B9] group border-[1px] py-1 w-full rounded-b-lg items-center flex flex-col  ">
@@ -92,9 +96,19 @@ export default {
                     label: 'Action menée',
                     model: '',
                 },
+                {
+                    label: 'Portable/Téléphone',
+                    model: '',
+                    type: 'text'
+                },
+                {
+                    label: 'Email',
+                    model: '',
+                    type: 'text'
+                },
             ],
             indexStatu: 0,
-            listeStatus: ['A traité', 'En cours', 'Resolue'],
+            listeStatut: ['A traité', 'En cours', 'Resolue'],
             niveauList: [{
                     label: 'Niveau 1',
                     val: ''

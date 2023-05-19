@@ -1,12 +1,12 @@
 <template>
 <div class="flex flex-col">
     <div class="flex flex-row w-full justify-between py-5 mt-2">
-        <span class=" text-lg font-semibold ">Detail de la formations</span>
+        <span class=" text-lg font-semibold ">Detail de la formation</span>
     </div>
     <div class="flex flex-row">
         <div class="flex w-1/2 mr-2 flex-col border-">
             <span class=" text_xs font-semibold h-4"> </span>
-            <input_ class="   mr-2 py-2" :options="{ label: 'Date début de formation', model:'',type: 'date'}"></input_>
+            <input_ class="   mr-2 py-2" :options="{ label: 'Date debut de formation', model:'',type: 'date'}"></input_>
         </div>
         <div class="flex w-1/2 ml-2 flex-col border-">
             <span class=" text_xs font-semibold">Modalités et délais d’accès ?</span>
@@ -16,14 +16,14 @@
                         <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z" /></svg>
                     <svg v-else class=" fill-current color_base w-4" viewBox="0 0 24 24">
                         <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 5a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5 5 5 0 0 0-5-5z" /></svg>
-                    <span>Présenciel</span>
+                    <span class=" text_xs">Présenciel</span>
                 </div>
                 <div class="flex flex-row cursor-pointer" @click="()=>{isPresenciel=false}">
                     <svg v-if="isPresenciel!=false" class=" fill-current color_base w-4" viewBox="0 0 24 24">
                         <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z" /></svg>
                     <svg v-else class=" fill-current color_base w-4" viewBox="0 0 24 24">
                         <path d="M12 20a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 5a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5 5 5 0 0 0-5-5z" /></svg>
-                    <span> Distanciel</span>
+                    <span class=" text_xs"> Distanciel</span>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
              
                     <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:''}"> </bibliothequeVue>
                 </div>
-                <btn_ @click="()=>{showFormulaire=true}" class=" ml-1 " :options="{url:{name:'organisme',query: {is:true}},label:'Nouveau sites',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
+                <btn_ @click="()=>{showFormulaire=true}" class=" ml-1 " :options="{url:{name:'organisme',query: {is:true}},label:'Nouveau site',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
 
             </div>
         </div>
@@ -49,7 +49,7 @@
             </div>
             <div class="flex w-[60%] items-center  justify-end flex-row">
                 <span class=" mr-3 text_xs font-semibold color_base">Titre de site :</span> 
-                <selectOptionVue :options="{elt:nomFormation,select:true}"></selectOptionVue>
+                <selectOptionVue :options="{elt:nomFormation,select:false}"></selectOptionVue>
                 
             </div>
         </div>
@@ -59,7 +59,7 @@
                 <tr class=" w-full sticky top-0 bg-white py-5  ">
                     <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                     <th class="  w-[76%] text-start text-stone-500  pl-5 border-r border-stone-200 ">TitreSite</th>
-                    <th class=" py-3  w-[10%] text-center text-stone-500   ">Actions</th>
+                    <th class=" py-3  w-[10%] text-center text-stone-500   ">action</th>
                 </tr>
                 <tr v-for="i in 20" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
                     <td class=" text-gray-500 px-2" v-text="i"></td>
@@ -138,15 +138,15 @@
             <tr class=" w-full">
                 <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                 <th class="  w-[76%] text-start text-stone-500  pl-5 ">Titre</th>
-                <th class="  w-[16%] text-start text-stone-500  pl-5 ">Public</th>
+                <th class="  w-[16%] text-start text-stone-500  pl-5 ">Publique</th>
                 <th class="  w-[16%] text-start text-stone-500  px-5 ">Type</th>
-                <th class="  w-[19%] text-start text-stone-500  ">Actions</th>
+                <th class="  w-[19%] text-start text-stone-500  ">action</th>
             </tr>
             <tr v-for="item,i in this.$store.state.myData.TitreFormation" :key="i" class=" duration-200 group hover:text-white  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="item.id"></td>
                 <td class="pl-5" v-text="`Les clés pour réussir votre projet`"></td>
                 <td class="pl-5 ">
-                    <div class=" flex my-1 color_base  group-hover:text-white" v-text="'{public}'"></div>
+                    <div class=" flex my-1 color_base  group-hover:text-white" v-text="'{Publique}'"></div>
                 </td>
                 <td class="pl-5" v-text="'PDF'"></td>
                 <td class=" px-2 text-teal-500 group-hover:text-white">

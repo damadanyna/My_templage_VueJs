@@ -8,7 +8,7 @@
                     <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
                 </button>
-                <h1 class=" text-black font-bold">Session formations</h1>
+                <h1 class=" text-black font-bold">Sessions formations</h1>
             </div>
             <div :class="showFormulaire==false?'px-7':'px-2'" class="  py-5 sticky -top-6   duration-500 bg-white rounded-lg  h-max   flex z-10 flex-col ">
                 <!-- entête -->
@@ -24,9 +24,9 @@
                             <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                             <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-200 ">TitreSite</th>
                             <th v-if="showFormulaire==false" class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Etat</th>
-                            <th v-if="showFormulaire==false" class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date Début</th>
+                            <th v-if="showFormulaire==false" class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date debut</th>
                             <th v-if="showFormulaire==false" class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date Fin</th>
-                            <th class=" py-3  w-[19%]  text-stone-500 text-center  ">Actions</th>
+                            <th class=" py-3  w-[19%]  text-stone-500 text-center  ">action</th>
                         </tr>
                         <tr v-for="i in 20" :key="i" class=" duration-200 my-1 group hover:text-white  hover:bg-[#63B6B9]  ">
                             <td class=" text-gray-500 px-2 " v-text="i"></td>

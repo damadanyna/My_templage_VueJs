@@ -6,10 +6,10 @@
         <table class=" text_xs  w-full items-start px-1">
             <tr class=" sticky top-0 bg-white mb-2 w-full">
                 <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
-                <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-200 ">TitreSite</th>
-                <th class="  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Status</th>
-                <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date d'inscriptoin</th>
-                <th class="  w-[19] text-start text-stone-500 pl-5  ">Actions</th>
+                <th class="  w-[46%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Titre Article</th>
+                <th class="  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Statut</th>
+                <th class="  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date d’inscription</th>
+                <th class="  w-[19] text-start text-stone-500 pl-5  ">action</th>
             </tr>
             <tr v-for="i in 35" :class="i<options.limite?' ':'hidden'" :key="i" class=" duration-200 my-1 group hover:color_base  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="i"></td>

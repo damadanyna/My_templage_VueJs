@@ -31,9 +31,9 @@
                             <th :class="showFormulaire==false?'w-[26%]':' w-[30%]'" class=" py-1 bg-white text-center text-stone-500  border-r border-stone-200 ">Nom </th>
                             <th :class="showFormulaire==false?'w-[26%]':' w-[30%]'" class=" py-1 bg-white text-center text-stone-500  border-r border-stone-200 ">Prénom</th>
                             <th v-if="showFormulaire==false" class=" py-1 bg-white w-[13%] text-center text-stone-500  border-r border-stone-200 ">Fonction</th>
-                            <th v-if="showFormulaire==false" class=" py-1 bg-white w-[12%] text-center text-stone-500  border-r border-stone-200 ">Status</th>
+                            <th v-if="showFormulaire==false" class=" py-1 bg-white w-[12%] text-center text-stone-500  border-r border-stone-200 ">Statut</th>
                             <th v-if="showFormulaire==false" class=" py-1 bg-white w-[16%] text-center text-stone-500  border-r border-stone-200 ">Etat</th>
-                            <th :class="showFormulaire==false?' w-[12%]':' w-[10%]'" class=" py-1 bg-white text-center text-stone-500  ">Actions</th>
+                            <th :class="showFormulaire==false?' w-[12%]':' w-[10%]'" class=" py-1 bg-white text-center text-stone-500  ">action</th>
                         </tr>
                         <tr v-for="item,i in this.$store.state.myData.TitreFormation" :key="i" class=" duration-200 my-1 hover:text-white group  hover:bg-[#63B6B9]  ">
                             <td class=" text-center text-gray-500 px-2" v-text="item.id"></td>
@@ -74,7 +74,7 @@
                 <div v-if="showFormulaire==true" class=" flex flex-col  bg-white rounded-lg px-5">
                     <div class="flex text-lg bg-white mb-5 items-center py-6  flex-row">
                         <h1 class="   font-bold text-stone-800  ">Statut :</h1>
-                        <selectOption2Vue class=" ml-5" :options="{elt:statut,select:false}" />
+                        <selectOptionVue class=" ml-5" :options="{elt:statut,select:false}" />
 
                     </div>
                     <formulaireVue></formulaireVue>
@@ -102,7 +102,7 @@
 
 <script>
 import btn_ from '../components/button/btn_.vue'
-import selectOption2Vue from '../components/input/selectOption2.vue'
+import selectOptionVue from '../components/input/selectOption.vue'
 import etat from '../components/poppup/equipe/etat.vue'
 import historiqueSessionVue from '../components/poppup/equipe/historiqueSession.vue'
 import listeExperienceVue from '../components/poppup/equipe/listeExperience.vue'
@@ -117,7 +117,7 @@ export default {
         etat,
         historiqueSessionVue,
         soustraitantVue,
-        selectOption2Vue,
+        selectOptionVue,
         listeExperienceVue,
         listeObjectiifValiderVue,
         listeQuestionaireVue

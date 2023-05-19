@@ -15,7 +15,7 @@
                          <th class="  w-[26%] text-center text-stone-500 mx-2 border-r border-stone-200 ">Prénom</th>
                          <th class="  w-[16%] text-center text-stone-500 mx-2 border-r border-stone-200 ">Etat</th>
                          <th class="  w-[36%] text-center text-stone-500 mx-2 border-r border-stone-200 ">Date D'inscription</th>
-                         <th class="  w-[19] text-center text-stone-500 mx-2 ">Actions</th>
+                         <th class="  w-[19] text-center text-stone-500 mx-2 ">action</th>
                      </tr>
                      <tr @click="getIt_()" v-for="item,i in this.$store.state.myData.TitreFormation" :key="i" class=" group duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
                          <td class=" text-center text-gray-500 px-2" v-text="item.id"></td>

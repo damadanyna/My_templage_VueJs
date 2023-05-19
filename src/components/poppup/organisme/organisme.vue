@@ -21,10 +21,10 @@
             <div class="flex mt-5 flex-col w-full">
                 <div class="flex flex-row w-full  rounded-t-lg border-[#63B6B9] border-t-[1px] border-x-[1px] font-bold">
                     <div @click="set_('IB')" :class="selected=='IB'?'bg-[#63B6B9] text-white':' bg-stone-100 color_base'" class=" rounded-tl-lg w-full py-2   flex flex-col justify-center ">
-                        <span class=" text-center text_xs w-full   ">Commentaire interne </span>
+                        <span class=" text-center text_xs w-full   ">Information pour les bénéficiaires </span>
                     </div>
                     <div @click="set_('IF')" :class="selected!='IB'?'bg-[#63B6B9] text-white':' bg-stone-100 color_base'" class=" w-full py-2 rounded-tr-lg  flex flex-col justify-center ">
-                        <span class=" text-center text_xs w-full  ">Commentaire public</span>
+                        <span class=" text-center text_xs w-full  ">Information pour les formateurs</span>
                     </div>
                 </div>
                 <div class="   border-[#63B6B9] group border-[1px] py-1 w-full rounded-b-lg items-center flex flex-col  ">

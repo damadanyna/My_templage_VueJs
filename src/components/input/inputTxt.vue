@@ -11,7 +11,7 @@
         </button>
         <div v-if="show==true" class="relative duration-500  flex z-50">
             <div style=" box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.385);" class="absolute px-4 py-1 rounded-t-md rounded-l-md flex -mt-5 -ml-72 bg-white z-50  w-[20vw]">
-                <span class="  text_xs">Bonjour je suis le popup d'aide</span>
+                <span class="  text_xs">Bonjour, je suis le poppup pour + d'info</span>
             </div>
         </div>
     </div>

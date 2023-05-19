@@ -2,7 +2,7 @@
 
 <div v-if="this.options.select==true"  x-data="select" class="relative z-50  ">
     <!-- trigger button -->
-    <button id="btn__" type="button" @click="()=> {set2_()}" class="flex w-[200px] text-white color-white items-center justify-between rounded base_bg p-2  " :class="(open2) && 'ring-blue-600'">
+    <button id="btn__" type="button" @click="()=> {set2_()}" class="text_xs flex w-[200px] text-white color-white items-center justify-between rounded base_bg p-2  " :class="(open2) && 'ring-blue-600'">
         <div class="flex flex-row">
             <span class="" v-text="(language == '') ? this.options.elt[0].label : language"></span>
         </div>
@@ -13,7 +13,7 @@
     </button>
 
     <!-- list items -->
-    <ul id="list__"  @click="()=> {open2=true}" class="z-2 absolute mt-2 shadow-lg ring-1 ring-stone-200  w-[200px]  rounded bg-white  " v-show="open2">
+    <ul id="list__"  @click="()=> {open2=true}" class="text_xs z-2 absolute mt-2 shadow-lg ring-1 ring-stone-200  w-[200px]  rounded bg-white  " v-show="open2">
         <div v-for=" item, i in options.elt" @click="()=>{item.checked=!item.checked}"  v-show="i!=0" class=" hover:bg-gray-200 flex flex-col">
             <div class="flex flex-row w-full pl-2">
                 <svg v-if="item.checked==false" class=" text-stone-400 fill-current w-5" viewBox="0 0 24 24"><path d="M19 3H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m0 2v14H5V5h14z" /></svg>
@@ -27,7 +27,7 @@
 </div>
 <div v-else x-data="select" class="relative z-50  ">
     <!-- trigger button -->
-    <button id="select_" type="button" @click="()=> {set_()}" class="flex w-[200px] text-white color-white items-center justify-between rounded base_bg p-2  " :class="(open) && 'ring-blue-600'">
+    <button id="select_" type="button" @click="()=> {set_()}" class="text_xs flex w-[200px] text-white color-white items-center justify-between rounded base_bg p-2  " :class="(open) && 'ring-blue-600'">
         <div class="flex flex-row">
             <span class="" v-text="(language == '') ? this.options.elt[0].label : language"></span>
         </div>
@@ -38,7 +38,7 @@
     </button>
 
     <!-- list items -->
-    <ul class="z-2 absolute mt-2 shadow-lg ring-1 ring-stone-200  w-[200px]  rounded bg-white  " v-show="open">
+    <ul class="text_xs z-2 absolute mt-2 shadow-lg ring-1 ring-stone-200  w-[200px]  rounded bg-white  " v-show="open">
         <div v-for=" item, i in options.elt"  v-show="i!=0" class="flex flex-col">
             <li v-text="item.label" :key="i" class=" cursor-pointer select-none p-2 hover:bg-gray-200" @click="setLanguage(item.label)"> </li>
             <span v-if="i< options.elt.length-1" class=" w-full h-[2px] bg-stone-300"></span>

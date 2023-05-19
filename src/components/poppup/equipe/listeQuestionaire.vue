@@ -12,7 +12,7 @@
                 <th class="  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-200 ">TitreSite</th>
                 <th class="  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Nom questionnaire</th>
                 <th class="  w-[16%] text-center text-stone-500   border-r border-stone-200 ">Date</th>
-                <th class="  w-[13] text-center text-stone-500   ">Actions</th>
+                <th class="  w-[13] text-center text-stone-500   ">action</th>
             </tr>
             <tr v-for="i in 35"   :key="i" class=" group duration-200 my-1 group hover:color_base  hover:bg-[#63B6B9]  ">
                 <td class=" group-hover:text-white  text-gray-500 px-2" v-text="i"></td>

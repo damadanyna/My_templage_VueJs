@@ -101,7 +101,7 @@
         <div class=" w-[80%]  mt-8">
             <radioVue v-if="index==0" :options="{liste:reponses,editable:true}"></radioVue>
             <textareaVue v-if="index==1" :options="{model:'',label:'Réponse'}"></textareaVue>
-            <selectOption2Vue v-if="index==2" :options="{elt:niveaufonction,select:false}"></selectOption2Vue>
+            <selectOptionVue v-if="index==2" :options="{elt:niveaufonction,select:false}"></selectOptionVue>
             <numberIncrementVue v-if="index==3" :options="{model:1}"></numberIncrementVue>
             <div  v-if="index==4" class="flex flex-col">
                 <span class=" text-stone-600">Importez les réponses</span>
@@ -123,7 +123,7 @@ import radio_ from '../../button/radio_.vue'
 import selectOption from '../../input/selectOption.vue'
 import radioVue from '../../input/radio.vue'
 import textareaVue from '../../input/textarea.vue'
-import selectOption2Vue from '../../input/selectOption2.vue' 
+import selectOptionVue from '../../input/selectOption.vue' 
 import numberIncrementVue from '../../input/numberIncrement.vue'
 
  
@@ -135,7 +135,7 @@ export default {
         radio_,
         radioVue,
         textareaVue,
-        selectOption2Vue,
+        selectOptionVue,
         numberIncrementVue
     },
     data() {
