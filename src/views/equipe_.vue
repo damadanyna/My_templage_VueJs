@@ -74,7 +74,7 @@
                 <div v-if="showFormulaire==true" class=" flex flex-col  bg-white rounded-lg px-5">
                     <div class="flex text-lg bg-white mb-5 items-center py-6  flex-row">
                         <h1 class="   font-bold text-stone-800  ">Statut :</h1>
-                        <selectOption2Vue class=" ml-5" :options="statut" />
+                        <selectOption2Vue class=" ml-5" :options="{elt:statut,select:false}" />
 
                     </div>
                     <formulaireVue></formulaireVue>

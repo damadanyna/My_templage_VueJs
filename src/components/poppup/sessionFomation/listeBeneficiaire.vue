@@ -4,13 +4,11 @@
         <!-- select Option -->
         <div class="flex items-center flex-row">
             <span class=" mr-3 font-semibold color_base">Formation :</span>
-            <selectOptionVue :options="nomFormation" />
+            <selectOptionVue :options="{elt:nomFormation,select:false}" />
         </div>
         <!-- select Option -->
-        <div class="flex items-center flex-row">
-            <button @click="()=>{showList=!showList}" class=" mr-3 font-semibold color_base" id="titre_">Equipe pédagogique :</button>
-            <selectCheckBoxVue v-if="showList==true" class=" mt-9" :options="{posX:xposition}" />
-            <!-- <selectOptionVue2 :options="formateur" /> -->
+        <div class="flex items-center flex-row"> 
+            <selectOptionVue :options="{elt:formateur,select:true}" /> 
 
         </div>
     </div>
@@ -63,8 +61,7 @@ import btn_ from '../../button/btn_.vue';
 import input_ from '../../input/inputTxt.vue';
 import textArea_ from '../../input/textarea.vue';
 import detailFormationVue from './components/detailFormation.vue';
-import selectOptionVue from '../../input/selectOption3.vue';
-import selectOptionVue2 from '../../input/selectOption2.vue';
+import selectOptionVue from '../../input/selectOption.vue'; 
 import gsap from 'gsap';
 import selectCheckBoxVue from '../../input/selectCheckBox.vue';
 export default {
@@ -73,8 +70,7 @@ export default {
         input_,
         textArea_,
         detailFormationVue,
-        selectOptionVue,
-        selectOptionVue2,
+        selectOptionVue, 
         selectCheckBoxVue
     },
 
@@ -101,20 +97,24 @@ export default {
                 },
             ],
             formateur: [{
-                    label: 'Formateur name',
-                    val: ''
+                    label: 'Equipe pédagogique',
+                    val: '',
+                    checked:false
                 },
                 {
                     label: 'Formateur name 1',
-                    val: '0'
+                    val: '0',
+                    checked:false
                 },
                 {
                     label: 'Formateur name 2',
-                    val: '1'
+                    val: '1',
+                    checked:false
                 },
                 {
                     label: 'Formateur name 3',
-                    val: '2'
+                    val: '2',
+                    checked:false
                 },
             ],
         }

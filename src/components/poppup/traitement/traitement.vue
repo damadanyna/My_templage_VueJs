@@ -11,7 +11,7 @@
 
             <div class="flex flex-row my-4 justify-end items-center">
                 <span class=" font-bold text_xs mr-5">Gravité de l’incident:</span>
-                <selectOption :options="niveauList"></selectOption>
+                <selectOption :options="{elt:niveauList,select:false}"></selectOption>
             </div>
             <div class="flex mt-5 w-full flex-row">
                 <textArea_ class=" w-full" :options="data_[2]"></textArea_>

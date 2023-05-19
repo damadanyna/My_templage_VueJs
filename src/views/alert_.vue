@@ -7,7 +7,7 @@
             <!-- select Option -->
             <div class="flex items-center flex-row">
                 <span class=" mr-3 font-semibold">Filtrer</span>
-                <selectOption :options="triList"></selectOption>
+                <selectOption :options="{elt:triList,select:false}"></selectOption>
             </div>
         </div>
         <!-- succees -->

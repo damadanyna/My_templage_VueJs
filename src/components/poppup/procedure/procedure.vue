@@ -10,7 +10,7 @@
         <div class="flex flex-row w-full items-center">
             <div class="flex w-[30%] flex-col my-3  ">
                 <span class=" font-bold text_xs ">Fonction :</span>
-                <selectOption :options="niveaufonction"></selectOption>
+                <selectOption :options="{elt:niveaufonction,select:false}"></selectOption>
             </div>
             <div class="flex flex-col  w-[70%] mt-5 ml-4">
                 <div class="flex flex-row">

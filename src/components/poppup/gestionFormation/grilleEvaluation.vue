@@ -45,7 +45,7 @@
                         <span :class="index==2?'bg-stone-300':'bg-white'"  class=" absolute -mt-5  ml-2   px-2 font-semibold">Select</span>
                     </div>
 
-                    <selectOption :options="niveaufonction"></selectOption>
+                    <selectOption :options="{elt:niveaufonction,select:false}"></selectOption>
                 </div>
             </div>
 
@@ -101,7 +101,7 @@
         <div class=" w-[80%]  mt-8">
             <radioVue v-if="index==0" :options="{liste:reponses,editable:true}"></radioVue>
             <textareaVue v-if="index==1" :options="{model:'',label:'Réponse'}"></textareaVue>
-            <selectOption2Vue v-if="index==2" :options="niveaufonction"></selectOption2Vue>
+            <selectOption2Vue v-if="index==2" :options="{elt:niveaufonction,select:false}"></selectOption2Vue>
             <numberIncrementVue v-if="index==3" :options="{model:1}"></numberIncrementVue>
             <div  v-if="index==4" class="flex flex-col">
                 <span class=" text-stone-600">Importez les réponses</span>

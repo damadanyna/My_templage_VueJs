@@ -49,7 +49,8 @@
             </div>
             <div class="flex w-[60%] items-center  justify-end flex-row">
                 <span class=" mr-3 text_xs font-semibold color_base">Titre de site :</span> 
-                <selectOptionVue :options="nomFormation"></selectOptionVue>
+                <selectOptionVue :options="{elt:nomFormation,select:true}"></selectOptionVue>
+                
             </div>
         </div>
         <!-- tableau de titre du site -->
