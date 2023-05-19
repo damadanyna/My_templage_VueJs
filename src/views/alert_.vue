@@ -22,8 +22,8 @@
                                 <svg class=" mx-4 fill-current w-5" viewBox="0 0 24 24" v-html=" item.ico"></svg>
                                 <span v-text="item.label"></span>
                             </div>
-                            <div class="relative flex">
-                                <span class=" absolute  mt-2 ml-5 " v-text="item.date"></span>
+                            <div class="relative flex bg-stone-300">
+                                <span class=" absolute  mt-2 ml-16 " v-text="item.date"></span>
                             </div>
                         </div>
                     </div>

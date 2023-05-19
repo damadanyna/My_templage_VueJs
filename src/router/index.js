@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory, } from 'vue-router';
-import organismeView from '../views/organisation_.vue';
+import organismeView from '../views/organisme_.vue';
 import listeFormationView from '../views/listeFormation_.vue';
 import sessionFormatonView from '../views/sessionFormation_.vue';
 import listeBeneficiaireView from '../views/listeBeneficiaire_.vue';
