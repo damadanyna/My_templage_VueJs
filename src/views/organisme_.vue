@@ -99,10 +99,12 @@
 </template>
 
 <script>
+import fr from '../language/fr'
 import btn_ from '../components/button/btn_.vue'
 import input_ from '../components/input/inputTxt.vue'
 import popup from '../components/poppup/organisme/organisme.vue'
 export default {
+   mixins:[fr], 
     components: {
         btn_,
         popup,
