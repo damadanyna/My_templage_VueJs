@@ -52,7 +52,8 @@ import actionFormationVue from '../../components/poppup/listeFormation/actionFor
 import bilan from '../../components/poppup/listeFormation/bilan.vue'
 import vae from '../../components/poppup/listeFormation/vae.vue'
 import optionDocDeFormVue from '../../components/poppup/listeFormation/optionDocDeForm.vue'
-import moduleApprentisVue from '../../components/poppup/listeFormation/moduleApprentis.vue'
+// import moduleApprentisVue from '../../components/poppup/listeFormation/moduleApprentis.vue'
+// import evaluationFormateurVue from '../../components/poppup/listeFormation/moduleApprentis.vue'
 import espaceQuestionVue from '../../components/poppup/listeFormation/espaceQuestion.vue'
 
 export default {
@@ -63,7 +64,8 @@ export default {
         bilan,
         vae,
         optionDocDeFormVue,
-        moduleApprentisVue,
+        // moduleApprentisVue,
+        // evaluationFormateurVue,
         espaceQuestionVue
     },
     data() {

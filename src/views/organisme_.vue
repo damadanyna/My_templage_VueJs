@@ -13,7 +13,7 @@
             </div>
             <div :class="showFormulaire==true?' px-5  ':'px-12'" class="flex rounded-lg flex-col bg-white ">
 
-                <span v-if="showFormulaire==false" class=" sticky top-6 py-3  bg-white font-bold text-lg">Raison social</span>
+                <span v-if="showFormulaire==false" class=" sticky top-6 py-3 z-50  bg-white font-bold text-lg">Raison social</span>
                 <!-- boite raison social -->
                 <div v-if="showFormulaire==false" class="flex flex-between mt-4 text_xs">
                     <!-- formulaire -->
@@ -49,7 +49,7 @@
                 </div>
 
                 <!-- titre du tableau -->
-                <div class="flex z-50 flex-row items-center py-1 bg-white mt-6 justify-between w-full">
+                <div class="flex z-0 flex-row items-center py-1 bg-white mt-6 justify-between w-full">
                     <div class="flex flex-row items-center"> 
                         <h5 :class="showFormulaire==true?'text-sm ':'xl'" class=" font-semibold  ">Listes des sites de formation</h5>
                     </div>

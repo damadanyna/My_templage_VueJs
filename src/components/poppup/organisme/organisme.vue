@@ -33,9 +33,11 @@
                 </div>
             </div>
         </div>
+        <espaceDocumentaireVue></espaceDocumentaireVue>
         <div :class="data_[0].model=='' || data_[1].model=='' || data_[2].model=='' || data_[3].model==''|| data_[4].model || data_[5].model==''?' opacity-50':' opacity-100'" class=" duration-300 flex mt-12 justify-center  flex-row w-full">
             <btn_ @click="setIt()" :options="{label:'Valider',style:' base_bg text-white',ico:$store.state.icons.done}"></btn_>
         </div>
+
     </div>
 </div>
 </template>
@@ -44,10 +46,17 @@
 import input_ from '../../input/inputTxt.vue'
 import textArea_ from '../../input/textarea.vue'
 import btn_ from '../../button/btn_.vue';
-import gsap from 'gsap'
+import gsap from 'gsap' 
+import espaceDocumentaireVue from '../sessionFomation/components/espaceDocumentaire.vue';
 export default {
     props: {
         item: {}
+    },
+    components: {
+        input_,
+        textArea_,
+        btn_,
+        espaceDocumentaireVue
     },
     data() {
         return {
@@ -91,11 +100,6 @@ export default {
             ],
             selected: 'IB'
         }
-    },
-    components: {
-        input_,
-        textArea_,
-        btn_
     },
     methods: {
         setIt() {

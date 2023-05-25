@@ -132,7 +132,7 @@ export default {
                 label: 'Salarié',
                 val: '0'
             }, {
-                label: 'Sous traitant',
+                label: 'Contrat de prestation',
                 val: '1'
             }, ],
             raisonSocial: [{

@@ -37,7 +37,7 @@
                 <div class="flex flex-col">
                      <btn_ @click="()=>{showBibliotheque=!showBibliotheque}" class=" mr-1 " :options="{label:'Bibliothéque sites',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
              
-                    <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:''}"> </bibliothequeVue>
+                    <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:'',liste:liste ,type:'input'}" > </bibliothequeVue>
                 </div>
                 <btn_ @click="()=>{showFormulaire=true}" class=" ml-1 " :options="{url:{name:'organisme',query: {is:true}},label:'Nouveau site',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
 
@@ -129,7 +129,7 @@
         <btn_ class=" " :options="{label:'Nouveau Objectif',style:' px-0 base_bg text_xs  text-white ',ico:$store.state.icons.plus}"></btn_>
         <div class="flex flex-col">
             <btn_ @click="()=>{showBibliotheque=!showBibliotheque}" class=" ml-2 " :options="{label:'Bibliothéque d\'objectif',style:' base_bg text_xs  text-white ',ico:$store.state.icons.list}"></btn_>
-            <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:''}"> </bibliothequeVue>
+            <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:'',liste:liste ,type:'input'}" > </bibliothequeVue>
         </div>
     </div>
 
@@ -191,6 +191,22 @@ export default {
         return {
             showBibliotheque: false,
 
+            liste: [{
+                label: 'Niveau',
+                isChecked: false,
+            }, {
+                label: 'Niveau1',
+                isChecked: false,
+            }, {
+                label: 'Niveau2',
+                isChecked: false,
+            }, {
+                label: 'Niveau3',
+                isChecked: false,
+            }, {
+                label: 'Niveau4',
+                isChecked: false,
+            }, ],
             nomFormation: [{
                 label: 'Salarié',
                 val: ''
@@ -198,7 +214,7 @@ export default {
                 label: 'Salarié',
                 val: '0'
             },  {
-                label: 'Sous traitant',
+                label: 'Contrat de prestation',
                 val: '1'
             },  ],
             data: [{

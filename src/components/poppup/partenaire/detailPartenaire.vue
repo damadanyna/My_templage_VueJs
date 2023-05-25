@@ -143,7 +143,7 @@
         </button>
            <div class="flex flex-col">
             <btn_ @click="()=>{showBibliotheque=!showBibliotheque}" class=" ml-2 " :options="{label:'Bibliothéque de document',style:' base_bg text_xs  text-white ',ico:$store.state.icons.list}"></btn_>
-            <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:''}"> </bibliothequeVue>
+            <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:'',liste:liste ,type:'input'}" > </bibliothequeVue>
         </div> 
     </div>
 
@@ -192,6 +192,23 @@ export default {
         return {
         
             showBibliotheque: false,
+
+            liste: [{
+                label: 'Niveau',
+                isChecked: false,
+            }, {
+                label: 'Niveau1',
+                isChecked: false,
+            }, {
+                label: 'Niveau2',
+                isChecked: false,
+            }, {
+                label: 'Niveau3',
+                isChecked: false,
+            }, {
+                label: 'Niveau4',
+                isChecked: false,
+            }, ],
             data_: [{
                     label: 'Adresse',
                     model: '',

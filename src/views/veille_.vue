@@ -2,7 +2,21 @@
 <div v-if="$route.name=='veille'" class="flex flex-col h-full">
     <div class="flex flex-row z-50   bg-stone-100 text-stone-600 justify-between sticky -top-4 w-full pt-1 pb-2">
         <h1 class=" text-lg text-black font-bold">Veilles réglementaire</h1>
-        <btn_ class="mr-4" :options="{label:'Flux RSS',style:' base_bg text-white w-full',ico:$store.state.icons.listCheck}"></btn_>
+        <div class="flex flex-row">
+            <div id="veille_" class="flex flex-col">
+                <div class="flex flex-col relative">
+                    <btn_ @click="()=> {set_()}" class="mr-4" :options="{label:'Config email',style:' base_bg text-white w-full',ico:$store.state.icons.at}"></btn_>
+                </div>
+                <div class="flex flex-row relative text_xs">
+                    <div @click="activeIt()"  v-if="open==true" class="  py-1 mt-1 absolute px-5 items-center bg-white flex rounded-md shadow-md">
+                        <span>Connecté à la boite email</span>
+                        <slidebtn_ :options="{active:activer,border:'border-[#63B6B9] ',bg:' bg-[#63B6B9]'}"></slidebtn_>
+
+                    </div>
+                </div>
+            </div>
+            <btn_ class="mr-4" :options="{label:'Flux RSS',style:' base_bg text-white w-full',ico:$store.state.icons.listCheck}"></btn_>
+        </div>
     </div>
     <div class="flex flex-col   bg-white rounded-lg pb-12">
         <!-- legale et règlement -->
@@ -19,8 +33,8 @@
             <div class="flex flex-row sticky top-4 px-5 py-7 w-full justify-between items-center mt-6">
                 <h5 class=" font-semibold text-lg">Veille pédagogique</h5>
                 <btn_ @click="()=>{$router.push({ name: 'pedagogique'})}" :options="{label:'Veille',style:' py-1 base_bg text-white w-full',ico:$store.state.icons.listCheck}"></btn_>
-             </div> 
-            <pedagogique  :options="{limite:5}"></pedagogique>
+            </div>
+            <pedagogique :options="{limite:5}"></pedagogique>
         </div>
 
         <!-- metier -->
@@ -28,8 +42,8 @@
             <div class="flex flex-row sticky top-4 px-5 py-7 w-full justify-between items-center mt-6">
                 <h5 class=" font-semibold text-lg">Veille du métier</h5>
                 <btn_ @click="()=>{$router.push({ name: 'metier'})}" :options="{label:'Veille',style:' py-1 base_bg text-white w-full',ico:$store.state.icons.listCheck}"></btn_>
-             </div>
-            <metier  :options="{limite:5}"></metier>
+            </div>
+            <metier :options="{limite:5}"></metier>
         </div>
     </div>
 </div>
@@ -41,15 +55,36 @@ import legale from './veille/legale.vue';
 import pedagogique from './veille/pedagogique.vue';
 import metier from './veille/metier.vue';
 import btn_ from '../components/button/btn_.vue';
+import {
+    onClickOutside
+} from '@vueuse/core'
+import slidebtn_ from '../components/button/slidebtn_.vue';
 export default {
     components: {
         legale,
         pedagogique,
         metier,
-        btn_
+        btn_,
+        slidebtn_
     },
     data() {
-        return {}
+        return {
+            open: false,
+            activer: false,
+        }
+    },
+    methods: {
+        set_() {
+            this.open = !this.open;
+        },
+        activeIt() {
+            this.activer = !this.activer;
+        }
+    },
+    mounted() {
+        onClickOutside(document.getElementById('veille_'), () => {
+            this.open = false
+        })
     }
 
 }

@@ -21,7 +21,7 @@
                     <btn_ @click="()=>{showFormulaire=true}" class=" " :options="{label:'Nouveau document',ico:$store.state.icons.plus,style:' base_bg text-[12px] text-white py-1 text-stone-800 '}"></btn_>
                     <div class="flex flex-col">
                         <btn_ @click="()=>{showBibliotheque=!showBibliotheque}" class=" ml-3 " :options="{label: `Bibliothéque module d’apprentissage`,ico:$store.state.icons.list,style:' base_bg text-[12px] text-white py-1 text-stone-800 '}"></btn_>
-                        <bibliothequeVue v-if= "showBibliotheque==true" :options="{class:''}" class="flex"> </bibliothequeVue>
+                        <bibliothequeVue v-if= "showBibliotheque==true" :options="{class:'',liste:liste ,type:'input'}"  class="flex"> </bibliothequeVue>
 
                     </div>
                 </div>
@@ -150,7 +150,24 @@ export default {
             index: null,
             activer: false,
             question: [''],
-            showBibliotheque:false
+            showBibliotheque:false,
+
+            liste: [{
+                label: 'Niveau',
+                isChecked: false,
+            }, {
+                label: 'Niveau1',
+                isChecked: false,
+            }, {
+                label: 'Niveau2',
+                isChecked: false,
+            }, {
+                label: 'Niveau3',
+                isChecked: false,
+            }, {
+                label: 'Niveau4',
+                isChecked: false,
+            }, ]
         }
     },
     methods: {
@@ -158,7 +175,7 @@ export default {
             this.index == null ? this.index = i : this.index = null
         },
         activeIt() {
-            this.activer == true ? this.activer = false : this.activer = true
+            this.activer =!this.activer;
         }
     }
 

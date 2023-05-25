@@ -80,7 +80,8 @@ export default {
                 ['Référent administratif', false],
                 ['Référent commercial', false],
                 ['Responsable qualité', false],
-                ['Responsable logistique', false]
+                ['Responsable logistique', false],
+                ['Référence mobilité National et international', false]
             ]
         }
     },

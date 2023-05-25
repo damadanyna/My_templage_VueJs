@@ -4,7 +4,7 @@
         <span>Espace documentaire de la formation</span>
         <div class="flex flex-col">
             <btn_ @click="()=>{showBibliotheque=!showBibliotheque}" class=" " :options="{label:'Bibliothéque de document',ico:$store.state.icons.list,style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
-            <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:''}"> </bibliothequeVue>
+            <bibliothequeVue v-if="showBibliotheque==true" class="flex" :options="{class:'',liste:liste ,type:'input'}" > </bibliothequeVue>
     
         </div>
     </div>
@@ -84,6 +84,23 @@ export default {
                 id: 2,
                 titre: 'Les techniques avancées de création visuelle.pdf',
                 activer: true,
+            }, ],
+
+            liste: [{
+                label: 'Niveau',
+                isChecked: false,
+            }, {
+                label: 'Niveau1',
+                isChecked: false,
+            }, {
+                label: 'Niveau2',
+                isChecked: false,
+            }, {
+                label: 'Niveau3',
+                isChecked: false,
+            }, {
+                label: 'Niveau4',
+                isChecked: false,
             }, ]
         }
     }

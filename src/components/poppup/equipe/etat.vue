@@ -19,6 +19,7 @@
         <span class=" font-semibold">Contrat de travail</span>
         <div class="flex">
             <btn_ class=" bg-white mt-3" :options="{label:'Contrat de travail.pdf',ico2Style:'color_base',style:'   text-red-500 w-full',stylelabel:' text-black',ico:$store.state.icons.pdf_,ico2:$store.state.icons.cloudDown}"></btn_>
+            <btn_ class=" bg-white mt-3 ml-5" :options="{label:'CV.pdf',ico2Style:'color_base',style:'   text-red-500 w-full',stylelabel:' text-black',ico:$store.state.icons.pdf_,ico2:$store.state.icons.cloudDown}"></btn_>
         </div>
     </div>
 </div>
