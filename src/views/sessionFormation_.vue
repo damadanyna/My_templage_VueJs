@@ -2,9 +2,8 @@
 <div class="flex flex-col h-full ">
     <div class="w-full  flex flex-row">
         <div :class="showFormulaire==true?'w-[30%]':'w-full'" class="flex h-full bg-white rounded-md duration-500 flex-col">
-
             <div class=" flex flex-row text-lg items-center w-full bg-stone-100 z-50 font-bold text-stone-600 pt-0   pb-3 ">
-                <button v-if="eshowFormulaire==tru" @click="()=>{$router.go(-1)}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
+                <button v-if="eshowFormulaire==true" @click="()=>{$router.go(-1)}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
                     <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
                         <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
                 </button>

@@ -1,6 +1,10 @@
 <template>
 <div class="flex flex-col px-6 bg-white rounded-md">
-    <div class="flex flex-row font-semibold">
+    <div class="flex flex-row font-semibold items-center">
+        <button @click="()=>{$router.go(-1)}" class="  bg-[#63B6B9] mr-3 px-2 border border-black rounded-full">
+            <svg class=" w-5 fill-current text-white" viewBox="0 0 24 24">
+                <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z" /></svg>
+        </button>
         <span>Grille d'évaluation/Sondage :</span>
         <span class=" color_base">Titre formation - Module</span>
     </div>
@@ -35,7 +39,7 @@
         </div>
     </div>
     <div class="flex flex-col w-full mt-8 items-center">
-        <div class="flex flex-row w-[70%]"> 
+        <div class="flex flex-row w-[70%]">
             <radioVue :options="{liste:reponses,editable:false}"></radioVue>
         </div>
         <div class="flex w-full justify-center my-12">
@@ -71,7 +75,7 @@
         </div>
     </div>
     <div class="flex flex-col w-full mt-8 items-center">
-        <div class="flex flex-row w-[70%]"> 
+        <div class="flex flex-row w-[70%]">
             <radioVue :options="{liste:reponses,editable:true}"></radioVue>
         </div>
 

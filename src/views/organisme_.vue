@@ -41,7 +41,9 @@
                         <div v-for="item, i in importFichier" :key="i" class="flex flex-row">
                             <div class="flex flex-col">
                                 <span v-text=" item.titre" class=" font-semibold"></span>
-                                <btn_ :options="{label:item.label_fichier,style:' base_bg text-white w-full',ico:$store.state.icons.uploadFolder}"></btn_>
+                                <btn_ :options="{label:item.label_fichier,style:' base_bg text-white w-full',ico:$store.state.icons.uploadFolder,type:'file',in:'file_'+i}"></btn_>
+                                <input @change="doIt('file_'+i,i)" type="file" hidden name="" :id="'file_'+i">
+
                                 <btn_ class=" mt-3" :options="{label:item.text_fichier,style:' bg-gray-200 text-red-500 w-full',stylelabel:' text-black',ico:$store.state.icons.pdf_,ico2:$store.state.icons.delete}"></btn_>
                             </div>
                         </div>
@@ -50,12 +52,12 @@
 
                 <!-- titre du tableau -->
                 <div class="flex z-0 flex-row items-center py-1 bg-white mt-6 justify-between w-full">
-                    <div class="flex flex-row items-center"> 
+                    <div class="flex flex-row items-center">
                         <h5 :class="showFormulaire==true?'text-sm ':'xl'" class=" font-semibold  ">Listes des sites de formation</h5>
                     </div>
-                                  <btn_  v-if="showFormulaire==false" @click="()=>{showFormulaire=true}" class=" ml-1 " :options="{url:{name:'organisme',query: {is:true}},label:'Nouveau site',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
+                    <btn_ v-if="showFormulaire==false" @click="()=>{showFormulaire=true}" class=" ml-1 " :options="{url:{name:'organisme',query: {is:true}},label:'Nouveau site',style:' base_bg text-white py-2 text-stone-800 '}"></btn_>
 
-                 </div>
+                </div>
                 <div class="  w-full text_xs  h-[70vh] overflow-auto px-2 mt-9">
                     <table class="  w-full items-start">
                         <tr class=" w-full sticky -top-7  bg-white py-4  ">
@@ -104,7 +106,7 @@ import btn_ from '../components/button/btn_.vue'
 import input_ from '../components/input/inputTxt.vue'
 import popup from '../components/poppup/organisme/organisme.vue'
 export default {
-   mixins:[fr], 
+    mixins: [fr],
     components: {
         btn_,
         popup,
@@ -117,9 +119,7 @@ export default {
                 model: '',
                 type: 'text',
                 edit: null,
-
             },
-
             selectedItem: {
                 titre: ''
             },
@@ -184,12 +184,15 @@ export default {
         cutText(item) {
             return item.length > 10 ? item.substring(0, 50) + '...' : item
         },
+        doIt(val, index) {
+            var io = document.getElementById(val)
+            this.importFichier[index].text_fichier= io.files[0].name.length>10?io.files[0].name.substring(0,10)+'...':io.files[0].name
+        },
         nouveauSite() {
             this.showFormulaire = true
             this.selectedItem.titre = ""
-        }
-        ,
-        goOn(){ 
+        },
+        goOn() {
             // this.$router.push({name: 'organisme'})
             this.$router.go(-1)
         }
@@ -198,12 +201,12 @@ export default {
         if (this.$route.query.is) {
             this.showFormulaire = true
         }
-        
+
     },
     updated() {
         if (this.$route.query.is) {
             this.showFormulaire = true
-        }else{
+        } else {
 
             this.showFormulaire = false
         }

@@ -1,7 +1,7 @@
 <template>
 <!-- forumlaire d'ajout de contacte societe -->
 <div class=" bg-white rounded-lg flex px-1 py-5 flex-col z-20">
-    <span class=" text-lg font-bold sticky mt-11 top-5 py-4 bg-white z-50">Formulaire d'ajout d'un contact de la société :</span>
+    <span class=" text-lg font-bold   top-5 py-4 bg-white z-50">Formulaire d'ajout d'un contact de la société :</span>
 
     <div class=" mt-8 flex flex-col">
         <div class="flex flex-row w-full">
