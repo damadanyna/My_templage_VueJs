@@ -2,7 +2,8 @@
 const state = () => ({ 
   sshowFormulaire: false,
   beneProp:true,
-  isAdd:true
+  isAdd:true,
+  loggedIn:true
 })
 
  
