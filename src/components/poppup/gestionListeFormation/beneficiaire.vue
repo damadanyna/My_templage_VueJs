@@ -117,7 +117,7 @@ export default {
                     type: 'text'
                 },
                 {
-                    label: 'Prénom',
+                    label: 'Prenom',
                     model: '',
                     type: 'text'
                 },
@@ -167,7 +167,7 @@ export default {
             console.log(item);
             if (item.titre) {
                 this.data_[0].model = item.titre.nom
-                this.data_[1].model = item.titre.prenom
+                this.data_[1].model = item.titre.Prenom
             }
         }
     },

@@ -144,7 +144,7 @@ export default {
         setVal(item) {
             if (item.nom) {
                 this.data_[0].model = item.nom
-                this.data_[1].model = item.prenom
+                this.data_[1].model = item.Prenom
             }
         }
     },

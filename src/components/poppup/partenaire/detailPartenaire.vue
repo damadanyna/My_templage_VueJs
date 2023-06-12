@@ -88,7 +88,7 @@
             <tr class=" w-full">
                 <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                 <th class="  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Nom </th>
-                <th class="  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Prénom</th>
+                <th class="  w-[36%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Prenom</th>
                 <th class="  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Tél</th>
                 <th class="  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Email</th>
                 <th class="  w-[13%] text-center text-stone-500  border-r border-stone-200 ">Fonction</th>
@@ -97,7 +97,7 @@
             <tr v-for="i in 2" :key="i" class=" duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
                 <td class=" text-gray-500 px-2" v-text="i"></td>
                 <td class="pl-5" v-text="'Nom'+i"></td>
-                <td class="pl-5" v-text="'Prénom'"></td>
+                <td class="pl-5" v-text="'Prenom'"></td>
                 <td class="pl-5" v-text="'+261...'"></td>
                 <td class="pl-5" v-text="'dossierfor...'"></td>
                 <td class="pl-5" v-text="'{Fonction}'"></td>

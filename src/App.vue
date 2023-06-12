@@ -1,5 +1,5 @@
 <template> 
-  <div class=" flex w-full h-full">
+  <div class=" flex w-full h-full ">
     <template v-if="$store.state.tools.loggedIn">
       <login></login>
     </template>

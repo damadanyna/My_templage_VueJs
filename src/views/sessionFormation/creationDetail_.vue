@@ -22,13 +22,13 @@
                             <tr class=" w-full">
                                 <th class=" w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                                 <th class="  w-[26%] text-center text-stone-500 mx-2 border-r border-stone-200 ">Nom</th>
-                                <th class="  w-[26%] text-center text-stone-500 mx-2 border-r border-stone-200 ">Prénom</th>
+                                <th class="  w-[26%] text-center text-stone-500 mx-2 border-r border-stone-200 ">Prenom</th>
                                 <th class="  w-[16%] text-center text-stone-500 mx-2">Etat</th>
                             </tr>
                             <tr @click="getIt_( item)" v-for="item,i in this.$store.state.myData.TitreFormation" :key="i" class=" group duration-200 my-1 hover:text-white  hover:bg-[#63B6B9]  ">
                                 <td class=" text-center text-gray-500 px-2" v-text="item.id"></td>
                                 <td class=" text-center" v-text="item.nom"></td>
-                                <td class=" text-center" v-text="item.prenom"></td>
+                                <td class=" text-center" v-text="item.Prenom"></td>
                                 <td class=" px-4 text-center ">
                                     <button v-if="item.etat=='Abandonné'" class=" py-1  px-2 my-1 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border" v-text="item.etat"></button>
                                     <button v-if="item.etat=='En formation'" class=" py-1  px-2 my-1 bg-green-100 rounded-md text-green-600 text_xs  border-green-500 border" v-text="item.etat"></button>

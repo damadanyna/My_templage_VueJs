@@ -30,7 +30,7 @@
                     <tr class=" w-full sticky top-0 bg-white py-5  ">
                         <th class=" py-2 w-[8%] text-start text-stone-500 border-r border-stone-200">idx</th>
                         <th class=" py-2  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Nom </th>
-                        <th class=" py-2  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Prénom</th>
+                        <th class=" py-2  w-[26%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Prenom</th>
                         <th class=" py-2  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Etat</th>
                         <th v-if="showFormulaire==false" class=" py-2  w-[16%] text-start text-stone-500  pl-5 border-r border-stone-200 ">Date d'inscription</th>
                         <th v-if="showFormulaire==false" class=" py-2  w-[23] text-center text-stone-500 ">action</th>
@@ -38,7 +38,7 @@
                     <tr v-for="i in 20" :key="i" class=" duration-200 my-1 group hover:text-white  hover:bg-[#63B6B9]  ">
                         <td class=" text-gray-500 px-2" v-text="i"></td>
                         <td class=" font-semibold pl-5" v-text="'Nom'+i"></td>
-                        <td class=" font-semibold pl-5" v-text="'Prénom'"></td>
+                        <td class=" font-semibold pl-5" v-text="'Prenom'"></td>
                         <td class="  ">
                             <div class=" flex my-1 justify-center">
                                 <button class=" px-1 bg-red-100 rounded-md text-red-600 text_xs  border-red-500 border py-0 ">A traité</button>

@@ -29,7 +29,7 @@
                         <tr class=" w-full sticky top-0 ">
                             <th class=" py-1 bg-white w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>
                             <th :class="showFormulaire==false?'w-[26%]':' w-[30%]'" class=" py-1 bg-white text-center text-stone-500  border-r border-stone-200 ">Nom </th>
-                            <th :class="showFormulaire==false?'w-[26%]':' w-[30%]'" class=" py-1 bg-white text-center text-stone-500  border-r border-stone-200 ">Prénom</th>
+                            <th :class="showFormulaire==false?'w-[26%]':' w-[30%]'" class=" py-1 bg-white text-center text-stone-500  border-r border-stone-200 ">Prenom</th>
                             <th v-if="showFormulaire==false" class=" py-1 bg-white w-[13%] text-center text-stone-500  border-r border-stone-200 ">Fonction</th>
                             <th v-if="showFormulaire==false" class=" py-1 bg-white w-[12%] text-center text-stone-500  border-r border-stone-200 ">Statut</th>
                             <th v-if="showFormulaire==false" class=" py-1 bg-white w-[16%] text-center text-stone-500  border-r border-stone-200 ">Etat</th>
@@ -38,7 +38,7 @@
                         <tr v-for="item,i in this.$store.state.myData.TitreFormation" :key="i" class=" duration-200 my-1 hover:text-white group  hover:bg-[#63B6B9]  ">
                             <td class=" text-center text-gray-500 px-2" v-text="item.id"></td>
                             <td class=" text-center font-semibold" v-text="item.nom"></td>
-                            <td class=" text-center font-semibold" v-text="item.prenom"></td>
+                            <td class=" text-center font-semibold" v-text="item.Prenom"></td>
                             <td v-if="showFormulaire==false" class=" color_base text-center" v-text="'{Fonction}'"></td>
                             <td v-if="showFormulaire==false" class=" text-center" v-text="'Gérant'"></td>
                             <td v-if="showFormulaire==false" class=" text-center ">

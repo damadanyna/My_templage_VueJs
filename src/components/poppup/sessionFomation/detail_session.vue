@@ -32,7 +32,7 @@
                 <th class=" py-2 w-[8%] text-center text-stone-500 border-r border-stone-200">idx</th>
                 <th class=" py-2  w-[9%] text-center text-stone-500  border-r border-stone-200 ">Alertes </th>
                 <th class=" py-2  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Nom </th>
-                <th class=" py-2  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Prénom</th>
+                <th class=" py-2  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Prenom</th>
                 <th class=" py-2  w-[26%] text-center text-stone-500  border-r border-stone-200 ">Date d'inscription</th>
                 <th class=" py-2  w-[19] text-center text-stone-500   ">action</th>
             </tr>
@@ -44,7 +44,7 @@
                     </div>
                 </td>
                 <td class="text-center font-semibold" v-text="'Nom'+i"></td>
-                <td class="text-center font-semibold" v-text="'Prénom'"></td>
+                <td class="text-center font-semibold" v-text="'Prenom'"></td>
                 <td class="text-center" v-text="'18 juin 2025'"></td>
                 <td class=" px-2 ">
                     <div class=" flex flex-row items-center justify-center py-1">

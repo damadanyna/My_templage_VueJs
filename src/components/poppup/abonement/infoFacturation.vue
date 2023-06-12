@@ -42,7 +42,7 @@ export default {
                     type: 'text'
                 },
                 {
-                    label: 'Prénom',
+                    label: 'Prenom',
                     model: '',
                     type: 'text'
                 },
